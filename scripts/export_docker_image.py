@@ -8,8 +8,8 @@ from zipfile import ZIP_DEFLATED, ZipFile
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT_DIR = ROOT / "artifacts" / "docker"
-IMAGE = "heritage-map:1.1.0"
-IMAGE_TAR = OUTPUT_DIR / "heritage-map_1.1.0_linux_amd64.tar"
+IMAGE = "heritage-map:1.2.0"
+IMAGE_TAR = OUTPUT_DIR / "heritage-map_1.2.0_linux_amd64.tar"
 TRANSFER_BUNDLE = OUTPUT_DIR / "heritage-map-docker.zip"
 
 

@@ -1,6 +1,6 @@
 # Deploy Docker image trên Linux
 
-Gói có sẵn Docker image `heritage-map:1.1.0` cho Linux `amd64` (máy `x86_64`). Máy chủ chỉ cần Docker Engine và Docker Compose plugin; không cần build lại image hoặc đăng nhập registry. Website được phục vụ công khai bằng HTTP trên cổng 80, không có màn hình đăng nhập hay tài khoản ứng dụng. Khách xem chỉ cần mở `http://IP_MAY_CHU/`.
+Trên máy có Docker Desktop hoặc Docker Engine kèm Buildx, chạy `python scripts/export_docker_image.py` để tạo image `heritage-map:1.2.0` cho Linux `amd64` (máy `x86_64`) và gói chuyển máy `artifacts/docker/heritage-map-docker.zip`. Máy chủ chỉ cần Docker Engine và Docker Compose plugin; không cần đăng nhập registry. Website được phục vụ công khai bằng HTTP trên cổng 80, không có màn hình đăng nhập hay tài khoản ứng dụng. Khách xem chỉ cần mở `http://IP_MAY_CHU/`.
 
 Tạo lại image và gói chuyển máy khi cập nhật website bằng `python scripts/export_docker_image.py`.
 
@@ -22,7 +22,7 @@ scp "D:\TourVanMieu\dau-chan-di-san-codex-handoff\heritage-map\artifacts\docker\
 sudo mkdir -p /opt/heritage-map
 sudo unzip -o /tmp/heritage-map-docker.zip -d /opt/heritage-map
 cd /opt/heritage-map
-sudo docker load -i heritage-map_1.1.0_linux_amd64.tar
+sudo docker load -i heritage-map_1.2.0_linux_amd64.tar
 sudo docker compose up -d
 sudo docker compose ps
 curl -I http://127.0.0.1/

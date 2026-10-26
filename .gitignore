@@ -3,3 +3,5 @@ app.bundle.js
 __pycache__/
 *.log
 .venv-gis/
+artifacts/docker/*.tar
+artifacts/docker/*.zip

@@ -1,4 +1,5 @@
 import React, {useEffect, useLayoutEffect, useRef, useState} from 'react';
+import HomePage from './HomePage.jsx';
 
 const ICONS = ['pin','route','walk','bike','search','arrow','external','check','alert','layers','compass','close','copy','filter','book'];
 const LAYER_DEFAULTS = {
@@ -38,7 +39,7 @@ function LayerToggle({id, attribute, value, checked, disabled, label, swatch, on
   return <label><input id={id} type="checkbox" {...{[attribute]:value}} checked={checked} disabled={disabled} onChange={event=>onChange(event.target.checked)} /><span className={`gis-swatch ${swatch}`} />{label}</label>;
 }
 
-function App() {
+function MapPage() {
   const data = window.HERITAGE_DATA;
   const sites = data?.sites || [];
   const routes = data?.routes || [];
@@ -195,7 +196,7 @@ function App() {
   return <>
     <IconBank />
     <header className="topbar">
-      <div className="brand-wrap"><div className="brand-symbol"><span className="roof">⌃</span><span className="pillar">▥</span></div><div className="brand-copy"><span className="brand-name">DẤU CHÂN <em>DI SẢN</em></span><span className="brand-tagline">HERITAGE ATLAS · HÀ NỘI</span></div></div>
+      <a className="brand-wrap" href="/" aria-label="Trở về trang chủ"><div className="brand-symbol"><span className="roof">⌃</span><span className="pillar">▥</span></div><div className="brand-copy"><span className="brand-name">DẤU CHÂN <em>DI SẢN</em></span><span className="brand-tagline">HERITAGE ATLAS · HÀ NỘI</span></div></a>
       <div className="topbar-center"><span className="status-dot" /> Hành trình qua những lớp ký ức Thăng Long <span className="top-divider" /> BẢN XEM TRƯỚC DỮ LIỆU</div>
       <div className="topbar-right"><a className="top-link" href="data/site-audit.csv" download><Icon name="book" /> Tải bảng 32 điểm</a><button className="menu-toggle" id="menu-toggle" aria-label="Mở tuyến và tìm di tích" aria-expanded={menuOpen} aria-controls="sidebar" onClick={()=>setMenuOpen(value=>!value)}><Icon name="filter" /><span>Tuyến & địa điểm</span></button><span className="edition-tag">BETA · 2026</span></div>
     </header>
@@ -315,5 +316,15 @@ function App() {
 }
 
 function Fact({title,value}) { return <div className="detail-fact"><span>{title}</span><strong>{value}</strong></div>; }
+
+function App() {
+  const [mapOpen,setMapOpen] = useState(()=>window.location.hash==='#/map');
+  useEffect(()=>{
+    const syncRoute=()=>setMapOpen(window.location.hash==='#/map');
+    window.addEventListener('hashchange',syncRoute);
+    return ()=>window.removeEventListener('hashchange',syncRoute);
+  },[]);
+  return mapOpen ? <MapPage/> : <HomePage/>;
+}
 
 export default App;

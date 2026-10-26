@@ -5,7 +5,7 @@ const { JSDOM } = require('jsdom');
 
 const root = path.join(__dirname,'..');
 const html = fs.readFileSync(path.join(root,'index.html'),'utf8');
-const dom = new JSDOM(html, {runScripts:'outside-only',url:'http://localhost:8765/',pretendToBeVisual:true});
+const dom = new JSDOM(html, {runScripts:'outside-only',url:'http://localhost:8765/#/map',pretendToBeVisual:true});
 const {window} = dom;
 const {document} = window;
 window.ResizeObserver = class { observe() {} disconnect() {} };
@@ -80,4 +80,13 @@ assert.strictEqual(window.HERITAGE_DATA.sites.filter(s => s.lat !== null).length
 
 console.log('DOM checks passed: 32 sites, 25 coordinates, 6 routes, categories, click details, searching and R03 missing stop.');
 dom.window.close();
+
+const homeDom = new JSDOM(html, {runScripts:'outside-only',url:'http://localhost:8765/',pretendToBeVisual:true});
+homeDom.window.eval(fs.readFileSync(path.join(root,'app.bundle.js'),'utf8'));
+assert.strictEqual(homeDom.window.document.querySelector('#home-title')?.textContent.replace(/\s+/g,'').trim(),'ChạmvàokýứcngànnămThăngLong.');
+assert.strictEqual(homeDom.window.document.querySelector('.home-hero-image')?.getAttribute('src'),'assets/van-mieu-home-hero.webp');
+assert.strictEqual(homeDom.window.document.querySelector('#map'),null,'The map must not mount behind the default homepage.');
+assert(homeDom.window.document.querySelector('a[href="#/map"]'),'The homepage exposes a route into the existing map.');
+homeDom.window.close();
+console.log('Home checks passed: root opens the illustrated landing page with a map entry point and no hidden map instance.');
 })().catch(error=>{console.error(error);dom.window.close();process.exitCode=1;});

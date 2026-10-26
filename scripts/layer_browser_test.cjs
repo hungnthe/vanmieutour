@@ -17,7 +17,7 @@ const {chromium} = require('playwright');
       '<script>const start=HeritageMap.prototype.start;HeritageMap.prototype.start=function(...args){window.__layerAuditMap=this;return start.apply(this,args)};</script><script src="app.bundle.js"></script>');
     await route.fulfill({response,body:html});
   });
-  await page.goto('http://localhost:8766/', {waitUntil:'domcontentloaded',timeout:30000});
+  await page.goto('http://localhost:8766/#/map', {waitUntil:'domcontentloaded',timeout:30000});
   await page.locator('#map-key').evaluate(element => {element.open = true;});
   await page.waitForSelector('#map[data-ready="true"]', {timeout:90000});
   await page.waitForSelector('#map[data-gis-ready="true"]', {timeout:30000});

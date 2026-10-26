@@ -1,6 +1,6 @@
 services:
   map:
-    image: heritage-map:1.1.0
+    image: heritage-map:1.2.0
     pull_policy: never
     restart: unless-stopped
     ports:

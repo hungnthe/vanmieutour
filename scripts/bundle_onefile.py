@@ -10,6 +10,7 @@ import subprocess
 ROOT = Path(__file__).resolve().parents[1]
 html = (ROOT / "index.html").read_text(encoding="utf-8")
 css = (ROOT / "styles.css").read_text(encoding="utf-8")
+home_css = (ROOT / "home.css").read_text(encoding="utf-8")
 data = (ROOT / "data.js").read_text(encoding="utf-8")
 subprocess.run(["npm.cmd" if os.name == "nt" else "npm", "run", "build"], cwd=ROOT, check=True)
 app = (ROOT / "app.bundle.js").read_text(encoding="utf-8")
@@ -47,6 +48,7 @@ html = html.replace('<script src="vendor/sketchup-model.js"></script>',script(mo
 config = f'window.HERITAGE_MAP_STYLE={style};\nwindow.HERITAGE_WORKER_URL=URL.createObjectURL(new Blob([{json.dumps(worker)}],{{type:"text/javascript"}}));'
 html = html.replace('<script src="data.js"></script>',script(config)+'\n<script src="data.js"></script>')
 html = html.replace('<link rel="stylesheet" href="styles.css">', f'<style>\n{css}\n</style>')
+html = html.replace('<link rel="stylesheet" href="home.css">', f'<style>\n{home_css}\n</style>')
 html = html.replace('<script src="data.js"></script>', f'<script>\n{data}\n</script>')
 html = html.replace('<script src="app.bundle.js"></script>', f'<script>\n{app}\n</script>')
 html = html.replace('<script src="map-engine.js"></script>',script(engine))
@@ -56,5 +58,7 @@ html = html.replace('<script src="gis-layers.js"></script>',script(gis_inline)+"
 csv_data = (ROOT / "data" / "site-audit.csv").read_text(encoding="utf-8-sig")
 csv_url = 'data:text/csv;charset=utf-8,' + quote('\ufeff' + csv_data, safe='')
 html = html.replace('href="data/site-audit.csv"', f'href="{csv_url}"')
+hero_data = base64.b64encode((ROOT / "assets" / "van-mieu-home-hero.webp").read_bytes()).decode("ascii")
+html = html.replace('assets/van-mieu-home-hero.webp', f'data:image/webp;base64,{hero_data}')
 (ROOT / "heritage-atlas-2_5d.html").write_text(html,encoding="utf-8")
 print("Built",ROOT / "heritage-atlas-2_5d.html")

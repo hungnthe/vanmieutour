@@ -13,9 +13,10 @@ COPY nginx/default.conf /etc/nginx/conf.d/default.conf
 
 WORKDIR /usr/share/nginx/html
 
-COPY index.html styles.css map-engine.js gis-layers.js data.js map-style.json ./
+COPY index.html styles.css home.css map-engine.js gis-layers.js data.js map-style.json ./
 COPY --from=builder /app/app.bundle.js ./app.bundle.js
 COPY vendor/ ./vendor/
+COPY assets/ ./assets/
 
 # Copy only the assets used by the public map; research inputs and review-only
 # GIS files stay out of the image.
