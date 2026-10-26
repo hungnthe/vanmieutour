@@ -1,4 +1,5 @@
 node_modules/
+app.bundle.js
 __pycache__/
 *.log
 .venv-gis/

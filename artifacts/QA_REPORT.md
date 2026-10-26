@@ -12,7 +12,7 @@
 ## Thay đổi chính
 
 - MapLibre 6.15.0, Leaflet 1.9.4, worker, CSS và license nằm trong `vendor/`; `package-lock.json` cố định dependency. `scripts/vendor.cjs` tái tạo thư viện cục bộ.
-- `map-engine.js` quản lý renderer, trạng thái tải, marker, sơ đồ tuyến, camera, retry và vòng đời timeout/event. `app.js` quản lý bộ lọc, tìm kiếm và nội dung chi tiết.
+- `map-engine.js` quản lý renderer, trạng thái tải, marker, sơ đồ tuyến, camera, retry và vòng đời timeout/event. UI React tại `src/App.jsx` quản lý bộ lọc, tìm kiếm, điều khiển lớp và nội dung chi tiết.
 - Style Liberty lưu tại `map-style.json`: đường phố rõ hơn, ưu tiên tên tiếng Việt, bỏ các POI nền gây rối và dùng đúng một lớp nhà extrusion, không tải trùng nguồn vector. Nút 2D ẩn nhà; 2.5D bật nhà và nghiêng 52°.
 - Khi thiếu WebGL/MapLibre hoặc lỗi style/vector tile: Leaflet dựng bản đồ raster 2D độc lập từ OSM DE, rồi OSM Standard nếu nguồn đầu lỗi. Các pin, tuyến và chi tiết vẫn hoạt động. Nút Tải lại khôi phục 2.5D khi nguồn chính sẵn sàng.
 - Sáu tuyến chia ba đi bộ và ba xe máy; pin đánh số theo thứ tự PDF, danh sách điểm ghé bấm được. R03 có bốn pin và một điểm chưa định vị. Điểm thiếu tọa độ ngắt sơ đồ, không nối tắt qua điểm đó.

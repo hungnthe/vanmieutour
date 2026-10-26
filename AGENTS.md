@@ -4,7 +4,7 @@
 
 ## Ưu tiên
 
-1. **P0: sửa lỗi bản đồ nền không hiển thị.** Trong ảnh `references/current-blank-map.png`, khung trắng viền đứt đoạn tương ứng với lớp lỗi `.map-failure` trong `styles.css`. Phải tái hiện trên trình duyệt, kiểm tra console/network/WebGL, rồi sửa nguyên nhân được xác nhận.
+1. **Giữ bản đồ nền hoạt động ổn định.** Lỗi khung trắng trong `references/current-blank-map.png` đã được sửa và có kiểm thử fallback; nếu tái xuất hiện, kiểm tra console/network/WebGL trước khi thay đổi.
 2. Nếu nguồn tile hoặc WebGL thất bại, vẫn phải hiển thị được nền bản đồ 2D đáng tin và các điểm di tích có tọa độ; không để màn hình trắng im lặng.
 3. Giữ nguyên mô hình sáu tuyến, chia hai nhóm đi bộ và xe máy; click tuyến làm nổi bật điểm dừng, click từng điểm hiện detail.
 
@@ -26,7 +26,8 @@
 ## Chạy hiện tại
 
 ```bash
-python3 -m http.server 8765
+npm ci
+npm run start
 ```
 
-Mở `http://localhost:8765` từ thư mục chứa `index.html`. Có thể chạy `npm install`, `npm test` và `npm run check` để kiểm tra logic/cú pháp (npm chỉ dùng cho test, không build website). Codex có thể thiết lập Vite + browser tests nếu cải tiến kiến trúc.
+Mở `http://localhost:8765` từ thư mục dự án. UI nằm trong `src/App.jsx`; esbuild tạo `app.bundle.js` trước khi chạy. `map-engine.js` vẫn quản lý MapLibre/Leaflet và vòng đời lớp bản đồ. Chạy `npm test` và `npm run check` để kiểm tra; Docker build cũng tạo bundle React ở stage Node.

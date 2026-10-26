@@ -13,8 +13,8 @@ const {chromium} = require('playwright');
   page.on('pageerror', error => errors.push(error.message));
   await page.route('http://localhost:8766/', async route => {
     const response = await route.fetch();
-    const html = (await response.text()).replace('<script src="app.js"></script>',
-      '<script>const start=HeritageMap.prototype.start;HeritageMap.prototype.start=function(...args){window.__layerAuditMap=this;return start.apply(this,args)};</script><script src="app.js"></script>');
+    const html = (await response.text()).replace('<script src="app.bundle.js"></script>',
+      '<script>const start=HeritageMap.prototype.start;HeritageMap.prototype.start=function(...args){window.__layerAuditMap=this;return start.apply(this,args)};</script><script src="app.bundle.js"></script>');
     await route.fulfill({response,body:html});
   });
   await page.goto('http://localhost:8766/', {waitUntil:'domcontentloaded',timeout:30000});

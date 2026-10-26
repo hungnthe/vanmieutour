@@ -1,5 +1,7 @@
 # Bàn giao cho Codex — Bản đồ Di sản Hà Nội 2.5D
 
+> **Kiến trúc hiện tại:** UI đã chuyển sang React tại `src/App.jsx`; `scripts/build.mjs` tạo bundle `app.bundle.js`. `map-engine.js` vẫn quản lý MapLibre/Leaflet và đồng bộ với UI qua `useLayoutEffect`. Chạy `npm ci && npm run start` để xem; Docker build bundle ở stage Node trước khi đóng gói nginx.
+
 > **Cập nhật 26/10/2026:** Kiểm toán lớp đã phát hiện mặt địa hình trắng 955 × 950 m che nền, hatch đường/nước trùng GIS, và nhà OSM 3D mặc định bị bật dù chưa chọn. Đã tách công tắc từng nhóm, áp dụng trạng thái sau khi MapLibre style sẵn sàng, và khóa hai bộ công trình 3D loại trừ nhau. SketchUp vẫn tắt mặc định vì georeference chưa được chứng minh độc lập; căn vị trí suy ra từ GIS, không khảo sát. Đọc `artifacts/LAYER_AUDIT.md` cùng `artifacts/MODEL_INTEGRATION.md` trước khi thay ma trận hoặc bật mặc định. Tọa độ di tích và nguồn SKP không đổi.
 
 > **Cập nhật 25/10/2026 sau sửa:** P0 đã được sửa và kiểm tra trong trình duyệt desktop/tablet/mobile. MapLibre 6.15.0 và worker được bundle cục bộ, có Leaflet 2D dự phòng, sửa CSS ghim và chiều cao map, hoàn thiện tuyến/chi tiết. Dữ liệu nghiên cứu và PDF gốc không đổi. Xem `artifacts/QA_REPORT.md`, `artifacts/browser-results.json` và ảnh kết quả. Các mô tả lỗi/bản chạy cũ dưới đây được giữ làm lịch sử; cách chạy hiện tại ở README. Công việc tiếp theo vẫn là danh mục 37, xác minh cổng và đường đi thực tế, không tự bổ sung tọa độ.
@@ -14,7 +16,7 @@ Tạo bản đồ 2.5D rõ ràng, hiển thị các di tích thực tế, có b�
 
 Ảnh `references/current-blank-map.png` cho thấy khu vực bản đồ nền màu nhạt và một khung trắng viền nét đứt. Đây là giao diện lỗi `.map-failure` được định nghĩa trong `styles.css`, chứ không phải một thiết kế bản đồ. Người dùng **không thấy đường, nhà, địa hình hoặc các ghim**.
 
-Đọc `index.html`, `app.js` (`initMap`, `createMarker`, `updateLine`) và `styles.css`. Bản hiện tại tải MapLibre GL JS 6.15/CSS từ `unpkg.com`, style `https://tiles.openfreemap.org/styles/liberty`, vector tile từ OpenFreeMap, và bật WebGL + extrusion. Map failure hiện khi thiếu MapLibre/WebGL, MapLibre chưa tải xong sau 15 giây, hoặc phát sinh lỗi nguồn style/tile. **Chưa xác định nguyên nhân thực tế**, không kết luận chỉ do CDN hoặc do quyền truy cập trang.
+Đọc `index.html`, `src/App.jsx`, `map-engine.js` và `styles.css`. Phần mô tả lỗi giao diện cũ bên dưới là lịch sử trước khi sửa; trạng thái kiểm chứng hiện tại ghi ở các cập nhật đầu tài liệu.
 
 ### Definition of done cho P0
 
@@ -30,7 +32,9 @@ Tạo bản đồ 2.5D rõ ràng, hiển thị các di tích thực tế, có b�
 | --- | --- |
 | `index.html` | Bố cục 3 cột, bộ lọc 2 nhóm, vùng MapLibre, detail |
 | `styles.css` | Thiết kế responsive và `.map-failure` |
-| `app.js` | MapLibre khối nhà 2.5D, pins, sáu tuyến, tương tác |
+| `src/App.jsx` | UI React, sáu tuyến, tìm kiếm, detail, điều khiển lớp |
+| `scripts/build.mjs` | Bundle React cho trình duyệt bằng esbuild |
+| `map-engine.js` | MapLibre/Leaflet, marker, lớp GIS và SketchUp |
 | `data.js` | `window.HERITAGE_DATA` cho browser |
 | `data/sites.json` | 32 địa điểm, 25 tọa độ tâm từ văn bản nhà nước |
 | `data/routes.json` | Sáu tuyến theo PDF, 3 đi bộ + 3 xe máy |
@@ -42,7 +46,7 @@ Tạo bản đồ 2.5D rõ ràng, hiển thị các di tích thực tế, có b�
 | `references/original-tour-map.pdf` | PDF do người dùng cung cấp, dùng để xác định tuyến |
 | `references/current-blank-map.png` | Ảnh lỗi người dùng vừa báo |
 
-Phiên bản gốc không có backend hoặc API key; `python3 -m http.server 8765` từ thư mục dự án sẽ phục vụ bản đồ tại `http://localhost:8765` (cần Internet để tải tile/CDN). `npm install && npm test` chạy các kiểm tra logic DOM hiện có, chưa thay cho browser QA. `heritage-atlas-2_5d.html` là bản một file để xem thử, nhưng vẫn yêu cầu Internet.
+Phiên bản này không có backend hoặc API key; `npm ci && npm run start` tạo bundle React rồi phục vụ bản đồ tại `http://localhost:8765` (cần Internet để tải tile). `npm test` kiểm tra dữ liệu, GIS, map engine và hành vi DOM React. `heritage-atlas-2_5d.html` là bản một file để xem thử, nhưng vẫn yêu cầu Internet.
 
 ## Dữ liệu thực và giới hạn kiểm chứng
 
@@ -56,7 +60,7 @@ Phiên bản gốc không có backend hoặc API key; `python3 -m http.server 87
 
 ## Kế hoạch nâng cấp sau P0
 
-1. Tách kiến trúc UI, map rendering, dữ liệu địa danh và route services. Nếu dùng React/Vite/TypeScript, giữ mọi dữ liệu và cờ provenance.
+1. UI và map rendering đã tách: React quản lý tương tác, `map-engine.js` quản lý renderer. Giữ mọi dữ liệu và cờ provenance nếu tiếp tục tái cấu trúc.
 2. Tạo trạng thái 3 mức cho các điểm: đã kiểm chứng Google + địa phương; có tâm từ công báo nhưng chưa xác minh cổng; chưa đủ dữ liệu để định vị.
 3. Hoàn thiện route UX: đổi nhóm đi bộ/xe máy, hiển thị thứ tự, pin có số, phân biệt đoạn sơ đồ với chỉ đường phố thực tế, cảnh báo điểm thiếu tọa độ.
 4. Khi được cấp danh sách 37 chuẩn và quyền API, tích hợp Places để đối soát; dùng Routes API hoặc engine phù hợp để dựng tuyến **trên đường phố**, có kiểm tra phương tiện và đường một chiều. Không đưa key bí mật vào client; tuân thủ điều khoản sử dụng và lưu dữ liệu Google.

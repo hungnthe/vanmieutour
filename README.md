@@ -13,10 +13,13 @@ Trang web tương tác phục vụ rà soát bộ địa điểm du lịch văn 
 Chạy từ thư mục có `index.html` (cần Internet để tải tile và nhãn bản đồ):
 
 ```bash
-python -m http.server 8765 --bind localhost
+npm ci
+npm run start
 ```
 
-Sau đó truy cập `http://localhost:8765/`. Trang hoạt động không cần tài khoản hay khóa API. Các thư viện và worker đã nằm trong `vendor/`, không cần npm để chạy trang. Nhấn vào các tuyến W01–W03 (đi bộ) hoặc R01–R03 (xe máy) để làm nổi bật và đánh số điểm ghé; mở mục **Xem điểm ghé** để chọn từng điểm theo PDF. Nhấn pin hoặc danh sách để mở chi tiết; có chuyển 2D / 2.5D. Trên mobile, nút **Tuyến & địa điểm** mở bộ lọc/tìm kiếm, chi tiết mở thành bảng phía dưới có nút đóng.
+Sau đó truy cập `http://localhost:8765/`. Giao diện được viết bằng React trong `src/App.jsx`, esbuild tạo `app.bundle.js`; phần vẽ bản đồ MapLibre/Leaflet tiếp tục nằm trong `map-engine.js`. Các thư viện bản đồ và worker đã nằm trong `vendor/`. Trang hoạt động không cần tài khoản hay khóa API. Nhấn vào các tuyến W01–W03 (đi bộ) hoặc R01–R03 (xe máy) để làm nổi bật và đánh số điểm ghé; mở mục **Xem điểm ghé** để chọn từng điểm theo PDF. Nhấn pin hoặc danh sách để mở chi tiết; có chuyển 2D / 2.5D. Trên mobile, nút **Tuyến & địa điểm** mở bộ lọc/tìm kiếm, chi tiết mở thành bảng phía dưới có nút đóng.
+
+Docker build chạy bước bundle React trong image builder; máy chủ Linux chỉ cần nạp image như hướng dẫn deploy.
 
 ### Sửa bản đồ trống — 25/10/2026
 
@@ -62,7 +65,7 @@ npm audit --omit=dev
 
 `npm run qa` chạy server kiểm thử riêng trên `http://localhost:8766/`. Các URL `/?qa=no-webgl`, `/?qa=no-library`, `/?qa=style-error`, `/?qa=tile-error`, `/?qa=raster-error` chủ động tạo lỗi; không sửa file sản phẩm. Server chỉ lắng nghe loopback. Đã kiểm tra trình duyệt thực ở 1440×900, 834×1112 và 390×844. Xem **[báo cáo QA](artifacts/QA_REPORT.md)** và ảnh trong `artifacts/`.
 
-Khi cập nhật dependency: `npm run vendor`, sau đó `python scripts/bundle_onefile.py` và chạy lại kiểm thử. Không cần chạy `scripts/build_data.py` để sửa giao diện; giữ nguyên bộ dữ liệu chuẩn đã bàn giao.
+Khi cập nhật dependency: `npm run vendor`, `npm run build`, sau đó `python scripts/bundle_onefile.py` và chạy lại kiểm thử. Không cần chạy `scripts/build_data.py` để sửa giao diện; giữ nguyên bộ dữ liệu chuẩn đã bàn giao.
 
 ### Đối chiếu Google Maps — 25/10/2026
 
@@ -141,7 +144,9 @@ Các đoạn đường dạng nét đứt trong bản đồ là đường nối 
 - `data/sites.geojson`: 25 điểm tâm chuyển sang WGS84 để nhập GIS, chỉ dùng kiểm tra nội bộ.
 - `data/needs-field-verification.csv`: danh sách 7 địa điểm cần tra cứu / đi thực địa.
 - `scripts/build_data.py`: tái tạo dữ liệu từ PDF Thông tư địa danh và chuyển hệ bằng `pyproj`.
-- `index.html`, `styles.css`, `app.js`, `map-engine.js`, `map-style.json`, `data.js`, `vendor/`: website tĩnh chạy qua HTTP, không cần npm build để xem.
+- `src/App.jsx`: giao diện React, trạng thái bộ lọc, tuyến, chi tiết và công tắc bản đồ.
+- `scripts/build.mjs`: bundle React vào `app.bundle.js` bằng esbuild; `npm run start` tự build trước khi mở server.
+- `index.html`, `styles.css`, `map-engine.js`, `gis-layers.js`, `map-style.json`, `data.js`, `vendor/`: website tĩnh và bộ máy bản đồ.
 
 ## Điều kiện trước khi xuất bản cho người dùng thật
 

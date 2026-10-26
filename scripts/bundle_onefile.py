@@ -4,12 +4,15 @@ from pathlib import Path
 from urllib.parse import quote
 import json
 import base64
+import os
+import subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
 html = (ROOT / "index.html").read_text(encoding="utf-8")
 css = (ROOT / "styles.css").read_text(encoding="utf-8")
 data = (ROOT / "data.js").read_text(encoding="utf-8")
-app = (ROOT / "app.js").read_text(encoding="utf-8")
+subprocess.run(["npm.cmd" if os.name == "nt" else "npm", "run", "build"], cwd=ROOT, check=True)
+app = (ROOT / "app.bundle.js").read_text(encoding="utf-8")
 engine = (ROOT / "map-engine.js").read_text(encoding="utf-8")
 gis_engine = (ROOT / "gis-layers.js").read_text(encoding="utf-8")
 style = (ROOT / "map-style.json").read_text(encoding="utf-8")
@@ -45,7 +48,7 @@ config = f'window.HERITAGE_MAP_STYLE={style};\nwindow.HERITAGE_WORKER_URL=URL.cr
 html = html.replace('<script src="data.js"></script>',script(config)+'\n<script src="data.js"></script>')
 html = html.replace('<link rel="stylesheet" href="styles.css">', f'<style>\n{css}\n</style>')
 html = html.replace('<script src="data.js"></script>', f'<script>\n{data}\n</script>')
-html = html.replace('<script src="app.js"></script>', f'<script>\n{app}\n</script>')
+html = html.replace('<script src="app.bundle.js"></script>', f'<script>\n{app}\n</script>')
 html = html.replace('<script src="map-engine.js"></script>',script(engine))
 gis_bundle = {"manifest":gis_manifest,"layers":gis_layers}
 gis_inline = f"window.HERITAGE_GIS_DATA={json.dumps(gis_bundle,ensure_ascii=False,separators=(',',':'))};"

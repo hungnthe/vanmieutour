@@ -3,13 +3,16 @@
 node_modules
 references
 artifacts
-scripts
+scripts/*
+!scripts/build.mjs
 *.md
 *.pdf
 *.skp
 *.zip
 package.json
 package-lock.json
+!package.json
+!package-lock.json
 data/sites.json
 data/routes.json
 data/sites.geojson
