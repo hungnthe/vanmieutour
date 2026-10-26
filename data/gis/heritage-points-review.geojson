@@ -1,0 +1,608 @@
+{
+  "type": "FeatureCollection",
+  "name": "heritage_points_review",
+  "metadata": {
+    "source_layer": "QTG_Diem",
+    "source_crs": "EPSG:4326",
+    "target_crs": "EPSG:4326",
+    "render_on_map": false,
+    "attribution": "OpenStreetMap-derived layers carry © OpenStreetMap contributors attribution. Source bundle has no separate license file; verify terms before redistribution."
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "QTG_Diem.0001",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8346961,
+          21.016154
+        ]
+      },
+      "properties": {
+        "Name": "Đình Làng Thổ Quan",
+        "_source_layer": "QTG_Diem",
+        "_source_record": 1,
+        "_review_only": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "QTG_Diem.0002",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8336083,
+          21.0195646
+        ]
+      },
+      "properties": {
+        "Name": "Chùa Linh Ứng",
+        "_source_layer": "QTG_Diem",
+        "_source_record": 2,
+        "_review_only": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "QTG_Diem.0003",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8344246,
+          21.0193501
+        ]
+      },
+      "properties": {
+        "Name": "Đền Trung Tả",
+        "_source_layer": "QTG_Diem",
+        "_source_record": 3,
+        "_review_only": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "QTG_Diem.0004",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8365512,
+          21.0224689
+        ]
+      },
+      "properties": {
+        "Name": "Chùa Linh Quang",
+        "_source_layer": "QTG_Diem",
+        "_source_record": 4,
+        "_review_only": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "QTG_Diem.0005",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8328232,
+          21.0228189
+        ]
+      },
+      "properties": {
+        "Name": "Chùa Huy Văn",
+        "_source_layer": "QTG_Diem",
+        "_source_record": 5,
+        "_review_only": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "QTG_Diem.0006",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.83859,
+          21.0189015
+        ]
+      },
+      "properties": {
+        "Name": "Đài tưởng niệm Khâm Thiên",
+        "_source_layer": "QTG_Diem",
+        "_source_record": 6,
+        "_review_only": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "QTG_Diem.0007",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8367944,
+          21.0177664
+        ]
+      },
+      "properties": {
+        "Name": "Chùa Phụng Thánh",
+        "_source_layer": "QTG_Diem",
+        "_source_record": 7,
+        "_review_only": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "QTG_Diem.0008",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.839203,
+          21.0171568
+        ]
+      },
+      "properties": {
+        "Name": "Chùa Mỹ Quang",
+        "_source_layer": "QTG_Diem",
+        "_source_record": 8,
+        "_review_only": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "QTG_Diem.0009",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8366669,
+          21.028984
+        ]
+      },
+      "properties": {
+        "Name": "Chùa Bà Nành",
+        "_source_layer": "QTG_Diem",
+        "_source_record": 9,
+        "_review_only": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "QTG_Diem.0010",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8394213,
+          21.0269944
+        ]
+      },
+      "properties": {
+        "Name": "Y Miếu",
+        "_source_layer": "QTG_Diem",
+        "_source_record": 10,
+        "_review_only": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "QTG_Diem.0011",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8374526,
+          21.0287393
+        ]
+      },
+      "properties": {
+        "Name": "Chùa Ngọc Hồ (Bà Ngô)",
+        "_source_layer": "QTG_Diem",
+        "_source_record": 11,
+        "_review_only": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "QTG_Diem.0012",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8379853727004,
+          21.02653073077352
+        ]
+      },
+      "properties": {
+        "Name": "Chùa Phổ Giác",
+        "_source_layer": "QTG_Diem",
+        "_source_record": 12,
+        "_review_only": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "QTG_Diem.0013",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8395071,
+          21.0268569
+        ]
+      },
+      "properties": {
+        "Name": "Chùa Quang Minh",
+        "_source_layer": "QTG_Diem",
+        "_source_record": 13,
+        "_review_only": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "QTG_Diem.0014",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8361195,
+          21.012942
+        ]
+      },
+      "properties": {
+        "Name": "Chùa Trung Tự",
+        "_source_layer": "QTG_Diem",
+        "_source_record": 14,
+        "_review_only": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "QTG_Diem.0015",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8384558,
+          21.0121984
+        ]
+      },
+      "properties": {
+        "Name": "Giếng Ngọc Đình Trung Tự",
+        "_source_layer": "QTG_Diem",
+        "_source_record": 15,
+        "_review_only": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "QTG_Diem.0016",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8382111,
+          21.0106528
+        ]
+      },
+      "properties": {
+        "Name": "Đền - Đình Kim Liên",
+        "_source_layer": "QTG_Diem",
+        "_source_record": 16,
+        "_review_only": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "QTG_Diem.0017",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8356692,
+          21.0281175
+        ]
+      },
+      "properties": {
+        "Name": "Văn Miếu - Quốc Tử Giám",
+        "_source_layer": "QTG_Diem",
+        "_source_record": 17,
+        "_review_only": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "QTG_Diem.0018",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.837608,
+          21.0294284
+        ]
+      },
+      "properties": {
+        "Name": "Đình Thanh Miến",
+        "_source_layer": "QTG_Diem",
+        "_source_record": 18,
+        "_review_only": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "QTG_Diem.0019",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8392717,
+          21.0169454
+        ]
+      },
+      "properties": {
+        "Name": "Đình Trung Kính",
+        "_source_layer": "QTG_Diem",
+        "_source_record": 19,
+        "_review_only": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "QTG_Diem.0020",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.836492,
+          21.0157923
+        ]
+      },
+      "properties": {
+        "Name": "Đình Thái Kiều",
+        "_source_layer": "QTG_Diem",
+        "_source_record": 20,
+        "_review_only": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "QTG_Diem.0021",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8342295,
+          21.0211173
+        ]
+      },
+      "properties": {
+        "Name": "Chùa Bụt Mọc",
+        "_source_layer": "QTG_Diem",
+        "_source_record": 21,
+        "_review_only": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "QTG_Diem.0022",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8356216,
+          21.0236831
+        ]
+      },
+      "properties": {
+        "Name": "Đình Văn Hương",
+        "_source_layer": "QTG_Diem",
+        "_source_record": 22,
+        "_review_only": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "QTG_Diem.0023",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8361709,
+          21.0257366
+        ]
+      },
+      "properties": {
+        "Name": "Đình - Đền Lương Sử",
+        "_source_layer": "QTG_Diem",
+        "_source_record": 23,
+        "_review_only": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "QTG_Diem.0024",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.838079,
+          21.0120003
+        ]
+      },
+      "properties": {
+        "Name": "Đình làng Trung Tự",
+        "_source_layer": "QTG_Diem",
+        "_source_record": 24,
+        "_review_only": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "QTG_Diem.0025",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.836976,
+          21.0200301
+        ]
+      },
+      "properties": {
+        "Name": "Chùa Liên Hoa",
+        "_source_layer": "QTG_Diem",
+        "_source_record": 25,
+        "_review_only": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "QTG_Diem.0026",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8413848,
+          21.0262436
+        ]
+      },
+      "properties": {
+        "Name": "Chùa Tiên Tích",
+        "_source_layer": "QTG_Diem",
+        "_source_record": 26,
+        "_review_only": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "QTG_Diem.0027",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8413874,
+          21.0264668
+        ]
+      },
+      "properties": {
+        "Name": "Đền Đức Thánh Trần",
+        "_source_layer": "QTG_Diem",
+        "_source_record": 27,
+        "_review_only": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "QTG_Diem.0028",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8330084,
+          21.0235319
+        ]
+      },
+      "properties": {
+        "Name": "Đền Văn Chỉ",
+        "_source_layer": "QTG_Diem",
+        "_source_record": 28,
+        "_review_only": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "QTG_Diem.0029",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8353596,
+          21.0265502
+        ]
+      },
+      "properties": {
+        "Name": "Hồ Giám",
+        "_source_layer": "QTG_Diem",
+        "_source_record": 29,
+        "_review_only": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "QTG_Diem.0030",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8350385,
+          21.0268071
+        ]
+      },
+      "properties": {
+        "Name": "Gò Kim Châu",
+        "_source_layer": "QTG_Diem",
+        "_source_record": 30,
+        "_review_only": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "QTG_Diem.0031",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8339554,
+          21.0269193
+        ]
+      },
+      "properties": {
+        "Name": "Đền Mẫu Sòng Sơn - Hà Nội",
+        "_source_layer": "QTG_Diem",
+        "_source_record": 31,
+        "_review_only": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "QTG_Diem.0032",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.838274358791,
+          21.01529494976959
+        ]
+      },
+      "properties": {
+        "Name": "Đền Trung Phụng",
+        "_source_layer": "QTG_Diem",
+        "_source_record": 32,
+        "_review_only": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "QTG_Diem.0033",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8386937794429,
+          21.01757334920506
+        ]
+      },
+      "properties": {
+        "Name": "Đình Khâm Đức",
+        "_source_layer": "QTG_Diem",
+        "_source_record": 33,
+        "_review_only": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "QTG_Diem.0034",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8387428425481,
+          21.01763811491321
+        ]
+      },
+      "properties": {
+        "Name": "Đền Khâm Đức - thờ Châu Đệ Tứ",
+        "_source_layer": "QTG_Diem",
+        "_source_record": 34,
+        "_review_only": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "QTG_Diem.0035",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8367208,
+          21.028861
+        ]
+      },
+      "properties": {
+        "Name": "Chùa Tiên Phúc Tự",
+        "_source_layer": "QTG_Diem",
+        "_source_record": 35,
+        "_review_only": true
+      }
+    }
+  ]
+}

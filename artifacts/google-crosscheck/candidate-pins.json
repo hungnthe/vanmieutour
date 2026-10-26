@@ -1,0 +1,260 @@
+{
+  "status": "REVIEW_ONLY_DO_NOT_IMPORT_AUTOMATICALLY",
+  "note": "Google browser observations, not official gazette coordinates or verified entrances. Production sites.json remains unchanged.",
+  "candidates": [
+    {
+      "id": "kham_duc_dinh",
+      "name": "Đình Khâm Đức",
+      "original": {
+        "lat": null,
+        "lng": null,
+        "address": "74 ngõ Chợ Khâm Thiên, Hà Nội",
+        "coord_status": "unlocated"
+      },
+      "google_observation": {
+        "id": "kham_duc_dinh",
+        "query": "Đình Khâm Đức 74 ngõ Chợ Khâm Thiên Hà Nội",
+        "address": "Địa chỉ: 74 Ng. Chợ Khâm Thiên, Văn Miếu - Quốc Tử Giám, Hà Nội, Việt Nam ",
+        "headings": [
+          "Đình Khâm Đức",
+          "Thêm thông tin bị thiếu",
+          "Ảnh và video",
+          "Tóm tắt bài đánh giá",
+          "Tất cả các bài đánh giá"
+        ],
+        "name": "Đình Khâm Đức",
+        "url": "https://www.google.com/maps/place/%C4%90%C3%ACnh+Kh%C3%A2m+%C4%90%E1%BB%A9c/@21.0175766,105.8386924,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab85141e0631:0xbe5a5174ffa45bae!8m2!3d21.0175766!4d105.8386924!16s%2Fg%2F11g8_3tn1k?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+        "google_pin": {
+          "lat": 21.0175766,
+          "lng": 105.8386924
+        },
+        "checkedAt": "2026-10-25T14:28:08.759Z",
+        "method": "manual_google_maps_browser_listing_not_places_api",
+        "screenshot": "kham_duc_dinh-google.jpg"
+      },
+      "point_separation_m": null,
+      "assessment": "candidate_only_not_adopted",
+      "google_places_api_verified": false,
+      "entrance_verified": false,
+      "note": "Ứng viên Google tại 74 ngõ Chợ Khâm Thiên khớp địa chỉ tham khảo hiện có. Giữ tọa độ ứng viên riêng."
+    },
+    {
+      "id": "thanh_mien",
+      "name": "Đình Thanh Miến",
+      "original": {
+        "lat": null,
+        "lng": null,
+        "address": "20 ngõ Thanh Miến, Hà Nội",
+        "coord_status": "unlocated"
+      },
+      "google_observation": {
+        "id": "thanh_mien",
+        "query": "Đình Thanh Miến Hà Nội",
+        "address": "Địa chỉ: 2RHQ+Q2Q, Ng. Thanh Miến, Văn Miếu - Quốc Tử Giám, Hà Nội, Việt Nam ",
+        "headings": [
+          "Đình Thanh Miến",
+          "Thêm thông tin bị thiếu",
+          "Ảnh và video",
+          "Tóm tắt bài đánh giá",
+          "Tất cả các bài đánh giá"
+        ],
+        "name": "Đình Thanh Miến",
+        "url": "https://www.google.com/maps/place/%C4%90%C3%ACnh+Thanh+Mi%E1%BA%BFn/@21.0294563,105.8376179,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab98f90fe039:0x665e93c297bbaa18!8m2!3d21.0294563!4d105.8376179!16s%2Fg%2F11h04vln8?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+        "google_pin": {
+          "lat": 21.0294563,
+          "lng": 105.8376179
+        },
+        "checkedAt": "2026-10-25T14:28:09.361Z",
+        "method": "manual_google_maps_browser_listing_not_places_api",
+        "screenshot": "thanh_mien-google.jpg"
+      },
+      "point_separation_m": null,
+      "assessment": "candidate_only_not_adopted",
+      "google_places_api_verified": false,
+      "entrance_verified": false,
+      "note": "Google có listing trên ngõ Thanh Miến; Đống Đa 360 xác nhận số 20. Chưa khảo sát cổng."
+    },
+    {
+      "id": "duc_thanh_tran",
+      "name": "Đền Đức Thánh Trần",
+      "original": {
+        "lat": null,
+        "lng": null,
+        "address": "Khu vực trung tâm Hà Nội; đang kiểm tra địa chỉ",
+        "coord_status": "unlocated"
+      },
+      "google_observation": {
+        "id": "duc_thanh_tran",
+        "query": "Đền Đức Thánh Trần Văn Miếu Hà Nội",
+        "address": "Địa chỉ: 100 Đ. Lê Duẩn, Văn Miếu - Quốc Tử Giám, Hà Nội, Việt Nam ",
+        "headings": [
+          "Đền Đức Thánh Trần",
+          "Thêm thông tin bị thiếu",
+          "Giờ đông khách",
+          "Ảnh và video",
+          "Tóm tắt bài đánh giá"
+        ],
+        "name": "Đền Đức Thánh Trần",
+        "url": "https://www.google.com/maps/place/%C4%90%E1%BB%81n+%C4%90%E1%BB%A9c+Th%C3%A1nh+Tr%E1%BA%A7n/@21.0264671,105.8413571,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abef39cb6b67:0xa458c37156350d0b!8m2!3d21.0264671!4d105.8413571!16s%2Fg%2F11h4fjy5yp?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+        "google_pin": {
+          "lat": 21.0264671,
+          "lng": 105.8413571
+        },
+        "checkedAt": "2026-10-25T14:28:44.032Z",
+        "method": "manual_google_maps_browser_listing_not_places_api",
+        "screenshot": "duc_thanh_tran-google.jpg"
+      },
+      "point_separation_m": null,
+      "assessment": "candidate_only_not_adopted",
+      "google_places_api_verified": false,
+      "entrance_verified": false,
+      "note": "Tìm thấy ứng viên tại 100 Lê Duẩn; cần đối chiếu phạm vi cơ sở với nhãn trong PDF trước khi nhập tọa độ chuẩn."
+    },
+    {
+      "id": "tien_tich",
+      "name": "Chùa Tiên Tích",
+      "original": {
+        "lat": null,
+        "lng": null,
+        "address": "110 phố Lê Duẩn, phường Cửa Nam, Hà Nội",
+        "coord_status": "unlocated"
+      },
+      "google_observation": {
+        "id": "tien_tich",
+        "query": "Chùa Tiên Tích 110 Lê Duẩn Hà Nội",
+        "address": "Địa chỉ: 110 Đ. Lê Duẩn, Văn Miếu - Quốc Tử Giám, Hà Nội, Việt Nam ",
+        "headings": [
+          "Chùa Tiên Tích",
+          "Thêm thông tin bị thiếu",
+          "Ảnh và video",
+          "Tóm tắt bài đánh giá",
+          "Tất cả các bài đánh giá"
+        ],
+        "name": "Chùa Tiên Tích",
+        "url": "https://www.google.com/maps/place/Ch%C3%B9a+Ti%C3%AAn+T%C3%ADch/@21.0262402,105.8413884,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab974e25c6ff:0x9fbc85deda607fd0!8m2!3d21.0262402!4d105.8413884!16s%2Fg%2F1yfh_jsxv?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+        "google_pin": {
+          "lat": 21.0262402,
+          "lng": 105.8413884
+        },
+        "checkedAt": "2026-10-25T14:28:44.684Z",
+        "method": "manual_google_maps_browser_listing_not_places_api",
+        "screenshot": "tien_tich-google.jpg"
+      },
+      "point_separation_m": null,
+      "assessment": "candidate_only_not_adopted",
+      "google_places_api_verified": false,
+      "entrance_verified": false,
+      "note": "Số 110 Lê Duẩn khớp nguồn Thư viện Hà Nội. Nhãn phường trên Google khác nguồn thư viện; không tự chốt địa giới hiện hành."
+    },
+    {
+      "id": "kham_duc_den",
+      "name": "Đền Khâm Đức (thờ Châu Đệ Tứ)",
+      "original": {
+        "lat": null,
+        "lng": null,
+        "address": "Khu vực trung tâm Hà Nội; đang kiểm tra địa chỉ",
+        "coord_status": "unlocated"
+      },
+      "google_observation": {
+        "id": "kham_duc_den",
+        "query": "Đền Khâm Đức Chầu Đệ Tứ Hà Nội",
+        "address": "Địa chỉ: 63 Ng. Chợ Khâm Thiên, Văn Miếu - Quốc Tử Giám, Hà Nội, Việt Nam ",
+        "headings": [
+          "Đền Khâm Đức - thờ Chầu Đệ Tứ",
+          "Thêm thông tin bị thiếu",
+          "Ảnh và video",
+          "Tóm tắt bài đánh giá",
+          "Tất cả các bài đánh giá"
+        ],
+        "name": "Đền Khâm Đức - thờ Chầu Đệ Tứ",
+        "url": "https://www.google.com/maps/place/%C4%90%E1%BB%81n+Kh%C3%A2m+%C4%90%E1%BB%A9c+-+th%E1%BB%9D+Ch%E1%BA%A7u+%C4%90%E1%BB%87+T%E1%BB%A9/@21.0176355,105.838748,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab0039c90633:0x6fb840a8fdc6952e!8m2!3d21.0176355!4d105.838748!16s%2Fg%2F11yjr68xd1?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+        "google_pin": {
+          "lat": 21.0176355,
+          "lng": 105.838748
+        },
+        "checkedAt": "2026-10-25T14:29:49.325Z",
+        "method": "manual_google_maps_browser_listing_not_places_api",
+        "screenshot": "kham_duc_den-google.jpg"
+      },
+      "point_separation_m": null,
+      "assessment": "candidate_only_not_adopted",
+      "google_places_api_verified": false,
+      "entrance_verified": false,
+      "note": "Google có listing Đền Khâm Đức - thờ Chầu Đệ Tứ tại 63 ngõ Chợ Khâm Thiên, khác tên/số nhà với Đình Khâm Đức. Chưa khẳng định hai cơ sở độc lập chỉ từ listing."
+    },
+    {
+      "id": "trung_kinh",
+      "name": "Đình Trung Kính",
+      "original": {
+        "lat": null,
+        "lng": null,
+        "address": "Khu vực trung tâm Hà Nội; đang kiểm tra địa chỉ",
+        "coord_status": "unlocated"
+      },
+      "google_observation": {
+        "id": "trung_kinh",
+        "query": "Đình Trung Kính ngõ Chợ Khâm Thiên Hà Nội — không chọn kết quả Cầu Giấy",
+        "address": "Địa chỉ: 2R8Q+QPC, Ng. Chùa Mỹ Quang, Văn Miếu - Quốc Tử Giám, Hà Nội, Việt Nam ",
+        "headings": [
+          "Đình Trung Kính",
+          "Thêm thông tin bị thiếu",
+          "Ảnh",
+          "Tóm tắt bài đánh giá",
+          "Tất cả các bài đánh giá",
+          "Mọi người cũng tìm kiếm"
+        ],
+        "name": "Đình Trung Kính",
+        "url": "https://www.google.com/maps/place/%C4%90%C3%ACnh+Trung+K%C3%ADnh/@21.0169454,105.8392717,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abec41686d6b:0x7f0db5c35c997ddd!8m2!3d21.0169454!4d105.8392717!16s%2Fg%2F11h51cjyyh?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+        "google_pin": {
+          "lat": 21.0169454,
+          "lng": 105.8392717
+        },
+        "checkedAt": "2026-10-25T14:34:26.315Z",
+        "method": "manual_google_maps_browser_listing_not_places_api",
+        "screenshot": "trung_kinh-google.jpg"
+      },
+      "point_separation_m": null,
+      "assessment": "candidate_only_not_adopted",
+      "google_places_api_verified": false,
+      "entrance_verified": false,
+      "note": "Chọn đúng Đình Trung Kính trong ngõ Chùa Mỹ Quang; loại Trung Kính Thượng/Hạ ở khu Cầu Giấy."
+    },
+    {
+      "id": "thai_kieu",
+      "name": "Đình Thái Kiều",
+      "original": {
+        "lat": null,
+        "lng": null,
+        "address": "Khu vực trung tâm Hà Nội; đang kiểm tra địa chỉ",
+        "coord_status": "unlocated"
+      },
+      "google_observation": {
+        "id": "thai_kieu",
+        "query": "Chọn Đình Thái Kiều trong khu Trung Phụng, không lấy Kiều Mai",
+        "address": "Địa chỉ: 84 Ng. 218 Ng. Chợ Khâm Thiên, Văn Miếu - Quốc Tử Giám, Hà Nội, Việt Nam ",
+        "headings": [
+          "Kết quả",
+          "",
+          "Đình Thái Kiều",
+          "Thêm thông tin bị thiếu",
+          "Ảnh và video",
+          "Tóm tắt bài đánh giá"
+        ],
+        "name": "Đình Thái Kiều",
+        "url": "https://www.google.com/maps/place/%C4%90%C3%ACnh+Tha%CC%81i+Ki%C3%AA%CC%80u/@21.0512089,105.6583511,11z/data=!4m10!1m2!2m1!1zxJDDrG5oIFBo4bunIFRow6FpIEtp4buBdSBUcnVuZyBQaOG7pW5nIEjDoCBO4buZaQ!3m6!1s0x3135abe003a464d9:0x16de96effe8d5052!8m2!3d21.0157923!4d105.836492!15sCjHEkMOsbmggUGjhu6cgVGjDoWkgS2nhu4F1IFRydW5nIFBo4bulbmcgSMOgIE7hu5lpkgEPYnVkZGhpc3RfdGVtcGxl4AEA!16s%2Fg%2F11mp9y68yz?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+        "google_pin": {
+          "lat": 21.0157923,
+          "lng": 105.836492
+        },
+        "checkedAt": "2026-10-25T14:34:08.587Z",
+        "method": "manual_google_maps_browser_listing_not_places_api",
+        "screenshot": "thai_kieu-google.jpg"
+      },
+      "point_separation_m": null,
+      "assessment": "candidate_only_not_adopted",
+      "google_places_api_verified": false,
+      "entrance_verified": false,
+      "note": "Chọn Đình Thái Kiều tại 84 ngõ 218 ngõ Chợ Khâm Thiên; không chọn các kết quả Kiều Mai hoặc di tích ngoài khu vực."
+    }
+  ]
+}

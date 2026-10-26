@@ -1,0 +1,22 @@
+{
+  "name": "dau-chan-di-san-hanoi",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Prototype bản đồ di tích Hà Nội 2.5D — ưu tiên kiểm chứng địa lý",
+  "scripts": {
+    "test": "node scripts/data_test.cjs && node scripts/gis_test.cjs && node scripts/map_test.cjs && node scripts/dom_test.cjs && node scripts/model_test.cjs",
+    "check": "node --check app.js && node --check map-engine.js && node --check gis-layers.js && node --check scripts/sketchup-layer.mjs",
+    "vendor": "node scripts/vendor.cjs",
+    "start": "python -m http.server 8765 --bind localhost",
+    "qa": "python scripts/qa_server.py"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.12",
+    "jsdom": "^26.1.0"
+  },
+  "dependencies": {
+    "leaflet": "1.9.4",
+    "maplibre-gl": "6.15.0",
+    "three": "0.180.0"
+  }
+}

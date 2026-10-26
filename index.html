@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102b29">
+  <meta name="description" content="Bản đồ di sản 2.5D Văn Miếu - Khâm Thiên. Điểm từ dữ liệu địa danh chính thống, 6 tuyến tham quan từ sơ đồ nguồn, trạng thái đối soát minh bạch.">
+  <title>Dấu chân Di sản — Heritage Atlas Hà Nội</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/maplibre-gl.css">
+  <link rel="stylesheet" href="vendor/leaflet.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <svg class="icon-bank" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="i-route" viewBox="0 0 24 24"><circle cx="6" cy="18" r="2"/><path d="M9 18h5a5 5 0 0 0 0-10H9a3 3 0 1 1 0-6h8"/><path d="m14 5 3-3 3 3"/></symbol>
+    <symbol id="i-walk" viewBox="0 0 24 24"><circle cx="13" cy="3.5" r="1.7"/><path d="m9 21 2-6-2-4-4 3M17 21l-3-7-3-2 1-4 4 2 2 4"/></symbol>
+    <symbol id="i-bike" viewBox="0 0 24 24"><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="18.5" cy="17.5" r="3.5"/><path d="m5.5 17.5 4-9h5l4 9M9.5 8.5l3 9h-7M12 5h4"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="7"/><path d="m16 16 5 5"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M13 5h6v6M19 5l-9 9"/><path d="M19 13v6H5V5h6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m4 12 5 5L20 6"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><path d="m12 3 10 18H2L12 3Z"/><path d="M12 9v5m0 3v.1"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 2 9 5-9 5-9-5 9-5Zm-9 10 9 5 9-5M3 17l9 5 9-5"/></symbol>
+    <symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m16 8-2.5 5.5L8 16l2.5-5.5L16 8Z"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M5 5 19 19M19 5 5 19"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect width="13" height="13" x="8" y="8" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></symbol>
+    <symbol id="i-filter" viewBox="0 0 24 24"><path d="M3 5h18M7 12h10m-7 7h4"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M12 5c-3-2-6-2-9-1v15c3-1 6-1 9 1 3-2 6-2 9-1V4c-3-1-6-1-9 1ZM12 5v15"/></symbol>
+  </svg>
+
+  <header class="topbar">
+    <div class="brand-wrap">
+      <div class="brand-symbol"><span class="roof">⌃</span><span class="pillar">▥</span></div>
+      <div class="brand-copy"><span class="brand-name">DẤU CHÂN <em>DI SẢN</em></span><span class="brand-tagline">HERITAGE ATLAS · HÀ NỘI</span></div>
+    </div>
+    <div class="topbar-center"><span class="status-dot"></span> Hành trình qua những lớp ký ức Thăng Long <span class="top-divider"></span> BẢN XEM TRƯỚC DỮ LIỆU</div>
+    <div class="topbar-right"><a class="top-link" href="data/site-audit.csv" download><svg class="icon"><use href="#i-book"/></svg> Tải bảng 32 điểm</a><button class="menu-toggle" id="menu-toggle" aria-label="Mở tuyến và tìm di tích" aria-expanded="false" aria-controls="sidebar"><svg class="icon"><use href="#i-filter"/></svg><span>Tuyến & địa điểm</span></button><span class="edition-tag">BETA · 2026</span></div>
+  </header>
+
+  <main class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <button type="button" id="sidebar-close" class="panel-close" aria-label="Đóng danh sách tuyến">×</button>
+      <div class="sidebar-scroll">
+        <div class="eyebrow"><span class="eyebrow-line"></span> KHÁM PHÁ HÀ NỘI</div>
+        <h1>Di sản trong<br><em>từng bước chân.</em></h1>
+        <p class="hero-subtitle">Bản đồ 2.5D với vị trí đối soát từ địa danh chính thống và 6 hành trình của tài liệu gốc.</p>
+
+        <div class="metrics">
+          <div class="metric"><b id="metric-geocoded">25</b><span>điểm có tọa độ</span></div>
+          <div class="metric-divider"></div>
+          <div class="metric"><b>06</b><span>hành trình</span></div>
+          <div class="metric-divider"></div>
+          <div class="metric"><b>37</b><span>mục tiêu</span></div>
+        </div>
+
+        <div class="section-row route-heading"><div><div class="kicker">BƯỚC 01</div><h2>Chọn tuyến tham quan</h2></div><span class="mini-count">06 tuyến</span></div>
+        <div class="tabs" role="tablist" aria-label="Lọc loại tuyến">
+          <button id="tab-all" class="tab active" data-category="all" role="tab" aria-selected="true">Tất cả</button>
+          <button id="tab-walk" class="tab" data-category="walk" role="tab" aria-selected="false"><svg class="icon"><use href="#i-walk"/></svg> Đi bộ</button>
+          <button id="tab-motorbike" class="tab" data-category="motorbike" role="tab" aria-selected="false"><svg class="icon"><use href="#i-bike"/></svg> Xe máy</button>
+        </div>
+        <div class="route-list" id="route-list" aria-live="polite"></div>
+
+        <div class="section-row site-heading"><div><div class="kicker">BƯỚC 02</div><h2>Khám phá địa điểm</h2></div><span class="mini-count" id="site-count">32 điểm</span></div>
+        <label class="search-field"><svg class="icon"><use href="#i-search"/></svg><input id="site-search" type="search" placeholder="Tìm tên di tích..." autocomplete="off"><span class="search-key">⌕</span></label>
+        <div class="site-list" id="site-list" aria-live="polite"></div>
+
+        <div class="sidebar-footnote"><svg class="icon"><use href="#i-alert"/></svg><p>PDF thể hiện 33 nhãn, tương ứng 32 địa điểm sau khi gộp tên trùng. <strong>Chênh 5 địa điểm so với mục tiêu 37; cần danh mục chính thức để xác định.</strong></p></div>
+      </div>
+    </aside>
+
+    <section class="map-wrap" aria-label="Bản đồ địa điểm di sản">
+      <div id="map" role="application" aria-label="Bản đồ OpenStreetMap tương tác, các điểm di tích có tọa độ chuyển đổi từ VN-2000"></div>
+      <div id="map-failure" class="map-failure" hidden role="alert"><strong>Chưa tải được nền đường phố.</strong><span>Danh sách và chi tiết vẫn dùng được. Nhấn Tải lại khi có mạng.</span></div>
+
+      <div class="map-caption"><span class="tiny-dot"></span> HÀ NỘI · VĂN MIẾU – KHÂM THIÊN <span class="cap-separator">/</span><span id="view-caption">ĐƯỜNG PHỐ & NHÀ OSM</span></div>
+      <div class="map-status" id="map-status" role="status" aria-live="polite"><span id="map-status-text">Đang khởi tạo bản đồ…</span><button type="button" id="map-retry">Tải lại</button><button type="button" id="map-raster" title="Dùng bản đồ đường phố 2D không cần WebGL">Nền 2D</button></div>
+        <div class="map-control-group">
+        <button id="map-perspective" class="map-control" title="Chuyển góc nhìn 2D / 2.5D"><svg class="icon"><use href="#i-layers"/></svg><span id="perspective-label">2.5D</span></button>
+        <button id="map-model" type="button" class="map-control" title="Bật hoặc tắt công trình SketchUp" aria-pressed="false">SketchUp</button>
+        <button id="map-reset" class="map-control icon-only" title="Về toàn cảnh"><svg class="icon"><use href="#i-compass"/></svg></button>
+        <button id="map-zoom-in" class="map-control square-control" title="Phóng to">+</button>
+        <button id="map-zoom-out" class="map-control square-control" title="Thu nhỏ">−</button>
+      </div>
+
+      <div id="floating-route" class="floating-route" hidden></div>
+
+      <details class="map-key" id="map-key"><summary class="map-key-title">CHÚ GIẢI & KIỂM SOÁT LỚP</summary>
+        <div class="map-key-entry"><span class="key-pin official"></span> 25 tâm địa danh · Thông tư 10/2022</div><div class="map-key-entry"><span class="key-pin missing"></span> 7 điểm chờ định vị · xem danh sách</div><div class="map-key-entry"><span class="key-dash"></span> Nét nối sơ đồ, <strong>không phải đường đi</strong></div>
+        <fieldset class="gis-layer-controls">
+          <legend>Các lớp hiển thị</legend>
+          <label><input id="layer-osm-base" type="checkbox" data-map-base checked><span class="gis-swatch gis-road"></span>Bản đồ nền OSM</label>
+          <label><input id="layer-gis-roads" type="checkbox" data-gis-group="roads"><span class="gis-swatch gis-road"></span>Đường GIS</label>
+          <label><input id="layer-gis-water" type="checkbox" data-gis-group="water"><span class="gis-swatch gis-water"></span>Nước GIS</label>
+          <label><input id="layer-gis-railways" type="checkbox" data-gis-group="railways"><span class="gis-swatch gis-rail"></span>Đường sắt GIS</label>
+          <label><input id="layer-osm-buildings" type="checkbox" data-map-buildings><span class="gis-swatch gis-context"></span>Nhà 3D OSM</label>
+          <label><input id="layer-sketchup" type="checkbox" data-map-sketchup><span class="gis-swatch gis-boundary"></span>Công trình SketchUp</label>
+          <label><input id="layer-markers" type="checkbox" data-map-markers checked><span class="key-pin official"></span>Marker di tích</label>
+          <label><input id="layer-sketchup-buildings" type="checkbox" data-sketchup-layer="TPX_BUILDINGS" checked disabled><span class="gis-swatch gis-context"></span>Nhà trong SketchUp</label>
+          <label><input id="layer-sketchup-details" type="checkbox" data-sketchup-layer="noithat" checked disabled><span class="gis-swatch gis-context"></span>Nội thất SketchUp</label>
+          <label><input id="layer-sketchup-blocks" type="checkbox" data-sketchup-layer="nha_khoi" checked disabled><span class="gis-swatch gis-context"></span>Khối nhà SketchUp</label>
+          <label><input id="layer-sketchup-annotations" type="checkbox" data-sketchup-layer="timngo" checked disabled><span class="gis-swatch gis-context"></span>Nhãn/hướng dẫn SketchUp</label>
+          <label><input id="layer-sketchup-roads" type="checkbox" data-sketchup-layer="TPX_ROADS_HATCH" disabled><span class="gis-swatch gis-road"></span>Đường SketchUp</label>
+          <label><input id="layer-sketchup-water" type="checkbox" data-sketchup-layer="TPX_WATERWAYS_HATCH" disabled><span class="gis-swatch gis-water"></span>Nước SketchUp</label>
+          <label><input id="layer-sketchup-terrain" type="checkbox" data-sketchup-layer="TPX_TERRAIN_TERRAIN_MESH" disabled><span class="gis-swatch gis-boundary"></span>Nền trắng / địa hình SketchUp</label>
+          <label><input id="layer-sketchup-green" type="checkbox" data-sketchup-layer="TPX_VEGETATION_GREEN_SPACES_HATCH" disabled><span class="gis-swatch gis-context"></span>Mảng xanh SketchUp</label>
+          <label><input id="layer-gis-boundaries" type="checkbox" data-gis-group="boundaries"><span class="gis-swatch gis-supplementary"></span>Ranh giới GIS</label>
+        </fieldset>
+        <p id="gis-layer-status" role="status">Đang nạp lớp GIS…</p>
+        <p class="gis-attribution">Nền, đường phố, nhãn và nhà 3D OSM dùng dữ liệu OpenFreeMap/OpenMapTiles © OpenStreetMap. Các lớp GIS cục bộ cũng ghi nhận dữ liệu OSM; bật đồng thời có thể làm nét đường, nước và đường sắt trùng nhau.</p>
+        <p id="model-status" role="status">SketchUp tắt mặc định. Tọa độ suy ra từ hình học GIS, chưa được khảo sát.</p>
+        <p id="building-note">Mô hình SketchUp chưa có georeference. Chỉ bật sau khi kiểm tra; địa hình và hatch đường/nước đang ẩn để không phủ nền hoặc lặp lớp GIS.</p>
+      </details>
+      <div class="map-bottom-banner"><svg class="icon"><use href="#i-alert"/></svg><span><strong>Dữ liệu tham khảo:</strong> Tâm địa danh đã chuyển VN-2000 → WGS84. Chưa xác minh cổng, lối xe máy, đường đi và Google Place ID.</span><a href="data/site-audit.csv" download>Kiểm tra nguồn <svg class="icon"><use href="#i-arrow"/></svg></a></div>
+    </section>
+
+    <aside class="details" id="details" aria-label="Chi tiết di tích"><button type="button" id="details-close" class="panel-close" aria-label="Đóng chi tiết di tích">×</button><div id="details-content" class="details-content"></div></aside>
+  </main>
+
+  <script src="data.js"></script>
+  <script src="vendor/maplibre-gl.js"></script>
+  <script src="vendor/leaflet.js"></script>
+  <script src="vendor/sketchup-model.js"></script>
+  <script src="map-engine.js"></script>
+  <script src="gis-layers.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

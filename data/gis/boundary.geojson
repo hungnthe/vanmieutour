@@ -1,0 +1,82 @@
+{
+  "type": "FeatureCollection",
+  "name": "boundary",
+  "metadata": {
+    "source_layer": "QTG_RanhGioi",
+    "source_crs": "EPSG:4326",
+    "target_crs": "EPSG:4326",
+    "render_on_map": true,
+    "attribution": "OpenStreetMap-derived layers carry © OpenStreetMap contributors attribution. Source bundle has no separate license file; verify terms before redistribution."
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "QTG_RanhGioi.0001",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.8415796743118,
+              21.02886531123692
+            ],
+            [
+              105.8359357705209,
+              21.03046825473816
+            ],
+            [
+              105.8341955829636,
+              21.0277462692833
+            ],
+            [
+              105.8298217409784,
+              21.01828494585063
+            ],
+            [
+              105.8323766422322,
+              21.01604023962769
+            ],
+            [
+              105.8350632337853,
+              21.01329815669743
+            ],
+            [
+              105.837274366163,
+              21.01081639043589
+            ],
+            [
+              105.8383795756425,
+              21.00933407788619
+            ],
+            [
+              105.8395886854387,
+              21.00839642159431
+            ],
+            [
+              105.8405559501079,
+              21.00781585216302
+            ],
+            [
+              105.8413496018567,
+              21.00768958583906
+            ],
+            [
+              105.8413824602135,
+              21.02019694274843
+            ],
+            [
+              105.8415796743118,
+              21.02886531123692
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "Name": "VM-QTG",
+        "_source_layer": "QTG_RanhGioi",
+        "_source_record": 1,
+        "_review_only": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,1004 @@
+{
+  "url": "http://localhost:8766/",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "screenshots": [
+    "01-osm-base.png",
+    "02-gis-roads.png",
+    "03-gis-water.png",
+    "04-gis-railways.png",
+    "05-gis-boundaries.png",
+    "06-osm-3d-buildings.png",
+    "07-heritage-markers.png",
+    "08-sketchup-model-default-sublayers.png",
+    "09-sketchup-buildings.png",
+    "10-sketchup-interiors.png",
+    "11-sketchup-building-blocks.png",
+    "12-sketchup-labels-and-guides.png",
+    "13-sketchup-road-hatch.png",
+    "14-sketchup-water-hatch.png",
+    "15-sketchup-terrain-white-base.png",
+    "16-sketchup-green-spaces.png",
+    "17-composite-gis-overlays-and-markers.png",
+    "18-osm-and-gis-overlap-check.png",
+    "19-final-safe-osm-composite.png",
+    "20-mobile-layer-controls.png"
+  ],
+  "defaultLayerState": {
+    "osmBase": true,
+    "gisOverlays": false,
+    "osmBuildings": false,
+    "sketchup": false,
+    "markers": true
+  },
+  "sketchupLayerState": {
+    "renderer": "vector",
+    "model": "ready",
+    "buildings": "hidden"
+  },
+  "captures": [
+    {
+      "name": "01-osm-base",
+      "renderer": "vector",
+      "model": "idle",
+      "base": true,
+      "osm3d": {
+        "visibility": "none",
+        "rendered": 0
+      },
+      "sketchup": false,
+      "sketchupGroups": {
+        "TPX_BUILDINGS": null,
+        "noithat": null,
+        "nha_khoi": null,
+        "timngo": null,
+        "TPX_ROADS_HATCH": null,
+        "TPX_WATERWAYS_HATCH": null,
+        "TPX_TERRAIN_TERRAIN_MESH": null,
+        "TPX_VEGETATION_GREEN_SPACES_HATCH": null
+      },
+      "gis": {
+        "gis-roads": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-water-fill": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-railways_area": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-railways_context": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-boundary": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-boundary_supplementary": {
+          "visibility": "none",
+          "rendered": 0
+        }
+      },
+      "markers": 0
+    },
+    {
+      "name": "02-gis-roads",
+      "renderer": "vector",
+      "model": "idle",
+      "base": false,
+      "osm3d": {
+        "visibility": "none",
+        "rendered": 0
+      },
+      "sketchup": false,
+      "sketchupGroups": {
+        "TPX_BUILDINGS": null,
+        "noithat": null,
+        "nha_khoi": null,
+        "timngo": null,
+        "TPX_ROADS_HATCH": null,
+        "TPX_WATERWAYS_HATCH": null,
+        "TPX_TERRAIN_TERRAIN_MESH": null,
+        "TPX_VEGETATION_GREEN_SPACES_HATCH": null
+      },
+      "gis": {
+        "gis-roads": {
+          "visibility": "visible",
+          "rendered": 1070
+        },
+        "gis-water-fill": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-railways_area": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-railways_context": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-boundary": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-boundary_supplementary": {
+          "visibility": "none",
+          "rendered": 0
+        }
+      },
+      "markers": 0
+    },
+    {
+      "name": "03-gis-water",
+      "renderer": "vector",
+      "model": "idle",
+      "base": false,
+      "osm3d": {
+        "visibility": "none",
+        "rendered": 0
+      },
+      "sketchup": false,
+      "sketchupGroups": {
+        "TPX_BUILDINGS": null,
+        "noithat": null,
+        "nha_khoi": null,
+        "timngo": null,
+        "TPX_ROADS_HATCH": null,
+        "TPX_WATERWAYS_HATCH": null,
+        "TPX_TERRAIN_TERRAIN_MESH": null,
+        "TPX_VEGETATION_GREEN_SPACES_HATCH": null
+      },
+      "gis": {
+        "gis-roads": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-water-fill": {
+          "visibility": "visible",
+          "rendered": 14
+        },
+        "gis-railways_area": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-railways_context": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-boundary": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-boundary_supplementary": {
+          "visibility": "none",
+          "rendered": 0
+        }
+      },
+      "markers": 0
+    },
+    {
+      "name": "04-gis-railways",
+      "renderer": "vector",
+      "model": "idle",
+      "base": false,
+      "osm3d": {
+        "visibility": "none",
+        "rendered": 0
+      },
+      "sketchup": false,
+      "sketchupGroups": {
+        "TPX_BUILDINGS": null,
+        "noithat": null,
+        "nha_khoi": null,
+        "timngo": null,
+        "TPX_ROADS_HATCH": null,
+        "TPX_WATERWAYS_HATCH": null,
+        "TPX_TERRAIN_TERRAIN_MESH": null,
+        "TPX_VEGETATION_GREEN_SPACES_HATCH": null
+      },
+      "gis": {
+        "gis-roads": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-water-fill": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-railways_area": {
+          "visibility": "visible",
+          "rendered": 100
+        },
+        "gis-railways_context": {
+          "visibility": "visible",
+          "rendered": 139
+        },
+        "gis-boundary": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-boundary_supplementary": {
+          "visibility": "none",
+          "rendered": 0
+        }
+      },
+      "markers": 0
+    },
+    {
+      "name": "05-gis-boundaries",
+      "renderer": "vector",
+      "model": "idle",
+      "base": false,
+      "osm3d": {
+        "visibility": "none",
+        "rendered": 0
+      },
+      "sketchup": false,
+      "sketchupGroups": {
+        "TPX_BUILDINGS": null,
+        "noithat": null,
+        "nha_khoi": null,
+        "timngo": null,
+        "TPX_ROADS_HATCH": null,
+        "TPX_WATERWAYS_HATCH": null,
+        "TPX_TERRAIN_TERRAIN_MESH": null,
+        "TPX_VEGETATION_GREEN_SPACES_HATCH": null
+      },
+      "gis": {
+        "gis-roads": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-water-fill": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-railways_area": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-railways_context": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-boundary": {
+          "visibility": "visible",
+          "rendered": 2
+        },
+        "gis-boundary_supplementary": {
+          "visibility": "visible",
+          "rendered": 2
+        }
+      },
+      "markers": 0
+    },
+    {
+      "name": "06-osm-3d-buildings",
+      "renderer": "vector",
+      "model": "idle",
+      "base": true,
+      "osm3d": {
+        "visibility": "visible",
+        "rendered": 54
+      },
+      "sketchup": false,
+      "sketchupGroups": {
+        "TPX_BUILDINGS": null,
+        "noithat": null,
+        "nha_khoi": null,
+        "timngo": null,
+        "TPX_ROADS_HATCH": null,
+        "TPX_WATERWAYS_HATCH": null,
+        "TPX_TERRAIN_TERRAIN_MESH": null,
+        "TPX_VEGETATION_GREEN_SPACES_HATCH": null
+      },
+      "gis": {
+        "gis-roads": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-water-fill": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-railways_area": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-railways_context": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-boundary": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-boundary_supplementary": {
+          "visibility": "none",
+          "rendered": 0
+        }
+      },
+      "markers": 0
+    },
+    {
+      "name": "07-heritage-markers",
+      "renderer": "vector",
+      "model": "idle",
+      "base": false,
+      "osm3d": {
+        "visibility": "none",
+        "rendered": 0
+      },
+      "sketchup": false,
+      "sketchupGroups": {
+        "TPX_BUILDINGS": null,
+        "noithat": null,
+        "nha_khoi": null,
+        "timngo": null,
+        "TPX_ROADS_HATCH": null,
+        "TPX_WATERWAYS_HATCH": null,
+        "TPX_TERRAIN_TERRAIN_MESH": null,
+        "TPX_VEGETATION_GREEN_SPACES_HATCH": null
+      },
+      "gis": {
+        "gis-roads": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-water-fill": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-railways_area": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-railways_context": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-boundary": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-boundary_supplementary": {
+          "visibility": "none",
+          "rendered": 0
+        }
+      },
+      "markers": 25
+    },
+    {
+      "name": "08-sketchup-model-default-sublayers",
+      "renderer": "vector",
+      "model": "ready",
+      "base": false,
+      "osm3d": {
+        "visibility": "none",
+        "rendered": 0
+      },
+      "sketchup": true,
+      "sketchupGroups": {
+        "TPX_BUILDINGS": true,
+        "noithat": true,
+        "nha_khoi": true,
+        "timngo": true,
+        "TPX_ROADS_HATCH": false,
+        "TPX_WATERWAYS_HATCH": false,
+        "TPX_TERRAIN_TERRAIN_MESH": false,
+        "TPX_VEGETATION_GREEN_SPACES_HATCH": false
+      },
+      "gis": {
+        "gis-roads": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-water-fill": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-railways_area": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-railways_context": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-boundary": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-boundary_supplementary": {
+          "visibility": "none",
+          "rendered": 0
+        }
+      },
+      "markers": 0
+    },
+    {
+      "name": "09-sketchup-buildings",
+      "renderer": "vector",
+      "model": "ready",
+      "base": false,
+      "osm3d": {
+        "visibility": "none",
+        "rendered": 0
+      },
+      "sketchup": true,
+      "sketchupGroups": {
+        "TPX_BUILDINGS": true,
+        "noithat": false,
+        "nha_khoi": false,
+        "timngo": false,
+        "TPX_ROADS_HATCH": false,
+        "TPX_WATERWAYS_HATCH": false,
+        "TPX_TERRAIN_TERRAIN_MESH": false,
+        "TPX_VEGETATION_GREEN_SPACES_HATCH": false
+      },
+      "gis": {
+        "gis-roads": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-water-fill": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-railways_area": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-railways_context": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-boundary": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-boundary_supplementary": {
+          "visibility": "none",
+          "rendered": 0
+        }
+      },
+      "markers": 0
+    },
+    {
+      "name": "10-sketchup-interiors",
+      "renderer": "vector",
+      "model": "ready",
+      "base": false,
+      "osm3d": {
+        "visibility": "none",
+        "rendered": 0
+      },
+      "sketchup": true,
+      "sketchupGroups": {
+        "TPX_BUILDINGS": false,
+        "noithat": true,
+        "nha_khoi": false,
+        "timngo": false,
+        "TPX_ROADS_HATCH": false,
+        "TPX_WATERWAYS_HATCH": false,
+        "TPX_TERRAIN_TERRAIN_MESH": false,
+        "TPX_VEGETATION_GREEN_SPACES_HATCH": false
+      },
+      "gis": {
+        "gis-roads": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-water-fill": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-railways_area": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-railways_context": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-boundary": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-boundary_supplementary": {
+          "visibility": "none",
+          "rendered": 0
+        }
+      },
+      "markers": 0
+    },
+    {
+      "name": "11-sketchup-building-blocks",
+      "renderer": "vector",
+      "model": "ready",
+      "base": false,
+      "osm3d": {
+        "visibility": "none",
+        "rendered": 0
+      },
+      "sketchup": true,
+      "sketchupGroups": {
+        "TPX_BUILDINGS": false,
+        "noithat": false,
+        "nha_khoi": true,
+        "timngo": false,
+        "TPX_ROADS_HATCH": false,
+        "TPX_WATERWAYS_HATCH": false,
+        "TPX_TERRAIN_TERRAIN_MESH": false,
+        "TPX_VEGETATION_GREEN_SPACES_HATCH": false
+      },
+      "gis": {
+        "gis-roads": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-water-fill": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-railways_area": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-railways_context": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-boundary": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-boundary_supplementary": {
+          "visibility": "none",
+          "rendered": 0
+        }
+      },
+      "markers": 0
+    },
+    {
+      "name": "12-sketchup-labels-and-guides",
+      "renderer": "vector",
+      "model": "ready",
+      "base": false,
+      "osm3d": {
+        "visibility": "none",
+        "rendered": 0
+      },
+      "sketchup": true,
+      "sketchupGroups": {
+        "TPX_BUILDINGS": false,
+        "noithat": false,
+        "nha_khoi": false,
+        "timngo": true,
+        "TPX_ROADS_HATCH": false,
+        "TPX_WATERWAYS_HATCH": false,
+        "TPX_TERRAIN_TERRAIN_MESH": false,
+        "TPX_VEGETATION_GREEN_SPACES_HATCH": false
+      },
+      "gis": {
+        "gis-roads": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-water-fill": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-railways_area": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-railways_context": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-boundary": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-boundary_supplementary": {
+          "visibility": "none",
+          "rendered": 0
+        }
+      },
+      "markers": 0
+    },
+    {
+      "name": "13-sketchup-road-hatch",
+      "renderer": "vector",
+      "model": "ready",
+      "base": false,
+      "osm3d": {
+        "visibility": "none",
+        "rendered": 0
+      },
+      "sketchup": true,
+      "sketchupGroups": {
+        "TPX_BUILDINGS": false,
+        "noithat": false,
+        "nha_khoi": false,
+        "timngo": false,
+        "TPX_ROADS_HATCH": true,
+        "TPX_WATERWAYS_HATCH": false,
+        "TPX_TERRAIN_TERRAIN_MESH": false,
+        "TPX_VEGETATION_GREEN_SPACES_HATCH": false
+      },
+      "gis": {
+        "gis-roads": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-water-fill": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-railways_area": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-railways_context": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-boundary": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-boundary_supplementary": {
+          "visibility": "none",
+          "rendered": 0
+        }
+      },
+      "markers": 0
+    },
+    {
+      "name": "14-sketchup-water-hatch",
+      "renderer": "vector",
+      "model": "ready",
+      "base": false,
+      "osm3d": {
+        "visibility": "none",
+        "rendered": 0
+      },
+      "sketchup": true,
+      "sketchupGroups": {
+        "TPX_BUILDINGS": false,
+        "noithat": false,
+        "nha_khoi": false,
+        "timngo": false,
+        "TPX_ROADS_HATCH": false,
+        "TPX_WATERWAYS_HATCH": true,
+        "TPX_TERRAIN_TERRAIN_MESH": false,
+        "TPX_VEGETATION_GREEN_SPACES_HATCH": false
+      },
+      "gis": {
+        "gis-roads": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-water-fill": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-railways_area": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-railways_context": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-boundary": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-boundary_supplementary": {
+          "visibility": "none",
+          "rendered": 0
+        }
+      },
+      "markers": 0
+    },
+    {
+      "name": "15-sketchup-terrain-white-base",
+      "renderer": "vector",
+      "model": "ready",
+      "base": false,
+      "osm3d": {
+        "visibility": "none",
+        "rendered": 0
+      },
+      "sketchup": true,
+      "sketchupGroups": {
+        "TPX_BUILDINGS": false,
+        "noithat": false,
+        "nha_khoi": false,
+        "timngo": false,
+        "TPX_ROADS_HATCH": false,
+        "TPX_WATERWAYS_HATCH": false,
+        "TPX_TERRAIN_TERRAIN_MESH": true,
+        "TPX_VEGETATION_GREEN_SPACES_HATCH": false
+      },
+      "gis": {
+        "gis-roads": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-water-fill": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-railways_area": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-railways_context": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-boundary": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-boundary_supplementary": {
+          "visibility": "none",
+          "rendered": 0
+        }
+      },
+      "markers": 0
+    },
+    {
+      "name": "16-sketchup-green-spaces",
+      "renderer": "vector",
+      "model": "ready",
+      "base": false,
+      "osm3d": {
+        "visibility": "none",
+        "rendered": 0
+      },
+      "sketchup": true,
+      "sketchupGroups": {
+        "TPX_BUILDINGS": false,
+        "noithat": false,
+        "nha_khoi": false,
+        "timngo": false,
+        "TPX_ROADS_HATCH": false,
+        "TPX_WATERWAYS_HATCH": false,
+        "TPX_TERRAIN_TERRAIN_MESH": false,
+        "TPX_VEGETATION_GREEN_SPACES_HATCH": true
+      },
+      "gis": {
+        "gis-roads": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-water-fill": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-railways_area": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-railways_context": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-boundary": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-boundary_supplementary": {
+          "visibility": "none",
+          "rendered": 0
+        }
+      },
+      "markers": 0
+    },
+    {
+      "name": "17-composite-gis-overlays-and-markers",
+      "renderer": "vector",
+      "model": "ready",
+      "base": false,
+      "osm3d": {
+        "visibility": "none",
+        "rendered": 0
+      },
+      "sketchup": false,
+      "sketchupGroups": {
+        "TPX_BUILDINGS": true,
+        "noithat": true,
+        "nha_khoi": true,
+        "timngo": true,
+        "TPX_ROADS_HATCH": false,
+        "TPX_WATERWAYS_HATCH": false,
+        "TPX_TERRAIN_TERRAIN_MESH": false,
+        "TPX_VEGETATION_GREEN_SPACES_HATCH": false
+      },
+      "gis": {
+        "gis-roads": {
+          "visibility": "visible",
+          "rendered": 1070
+        },
+        "gis-water-fill": {
+          "visibility": "visible",
+          "rendered": 14
+        },
+        "gis-railways_area": {
+          "visibility": "visible",
+          "rendered": 100
+        },
+        "gis-railways_context": {
+          "visibility": "visible",
+          "rendered": 139
+        },
+        "gis-boundary": {
+          "visibility": "visible",
+          "rendered": 2
+        },
+        "gis-boundary_supplementary": {
+          "visibility": "visible",
+          "rendered": 2
+        }
+      },
+      "markers": 25
+    },
+    {
+      "name": "18-osm-and-gis-overlap-check",
+      "renderer": "vector",
+      "model": "ready",
+      "base": true,
+      "osm3d": {
+        "visibility": "none",
+        "rendered": 0
+      },
+      "sketchup": false,
+      "sketchupGroups": {
+        "TPX_BUILDINGS": true,
+        "noithat": true,
+        "nha_khoi": true,
+        "timngo": true,
+        "TPX_ROADS_HATCH": false,
+        "TPX_WATERWAYS_HATCH": false,
+        "TPX_TERRAIN_TERRAIN_MESH": false,
+        "TPX_VEGETATION_GREEN_SPACES_HATCH": false
+      },
+      "gis": {
+        "gis-roads": {
+          "visibility": "visible",
+          "rendered": 1070
+        },
+        "gis-water-fill": {
+          "visibility": "visible",
+          "rendered": 14
+        },
+        "gis-railways_area": {
+          "visibility": "visible",
+          "rendered": 100
+        },
+        "gis-railways_context": {
+          "visibility": "visible",
+          "rendered": 139
+        },
+        "gis-boundary": {
+          "visibility": "visible",
+          "rendered": 2
+        },
+        "gis-boundary_supplementary": {
+          "visibility": "visible",
+          "rendered": 2
+        }
+      },
+      "markers": 0
+    },
+    {
+      "name": "19-final-safe-osm-composite",
+      "renderer": "vector",
+      "model": "ready",
+      "base": true,
+      "osm3d": {
+        "visibility": "none",
+        "rendered": 0
+      },
+      "sketchup": false,
+      "sketchupGroups": {
+        "TPX_BUILDINGS": true,
+        "noithat": true,
+        "nha_khoi": true,
+        "timngo": true,
+        "TPX_ROADS_HATCH": false,
+        "TPX_WATERWAYS_HATCH": false,
+        "TPX_TERRAIN_TERRAIN_MESH": false,
+        "TPX_VEGETATION_GREEN_SPACES_HATCH": false
+      },
+      "gis": {
+        "gis-roads": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-water-fill": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-railways_area": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-railways_context": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-boundary": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-boundary_supplementary": {
+          "visibility": "none",
+          "rendered": 0
+        }
+      },
+      "markers": 25
+    },
+    {
+      "name": "20-mobile-layer-controls",
+      "renderer": "vector",
+      "model": "ready",
+      "base": true,
+      "osm3d": {
+        "visibility": "none",
+        "rendered": 0
+      },
+      "sketchup": false,
+      "sketchupGroups": {
+        "TPX_BUILDINGS": true,
+        "noithat": true,
+        "nha_khoi": true,
+        "timngo": true,
+        "TPX_ROADS_HATCH": false,
+        "TPX_WATERWAYS_HATCH": false,
+        "TPX_TERRAIN_TERRAIN_MESH": false,
+        "TPX_VEGETATION_GREEN_SPACES_HATCH": false
+      },
+      "gis": {
+        "gis-roads": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-water-fill": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-railways_area": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-railways_context": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-boundary": {
+          "visibility": "none",
+          "rendered": 0
+        },
+        "gis-boundary_supplementary": {
+          "visibility": "none",
+          "rendered": 0
+        }
+      },
+      "markers": 25
+    }
+  ],
+  "pageErrors": []
+}

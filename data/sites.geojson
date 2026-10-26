@@ -1,0 +1,456 @@
+{
+  "type": "FeatureCollection",
+  "name": "heritage-gazette-centroids-review-only",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8357716,
+          21.0287364
+        ]
+      },
+      "properties": {
+        "id": "van_mieu",
+        "name": "Văn Miếu – Quốc Tử Giám",
+        "kind": "di-tích",
+        "status": "gazette_centroid",
+        "gazette_page": 40,
+        "accuracy_note": "VN-2000 converted centroid, not visitor entrance"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.835216,
+          21.0265142
+        ]
+      },
+      "properties": {
+        "id": "ho_van",
+        "name": "Hồ Văn – Gò Kim Châu",
+        "kind": "hồ",
+        "status": "gazette_centroid",
+        "gazette_page": 37,
+        "accuracy_note": "VN-2000 converted centroid, not visitor entrance"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8366049,
+          21.0290142
+        ]
+      },
+      "properties": {
+        "id": "ba_nanh",
+        "name": "Chùa Bà Nành (Tiên Phúc tự)",
+        "kind": "chùa",
+        "status": "gazette_centroid",
+        "gazette_page": 40,
+        "accuracy_note": "VN-2000 converted centroid, not visitor entrance"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8374383,
+          21.0290142
+        ]
+      },
+      "properties": {
+        "id": "ngoc_ho",
+        "name": "Chùa Ngọc Hồ (Bà Ngô)",
+        "kind": "chùa",
+        "status": "gazette_centroid",
+        "gazette_page": 40,
+        "accuracy_note": "VN-2000 converted centroid, not visitor entrance"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8396605,
+          21.0270697
+        ]
+      },
+      "properties": {
+        "id": "y_mieu",
+        "name": "Y Miếu",
+        "kind": "đền",
+        "status": "gazette_centroid",
+        "gazette_page": 40,
+        "accuracy_note": "VN-2000 converted centroid, not visitor entrance"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.832716,
+          21.0229031
+        ]
+      },
+      "properties": {
+        "id": "huy_van",
+        "name": "Chùa Huy Văn",
+        "kind": "chùa",
+        "status": "gazette_centroid",
+        "gazette_page": 40,
+        "accuracy_note": "VN-2000 converted centroid, not visitor entrance"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8329938,
+          21.0234587
+        ]
+      },
+      "properties": {
+        "id": "van_chi",
+        "name": "Đền Văn Chỉ",
+        "kind": "đền",
+        "status": "gazette_centroid",
+        "gazette_page": 40,
+        "accuracy_note": "VN-2000 converted centroid, not visitor entrance"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8379938,
+          21.0265142
+        ]
+      },
+      "properties": {
+        "id": "pho_giac",
+        "name": "Chùa Phổ Giác",
+        "kind": "chùa",
+        "status": "gazette_centroid",
+        "gazette_page": 40,
+        "accuracy_note": "VN-2000 converted centroid, not visitor entrance"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8385492,
+          21.0187364
+        ]
+      },
+      "properties": {
+        "id": "kham_thien",
+        "name": "Đài tưởng niệm Khâm Thiên",
+        "kind": "tưởng-niệm",
+        "status": "gazette_centroid",
+        "gazette_page": 31,
+        "accuracy_note": "VN-2000 converted centroid, not visitor entrance"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8382714,
+          21.0120697
+        ]
+      },
+      "properties": {
+        "id": "trung_tu_dinh",
+        "name": "Đình làng Trung Tự",
+        "kind": "đình",
+        "status": "gazette_centroid",
+        "gazette_page": 35,
+        "accuracy_note": "VN-2000 converted centroid, not visitor entrance"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8382714,
+          21.0106808
+        ]
+      },
+      "properties": {
+        "id": "kim_lien",
+        "name": "Đền Kim Liên (Đình Kim Liên)",
+        "kind": "đền",
+        "status": "gazette_centroid",
+        "gazette_page": 35,
+        "accuracy_note": "VN-2000 converted centroid, not visitor entrance"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8354938,
+          21.0237364
+        ]
+      },
+      "properties": {
+        "id": "van_huong",
+        "name": "Đình Văn Hương",
+        "kind": "đình",
+        "status": "gazette_centroid",
+        "gazette_page": 31,
+        "accuracy_note": "VN-2000 converted centroid, not visitor entrance"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8368826,
+          21.0173475
+        ]
+      },
+      "properties": {
+        "id": "phung_thanh",
+        "name": "Chùa Phụng Thánh",
+        "kind": "chùa",
+        "status": "gazette_centroid",
+        "gazette_page": 39,
+        "accuracy_note": "VN-2000 converted centroid, not visitor entrance"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8341049,
+          21.026792
+        ]
+      },
+      "properties": {
+        "id": "song_son",
+        "name": "Đền Mẫu Sòng Sơn – Hà Nội",
+        "kind": "đền",
+        "status": "gazette_centroid",
+        "gazette_page": 37,
+        "accuracy_note": "VN-2000 converted centroid, not visitor entrance"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8396605,
+          21.0267919
+        ]
+      },
+      "properties": {
+        "id": "quang_minh",
+        "name": "Chùa Quang Minh",
+        "kind": "chùa",
+        "status": "gazette_centroid",
+        "gazette_page": 40,
+        "accuracy_note": "VN-2000 converted centroid, not visitor entrance"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8363271,
+          21.0256809
+        ]
+      },
+      "properties": {
+        "id": "luong_su",
+        "name": "Đình – Đền Lương Sử",
+        "kind": "đình–đền",
+        "status": "gazette_centroid",
+        "gazette_page": 40,
+        "accuracy_note": "VN-2000 converted centroid, not visitor entrance"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8366049,
+          21.0226253
+        ]
+      },
+      "properties": {
+        "id": "linh_quang",
+        "name": "Chùa Linh Quang",
+        "kind": "chùa",
+        "status": "gazette_centroid",
+        "gazette_page": 40,
+        "accuracy_note": "VN-2000 converted centroid, not visitor entrance"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8343826,
+          21.0209586
+        ]
+      },
+      "properties": {
+        "id": "but_moc",
+        "name": "Chùa Bụt Mọc",
+        "kind": "chùa",
+        "status": "gazette_centroid",
+        "gazette_page": 40,
+        "accuracy_note": "VN-2000 converted centroid, not visitor entrance"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8368826,
+          21.0201253
+        ]
+      },
+      "properties": {
+        "id": "lien_hoa",
+        "name": "Chùa Liên Hoa",
+        "kind": "chùa",
+        "status": "gazette_centroid",
+        "gazette_page": 31,
+        "accuracy_note": "VN-2000 converted centroid, not visitor entrance"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.833827,
+          21.0195698
+        ]
+      },
+      "properties": {
+        "id": "linh_ung",
+        "name": "Chùa Linh Ứng",
+        "kind": "chùa",
+        "status": "gazette_centroid",
+        "gazette_page": 38,
+        "accuracy_note": "VN-2000 converted centroid, not visitor entrance"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8346604,
+          21.0198475
+        ]
+      },
+      "properties": {
+        "id": "trung_ta",
+        "name": "Đền Trung Tả",
+        "kind": "đền",
+        "status": "gazette_centroid",
+        "gazette_page": 38,
+        "accuracy_note": "VN-2000 converted centroid, not visitor entrance"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8391048,
+          21.0170697
+        ]
+      },
+      "properties": {
+        "id": "my_quang",
+        "name": "Chùa Mỹ Quang",
+        "kind": "chùa",
+        "status": "gazette_centroid",
+        "gazette_page": 39,
+        "accuracy_note": "VN-2000 converted centroid, not visitor entrance"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8346603,
+          21.0162364
+        ]
+      },
+      "properties": {
+        "id": "tho_quan",
+        "name": "Đình làng Thổ Quan",
+        "kind": "đình",
+        "status": "gazette_centroid",
+        "gazette_page": 38,
+        "accuracy_note": "VN-2000 converted centroid, not visitor entrance"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8382714,
+          21.015403
+        ]
+      },
+      "properties": {
+        "id": "trung_phung",
+        "name": "Đền Trung Phụng",
+        "kind": "đền",
+        "status": "gazette_centroid",
+        "gazette_page": 39,
+        "accuracy_note": "VN-2000 converted centroid, not visitor entrance"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.836327,
+          21.012903
+        ]
+      },
+      "properties": {
+        "id": "trung_tu_chua",
+        "name": "Chùa Trung Tự",
+        "kind": "chùa",
+        "status": "gazette_centroid",
+        "gazette_page": 35,
+        "accuracy_note": "VN-2000 converted centroid, not visitor entrance"
+      }
+    }
+  ]
+}

@@ -1,0 +1,3540 @@
+{
+  "type": "FeatureCollection",
+  "name": "railways_area",
+  "metadata": {
+    "source_layer": "duongtau",
+    "source_crs": "EPSG:4326",
+    "target_crs": "EPSG:4326",
+    "render_on_map": true,
+    "attribution": "OpenStreetMap-derived layers carry © OpenStreetMap contributors attribution. Source bundle has no separate license file; verify terms before redistribution."
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "duongtau.0001",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8404883,
+            21.0242355
+          ],
+          [
+            105.8405163,
+            21.0256842
+          ],
+          [
+            105.8405361,
+            21.0257913
+          ],
+          [
+            105.8405507,
+            21.0258461
+          ],
+          [
+            105.840555,
+            21.0258595
+          ],
+          [
+            105.8405971,
+            21.0259902
+          ],
+          [
+            105.8406653,
+            21.0262015
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 38029148,
+        "name": "8",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 1,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0002",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8404543,
+            21.0242366
+          ],
+          [
+            105.8404711,
+            21.0256057
+          ],
+          [
+            105.8404743,
+            21.0256873
+          ],
+          [
+            105.8404909,
+            21.0258005
+          ],
+          [
+            105.8405055,
+            21.02586
+          ],
+          [
+            105.8405253,
+            21.025941
+          ],
+          [
+            105.8406159,
+            21.0262221
+          ],
+          [
+            105.8406202,
+            21.0262368
+          ],
+          [
+            105.8406975,
+            21.026499
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 262772599,
+        "name": "9",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 2,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0003",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8407349,
+            21.0242323
+          ],
+          [
+            105.8407194,
+            21.0231449
+          ],
+          [
+            105.8407186,
+            21.0227099
+          ],
+          [
+            105.8407313,
+            21.0224336
+          ],
+          [
+            105.8407428,
+            21.0223181
+          ],
+          [
+            105.8407581,
+            21.0222061
+          ],
+          [
+            105.8407939,
+            21.022012
+          ],
+          [
+            105.8408232,
+            21.0218334
+          ],
+          [
+            105.8408347,
+            21.021675
+          ],
+          [
+            105.8408321,
+            21.0214844
+          ],
+          [
+            105.8408334,
+            21.0212879
+          ],
+          [
+            105.8408313,
+            21.0212163
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 262772602,
+        "name": "đường 4",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 3,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0004",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8407893,
+            21.0265738
+          ],
+          [
+            105.8407593,
+            21.0264094
+          ],
+          [
+            105.8407426,
+            21.0262841
+          ],
+          [
+            105.8407417,
+            21.0262575
+          ],
+          [
+            105.8407286,
+            21.0258657
+          ],
+          [
+            105.8407285,
+            21.0258575
+          ],
+          [
+            105.8406996,
+            21.0242327
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 262772603,
+        "name": "5",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 4,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0005",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8409092,
+            21.026791
+          ],
+          [
+            105.8408828,
+            21.0266419
+          ],
+          [
+            105.8408738,
+            21.0265493
+          ],
+          [
+            105.8408675,
+            21.0264499
+          ],
+          [
+            105.8408653,
+            21.0263876
+          ],
+          [
+            105.8408585,
+            21.0261914
+          ],
+          [
+            105.8408547,
+            21.0258651
+          ],
+          [
+            105.8408546,
+            21.025856
+          ],
+          [
+            105.8408284,
+            21.0242311
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 262772607,
+        "name": "3",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 5,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0006",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8406549,
+            21.0222391
+          ],
+          [
+            105.8406026,
+            21.022561
+          ],
+          [
+            105.8405773,
+            21.0227463
+          ],
+          [
+            105.8405667,
+            21.0229126
+          ],
+          [
+            105.8405647,
+            21.0229434
+          ],
+          [
+            105.8405663,
+            21.0231473
+          ],
+          [
+            105.8405784,
+            21.0242343
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 262772608,
+        "name": "đường 7",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 6,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0007",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8409884,
+            21.0272016
+          ],
+          [
+            105.8409946,
+            21.0272351
+          ],
+          [
+            105.8410704,
+            21.0274805
+          ],
+          [
+            105.8411265,
+            21.0276184
+          ],
+          [
+            105.8411432,
+            21.0276612
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 262779970,
+        "name": "Đường sắt Hà Nội - Đồng Đăng",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 7,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0008",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8409185,
+            21.0207734
+          ],
+          [
+            105.8409214,
+            21.020834
+          ],
+          [
+            105.8409274,
+            21.0208943
+          ],
+          [
+            105.8409365,
+            21.0209543
+          ],
+          [
+            105.8409462,
+            21.0210174
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 654633456,
+        "name": "",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 8,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0009",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8408367,
+            21.0188939
+          ],
+          [
+            105.8408334,
+            21.018827
+          ],
+          [
+            105.8408324,
+            21.0187785
+          ],
+          [
+            105.8408264,
+            21.0186657
+          ],
+          [
+            105.8408222,
+            21.0182634
+          ],
+          [
+            105.8408195,
+            21.0181612
+          ],
+          [
+            105.8408291,
+            21.0180625
+          ],
+          [
+            105.8408577,
+            21.0179186
+          ],
+          [
+            105.8409014,
+            21.0177494
+          ],
+          [
+            105.8409434,
+            21.017621
+          ],
+          [
+            105.840999,
+            21.0174318
+          ],
+          [
+            105.8410423,
+            21.0173056
+          ],
+          [
+            105.8410847,
+            21.0171763
+          ],
+          [
+            105.8411398,
+            21.0170321
+          ],
+          [
+            105.8411886,
+            21.0168795
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 685021625,
+        "name": "Đường sắt Bắc–Nam",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 9,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0010",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8413508,
+            21.0160404
+          ],
+          [
+            105.8413514,
+            21.0159887
+          ],
+          [
+            105.8413491,
+            21.0158664
+          ],
+          [
+            105.8413329,
+            21.0155619
+          ],
+          [
+            105.8413278,
+            21.015319
+          ],
+          [
+            105.8413269,
+            21.0152772
+          ],
+          [
+            105.8413338,
+            21.0151119
+          ],
+          [
+            105.8413246,
+            21.0145852
+          ],
+          [
+            105.8413191,
+            21.0142372
+          ],
+          [
+            105.8413087,
+            21.0137948
+          ],
+          [
+            105.8413082,
+            21.0137612
+          ],
+          [
+            105.8413,
+            21.0134191
+          ],
+          [
+            105.8412572,
+            21.0110258
+          ],
+          [
+            105.8412522,
+            21.010744
+          ],
+          [
+            105.8412518,
+            21.0102719
+          ],
+          [
+            105.8412471,
+            21.0100706
+          ],
+          [
+            105.8412374,
+            21.0097628
+          ],
+          [
+            105.8412337,
+            21.0095862
+          ],
+          [
+            105.8412297,
+            21.0093069
+          ],
+          [
+            105.8412174,
+            21.0088011
+          ],
+          [
+            105.8412135,
+            21.0085479
+          ],
+          [
+            105.8412108,
+            21.0083748
+          ],
+          [
+            105.8412082,
+            21.0082543
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 685021658,
+        "name": "Đường sắt Bắc–Nam",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 10,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0011",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8411886,
+            21.0168795
+          ],
+          [
+            105.841225,
+            21.0167846
+          ],
+          [
+            105.8412499,
+            21.0167158
+          ],
+          [
+            105.8412864,
+            21.0165967
+          ],
+          [
+            105.8413092,
+            21.0164697
+          ],
+          [
+            105.8413285,
+            21.0163418
+          ],
+          [
+            105.8413484,
+            21.0162175
+          ],
+          [
+            105.8413505,
+            21.0161568
+          ],
+          [
+            105.8413518,
+            21.0160981
+          ],
+          [
+            105.8413509,
+            21.0160823
+          ],
+          [
+            105.8413508,
+            21.0160404
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 685021668,
+        "name": "Đường sắt Bắc–Nam",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 11,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0012",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8410615,
+            21.0217902
+          ],
+          [
+            105.8410194,
+            21.0215377
+          ],
+          [
+            105.8409681,
+            21.0212595
+          ],
+          [
+            105.840949,
+            21.0211722
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 685021674,
+        "name": "TX",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 12,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0013",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8409462,
+            21.0210174
+          ],
+          [
+            105.8409935,
+            21.0212542
+          ],
+          [
+            105.8410551,
+            21.021552
+          ],
+          [
+            105.8410985,
+            21.0217926
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 685021675,
+        "name": "TX",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 13,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0014",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8409211,
+            21.0209061
+          ],
+          [
+            105.8409185,
+            21.0207734
+          ],
+          [
+            105.8409101,
+            21.0203425
+          ],
+          [
+            105.8408912,
+            21.0193799
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 685021681,
+        "name": "",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 14,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0015",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8408803,
+            21.0216415
+          ],
+          [
+            105.8408776,
+            21.0214687
+          ],
+          [
+            105.8408681,
+            21.0208386
+          ],
+          [
+            105.8408647,
+            21.0206201
+          ],
+          [
+            105.8408543,
+            21.0199357
+          ],
+          [
+            105.8408466,
+            21.0196351
+          ],
+          [
+            105.8408388,
+            21.0189645
+          ],
+          [
+            105.8408374,
+            21.0189301
+          ],
+          [
+            105.8408367,
+            21.0188939
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 685021686,
+        "name": "Đường sắt Bắc–Nam",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 15,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0016",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.840949,
+            21.0211722
+          ],
+          [
+            105.840937,
+            21.0211066
+          ],
+          [
+            105.8409283,
+            21.0210406
+          ],
+          [
+            105.840923,
+            21.0209735
+          ],
+          [
+            105.8409211,
+            21.0209061
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 685021687,
+        "name": "",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 16,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0017",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8407337,
+            21.0264081
+          ],
+          [
+            105.8406994,
+            21.0262032
+          ],
+          [
+            105.8406812,
+            21.0261141
+          ],
+          [
+            105.8406797,
+            21.0261028
+          ],
+          [
+            105.8406509,
+            21.0258875
+          ],
+          [
+            105.8406485,
+            21.0258584
+          ],
+          [
+            105.8406373,
+            21.0257217
+          ],
+          [
+            105.840609,
+            21.0242814
+          ],
+          [
+            105.8406084,
+            21.0242339
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 685021695,
+        "name": "6",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 17,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0018",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8408805,
+            21.0221754
+          ],
+          [
+            105.8408791,
+            21.0218186
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 685021699,
+        "name": "Đường sắt Bắc–Nam",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 18,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0019",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8408791,
+            21.0218186
+          ],
+          [
+            105.8408803,
+            21.0216415
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 685021700,
+        "name": "Đường sắt Bắc–Nam",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 19,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0020",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8408968,
+            21.0242302
+          ],
+          [
+            105.8408856,
+            21.0231424
+          ],
+          [
+            105.8408789,
+            21.0224923
+          ],
+          [
+            105.8408805,
+            21.0221754
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 685021701,
+        "name": "Đường sắt Bắc–Nam",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 20,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0021",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8408647,
+            21.0242306
+          ],
+          [
+            105.8408486,
+            21.023143
+          ],
+          [
+            105.8408412,
+            21.0224891
+          ],
+          [
+            105.840841,
+            21.0224678
+          ],
+          [
+            105.8408399,
+            21.0221338
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1210928212,
+        "name": "đường 2",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 21,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0022",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8406975,
+            21.026499
+          ],
+          [
+            105.8406141,
+            21.0263249
+          ],
+          [
+            105.8405803,
+            21.0262521
+          ],
+          [
+            105.8405401,
+            21.0261654
+          ],
+          [
+            105.840475,
+            21.0260082
+          ],
+          [
+            105.8404437,
+            21.025929
+          ],
+          [
+            105.8404238,
+            21.025861
+          ],
+          [
+            105.8404163,
+            21.0258355
+          ],
+          [
+            105.8403857,
+            21.0256795
+          ],
+          [
+            105.8403768,
+            21.025602
+          ],
+          [
+            105.8403678,
+            21.0253484
+          ],
+          [
+            105.8403614,
+            21.0247362
+          ],
+          [
+            105.8403555,
+            21.0242372
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1210928213,
+        "name": "10",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 22,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0023",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8407957,
+            21.0267423
+          ],
+          [
+            105.840676,
+            21.0265313
+          ],
+          [
+            105.840609,
+            21.0264131
+          ],
+          [
+            105.8405107,
+            21.0262273
+          ],
+          [
+            105.8404405,
+            21.0260713
+          ],
+          [
+            105.8403921,
+            21.0259236
+          ],
+          [
+            105.840379,
+            21.0258615
+          ],
+          [
+            105.8403602,
+            21.0257724
+          ],
+          [
+            105.8403423,
+            21.0256652
+          ],
+          [
+            105.8403379,
+            21.0255719
+          ],
+          [
+            105.8403341,
+            21.0253773
+          ],
+          [
+            105.8403257,
+            21.0247109
+          ],
+          [
+            105.8403228,
+            21.0242373
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1210928214,
+        "name": "11",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 23,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0024",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8408232,
+            21.0218334
+          ],
+          [
+            105.8408471,
+            21.0217323
+          ],
+          [
+            105.840858,
+            21.0216448
+          ],
+          [
+            105.8408678,
+            21.0215652
+          ],
+          [
+            105.8408776,
+            21.0214687
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1210928215,
+        "name": "",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 24,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0025",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8402774,
+            21.0260148
+          ],
+          [
+            105.8402697,
+            21.0254002
+          ],
+          [
+            105.8402493,
+            21.0243248
+          ],
+          [
+            105.8402481,
+            21.0235626
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1210928216,
+        "name": "5",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 25,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0026",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8402264,
+            21.0260159
+          ],
+          [
+            105.8401983,
+            21.0239532
+          ],
+          [
+            105.840206,
+            21.0238341
+          ],
+          [
+            105.8402187,
+            21.0237472
+          ],
+          [
+            105.8402481,
+            21.0235626
+          ],
+          [
+            105.8402838,
+            21.023328
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1210928217,
+        "name": "4",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 26,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0027",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8403769,
+            21.0229564
+          ],
+          [
+            105.840345,
+            21.0230874
+          ],
+          [
+            105.8403067,
+            21.0232327
+          ],
+          [
+            105.8402838,
+            21.023328
+          ],
+          [
+            105.840197,
+            21.0236829
+          ],
+          [
+            105.8401715,
+            21.0238139
+          ],
+          [
+            105.84016,
+            21.0239151
+          ],
+          [
+            105.8401549,
+            21.024008
+          ],
+          [
+            105.8401817,
+            21.0260124
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1210928218,
+        "name": "3",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 27,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0028",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8401243,
+            21.0260124
+          ],
+          [
+            105.8401115,
+            21.0252966
+          ],
+          [
+            105.8400962,
+            21.0246785
+          ],
+          [
+            105.8400886,
+            21.0242569
+          ],
+          [
+            105.8400873,
+            21.0240842
+          ],
+          [
+            105.8401001,
+            21.023958
+          ],
+          [
+            105.8401256,
+            21.0237806
+          ],
+          [
+            105.8401587,
+            21.0236055
+          ],
+          [
+            105.8402009,
+            21.0234495
+          ],
+          [
+            105.8402532,
+            21.023278
+          ],
+          [
+            105.8403323,
+            21.0230725
+          ],
+          [
+            105.8403769,
+            21.0229564
+          ],
+          [
+            105.8404075,
+            21.022848
+          ],
+          [
+            105.8405541,
+            21.0222752
+          ],
+          [
+            105.8405947,
+            21.0221164
+          ],
+          [
+            105.8407109,
+            21.0216688
+          ],
+          [
+            105.840751,
+            21.0215116
+          ],
+          [
+            105.84077,
+            21.0214189
+          ],
+          [
+            105.8407857,
+            21.0213168
+          ],
+          [
+            105.8408011,
+            21.0211859
+          ],
+          [
+            105.8408086,
+            21.0210839
+          ],
+          [
+            105.8408223,
+            21.020904
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1210928219,
+        "name": "2",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 28,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0029",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8400452,
+            21.0245535
+          ],
+          [
+            105.8400426,
+            21.0242629
+          ],
+          [
+            105.8400477,
+            21.0241366
+          ],
+          [
+            105.8400771,
+            21.0239318
+          ],
+          [
+            105.8401256,
+            21.0237806
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1210928220,
+        "name": "1",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 29,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0030",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8408313,
+            21.0212163
+          ],
+          [
+            105.8408681,
+            21.0208386
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1210928221,
+        "name": "",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 30,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0031",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8408129,
+            21.0202736
+          ],
+          [
+            105.8408647,
+            21.0206201
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1210928222,
+        "name": "",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 31,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0032",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8408082,
+            21.0199557
+          ],
+          [
+            105.8408466,
+            21.0196351
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1210928223,
+        "name": "",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 32,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0033",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8404593,
+            21.0256651
+          ],
+          [
+            105.8404254,
+            21.0233744
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1210928226,
+        "name": "",
+        "type": "platform_edge",
+        "_source_layer": "duongtau",
+        "_source_record": 33,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0034",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8405871,
+            21.0256618
+          ],
+          [
+            105.8405551,
+            21.0233686
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1210928227,
+        "name": "",
+        "type": "platform_edge",
+        "_source_layer": "duongtau",
+        "_source_record": 34,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0035",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8406506,
+            21.0256623
+          ],
+          [
+            105.8406147,
+            21.0233676
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1210928228,
+        "name": "",
+        "type": "platform_edge",
+        "_source_layer": "duongtau",
+        "_source_record": 35,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0036",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8407771,
+            21.0256602
+          ],
+          [
+            105.8407423,
+            21.0233698
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1210928229,
+        "name": "",
+        "type": "platform_edge",
+        "_source_layer": "duongtau",
+        "_source_record": 36,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0037",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8403085,
+            21.0262445
+          ],
+          [
+            105.8403637,
+            21.0262439
+          ],
+          [
+            105.8403585,
+            21.0258617
+          ],
+          [
+            105.840358,
+            21.0258309
+          ],
+          [
+            105.840333,
+            21.0258309
+          ],
+          [
+            105.8402972,
+            21.0235868
+          ],
+          [
+            105.8402693,
+            21.0235872
+          ],
+          [
+            105.8403023,
+            21.0258268
+          ],
+          [
+            105.8403085,
+            21.0262445
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1210928231,
+        "name": "",
+        "type": "platform",
+        "_source_layer": "duongtau",
+        "_source_record": 37,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0038",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8407974,
+            21.0233687
+          ],
+          [
+            105.8408305,
+            21.0256609
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1210928245,
+        "name": "",
+        "type": "platform_edge",
+        "_source_layer": "duongtau",
+        "_source_record": 38,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0039",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8406685,
+            21.0233666
+          ],
+          [
+            105.8407042,
+            21.0256625
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1210928248,
+        "name": "",
+        "type": "platform_edge",
+        "_source_layer": "duongtau",
+        "_source_record": 39,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0040",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8404955,
+            21.0233699
+          ],
+          [
+            105.8405285,
+            21.0256621
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1210928250,
+        "name": "",
+        "type": "platform_edge",
+        "_source_layer": "duongtau",
+        "_source_record": 40,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0041",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8403645,
+            21.0233748
+          ],
+          [
+            105.8403985,
+            21.025666
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1210928252,
+        "name": "",
+        "type": "platform_edge",
+        "_source_layer": "duongtau",
+        "_source_record": 41,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0042",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8404603,
+            21.0221274
+          ],
+          [
+            105.8404665,
+            21.0219695
+          ],
+          [
+            105.84045,
+            21.0213
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1214358092,
+        "name": "ĐM",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 42,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0043",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8404944,
+            21.0219931
+          ],
+          [
+            105.8404979,
+            21.021835
+          ],
+          [
+            105.8404863,
+            21.0212993
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1214358093,
+        "name": "ĐM",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 43,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0044",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8405636,
+            21.0212979
+          ],
+          [
+            105.84056,
+            21.0216551
+          ],
+          [
+            105.8405517,
+            21.0217519
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1214358094,
+        "name": "ĐM",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 44,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0045",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8405229,
+            21.0212987
+          ],
+          [
+            105.8405277,
+            21.0217302
+          ],
+          [
+            105.8405229,
+            21.0218709
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1214358095,
+        "name": "ĐM",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 45,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0046",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8408174,
+            21.0205761
+          ],
+          [
+            105.8407942,
+            21.0207634
+          ],
+          [
+            105.8407642,
+            21.0209126
+          ],
+          [
+            105.8407137,
+            21.0211019
+          ],
+          [
+            105.8406687,
+            21.0212872
+          ],
+          [
+            105.8405979,
+            21.0215726
+          ],
+          [
+            105.8405517,
+            21.0217519
+          ],
+          [
+            105.8405229,
+            21.0218709
+          ],
+          [
+            105.840511,
+            21.0219141
+          ],
+          [
+            105.8404944,
+            21.0219931
+          ],
+          [
+            105.8404603,
+            21.0221274
+          ],
+          [
+            105.8404198,
+            21.0222897
+          ],
+          [
+            105.8403865,
+            21.0224208
+          ],
+          [
+            105.8403318,
+            21.0225711
+          ],
+          [
+            105.84029,
+            21.0226822
+          ],
+          [
+            105.8402143,
+            21.0229172
+          ],
+          [
+            105.840202,
+            21.0229556
+          ],
+          [
+            105.8401346,
+            21.0232243
+          ],
+          [
+            105.8400696,
+            21.0234852
+          ],
+          [
+            105.8399981,
+            21.0237388
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1214358096,
+        "name": "ĐM",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 46,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0047",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8402143,
+            21.0229172
+          ],
+          [
+            105.8402276,
+            21.0226395
+          ],
+          [
+            105.8402078,
+            21.0222656
+          ],
+          [
+            105.8401819,
+            21.0221278
+          ],
+          [
+            105.8401424,
+            21.0219477
+          ],
+          [
+            105.8401198,
+            21.021845
+          ],
+          [
+            105.84005,
+            21.0215249
+          ],
+          [
+            105.8400136,
+            21.0212402
+          ],
+          [
+            105.8399893,
+            21.0210193
+          ],
+          [
+            105.8399833,
+            21.0208323
+          ],
+          [
+            105.8399802,
+            21.0207019
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1214358097,
+        "name": "ĐM",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 47,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0048",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8401424,
+            21.0219477
+          ],
+          [
+            105.840057,
+            21.0217127
+          ],
+          [
+            105.8400098,
+            21.0215314
+          ],
+          [
+            105.839968,
+            21.021265
+          ],
+          [
+            105.8399618,
+            21.02122
+          ],
+          [
+            105.8399401,
+            21.0210607
+          ],
+          [
+            105.8399304,
+            21.0208915
+          ],
+          [
+            105.839925,
+            21.0207026
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1214358098,
+        "name": "ĐM",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 48,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0049",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8399618,
+            21.02122
+          ],
+          [
+            105.8399047,
+            21.0210517
+          ],
+          [
+            105.8398864,
+            21.0209435
+          ],
+          [
+            105.8398767,
+            21.0207032
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1214358099,
+        "name": "",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 49,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0050",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.84005,
+            21.0215249
+          ],
+          [
+            105.8400388,
+            21.0212159
+          ],
+          [
+            105.8400324,
+            21.0207012
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1214358100,
+        "name": "ĐM",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 50,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0051",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8406687,
+            21.0212872
+          ],
+          [
+            105.8406714,
+            21.0211511
+          ],
+          [
+            105.8406649,
+            21.0210019
+          ],
+          [
+            105.840637,
+            21.0207505
+          ],
+          [
+            105.8405759,
+            21.0204711
+          ],
+          [
+            105.8405083,
+            21.0202217
+          ],
+          [
+            105.8404085,
+            21.0198482
+          ],
+          [
+            105.8403603,
+            21.019663
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1214358101,
+        "name": "vào cầu quay",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 51,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0052",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8403635,
+            21.0195161
+          ],
+          [
+            105.8403881,
+            21.0195282
+          ],
+          [
+            105.840407,
+            21.0195472
+          ],
+          [
+            105.8404181,
+            21.019571
+          ],
+          [
+            105.8404201,
+            21.0195969
+          ],
+          [
+            105.8404129,
+            21.019622
+          ],
+          [
+            105.8403972,
+            21.0196434
+          ],
+          [
+            105.8403758,
+            21.0196583
+          ],
+          [
+            105.8403603,
+            21.019663
+          ],
+          [
+            105.8403504,
+            21.019666
+          ],
+          [
+            105.8403237,
+            21.0196658
+          ],
+          [
+            105.8402984,
+            21.0196577
+          ],
+          [
+            105.8402772,
+            21.0196426
+          ],
+          [
+            105.8402623,
+            21.0196219
+          ],
+          [
+            105.8402552,
+            21.0195978
+          ],
+          [
+            105.8402567,
+            21.0195729
+          ],
+          [
+            105.8402666,
+            21.0195497
+          ],
+          [
+            105.8402847,
+            21.0195301
+          ],
+          [
+            105.8403087,
+            21.0195171
+          ],
+          [
+            105.840336,
+            21.0195122
+          ],
+          [
+            105.8403635,
+            21.0195161
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1214358102,
+        "name": "",
+        "type": "turntable",
+        "_source_layer": "duongtau",
+        "_source_record": 52,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0053",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8398767,
+            21.0207032
+          ],
+          [
+            105.8398712,
+            21.0202716
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1214358103,
+        "name": "ĐM",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 53,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0054",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.839925,
+            21.0207026
+          ],
+          [
+            105.8399182,
+            21.0202705
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1214358104,
+        "name": "ĐM",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 54,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0055",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8399802,
+            21.0207019
+          ],
+          [
+            105.8399758,
+            21.0202692
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1214358105,
+        "name": "ĐM",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 55,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0056",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8400324,
+            21.0207012
+          ],
+          [
+            105.8400299,
+            21.020268
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1214358106,
+        "name": "ĐM",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 56,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0057",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.84045,
+            21.0213
+          ],
+          [
+            105.8404399,
+            21.0207208
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1214358107,
+        "name": "ĐM",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 57,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0058",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8404863,
+            21.0212993
+          ],
+          [
+            105.8404753,
+            21.0207199
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1214358108,
+        "name": "ĐM",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 58,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0059",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8405229,
+            21.0212987
+          ],
+          [
+            105.8405119,
+            21.0207189
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1214358109,
+        "name": "ĐM",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 59,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0060",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8405636,
+            21.0212979
+          ],
+          [
+            105.8405493,
+            21.0207179
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1214358110,
+        "name": "ĐM",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 60,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0061",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8402768,
+            21.0215551
+          ],
+          [
+            105.8402743,
+            21.0216998
+          ],
+          [
+            105.8402513,
+            21.0219058
+          ],
+          [
+            105.8402216,
+            21.0221519
+          ],
+          [
+            105.8402078,
+            21.0222656
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1214358111,
+        "name": "ĐM",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 61,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0062",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8402216,
+            21.0221519
+          ],
+          [
+            105.8402832,
+            21.0218844
+          ],
+          [
+            105.8403138,
+            21.0216855
+          ],
+          [
+            105.8403164,
+            21.0215544
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1214358112,
+        "name": "ĐM",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 62,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0063",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8403795,
+            21.0216983
+          ],
+          [
+            105.8403846,
+            21.0220401
+          ],
+          [
+            105.840377,
+            21.0222664
+          ],
+          [
+            105.8403591,
+            21.0224022
+          ],
+          [
+            105.8403318,
+            21.0225711
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1214358113,
+        "name": "ĐM",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 63,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0064",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8402768,
+            21.0215551
+          ],
+          [
+            105.8402737,
+            21.0213572
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1214358114,
+        "name": "",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 64,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0065",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8403164,
+            21.0215544
+          ],
+          [
+            105.8403152,
+            21.0213564
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1214358115,
+        "name": "",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 65,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0066",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8409344,
+            21.0262145
+          ],
+          [
+            105.8409233,
+            21.0258552
+          ],
+          [
+            105.8408977,
+            21.0243128
+          ],
+          [
+            105.8408968,
+            21.0242302
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1217264253,
+        "name": "Đường sắt Hà Nội - Đồng Đăng",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 66,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0067",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8409344,
+            21.0262145
+          ],
+          [
+            105.8409036,
+            21.0260769
+          ],
+          [
+            105.8408946,
+            21.0259514
+          ],
+          [
+            105.8408912,
+            21.0258556
+          ],
+          [
+            105.8408909,
+            21.0258478
+          ],
+          [
+            105.8408775,
+            21.0250291
+          ],
+          [
+            105.8408678,
+            21.02444
+          ],
+          [
+            105.8408647,
+            21.0242306
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1217264254,
+        "name": "2",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 67,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0068",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8408284,
+            21.0242311
+          ],
+          [
+            105.840811,
+            21.0231528
+          ],
+          [
+            105.8408107,
+            21.0231436
+          ],
+          [
+            105.8407982,
+            21.0226514
+          ],
+          [
+            105.8407988,
+            21.0224881
+          ],
+          [
+            105.840799,
+            21.0224327
+          ],
+          [
+            105.8408187,
+            21.0222641
+          ],
+          [
+            105.8408399,
+            21.0221338
+          ],
+          [
+            105.8408791,
+            21.0218186
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1217264255,
+        "name": "đường 3",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 68,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0069",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8409092,
+            21.026791
+          ],
+          [
+            105.8408807,
+            21.0267041
+          ],
+          [
+            105.8408306,
+            21.0265384
+          ],
+          [
+            105.8407988,
+            21.0264095
+          ],
+          [
+            105.8407889,
+            21.026347
+          ],
+          [
+            105.840779,
+            21.0262849
+          ],
+          [
+            105.840772,
+            21.0261772
+          ],
+          [
+            105.840758,
+            21.0258571
+          ],
+          [
+            105.8407349,
+            21.0242323
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1217264256,
+        "name": "4",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 69,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0070",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8406996,
+            21.0242327
+          ],
+          [
+            105.8406802,
+            21.0231455
+          ],
+          [
+            105.8406867,
+            21.0227641
+          ],
+          [
+            105.8406878,
+            21.0227374
+          ],
+          [
+            105.8406943,
+            21.0225808
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1217264257,
+        "name": "đường 5",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 70,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0071",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8406084,
+            21.0242339
+          ],
+          [
+            105.8405952,
+            21.0231468
+          ],
+          [
+            105.8406025,
+            21.023061
+          ],
+          [
+            105.8406098,
+            21.0230074
+          ],
+          [
+            105.8406461,
+            21.0228013
+          ],
+          [
+            105.8406549,
+            21.0227531
+          ],
+          [
+            105.8406943,
+            21.0225808
+          ],
+          [
+            105.8407428,
+            21.0223181
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1217264258,
+        "name": "đường 6",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 71,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0072",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8405784,
+            21.0242343
+          ],
+          [
+            105.8405806,
+            21.0244381
+          ],
+          [
+            105.8405967,
+            21.0256167
+          ],
+          [
+            105.8405978,
+            21.0257303
+          ],
+          [
+            105.8406116,
+            21.0258588
+          ],
+          [
+            105.8406145,
+            21.0258861
+          ],
+          [
+            105.8406314,
+            21.0259913
+          ],
+          [
+            105.8406653,
+            21.0262015
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1217264259,
+        "name": "7",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 72,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0073",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8408321,
+            21.0214844
+          ],
+          [
+            105.8408105,
+            21.0216672
+          ],
+          [
+            105.8407826,
+            21.0217954
+          ],
+          [
+            105.8407263,
+            21.0219911
+          ],
+          [
+            105.8406549,
+            21.0222391
+          ],
+          [
+            105.840553,
+            21.0226267
+          ],
+          [
+            105.8405058,
+            21.022844
+          ],
+          [
+            105.8404843,
+            21.0230403
+          ],
+          [
+            105.8404758,
+            21.0231486
+          ],
+          [
+            105.840478,
+            21.0237041
+          ],
+          [
+            105.8404883,
+            21.0242355
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1217264260,
+        "name": "đường 8",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 73,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0074",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8404724,
+            21.0227819
+          ],
+          [
+            105.8404521,
+            21.0229271
+          ],
+          [
+            105.8404436,
+            21.0230473
+          ],
+          [
+            105.8404383,
+            21.0231492
+          ],
+          [
+            105.8404446,
+            21.0237487
+          ],
+          [
+            105.8404543,
+            21.0242366
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1217264261,
+        "name": "đường 9",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 74,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0075",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8403555,
+            21.0242372
+          ],
+          [
+            105.8403551,
+            21.0242003
+          ],
+          [
+            105.8403434,
+            21.0235017
+          ],
+          [
+            105.8403429,
+            21.0234703
+          ],
+          [
+            105.8403466,
+            21.0233839
+          ],
+          [
+            105.8403518,
+            21.0233281
+          ],
+          [
+            105.8404138,
+            21.0230106
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1217264262,
+        "name": "đường 10",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 75,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0076",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8403228,
+            21.0242373
+          ],
+          [
+            105.8403082,
+            21.0235715
+          ],
+          [
+            105.840311,
+            21.0235072
+          ],
+          [
+            105.8403117,
+            21.0234905
+          ],
+          [
+            105.8403244,
+            21.0233786
+          ],
+          [
+            105.8403436,
+            21.0232857
+          ],
+          [
+            105.8403678,
+            21.0231832
+          ],
+          [
+            105.8404138,
+            21.0230106
+          ],
+          [
+            105.8404724,
+            21.0227819
+          ],
+          [
+            105.8405732,
+            21.022396
+          ],
+          [
+            105.8406077,
+            21.0222745
+          ],
+          [
+            105.8406383,
+            21.0221979
+          ],
+          [
+            105.8407263,
+            21.0219911
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1217264263,
+        "name": "đường 11",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 76,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0077",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8407957,
+            21.0267423
+          ],
+          [
+            105.8408239,
+            21.0268104
+          ],
+          [
+            105.8409426,
+            21.0270927
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1217264282,
+        "name": "",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 77,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0078",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8406975,
+            21.026499
+          ],
+          [
+            105.8407078,
+            21.0265341
+          ],
+          [
+            105.8407524,
+            21.0266377
+          ],
+          [
+            105.8407957,
+            21.0267423
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1217264283,
+        "name": "",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 78,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0079",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8407893,
+            21.0265738
+          ],
+          [
+            105.8408748,
+            21.0268405
+          ],
+          [
+            105.8409426,
+            21.0270927
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1217264284,
+        "name": "",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 79,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0080",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8406653,
+            21.0262015
+          ],
+          [
+            105.8406847,
+            21.0262618
+          ],
+          [
+            105.8407337,
+            21.0264081
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1217264285,
+        "name": "",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 80,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0081",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8407337,
+            21.0264081
+          ],
+          [
+            105.8407893,
+            21.0265738
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1217264286,
+        "name": "",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 81,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0082",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8409444,
+            21.0268982
+          ],
+          [
+            105.8409092,
+            21.026791
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1217264287,
+        "name": "",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 82,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0083",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8409344,
+            21.0262145
+          ],
+          [
+            105.840939,
+            21.0266458
+          ],
+          [
+            105.8409405,
+            21.0267856
+          ],
+          [
+            105.8409444,
+            21.0268982
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1217264288,
+        "name": "Đường sắt Hà Nội - Đồng Đăng",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 83,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0084",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8409426,
+            21.0270927
+          ],
+          [
+            105.8409884,
+            21.0272016
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1217264289,
+        "name": "",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 84,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0085",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8409444,
+            21.0268982
+          ],
+          [
+            105.8409497,
+            21.0269647
+          ],
+          [
+            105.8409564,
+            21.0270289
+          ],
+          [
+            105.8409739,
+            21.0271235
+          ],
+          [
+            105.8409884,
+            21.0272016
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1217264290,
+        "name": "Đường sắt Hà Nội - Đồng Đăng",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 85,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0086",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8411432,
+            21.0276612
+          ],
+          [
+            105.8411817,
+            21.0277458
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1247135449,
+        "name": "Đường sắt Hà Nội - Đồng Đăng",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 86,
+        "_review_only": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "duongtau.0087",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.8408313,
+            21.0212163
+          ],
+          [
+            105.8408223,
+            21.020904
+          ],
+          [
+            105.8408174,
+            21.0205761
+          ],
+          [
+            105.8408129,
+            21.0202736
+          ],
+          [
+            105.8408086,
+            21.0199919
+          ],
+          [
+            105.8408082,
+            21.0199557
+          ],
+          [
+            105.8407972,
+            21.0190605
+          ]
+        ]
+      },
+      "properties": {
+        "osm_id": 1252904103,
+        "name": "",
+        "type": "rail",
+        "_source_layer": "duongtau",
+        "_source_record": 87,
+        "_review_only": false
+      }
+    }
+  ]
+}

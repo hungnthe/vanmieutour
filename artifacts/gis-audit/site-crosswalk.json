@@ -1,0 +1,827 @@
+[
+  {
+    "gis_record": "QTG_Diem.0001",
+    "gis_name": "Đình Làng Thổ Quan",
+    "exact_name_or_alias_site_ids": [
+      "tho_quan"
+    ],
+    "possible_name_matches": [
+      {
+        "site_id": "tho_quan",
+        "canonical_name": "Đình làng Thổ Quan",
+        "name_similarity": 1.0
+      },
+      {
+        "site_id": "trung_tu_dinh",
+        "canonical_name": "Đình làng Trung Tự",
+        "name_similarity": 0.722
+      }
+    ],
+    "identity_status": "needs_human_review",
+    "public_map_status": "audit_only_not_rendered",
+    "notes": "Name similarity is a review hint, not an identity or coordinate verification."
+  },
+  {
+    "gis_record": "QTG_Diem.0002",
+    "gis_name": "Chùa Linh Ứng",
+    "exact_name_or_alias_site_ids": [
+      "linh_ung"
+    ],
+    "possible_name_matches": [
+      {
+        "site_id": "linh_ung",
+        "canonical_name": "Chùa Linh Ứng",
+        "name_similarity": 1.0
+      },
+      {
+        "site_id": "linh_quang",
+        "canonical_name": "Chùa Linh Quang",
+        "name_similarity": 0.929
+      },
+      {
+        "site_id": "my_quang",
+        "canonical_name": "Chùa Mỹ Quang",
+        "name_similarity": 0.692
+      }
+    ],
+    "identity_status": "needs_human_review",
+    "public_map_status": "audit_only_not_rendered",
+    "notes": "Name similarity is a review hint, not an identity or coordinate verification."
+  },
+  {
+    "gis_record": "QTG_Diem.0003",
+    "gis_name": "Đền Trung Tả",
+    "exact_name_or_alias_site_ids": [
+      "trung_ta"
+    ],
+    "possible_name_matches": [
+      {
+        "site_id": "trung_ta",
+        "canonical_name": "Đền Trung Tả",
+        "name_similarity": 1.0
+      },
+      {
+        "site_id": "trung_phung",
+        "canonical_name": "Đền Trung Phụng",
+        "name_similarity": 0.741
+      },
+      {
+        "site_id": "trung_tu_dinh",
+        "canonical_name": "Đình làng Trung Tự",
+        "name_similarity": 0.667
+      }
+    ],
+    "identity_status": "needs_human_review",
+    "public_map_status": "audit_only_not_rendered",
+    "notes": "Name similarity is a review hint, not an identity or coordinate verification."
+  },
+  {
+    "gis_record": "QTG_Diem.0004",
+    "gis_name": "Chùa Linh Quang",
+    "exact_name_or_alias_site_ids": [
+      "linh_quang"
+    ],
+    "possible_name_matches": [
+      {
+        "site_id": "linh_quang",
+        "canonical_name": "Chùa Linh Quang",
+        "name_similarity": 1.0
+      },
+      {
+        "site_id": "linh_ung",
+        "canonical_name": "Chùa Linh Ứng",
+        "name_similarity": 0.929
+      },
+      {
+        "site_id": "my_quang",
+        "canonical_name": "Chùa Mỹ Quang",
+        "name_similarity": 0.786
+      }
+    ],
+    "identity_status": "needs_human_review",
+    "public_map_status": "audit_only_not_rendered",
+    "notes": "Name similarity is a review hint, not an identity or coordinate verification."
+  },
+  {
+    "gis_record": "QTG_Diem.0005",
+    "gis_name": "Chùa Huy Văn",
+    "exact_name_or_alias_site_ids": [
+      "huy_van"
+    ],
+    "possible_name_matches": [
+      {
+        "site_id": "huy_van",
+        "canonical_name": "Chùa Huy Văn",
+        "name_similarity": 1.0
+      },
+      {
+        "site_id": "my_quang",
+        "canonical_name": "Chùa Mỹ Quang",
+        "name_similarity": 0.72
+      },
+      {
+        "site_id": "phung_thanh",
+        "canonical_name": "Chùa Phụng Thánh",
+        "name_similarity": 0.714
+      }
+    ],
+    "identity_status": "needs_human_review",
+    "public_map_status": "audit_only_not_rendered",
+    "notes": "Name similarity is a review hint, not an identity or coordinate verification."
+  },
+  {
+    "gis_record": "QTG_Diem.0006",
+    "gis_name": "Đài tưởng niệm Khâm Thiên",
+    "exact_name_or_alias_site_ids": [
+      "kham_thien"
+    ],
+    "possible_name_matches": [
+      {
+        "site_id": "kham_thien",
+        "canonical_name": "Đài tưởng niệm Khâm Thiên",
+        "name_similarity": 1.0
+      }
+    ],
+    "identity_status": "needs_human_review",
+    "public_map_status": "audit_only_not_rendered",
+    "notes": "Name similarity is a review hint, not an identity or coordinate verification."
+  },
+  {
+    "gis_record": "QTG_Diem.0007",
+    "gis_name": "Chùa Phụng Thánh",
+    "exact_name_or_alias_site_ids": [
+      "phung_thanh"
+    ],
+    "possible_name_matches": [
+      {
+        "site_id": "phung_thanh",
+        "canonical_name": "Chùa Phụng Thánh",
+        "name_similarity": 1.0
+      },
+      {
+        "site_id": "huy_van",
+        "canonical_name": "Chùa Huy Văn",
+        "name_similarity": 0.714
+      },
+      {
+        "site_id": "quang_minh",
+        "canonical_name": "Chùa Quang Minh",
+        "name_similarity": 0.71
+      }
+    ],
+    "identity_status": "needs_human_review",
+    "public_map_status": "audit_only_not_rendered",
+    "notes": "Name similarity is a review hint, not an identity or coordinate verification."
+  },
+  {
+    "gis_record": "QTG_Diem.0008",
+    "gis_name": "Chùa Mỹ Quang",
+    "exact_name_or_alias_site_ids": [
+      "my_quang"
+    ],
+    "possible_name_matches": [
+      {
+        "site_id": "my_quang",
+        "canonical_name": "Chùa Mỹ Quang",
+        "name_similarity": 1.0
+      },
+      {
+        "site_id": "linh_quang",
+        "canonical_name": "Chùa Linh Quang",
+        "name_similarity": 0.786
+      },
+      {
+        "site_id": "huy_van",
+        "canonical_name": "Chùa Huy Văn",
+        "name_similarity": 0.72
+      }
+    ],
+    "identity_status": "needs_human_review",
+    "public_map_status": "audit_only_not_rendered",
+    "notes": "Close to Đình Trung Kính; preserve distinct identities and check the local-context match."
+  },
+  {
+    "gis_record": "QTG_Diem.0009",
+    "gis_name": "Chùa Bà Nành",
+    "exact_name_or_alias_site_ids": [],
+    "possible_name_matches": [
+      {
+        "site_id": "ngoc_ho",
+        "canonical_name": "Chùa Bà Ngô",
+        "name_similarity": 0.783
+      },
+      {
+        "site_id": "huy_van",
+        "canonical_name": "Chùa Huy Văn",
+        "name_similarity": 0.667
+      },
+      {
+        "site_id": "ba_nanh",
+        "canonical_name": "Chùa Bà Nành (Tiên Phúc tự)",
+        "name_similarity": 0.649
+      }
+    ],
+    "identity_status": "needs_human_review",
+    "public_map_status": "audit_only_not_rendered",
+    "notes": "GIS also has a separate Tiên Phúc Tự point; compare against the PDF alias before merging."
+  },
+  {
+    "gis_record": "QTG_Diem.0010",
+    "gis_name": "Y Miếu",
+    "exact_name_or_alias_site_ids": [
+      "y_mieu"
+    ],
+    "possible_name_matches": [
+      {
+        "site_id": "y_mieu",
+        "canonical_name": "Y Miếu",
+        "name_similarity": 1.0
+      }
+    ],
+    "identity_status": "needs_human_review",
+    "public_map_status": "audit_only_not_rendered",
+    "notes": "Close to Chùa Quang Minh; preserve distinct identities."
+  },
+  {
+    "gis_record": "QTG_Diem.0011",
+    "gis_name": "Chùa Ngọc Hồ (Bà Ngô)",
+    "exact_name_or_alias_site_ids": [
+      "ngoc_ho"
+    ],
+    "possible_name_matches": [
+      {
+        "site_id": "ngoc_ho",
+        "canonical_name": "Chùa Ngọc Hồ (Bà Ngô)",
+        "name_similarity": 1.0
+      },
+      {
+        "site_id": "phung_thanh",
+        "canonical_name": "Chùa Phụng Thánh",
+        "name_similarity": 0.629
+      },
+      {
+        "site_id": "lien_hoa",
+        "canonical_name": "Chùa Liên Hoa",
+        "name_similarity": 0.625
+      }
+    ],
+    "identity_status": "needs_human_review",
+    "public_map_status": "audit_only_not_rendered",
+    "notes": "Name similarity is a review hint, not an identity or coordinate verification."
+  },
+  {
+    "gis_record": "QTG_Diem.0012",
+    "gis_name": "Chùa Phổ Giác",
+    "exact_name_or_alias_site_ids": [
+      "pho_giac"
+    ],
+    "possible_name_matches": [
+      {
+        "site_id": "pho_giac",
+        "canonical_name": "Chùa Phổ Giác",
+        "name_similarity": 1.0
+      },
+      {
+        "site_id": "huy_van",
+        "canonical_name": "Chùa Huy Văn",
+        "name_similarity": 0.64
+      },
+      {
+        "site_id": "but_moc",
+        "canonical_name": "Chùa Bột Mọc",
+        "name_similarity": 0.64
+      }
+    ],
+    "identity_status": "needs_human_review",
+    "public_map_status": "audit_only_not_rendered",
+    "notes": "Name similarity is a review hint, not an identity or coordinate verification."
+  },
+  {
+    "gis_record": "QTG_Diem.0013",
+    "gis_name": "Chùa Quang Minh",
+    "exact_name_or_alias_site_ids": [
+      "quang_minh"
+    ],
+    "possible_name_matches": [
+      {
+        "site_id": "quang_minh",
+        "canonical_name": "Chùa Quang Minh",
+        "name_similarity": 1.0
+      },
+      {
+        "site_id": "my_quang",
+        "canonical_name": "Chùa Mỹ Quang",
+        "name_similarity": 0.714
+      },
+      {
+        "site_id": "phung_thanh",
+        "canonical_name": "Chùa Phụng Thánh",
+        "name_similarity": 0.71
+      }
+    ],
+    "identity_status": "needs_human_review",
+    "public_map_status": "audit_only_not_rendered",
+    "notes": "Close to Y Miếu; preserve distinct identities."
+  },
+  {
+    "gis_record": "QTG_Diem.0014",
+    "gis_name": "Chùa Trung Tự",
+    "exact_name_or_alias_site_ids": [
+      "trung_tu_chua"
+    ],
+    "possible_name_matches": [
+      {
+        "site_id": "trung_tu_chua",
+        "canonical_name": "Chùa Trung Tự",
+        "name_similarity": 1.0
+      },
+      {
+        "site_id": "trung_tu_dinh",
+        "canonical_name": "Đình làng Trung Tự",
+        "name_similarity": 0.71
+      },
+      {
+        "site_id": "phung_thanh",
+        "canonical_name": "Chùa Phụng Thánh",
+        "name_similarity": 0.69
+      }
+    ],
+    "identity_status": "needs_human_review",
+    "public_map_status": "audit_only_not_rendered",
+    "notes": "Name similarity is a review hint, not an identity or coordinate verification."
+  },
+  {
+    "gis_record": "QTG_Diem.0015",
+    "gis_name": "Giếng Ngọc Đình Trung Tự",
+    "exact_name_or_alias_site_ids": [],
+    "possible_name_matches": [
+      {
+        "site_id": "trung_tu_dinh",
+        "canonical_name": "Đình làng Trung Tự",
+        "name_similarity": 0.619
+      },
+      {
+        "site_id": "trung_tu_chua",
+        "canonical_name": "Chùa Trung Tự",
+        "name_similarity": 0.595
+      }
+    ],
+    "identity_status": "needs_human_review",
+    "public_map_status": "audit_only_not_rendered",
+    "notes": "Additional GIS point outside the current 32-site canonical list; do not add automatically."
+  },
+  {
+    "gis_record": "QTG_Diem.0016",
+    "gis_name": "Đền - Đình Kim Liên",
+    "exact_name_or_alias_site_ids": [],
+    "possible_name_matches": [
+      {
+        "site_id": "kim_lien",
+        "canonical_name": "Đền Kim Liên (Đình Kim Liên)",
+        "name_similarity": 0.791
+      }
+    ],
+    "identity_status": "needs_human_review",
+    "public_map_status": "audit_only_not_rendered",
+    "notes": "Name similarity is a review hint, not an identity or coordinate verification."
+  },
+  {
+    "gis_record": "QTG_Diem.0017",
+    "gis_name": "Văn Miếu - Quốc Tử Giám",
+    "exact_name_or_alias_site_ids": [
+      "van_mieu"
+    ],
+    "possible_name_matches": [
+      {
+        "site_id": "van_mieu",
+        "canonical_name": "Văn Miếu – Quốc Tử Giám",
+        "name_similarity": 1.0
+      }
+    ],
+    "identity_status": "needs_human_review",
+    "public_map_status": "audit_only_not_rendered",
+    "notes": "Name similarity is a review hint, not an identity or coordinate verification."
+  },
+  {
+    "gis_record": "QTG_Diem.0018",
+    "gis_name": "Đình Thanh Miến",
+    "exact_name_or_alias_site_ids": [
+      "thanh_mien"
+    ],
+    "possible_name_matches": [
+      {
+        "site_id": "thanh_mien",
+        "canonical_name": "Đình Thanh Miến",
+        "name_similarity": 1.0
+      },
+      {
+        "site_id": "thai_kieu",
+        "canonical_name": "Đình Thái Kiều",
+        "name_similarity": 0.759
+      },
+      {
+        "site_id": "van_huong",
+        "canonical_name": "Đình Văn Hương",
+        "name_similarity": 0.621
+      }
+    ],
+    "identity_status": "needs_human_review",
+    "public_map_status": "audit_only_not_rendered",
+    "notes": "Name similarity is a review hint, not an identity or coordinate verification."
+  },
+  {
+    "gis_record": "QTG_Diem.0019",
+    "gis_name": "Đình Trung Kính",
+    "exact_name_or_alias_site_ids": [
+      "trung_kinh"
+    ],
+    "possible_name_matches": [
+      {
+        "site_id": "trung_kinh",
+        "canonical_name": "Đình Trung Kính",
+        "name_similarity": 1.0
+      },
+      {
+        "site_id": "trung_tu_dinh",
+        "canonical_name": "Đình làng Trung Tự",
+        "name_similarity": 0.667
+      },
+      {
+        "site_id": "trung_ta",
+        "canonical_name": "Đền Trung Tả",
+        "name_similarity": 0.667
+      }
+    ],
+    "identity_status": "needs_human_review",
+    "public_map_status": "audit_only_not_rendered",
+    "notes": "Close to Chùa Mỹ Quang; preserve distinct identities and check the local-context match."
+  },
+  {
+    "gis_record": "QTG_Diem.0020",
+    "gis_name": "Đình Thái Kiều",
+    "exact_name_or_alias_site_ids": [
+      "thai_kieu"
+    ],
+    "possible_name_matches": [
+      {
+        "site_id": "thai_kieu",
+        "canonical_name": "Đình Thái Kiều",
+        "name_similarity": 1.0
+      },
+      {
+        "site_id": "thanh_mien",
+        "canonical_name": "Đình Thanh Miến",
+        "name_similarity": 0.759
+      },
+      {
+        "site_id": "kham_duc_dinh",
+        "canonical_name": "Đình Khâm Đức",
+        "name_similarity": 0.667
+      }
+    ],
+    "identity_status": "needs_human_review",
+    "public_map_status": "audit_only_not_rendered",
+    "notes": "Name similarity is a review hint, not an identity or coordinate verification."
+  },
+  {
+    "gis_record": "QTG_Diem.0021",
+    "gis_name": "Chùa Bụt Mọc",
+    "exact_name_or_alias_site_ids": [
+      "but_moc"
+    ],
+    "possible_name_matches": [
+      {
+        "site_id": "but_moc",
+        "canonical_name": "Chùa Bụt Mọc",
+        "name_similarity": 1.0
+      },
+      {
+        "site_id": "ngoc_ho",
+        "canonical_name": "Chùa Bà Ngô",
+        "name_similarity": 0.696
+      },
+      {
+        "site_id": "tien_tich",
+        "canonical_name": "Chùa Tiên Tích",
+        "name_similarity": 0.615
+      }
+    ],
+    "identity_status": "needs_human_review",
+    "public_map_status": "audit_only_not_rendered",
+    "notes": "Name similarity is a review hint, not an identity or coordinate verification."
+  },
+  {
+    "gis_record": "QTG_Diem.0022",
+    "gis_name": "Đình Văn Hương",
+    "exact_name_or_alias_site_ids": [
+      "van_huong"
+    ],
+    "possible_name_matches": [
+      {
+        "site_id": "van_huong",
+        "canonical_name": "Đình Văn Hương",
+        "name_similarity": 1.0
+      },
+      {
+        "site_id": "luong_su",
+        "canonical_name": "Đình – Đền Lương Sử",
+        "name_similarity": 0.71
+      },
+      {
+        "site_id": "trung_tu_dinh",
+        "canonical_name": "Đình làng Trung Tự",
+        "name_similarity": 0.688
+      }
+    ],
+    "identity_status": "needs_human_review",
+    "public_map_status": "audit_only_not_rendered",
+    "notes": "Name similarity is a review hint, not an identity or coordinate verification."
+  },
+  {
+    "gis_record": "QTG_Diem.0023",
+    "gis_name": "Đình - Đền Lương Sử",
+    "exact_name_or_alias_site_ids": [
+      "luong_su"
+    ],
+    "possible_name_matches": [
+      {
+        "site_id": "luong_su",
+        "canonical_name": "Đình – Đền Lương Sử",
+        "name_similarity": 1.0
+      },
+      {
+        "site_id": "van_huong",
+        "canonical_name": "Đình Văn Hương",
+        "name_similarity": 0.71
+      }
+    ],
+    "identity_status": "needs_human_review",
+    "public_map_status": "audit_only_not_rendered",
+    "notes": "Name similarity is a review hint, not an identity or coordinate verification."
+  },
+  {
+    "gis_record": "QTG_Diem.0024",
+    "gis_name": "Đình làng Trung Tự",
+    "exact_name_or_alias_site_ids": [
+      "trung_tu_dinh"
+    ],
+    "possible_name_matches": [
+      {
+        "site_id": "trung_tu_dinh",
+        "canonical_name": "Đình làng Trung Tự",
+        "name_similarity": 1.0
+      },
+      {
+        "site_id": "tho_quan",
+        "canonical_name": "Đình làng Thổ Quan",
+        "name_similarity": 0.722
+      },
+      {
+        "site_id": "trung_tu_chua",
+        "canonical_name": "Chùa Trung Tự",
+        "name_similarity": 0.71
+      }
+    ],
+    "identity_status": "needs_human_review",
+    "public_map_status": "audit_only_not_rendered",
+    "notes": "Keep distinct from Chùa Trung Tự and Giếng Ngọc pending identity review."
+  },
+  {
+    "gis_record": "QTG_Diem.0025",
+    "gis_name": "Chùa Liên Hoa",
+    "exact_name_or_alias_site_ids": [
+      "lien_hoa"
+    ],
+    "possible_name_matches": [
+      {
+        "site_id": "lien_hoa",
+        "canonical_name": "Chùa Liên Hoa",
+        "name_similarity": 1.0
+      },
+      {
+        "site_id": "tien_tich",
+        "canonical_name": "Chùa Tiên Tích",
+        "name_similarity": 0.741
+      },
+      {
+        "site_id": "linh_quang",
+        "canonical_name": "Chùa Linh Quang",
+        "name_similarity": 0.714
+      }
+    ],
+    "identity_status": "needs_human_review",
+    "public_map_status": "audit_only_not_rendered",
+    "notes": "Name similarity is a review hint, not an identity or coordinate verification."
+  },
+  {
+    "gis_record": "QTG_Diem.0026",
+    "gis_name": "Chùa Tiên Tích",
+    "exact_name_or_alias_site_ids": [
+      "tien_tich"
+    ],
+    "possible_name_matches": [
+      {
+        "site_id": "tien_tich",
+        "canonical_name": "Chùa Tiên Tích",
+        "name_similarity": 1.0
+      },
+      {
+        "site_id": "lien_hoa",
+        "canonical_name": "Chùa Liên Hoa",
+        "name_similarity": 0.741
+      },
+      {
+        "site_id": "ba_nanh",
+        "canonical_name": "Chùa Tiên Phúc Tự",
+        "name_similarity": 0.71
+      }
+    ],
+    "identity_status": "needs_human_review",
+    "public_map_status": "audit_only_not_rendered",
+    "notes": "Additional GIS point outside the current 32-site canonical list; do not add to the public list automatically."
+  },
+  {
+    "gis_record": "QTG_Diem.0027",
+    "gis_name": "Đền Đức Thánh Trần",
+    "exact_name_or_alias_site_ids": [
+      "duc_thanh_tran"
+    ],
+    "possible_name_matches": [
+      {
+        "site_id": "duc_thanh_tran",
+        "canonical_name": "Đền Đức Thánh Trần",
+        "name_similarity": 1.0
+      },
+      {
+        "site_id": "thanh_mien",
+        "canonical_name": "Đình Thanh Miến",
+        "name_similarity": 0.606
+      }
+    ],
+    "identity_status": "needs_human_review",
+    "public_map_status": "audit_only_not_rendered",
+    "notes": "Additional GIS point outside the current 32-site canonical list; do not add automatically."
+  },
+  {
+    "gis_record": "QTG_Diem.0028",
+    "gis_name": "Đền Văn Chỉ",
+    "exact_name_or_alias_site_ids": [
+      "van_chi"
+    ],
+    "possible_name_matches": [
+      {
+        "site_id": "van_chi",
+        "canonical_name": "Đền Văn Chỉ",
+        "name_similarity": 1.0
+      },
+      {
+        "site_id": "van_huong",
+        "canonical_name": "Đình Văn Hương",
+        "name_similarity": 0.64
+      }
+    ],
+    "identity_status": "needs_human_review",
+    "public_map_status": "audit_only_not_rendered",
+    "notes": "Name similarity is a review hint, not an identity or coordinate verification."
+  },
+  {
+    "gis_record": "QTG_Diem.0029",
+    "gis_name": "Hồ Giám",
+    "exact_name_or_alias_site_ids": [],
+    "possible_name_matches": [
+      {
+        "site_id": "pho_giac",
+        "canonical_name": "Chùa Phổ Giác",
+        "name_similarity": 0.6
+      }
+    ],
+    "identity_status": "needs_human_review",
+    "public_map_status": "audit_only_not_rendered",
+    "notes": "Compare with Hồ Văn and Gò Kim Châu in the canonical list; nearby features may be parts of one complex."
+  },
+  {
+    "gis_record": "QTG_Diem.0030",
+    "gis_name": "Gò Kim Châu",
+    "exact_name_or_alias_site_ids": [],
+    "possible_name_matches": [
+      {
+        "site_id": "ho_van",
+        "canonical_name": "Hồ Văn – Gò Kim Châu",
+        "name_similarity": 0.759
+      }
+    ],
+    "identity_status": "needs_human_review",
+    "public_map_status": "audit_only_not_rendered",
+    "notes": "Compare with Hồ Văn and Hồ Giám; retain separate geometry until identity/scope is confirmed."
+  },
+  {
+    "gis_record": "QTG_Diem.0031",
+    "gis_name": "Đền Mẫu Sòng Sơn - Hà Nội",
+    "exact_name_or_alias_site_ids": [
+      "song_son"
+    ],
+    "possible_name_matches": [
+      {
+        "site_id": "song_son",
+        "canonical_name": "Đền Mẫu Sòng Sơn – Hà Nội",
+        "name_similarity": 1.0
+      }
+    ],
+    "identity_status": "needs_human_review",
+    "public_map_status": "audit_only_not_rendered",
+    "notes": "Name similarity is a review hint, not an identity or coordinate verification."
+  },
+  {
+    "gis_record": "QTG_Diem.0032",
+    "gis_name": "Đền Trung Phụng",
+    "exact_name_or_alias_site_ids": [
+      "trung_phung"
+    ],
+    "possible_name_matches": [
+      {
+        "site_id": "trung_phung",
+        "canonical_name": "Đền Trung Phụng",
+        "name_similarity": 1.0
+      },
+      {
+        "site_id": "trung_ta",
+        "canonical_name": "Đền Trung Tả",
+        "name_similarity": 0.741
+      },
+      {
+        "site_id": "trung_kinh",
+        "canonical_name": "Đình Trung Kính",
+        "name_similarity": 0.667
+      }
+    ],
+    "identity_status": "needs_human_review",
+    "public_map_status": "audit_only_not_rendered",
+    "notes": "Name similarity is a review hint, not an identity or coordinate verification."
+  },
+  {
+    "gis_record": "QTG_Diem.0033",
+    "gis_name": "Đình Khâm Đức",
+    "exact_name_or_alias_site_ids": [
+      "kham_duc_dinh"
+    ],
+    "possible_name_matches": [
+      {
+        "site_id": "kham_duc_dinh",
+        "canonical_name": "Đình Khâm Đức",
+        "name_similarity": 1.0
+      },
+      {
+        "site_id": "thai_kieu",
+        "canonical_name": "Đình Thái Kiều",
+        "name_similarity": 0.667
+      }
+    ],
+    "identity_status": "needs_human_review",
+    "public_map_status": "audit_only_not_rendered",
+    "notes": "A separate Đền Khâm Đức point is only 8.8 m away; confirm whether these are distinct sites/entrances."
+  },
+  {
+    "gis_record": "QTG_Diem.0034",
+    "gis_name": "Đền Khâm Đức - thờ Châu Đệ Tứ",
+    "exact_name_or_alias_site_ids": [
+      "kham_duc_den"
+    ],
+    "possible_name_matches": [
+      {
+        "site_id": "kham_duc_den",
+        "canonical_name": "Đền Khâm Đức (thờ Châu Đệ Tứ)",
+        "name_similarity": 1.0
+      }
+    ],
+    "identity_status": "needs_human_review",
+    "public_map_status": "audit_only_not_rendered",
+    "notes": "A separate Đình Khâm Đức point is only 8.8 m away; confirm whether these are distinct sites/entrances."
+  },
+  {
+    "gis_record": "QTG_Diem.0035",
+    "gis_name": "Chùa Tiên Phúc Tự",
+    "exact_name_or_alias_site_ids": [
+      "ba_nanh"
+    ],
+    "possible_name_matches": [
+      {
+        "site_id": "ba_nanh",
+        "canonical_name": "Chùa Tiên Phúc Tự",
+        "name_similarity": 1.0
+      },
+      {
+        "site_id": "tien_tich",
+        "canonical_name": "Chùa Tiên Tích",
+        "name_similarity": 0.71
+      },
+      {
+        "site_id": "trung_tu_chua",
+        "canonical_name": "Chùa Trung Tự",
+        "name_similarity": 0.667
+      }
+    ],
+    "identity_status": "needs_human_review",
+    "public_map_status": "audit_only_not_rendered",
+    "notes": "The canonical list treats Tiên Phúc Tự as an alias of Chùa Bà Nành; do not auto-merge the two GIS pins."
+  }
+]

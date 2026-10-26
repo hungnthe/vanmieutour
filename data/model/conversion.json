@@ -1,0 +1,243 @@
+{
+  "source": "model_2.skp",
+  "source_sha256": "86f6164537308d173a0cd1c3d1d651f0b671272394bacd733f5becf811b21acf",
+  "georeferenced": false,
+  "sdk": "C:\\Program Files\\Unity 2022.3.52f1\\Editor\\SketchUpAPI.dll",
+  "bounds_skp_m": [
+    [
+      -56.641299999999994,
+      -77.6734,
+      7.541208038410666
+    ],
+    [
+      973.8908,
+      1046.588,
+      70.5354
+    ]
+  ],
+  "glb_bytes": 13297076,
+  "stats": {
+    "faces": 115255,
+    "triangles": 226194,
+    "groups": 4048,
+    "instances": 118,
+    "hidden_objects": 1754,
+    "layers": {
+      "noithat": {
+        "faces": 47813,
+        "triangles": 131248,
+        "materials": [
+          "*4#1",
+          "*5",
+          "*6#1",
+          "*7",
+          "*8",
+          "<Burnt Umber>1",
+          "Default",
+          "White",
+          "[Asphalt_New]1",
+          "[Color A05]",
+          "[Color B02]",
+          "[Color C01]",
+          "[Color C02]",
+          "[Color C06]",
+          "[Color D01]",
+          "[Color D06]",
+          "[Color D07]1",
+          "[Color E01]",
+          "[Color E03]",
+          "[Color F03]",
+          "[Color G07]",
+          "[Color H01]",
+          "[Color H03]1",
+          "[Color H03]2",
+          "[Color H08]",
+          "[Color I02]",
+          "[Color I04]1",
+          "[Color I04]2",
+          "[Color I06]",
+          "[Color M00]",
+          "[Color M01]",
+          "[Color M02]",
+          "[Color M02]1",
+          "[Color M05]",
+          "[Color M06]",
+          "[Color M07]",
+          "[Color M08]",
+          "[Color_C13]",
+          "[Fencing_Metal_Straight]",
+          "[Granite Brown]1",
+          "[Granite Dark Gray]1",
+          "[Metal Aluminum Anodized]",
+          "[Sketchy Shingles Rustic]",
+          "[Steel Brushed Stainless]",
+          "[Translucent Glass Blue]",
+          "[Wood_Lumber_ButtJoined]",
+          "[Wood_Lumber_ButtJoined]2",
+          "[Wood_Lumber_ButtJoined]3"
+        ],
+        "bounds_m": [
+          [
+            370.51,
+            218.15452972912115,
+            7.541208038410666
+          ],
+          [
+            708.3976269534402,
+            460.4618951125103,
+            39.702460280747154
+          ]
+        ]
+      },
+      "timngo": {
+        "faces": 329,
+        "triangles": 752,
+        "materials": [
+          "[Color B02]",
+          "[Color C01]"
+        ],
+        "bounds_m": [
+          [
+            395.71590810577305,
+            295.1124915728154,
+            18.767894182508893
+          ],
+          [
+            669.1885092223426,
+            433.30729390876604,
+            38.04587372412298
+          ]
+        ]
+      },
+      "nha_khoi": {
+        "faces": 21190,
+        "triangles": 24020,
+        "materials": [
+          "Default",
+          "[Color B02]",
+          "[Color C08]1",
+          "[Color E08]"
+        ],
+        "bounds_m": [
+          [
+            386.31811586784517,
+            234.31537091849535,
+            16.725147367170774
+          ],
+          [
+            694.1964246432485,
+            450.58068510313325,
+            38.405399656640434
+          ]
+        ]
+      },
+      "TPX_BUILDINGS": {
+        "faces": 20613,
+        "triangles": 44864,
+        "materials": [
+          "TPX_BUILDINGS_mat",
+          "[Color B02]"
+        ],
+        "bounds_m": [
+          [
+            -56.641299999999994,
+            -77.6734,
+            8.9611
+          ],
+          [
+            973.8908,
+            1046.588,
+            70.5354
+          ]
+        ]
+      },
+      "TPX_ROADS_HATCH": {
+        "faces": 18680,
+        "triangles": 18680,
+        "materials": [
+          "Default",
+          "TPX_ROADS_HATCH_mat",
+          "[Color C08]",
+          "[Color M01]",
+          "[Color M02]",
+          "[Color M08]"
+        ],
+        "bounds_m": [
+          [
+            0.0,
+            0.0,
+            9.3535
+          ],
+          [
+            955.5258,
+            950.0058999999999,
+            18.13
+          ]
+        ]
+      },
+      "TPX_WATERWAYS_HATCH": {
+        "faces": 232,
+        "triangles": 232,
+        "materials": [
+          "TPX_WATERWAYS_HATCH_mat"
+        ],
+        "bounds_m": [
+          [
+            262.9311,
+            254.021,
+            9.6304
+          ],
+          [
+            926.5346999999999,
+            850.7320000000001,
+            16.6128
+          ]
+        ]
+      },
+      "TPX_VEGETATION_GREEN_SPACES_HATCH": {
+        "faces": 1694,
+        "triangles": 1694,
+        "materials": [
+          "TPX_VEGETATION_GREEN_SPACES_HATCH_mat"
+        ],
+        "bounds_m": [
+          [
+            36.6035,
+            79.4583,
+            8.5423
+          ],
+          [
+            928.5707,
+            950.0058999999999,
+            17.9901
+          ]
+        ]
+      },
+      "TPX_TERRAIN_TERRAIN_MESH": {
+        "faces": 4704,
+        "triangles": 4704,
+        "materials": [
+          "[Color M00]"
+        ],
+        "bounds_m": [
+          [
+            0.0,
+            0.0,
+            8.5323
+          ],
+          [
+            955.5258,
+            950.0058999999999,
+            18.1304
+          ]
+        ]
+      }
+    }
+  },
+  "materials": 65,
+  "notes": [
+    "Visible faces and nested instance transforms baked in metres.",
+    "Original solid colours; texture bitmaps and standalone edges omitted.",
+    "No change to source SKP or canonical heritage coordinates."
+  ]
+}

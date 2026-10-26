@@ -1,0 +1,971 @@
+{
+  "testedAt": "2026-10-25T10:56:28.965Z",
+  "browser": "Codex in-app Chromium; responsive viewport testing",
+  "results": [
+    {
+      "name": "Desktop 1440",
+      "pass": true,
+      "details": {
+        "detail": "Văn Miếu – Quốc Tử Giám",
+        "failureVisible": false,
+        "map": {
+          "buildings": "visible",
+          "moving": "false",
+          "pitch": "52",
+          "ready": "true",
+          "renderer": "vector",
+          "routeSegments": "0",
+          "routeStops": "0",
+          "status": "ready",
+          "streets": "true",
+          "zoom": "14.22"
+        },
+        "mapHeight": 824,
+        "missingPins": 0,
+        "numbered": [],
+        "overflow": false,
+        "pins": 25,
+        "routes": 6,
+        "viewport": [
+          1440,
+          900
+        ]
+      }
+    },
+    {
+      "name": "Missing stop detail",
+      "pass": true,
+      "details": {
+        "detail": "Đình Khâm Đức",
+        "failureVisible": false,
+        "map": {
+          "buildings": "visible",
+          "moving": "false",
+          "pitch": "52",
+          "ready": "true",
+          "renderer": "vector",
+          "routeSegments": "1",
+          "routeStops": "4",
+          "status": "ready",
+          "streets": "true",
+          "zoom": "14.92"
+        },
+        "mapHeight": 824,
+        "missingPins": 0,
+        "numbered": [
+          "1",
+          "3",
+          "2",
+          "4"
+        ],
+        "overflow": false,
+        "pins": 25,
+        "routes": 3,
+        "viewport": [
+          1440,
+          900
+        ]
+      }
+    },
+    {
+      "name": "Accent-insensitive search",
+      "pass": true,
+      "details": {
+        "count": 2,
+        "text": "\n        05Đình Khâm ĐứcChưa xác minh vị trí\n      \n        26Đền Khâm Đức (thờ Châu Đệ Tứ)Chưa xác minh vị trí\n      "
+      }
+    },
+    {
+      "name": "2D mode",
+      "pass": true,
+      "details": {
+        "detail": "Đình Khâm Đức",
+        "failureVisible": false,
+        "map": {
+          "buildings": "hidden",
+          "moving": "false",
+          "pitch": "0",
+          "ready": "true",
+          "renderer": "vector",
+          "routeSegments": "1",
+          "routeStops": "4",
+          "status": "ready",
+          "streets": "true",
+          "zoom": "14.92"
+        },
+        "mapHeight": 824,
+        "missingPins": 0,
+        "numbered": [
+          "1",
+          "3",
+          "2",
+          "4"
+        ],
+        "overflow": false,
+        "pins": 25,
+        "routes": 3,
+        "viewport": [
+          1440,
+          900
+        ]
+      }
+    },
+    {
+      "name": "2.5D mode",
+      "pass": true,
+      "details": {
+        "detail": "Đình Khâm Đức",
+        "failureVisible": false,
+        "map": {
+          "buildings": "visible",
+          "moving": "false",
+          "pitch": "52",
+          "ready": "true",
+          "renderer": "vector",
+          "routeSegments": "1",
+          "routeStops": "4",
+          "status": "ready",
+          "streets": "true",
+          "zoom": "14.92"
+        },
+        "mapHeight": 824,
+        "missingPins": 0,
+        "numbered": [
+          "1",
+          "3",
+          "2",
+          "4"
+        ],
+        "overflow": false,
+        "pins": 25,
+        "routes": 3,
+        "viewport": [
+          1440,
+          900
+        ]
+      }
+    },
+    {
+      "name": "Mode filter",
+      "pass": true,
+      "details": {
+        "detail": "Đình Khâm Đức",
+        "failureVisible": false,
+        "map": {
+          "buildings": "visible",
+          "moving": "true",
+          "pitch": "52",
+          "ready": "true",
+          "renderer": "vector",
+          "routeSegments": "0",
+          "routeStops": "0",
+          "status": "ready",
+          "streets": "true",
+          "zoom": "14.92"
+        },
+        "mapHeight": 824,
+        "missingPins": 0,
+        "numbered": [],
+        "overflow": false,
+        "pins": 25,
+        "routes": 3,
+        "viewport": [
+          1440,
+          900
+        ]
+      }
+    },
+    {
+      "name": "Map pin detail",
+      "pass": true,
+      "details": {
+        "detail": "Y Miếu",
+        "failureVisible": false,
+        "map": {
+          "buildings": "visible",
+          "moving": "false",
+          "pitch": "52",
+          "ready": "true",
+          "renderer": "vector",
+          "routeSegments": "1",
+          "routeStops": "3",
+          "status": "ready",
+          "streets": "true",
+          "zoom": "16.40"
+        },
+        "mapHeight": 824,
+        "missingPins": 0,
+        "numbered": [
+          "1",
+          "2",
+          "3"
+        ],
+        "overflow": false,
+        "pins": 25,
+        "routes": 3,
+        "viewport": [
+          1440,
+          900
+        ]
+      }
+    },
+    {
+      "name": "Route W01",
+      "pass": true,
+      "details": {
+        "detail": "Hồ Văn – Gò Kim Châu",
+        "failureVisible": false,
+        "map": {
+          "buildings": "visible",
+          "moving": "false",
+          "pitch": "52",
+          "ready": "true",
+          "renderer": "vector",
+          "routeSegments": "1",
+          "routeStops": "3",
+          "status": "ready",
+          "streets": "true",
+          "zoom": "16.40"
+        },
+        "mapHeight": 824,
+        "missingPins": 0,
+        "numbered": [
+          "1",
+          "2",
+          "3"
+        ],
+        "overflow": false,
+        "pins": 25,
+        "routes": 3,
+        "viewport": [
+          1440,
+          900
+        ]
+      }
+    },
+    {
+      "name": "Route W02",
+      "pass": true,
+      "details": {
+        "detail": "Chùa Ngọc Hồ (Bà Ngô)",
+        "failureVisible": false,
+        "map": {
+          "buildings": "visible",
+          "moving": "false",
+          "pitch": "52",
+          "ready": "true",
+          "renderer": "vector",
+          "routeSegments": "1",
+          "routeStops": "3",
+          "status": "ready",
+          "streets": "true",
+          "zoom": "16.40"
+        },
+        "mapHeight": 824,
+        "missingPins": 0,
+        "numbered": [
+          "1",
+          "2",
+          "3"
+        ],
+        "overflow": false,
+        "pins": 25,
+        "routes": 3,
+        "viewport": [
+          1440,
+          900
+        ]
+      }
+    },
+    {
+      "name": "Route W03",
+      "pass": true,
+      "details": {
+        "detail": "Chùa Huy Văn",
+        "failureVisible": false,
+        "map": {
+          "buildings": "visible",
+          "moving": "false",
+          "pitch": "52",
+          "ready": "true",
+          "renderer": "vector",
+          "routeSegments": "1",
+          "routeStops": "3",
+          "status": "ready",
+          "streets": "true",
+          "zoom": "15.83"
+        },
+        "mapHeight": 824,
+        "missingPins": 0,
+        "numbered": [
+          "1",
+          "2",
+          "3"
+        ],
+        "overflow": false,
+        "pins": 25,
+        "routes": 3,
+        "viewport": [
+          1440,
+          900
+        ]
+      }
+    },
+    {
+      "name": "Route R01",
+      "pass": true,
+      "details": {
+        "detail": "Chùa Phổ Giác",
+        "failureVisible": false,
+        "map": {
+          "buildings": "visible",
+          "moving": "false",
+          "pitch": "52",
+          "ready": "true",
+          "renderer": "vector",
+          "routeSegments": "1",
+          "routeStops": "4",
+          "status": "ready",
+          "streets": "true",
+          "zoom": "15.09"
+        },
+        "mapHeight": 824,
+        "missingPins": 0,
+        "numbered": [
+          "1",
+          "3",
+          "2",
+          "4"
+        ],
+        "overflow": false,
+        "pins": 25,
+        "routes": 3,
+        "viewport": [
+          1440,
+          900
+        ]
+      }
+    },
+    {
+      "name": "Route R02",
+      "pass": true,
+      "details": {
+        "detail": "Chùa Phổ Giác",
+        "failureVisible": false,
+        "map": {
+          "buildings": "visible",
+          "moving": "false",
+          "pitch": "52",
+          "ready": "true",
+          "renderer": "vector",
+          "routeSegments": "1",
+          "routeStops": "5",
+          "status": "ready",
+          "streets": "true",
+          "zoom": "14.27"
+        },
+        "mapHeight": 824,
+        "missingPins": 0,
+        "numbered": [
+          "1",
+          "3",
+          "2",
+          "4",
+          "5"
+        ],
+        "overflow": false,
+        "pins": 25,
+        "routes": 3,
+        "viewport": [
+          1440,
+          900
+        ]
+      }
+    },
+    {
+      "name": "Route R03",
+      "pass": true,
+      "details": {
+        "detail": "Đình Văn Hương",
+        "failureVisible": false,
+        "map": {
+          "buildings": "visible",
+          "moving": "false",
+          "pitch": "52",
+          "ready": "true",
+          "renderer": "vector",
+          "routeSegments": "1",
+          "routeStops": "4",
+          "status": "ready",
+          "streets": "true",
+          "zoom": "14.92"
+        },
+        "mapHeight": 824,
+        "missingPins": 0,
+        "numbered": [
+          "1",
+          "3",
+          "2",
+          "4"
+        ],
+        "overflow": false,
+        "pins": 25,
+        "routes": 3,
+        "viewport": [
+          1440,
+          900
+        ]
+      }
+    },
+    {
+      "name": "Tablet 834: streets and no overflow",
+      "pass": true,
+      "details": {
+        "detail": "Văn Miếu – Quốc Tử Giám",
+        "failureVisible": false,
+        "map": {
+          "buildings": "visible",
+          "moving": "false",
+          "pitch": "52",
+          "ready": "true",
+          "renderer": "vector",
+          "routeSegments": "0",
+          "routeStops": "0",
+          "status": "ready",
+          "streets": "true",
+          "zoom": "14.56"
+        },
+        "mapHeight": 1036,
+        "missingPins": 0,
+        "numbered": [],
+        "overflow": false,
+        "pins": 25,
+        "routes": 6,
+        "viewport": [
+          834,
+          1112
+        ]
+      }
+    },
+    {
+      "name": "Tablet pin detail",
+      "pass": true,
+      "details": {
+        "name": "Văn Miếu – Quốc Tử Giám",
+        "open": true
+      }
+    },
+    {
+      "name": "Mobile 390: streets, 25 pins, no overflow",
+      "pass": true,
+      "details": {
+        "detail": "Văn Miếu – Quốc Tử Giám",
+        "failureVisible": false,
+        "map": {
+          "buildings": "visible",
+          "moving": "false",
+          "pitch": "52",
+          "ready": "true",
+          "renderer": "vector",
+          "routeSegments": "0",
+          "routeStops": "0",
+          "status": "ready",
+          "streets": "true",
+          "zoom": "14.11"
+        },
+        "mapHeight": 778,
+        "missingPins": 0,
+        "numbered": [],
+        "overflow": false,
+        "pins": 25,
+        "routes": 6,
+        "viewport": [
+          390,
+          844
+        ]
+      }
+    },
+    {
+      "name": "Mobile R03 group and numbered stops",
+      "pass": true,
+      "details": {
+        "detail": "Đình Văn Hương",
+        "failureVisible": false,
+        "map": {
+          "buildings": "visible",
+          "moving": "false",
+          "pitch": "52",
+          "ready": "true",
+          "renderer": "vector",
+          "routeSegments": "1",
+          "routeStops": "4",
+          "status": "ready",
+          "streets": "true",
+          "zoom": "14.81"
+        },
+        "mapHeight": 778,
+        "missingPins": 0,
+        "numbered": [
+          "1",
+          "3",
+          "2",
+          "4"
+        ],
+        "overflow": false,
+        "pins": 25,
+        "routes": 3,
+        "viewport": [
+          390,
+          844
+        ]
+      }
+    },
+    {
+      "name": "Mobile missing-stop sheet",
+      "pass": true,
+      "details": {
+        "body": "×\nĐỊA ĐIỂM · 14 / 32\nCẦN XÁC MINH\nĐình Khâm Đức\n74 ngõ Chợ Khâm Thiên, Hà Nội\nChưa đủ tọa độ đáng tin\nChưa đủ chứng cứ để đặt pin; không suy đoán vị trí từ nhãn trên ảnh.\nCâu chuyện di sản\nGIỚI THIỆU\n\nĐịa danh ghi trong sơ đồ nguồn. Nội dung thuyết minh lịch sử cần được biên tập và thẩm định.\n\nThông tin địa lý\nKIỂM CHỨNG\nLoại hình\nđình\nTọa độ WGS84\nChưa có\nNguồn tọa độ\nĐang đối chiếu\nGoogle Place ID\nChưa xác minh\nTuyến đi qua\n1 TUYẾN\nR03\nChưa có tọa độ điểm độc lập; là di tích chưa xếp hạng theo bài báo 2026. Không lấy tọa độ chùa Mỹ Quang để thay thế.\nTìm trên Google Maps\n\nĐịa chỉ và danh mục Google Maps chưa được kiểm tra trực tiếp qua Places API. Dữ liệu bản đồ thể hiện vị trí địa danh, không thay cho khảo sát cổng vào hay chỉ đường thực địa.",
+        "name": "Đình Khâm Đức",
+        "open": true,
+        "pins": 25
+      }
+    },
+    {
+      "name": "Mobile search without accents",
+      "pass": true,
+      "details": {
+        "rows": 1
+      }
+    },
+    {
+      "name": "WebGL unavailable: OSM DE fallback visually confirmed",
+      "pass": true,
+      "details": {
+        "detail": "Văn Miếu – Quốc Tử Giám",
+        "failureVisible": false,
+        "map": {
+          "moving": "false",
+          "pitch": "0",
+          "ready": "true",
+          "renderer": "raster",
+          "routeSegments": "0",
+          "routeStops": "0",
+          "status": "fallback",
+          "streets": "true",
+          "tilesPending": "false"
+        },
+        "mapHeight": 778,
+        "missingPins": 0,
+        "numbered": [],
+        "overflow": false,
+        "pins": 25,
+        "routes": 6,
+        "viewport": [
+          390,
+          844
+        ]
+      }
+    },
+    {
+      "name": "Raster fallback route still interactive",
+      "pass": true,
+      "details": {
+        "detail": "Chùa Ngọc Hồ (Bà Ngô)",
+        "failureVisible": false,
+        "map": {
+          "moving": "false",
+          "pitch": "0",
+          "ready": "true",
+          "renderer": "raster",
+          "routeSegments": "1",
+          "routeStops": "3",
+          "status": "fallback",
+          "streets": "true",
+          "tilesPending": "true",
+          "zoom": "16.00"
+        },
+        "mapHeight": 778,
+        "missingPins": 0,
+        "numbered": [
+          "1",
+          "2",
+          "3"
+        ],
+        "overflow": false,
+        "pins": 25,
+        "routes": 3,
+        "viewport": [
+          390,
+          844
+        ]
+      }
+    },
+    {
+      "name": "Raster pin opens detail",
+      "pass": true,
+      "details": {
+        "detail": "Y Miếu",
+        "failureVisible": false,
+        "map": {
+          "moving": "false",
+          "pitch": "0",
+          "ready": "true",
+          "renderer": "raster",
+          "routeSegments": "1",
+          "routeStops": "3",
+          "status": "fallback",
+          "streets": "true",
+          "tilesPending": "true",
+          "zoom": "16.00"
+        },
+        "mapHeight": 778,
+        "missingPins": 0,
+        "numbered": [
+          "1",
+          "2",
+          "3"
+        ],
+        "overflow": false,
+        "pins": 25,
+        "routes": 3,
+        "viewport": [
+          390,
+          844
+        ]
+      }
+    },
+    {
+      "name": "Raster zoom controls",
+      "pass": true,
+      "details": {
+        "in": "17.00",
+        "out": "16.00"
+      }
+    },
+    {
+      "name": "Missing MapLibre script uses raster fallback",
+      "pass": true,
+      "details": {
+        "detail": "Văn Miếu – Quốc Tử Giám",
+        "failureVisible": false,
+        "map": {
+          "moving": "false",
+          "pitch": "0",
+          "ready": "true",
+          "renderer": "raster",
+          "routeSegments": "0",
+          "routeStops": "0",
+          "status": "fallback",
+          "streets": "true",
+          "tilesPending": "false"
+        },
+        "mapHeight": 778,
+        "missingPins": 0,
+        "numbered": [],
+        "overflow": false,
+        "pins": 25,
+        "routes": 6,
+        "viewport": [
+          390,
+          844
+        ]
+      }
+    },
+    {
+      "name": "Style HTTP 503: independent raster streets",
+      "pass": true,
+      "details": {
+        "detail": "Văn Miếu – Quốc Tử Giám",
+        "failureVisible": false,
+        "map": {
+          "moving": "false",
+          "pitch": "0",
+          "ready": "true",
+          "renderer": "raster",
+          "routeSegments": "0",
+          "routeStops": "0",
+          "status": "fallback",
+          "streets": "true",
+          "tilesPending": "false",
+          "zoom": "15.00"
+        },
+        "mapHeight": 824,
+        "missingPins": 0,
+        "numbered": [],
+        "overflow": false,
+        "pins": 25,
+        "routes": 6,
+        "viewport": [
+          1440,
+          900
+        ]
+      }
+    },
+    {
+      "name": "Vector tiles HTTP 503: independent raster streets",
+      "pass": true,
+      "details": {
+        "detail": "Văn Miếu – Quốc Tử Giám",
+        "failureVisible": false,
+        "map": {
+          "buildings": "visible",
+          "moving": "false",
+          "pitch": "0",
+          "ready": "true",
+          "renderer": "raster",
+          "routeSegments": "0",
+          "routeStops": "0",
+          "status": "fallback",
+          "streets": "true",
+          "tilesPending": "false",
+          "zoom": "15.00"
+        },
+        "mapHeight": 824,
+        "missingPins": 0,
+        "numbered": [],
+        "overflow": false,
+        "pins": 25,
+        "routes": 6,
+        "viewport": [
+          1440,
+          900
+        ]
+      }
+    },
+    {
+      "name": "All raster providers fail: explicit error and usable pins",
+      "pass": true,
+      "details": {
+        "detail": "Văn Miếu – Quốc Tử Giám",
+        "failureVisible": true,
+        "map": {
+          "moving": "false",
+          "pitch": "0",
+          "ready": "true",
+          "renderer": "raster",
+          "routeSegments": "0",
+          "routeStops": "0",
+          "status": "error",
+          "streets": "false",
+          "tilesPending": "true"
+        },
+        "mapHeight": 824,
+        "missingPins": 0,
+        "numbered": [],
+        "overflow": false,
+        "pins": 25,
+        "routes": 6,
+        "viewport": [
+          1440,
+          900
+        ]
+      }
+    },
+    {
+      "name": "All providers failed: pin detail still works",
+      "pass": true,
+      "details": {
+        "detail": "Văn Miếu – Quốc Tử Giám",
+        "failureVisible": true,
+        "map": {
+          "moving": "false",
+          "pitch": "0",
+          "ready": "true",
+          "renderer": "raster",
+          "routeSegments": "0",
+          "routeStops": "0",
+          "status": "error",
+          "streets": "false",
+          "tilesPending": "true",
+          "zoom": "16.00"
+        },
+        "mapHeight": 824,
+        "missingPins": 0,
+        "numbered": [],
+        "overflow": false,
+        "pins": 25,
+        "routes": 6,
+        "viewport": [
+          1440,
+          900
+        ]
+      }
+    },
+    {
+      "name": "Retry returns from raster to WebGL with no duplicate pins",
+      "pass": true,
+      "details": {
+        "detail": "Văn Miếu – Quốc Tử Giám",
+        "failureVisible": false,
+        "map": {
+          "buildings": "visible",
+          "moving": "false",
+          "pitch": "52",
+          "ready": "true",
+          "renderer": "vector",
+          "routeSegments": "0",
+          "routeStops": "0",
+          "status": "ready",
+          "streets": "true",
+          "tilesPending": "false",
+          "zoom": "14.22"
+        },
+        "mapHeight": 824,
+        "missingPins": 0,
+        "numbered": [],
+        "overflow": false,
+        "pins": 25,
+        "routes": 6,
+        "viewport": [
+          1440,
+          900
+        ]
+      }
+    },
+    {
+      "name": "Vector zoom controls",
+      "pass": true,
+      "details": {
+        "in": "15.22",
+        "out": "14.22"
+      }
+    },
+    {
+      "name": "Drag pans map and moves coordinate-anchored marker",
+      "pass": true,
+      "details": {
+        "before": {
+          "bottom": 343,
+          "height": 44,
+          "left": 750,
+          "right": 786,
+          "top": 299,
+          "width": 36,
+          "x": 750,
+          "y": 299
+        },
+        "after": {
+          "bottom": 313,
+          "height": 44,
+          "left": 711,
+          "right": 747,
+          "top": 269,
+          "width": 36,
+          "x": 711,
+          "y": 269
+        }
+      }
+    },
+    {
+      "name": "Single HTML release: bundled worker and vector map",
+      "pass": true,
+      "details": {
+        "detail": "Văn Miếu – Quốc Tử Giám",
+        "failureVisible": false,
+        "map": {
+          "buildings": "visible",
+          "moving": "false",
+          "pitch": "52",
+          "ready": "true",
+          "renderer": "vector",
+          "routeSegments": "0",
+          "routeStops": "0",
+          "status": "ready",
+          "streets": "true",
+          "zoom": "14.22"
+        },
+        "mapHeight": 824,
+        "missingPins": 0,
+        "numbered": [],
+        "overflow": false,
+        "pins": 25,
+        "routes": 6,
+        "viewport": [
+          1440,
+          900
+        ]
+      }
+    },
+    {
+      "name": "Final normal session: no console errors or warnings",
+      "pass": true,
+      "details": []
+    },
+    {
+      "name": "Selected site outside current route remains visible",
+      "pass": true,
+      "details": {
+        "dim": false,
+        "name": "Chùa Ngọc Hồ (Bà Ngô)",
+        "selected": true
+      }
+    },
+    {
+      "name": "Expanded desktop itinerary leaves all numbered route pins visible",
+      "pass": true,
+      "details": {
+        "card": {
+          "bottom": 463,
+          "height": 265,
+          "left": 336,
+          "right": 621,
+          "top": 198,
+          "width": 285,
+          "x": 336,
+          "y": 198
+        },
+        "map": {
+          "bottom": 900,
+          "height": 824,
+          "left": 320,
+          "right": 1120,
+          "top": 76,
+          "width": 800,
+          "x": 320,
+          "y": 76
+        },
+        "pins": [
+          {
+            "id": "van_mieu",
+            "rect": {
+              "bottom": 410,
+              "height": 44,
+              "left": 686,
+              "right": 722,
+              "top": 366,
+              "width": 36,
+              "x": 686,
+              "y": 366
+            }
+          },
+          {
+            "id": "ngoc_ho",
+            "rect": {
+              "bottom": 417,
+              "height": 44,
+              "left": 830,
+              "right": 866,
+              "top": 373,
+              "width": 36,
+              "x": 830,
+              "y": 373
+            }
+          },
+          {
+            "id": "y_mieu",
+            "rect": {
+              "bottom": 564,
+              "height": 44,
+              "left": 1010,
+              "right": 1046,
+              "top": 520,
+              "width": 36,
+              "x": 1010,
+              "y": 520
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

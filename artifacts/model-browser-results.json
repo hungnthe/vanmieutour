@@ -1,0 +1,61 @@
+{
+  "results": [
+    {
+      "name": "SketchUp loads only after requested",
+      "pass": true
+    },
+    {
+      "name": "OSM 3D stays off with SketchUp",
+      "pass": true
+    },
+    {
+      "name": "25 canonical pins retained",
+      "pass": true
+    },
+    {
+      "name": "SketchUp switch hides the model",
+      "pass": true
+    },
+    {
+      "name": "2D changes camera without enabling buildings",
+      "pass": true
+    },
+    {
+      "name": "Unsurveyed placement is disclosed",
+      "pass": true
+    },
+    {
+      "name": "Route selection works",
+      "pass": true
+    },
+    {
+      "name": "Pin opens detail",
+      "pass": true
+    },
+    {
+      "name": "Layer controls fit mobile",
+      "pass": true
+    },
+    {
+      "name": "WebGL fallback keeps pins and disables SketchUp",
+      "pass": true
+    },
+    {
+      "name": "Model outage keeps map and pins without OSM 3D fallback",
+      "pass": true
+    },
+    {
+      "name": "Retry restores the requested model without duplicate pins",
+      "pass": true
+    },
+    {
+      "name": "Single-file release includes on-demand model and layer controls",
+      "pass": true
+    },
+    {
+      "name": "No JavaScript exceptions",
+      "pass": true
+    }
+  ],
+  "errors": []
+}

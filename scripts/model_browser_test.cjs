@@ -1,0 +1,70 @@
+// Browser regression checks for the model, exclusive 3D layers and fallbacks.
+const {chromium}=require('playwright');
+const fs=require('node:fs');
+const path=require('node:path');
+const assert=require('node:assert/strict');
+const root=path.resolve(__dirname,'..');
+const base=process.env.MODEL_QA_URL || 'http://localhost:8766/';
+(async()=>{
+ const browser=await chromium.launch({channel:'chrome',headless:true,args:['--enable-webgl','--ignore-gpu-blocklist','--use-gl=angle','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
+ const page=await browser.newPage({viewport:{width:1440,height:900}});
+ const errors=[],results=[];
+ page.on('pageerror',error=>errors.push(error.message));
+ const check=(name,value)=>{assert(value,name);results.push({name,pass:true});};
+ const ready=async()=>{
+  await page.waitForSelector('#map[data-ready="true"]',{timeout:90000});
+  await page.waitForFunction(()=>{const map=document.querySelector('#map');return map.dataset.renderer==='raster'||map.dataset.osm3d!=null},{timeout:30000});
+ };
+ try {
+  await page.goto(base,{waitUntil:'domcontentloaded'});await ready();
+  await page.waitForFunction(()=>document.querySelector('#map').dataset.streets==='true',{timeout:60000});
+  await page.locator('#map-model').click();
+  await page.waitForFunction(()=>document.querySelector('#map').dataset.model==='ready'&&document.querySelector('#map').dataset.buildings==='sketchup',{timeout:90000});
+  check('SketchUp loads only after requested',await page.locator('#map').getAttribute('data-model')==='ready');
+  check('OSM 3D stays off with SketchUp',await page.locator('#map').getAttribute('data-osm3d')==='none');
+  check('25 canonical pins retained',await page.locator('.map-marker').count()===25);
+  await page.screenshot({path:path.join(root,'artifacts/model-desktop.png')});
+  await page.locator('#map-zoom-in').click();await page.locator('#map-zoom-in').click();await page.waitForTimeout(1000);
+  await page.screenshot({path:path.join(root,'artifacts/model-closeup.png')});
+  await page.locator('#layer-sketchup').evaluate(input=>{input.checked=false;input.dispatchEvent(new Event('change',{bubbles:true}))});
+  await page.waitForFunction(()=>document.querySelector('#map').dataset.buildings==='hidden');
+  check('SketchUp switch hides the model',await page.locator('#layer-sketchup').isChecked().then(value=>!value));
+  await page.locator('#map-perspective').click();await page.waitForFunction(()=>document.querySelector('#map').dataset.pitch==='0',{timeout:10000});
+  check('2D changes camera without enabling buildings',await page.locator('#map').getAttribute('data-buildings')==='hidden');
+  await page.locator('#map-key').evaluate(element=>{element.open=true});
+  check('Unsurveyed placement is disclosed',await page.locator('#model-status').textContent().then(text=>text.includes('chưa được khảo sát')));
+  await page.locator('#map-perspective').click();
+  await page.locator('.route-card[data-route="W02"]').click();await page.waitForTimeout(500);
+  check('Route selection works',await page.locator('#map').getAttribute('data-route-stops')==='3');
+  await page.locator('.map-marker.in-route').first().click();
+  check('Pin opens detail',await page.locator('#details-content').textContent().then(text=>text.length>50));
+  await page.setViewportSize({width:390,height:844});await page.waitForTimeout(400);
+  check('Layer controls fit mobile',await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
+  await page.screenshot({path:path.join(root,'artifacts/model-mobile.png')});
+  await page.setViewportSize({width:834,height:1112});await page.waitForTimeout(400);
+  await page.screenshot({path:path.join(root,'artifacts/model-tablet.png')});
+  await page.goto(base+'?qa=no-webgl',{waitUntil:'domcontentloaded'});await ready();
+  check('WebGL fallback keeps pins and disables SketchUp',await page.locator('#map').getAttribute('data-renderer')==='raster'&&await page.locator('.map-marker').count()===25&&await page.locator('#map-model').isDisabled());
+  await page.route('**/data/model/model_2.glb',route=>route.fulfill({status:503,body:'Intentional model outage'}));
+  await page.goto(base,{waitUntil:'domcontentloaded'});await ready();
+  await page.locator('#map-model').click();
+  await page.waitForFunction(()=>document.querySelector('#map').dataset.model==='error',{timeout:90000});
+  check('Model outage keeps map and pins without OSM 3D fallback',await page.locator('#map').getAttribute('data-renderer')==='vector'&&await page.locator('#map').getAttribute('data-osm3d')==='none'&&await page.locator('.map-marker').count()===25);
+  await page.unroute('**/data/model/model_2.glb');
+  await page.locator('#map-retry').click();await ready();
+  await page.locator('#map-model').click();
+  await page.waitForFunction(()=>document.querySelector('#map').dataset.model==='ready'&&document.querySelector('#map').dataset.buildings==='sketchup',{timeout:90000});
+  check('Retry restores the requested model without duplicate pins',await page.locator('.map-marker').count()===25);
+  await page.goto(base+'heritage-atlas-2_5d.html',{waitUntil:'domcontentloaded'});await ready();
+  await page.locator('#map-model').click();
+  await page.waitForFunction(()=>document.querySelector('#map').dataset.model==='ready'&&document.querySelector('#map').dataset.buildings==='sketchup',{timeout:90000});
+  check('Single-file release includes on-demand model and layer controls',await page.locator('[data-gis-group]').count()===4&&await page.locator('#map').getAttribute('data-osm3d')==='none');
+  check('No JavaScript exceptions',errors.length===0);
+  fs.writeFileSync(path.join(root,'artifacts/model-browser-results.json'),JSON.stringify({results,errors},null,2));
+  console.log(JSON.stringify({checks:results.length,errors}));
+ }catch(error){
+  await page.screenshot({path:path.join(root,'artifacts/model-failure.png')});
+  console.log('Map state',await page.locator('#map').evaluate(element=>({...element.dataset})).catch(()=>null));
+  console.log('Page exceptions',errors);throw error;
+ }finally{await browser.close()}
+})().catch(error=>{console.error(error);process.exit(1)});

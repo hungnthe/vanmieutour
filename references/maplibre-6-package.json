@@ -1,0 +1,3811 @@
+[
+  {
+    "id": "maplibre-gl@6.15.0",
+    "name": "maplibre-gl",
+    "version": "6.15.0",
+    "size": 6166111,
+    "unpackedSize": 28785416,
+    "shasum": "58e9c7d4eb37baad6e78a1a689930ce2c50d26b7",
+    "integrity": "sha512-kxFetbvUHDOVaAP1CYb226Mdk2QhzIPddqM0xJTFD35wu78Mpd6NM7+H68ALjc6Oa0kAOX5EAdMKyvD2u3qfcg==",
+    "filename": "maplibre-gl-6.15.0.tgz",
+    "files": [
+      {
+        "path": "LICENSE.txt",
+        "size": 5984,
+        "mode": 420
+      },
+      {
+        "path": "README.md",
+        "size": 13392,
+        "mode": 420
+      },
+      {
+        "path": "build/banner.ts",
+        "size": 479,
+        "mode": 420
+      },
+      {
+        "path": "build/eslint-rules/prefer-type-for-data-shapes.js",
+        "size": 1356,
+        "mode": 420
+      },
+      {
+        "path": "build/generate-doc-images.ts",
+        "size": 3148,
+        "mode": 420
+      },
+      {
+        "path": "build/generate-docs.ts",
+        "size": 11900,
+        "mode": 420
+      },
+      {
+        "path": "build/generate-shaders.ts",
+        "size": 1583,
+        "mode": 420
+      },
+      {
+        "path": "build/generate-struct-arrays.ts",
+        "size": 14604,
+        "mode": 420
+      },
+      {
+        "path": "build/generate-style-code.ts",
+        "size": 14602,
+        "mode": 420
+      },
+      {
+        "path": "build/generate-unicode-data.ts",
+        "size": 29256,
+        "mode": 420
+      },
+      {
+        "path": "build/readme.md",
+        "size": 2153,
+        "mode": 420
+      },
+      {
+        "path": "dist/maplibre-gl-dev.mjs",
+        "size": 2470588,
+        "mode": 420
+      },
+      {
+        "path": "dist/maplibre-gl-dev.mjs.map",
+        "size": 5552288,
+        "mode": 420
+      },
+      {
+        "path": "dist/maplibre-gl-shared-dev.mjs",
+        "size": 0,
+        "mode": 420
+      },
+      {
+        "path": "dist/maplibre-gl-shared.mjs",
+        "size": 0,
+        "mode": 420
+      },
+      {
+        "path": "dist/maplibre-gl-worker-dev.mjs",
+        "size": 1199914,
+        "mode": 420
+      },
+      {
+        "path": "dist/maplibre-gl-worker-dev.mjs.map",
+        "size": 2880629,
+        "mode": 420
+      },
+      {
+        "path": "dist/maplibre-gl-worker.mjs",
+        "size": 518806,
+        "mode": 420
+      },
+      {
+        "path": "dist/maplibre-gl-worker.mjs.map",
+        "size": 2643431,
+        "mode": 420
+      },
+      {
+        "path": "dist/maplibre-gl.css",
+        "size": 71596,
+        "mode": 420
+      },
+      {
+        "path": "dist/maplibre-gl.d.ts",
+        "size": 746446,
+        "mode": 420
+      },
+      {
+        "path": "dist/maplibre-gl.mjs",
+        "size": 1098062,
+        "mode": 420
+      },
+      {
+        "path": "dist/maplibre-gl.mjs.map",
+        "size": 5543874,
+        "mode": 420
+      },
+      {
+        "path": "package.json",
+        "size": 6704,
+        "mode": 420
+      },
+      {
+        "path": "src/css/maplibre-gl.css",
+        "size": 23631,
+        "mode": 420
+      },
+      {
+        "path": "src/css/svg/maplibregl-ctrl-attrib.svg",
+        "size": 229,
+        "mode": 420
+      },
+      {
+        "path": "src/css/svg/maplibregl-ctrl-compass.svg",
+        "size": 171,
+        "mode": 420
+      },
+      {
+        "path": "src/css/svg/maplibregl-ctrl-fullscreen.svg",
+        "size": 370,
+        "mode": 420
+      },
+      {
+        "path": "src/css/svg/maplibregl-ctrl-geolocate.svg",
+        "size": 408,
+        "mode": 420
+      },
+      {
+        "path": "src/css/svg/maplibregl-ctrl-globe.svg",
+        "size": 1836,
+        "mode": 420
+      },
+      {
+        "path": "src/css/svg/maplibregl-ctrl-logo.svg",
+        "size": 12772,
+        "mode": 420
+      },
+      {
+        "path": "src/css/svg/maplibregl-ctrl-shrink.svg",
+        "size": 370,
+        "mode": 420
+      },
+      {
+        "path": "src/css/svg/maplibregl-ctrl-terrain.svg",
+        "size": 299,
+        "mode": 420
+      },
+      {
+        "path": "src/css/svg/maplibregl-ctrl-zoom-in.svg",
+        "size": 290,
+        "mode": 420
+      },
+      {
+        "path": "src/css/svg/maplibregl-ctrl-zoom-out.svg",
+        "size": 190,
+        "mode": 420
+      },
+      {
+        "path": "src/data/array_types.g.ts",
+        "size": 39557,
+        "mode": 420
+      },
+      {
+        "path": "src/data/bucket.ts",
+        "size": 6369,
+        "mode": 420
+      },
+      {
+        "path": "src/data/bucket/circle_attributes.ts",
+        "size": 388,
+        "mode": 420
+      },
+      {
+        "path": "src/data/bucket/circle_bucket.ts",
+        "size": 9892,
+        "mode": 420
+      },
+      {
+        "path": "src/data/bucket/dash_attributes.ts",
+        "size": 303,
+        "mode": 420
+      },
+      {
+        "path": "src/data/bucket/fill_attributes.ts",
+        "size": 388,
+        "mode": 420
+      },
+      {
+        "path": "src/data/bucket/fill_bucket.test.ts",
+        "size": 9168,
+        "mode": 420
+      },
+      {
+        "path": "src/data/bucket/fill_bucket.ts",
+        "size": 9855,
+        "mode": 420
+      },
+      {
+        "path": "src/data/bucket/fill_extrusion_attributes.ts",
+        "size": 589,
+        "mode": 420
+      },
+      {
+        "path": "src/data/bucket/fill_extrusion_bucket.test.ts",
+        "size": 3227,
+        "mode": 420
+      },
+      {
+        "path": "src/data/bucket/fill_extrusion_bucket.ts",
+        "size": 13937,
+        "mode": 420
+      },
+      {
+        "path": "src/data/bucket/heatmap_bucket.ts",
+        "size": 481,
+        "mode": 420
+      },
+      {
+        "path": "src/data/bucket/line_attributes_ext.ts",
+        "size": 502,
+        "mode": 420
+      },
+      {
+        "path": "src/data/bucket/line_attributes.ts",
+        "size": 547,
+        "mode": 420
+      },
+      {
+        "path": "src/data/bucket/line_bucket.test.ts",
+        "size": 8461,
+        "mode": 420
+      },
+      {
+        "path": "src/data/bucket/line_bucket.ts",
+        "size": 32149,
+        "mode": 420
+      },
+      {
+        "path": "src/data/bucket/pattern_attributes.ts",
+        "size": 433,
+        "mode": 420
+      },
+      {
+        "path": "src/data/bucket/pattern_bucket_features.ts",
+        "size": 2467,
+        "mode": 420
+      },
+      {
+        "path": "src/data/bucket/round_polygon_corners.test.ts",
+        "size": 8992,
+        "mode": 420
+      },
+      {
+        "path": "src/data/bucket/round_polygon_corners.ts",
+        "size": 9338,
+        "mode": 420
+      },
+      {
+        "path": "src/data/bucket/symbol_attributes.ts",
+        "size": 5216,
+        "mode": 420
+      },
+      {
+        "path": "src/data/bucket/symbol_bucket.test.ts",
+        "size": 19271,
+        "mode": 420
+      },
+      {
+        "path": "src/data/bucket/symbol_bucket.ts",
+        "size": 43297,
+        "mode": 420
+      },
+      {
+        "path": "src/data/dem_data.test.ts",
+        "size": 13251,
+        "mode": 420
+      },
+      {
+        "path": "src/data/dem_data.ts",
+        "size": 9765,
+        "mode": 420
+      },
+      {
+        "path": "src/data/evaluation_feature.ts",
+        "size": 823,
+        "mode": 420
+      },
+      {
+        "path": "src/data/extent_bounds.ts",
+        "size": 1890,
+        "mode": 420
+      },
+      {
+        "path": "src/data/extent.ts",
+        "size": 598,
+        "mode": 420
+      },
+      {
+        "path": "src/data/feature_index.bench.ts",
+        "size": 1093,
+        "mode": 420
+      },
+      {
+        "path": "src/data/feature_index.test.ts",
+        "size": 6754,
+        "mode": 420
+      },
+      {
+        "path": "src/data/feature_index.ts",
+        "size": 15029,
+        "mode": 420
+      },
+      {
+        "path": "src/data/feature_position_map.test.ts",
+        "size": 1272,
+        "mode": 420
+      },
+      {
+        "path": "src/data/feature_position_map.ts",
+        "size": 3739,
+        "mode": 420
+      },
+      {
+        "path": "src/data/index_array_type.ts",
+        "size": 469,
+        "mode": 420
+      },
+      {
+        "path": "src/data/load_geometry.test.ts",
+        "size": 1634,
+        "mode": 420
+      },
+      {
+        "path": "src/data/load_geometry.ts",
+        "size": 1694,
+        "mode": 420
+      },
+      {
+        "path": "src/data/pos_attributes.ts",
+        "size": 220,
+        "mode": 420
+      },
+      {
+        "path": "src/data/pos3d_attributes.ts",
+        "size": 226,
+        "mode": 420
+      },
+      {
+        "path": "src/data/program_configuration.ts",
+        "size": 33777,
+        "mode": 420
+      },
+      {
+        "path": "src/data/raster_bounds_attributes.ts",
+        "size": 297,
+        "mode": 420
+      },
+      {
+        "path": "src/data/segment.test.ts",
+        "size": 10132,
+        "mode": 420
+      },
+      {
+        "path": "src/data/segment.ts",
+        "size": 4205,
+        "mode": 420
+      },
+      {
+        "path": "src/geo/bounds.test.ts",
+        "size": 5468,
+        "mode": 420
+      },
+      {
+        "path": "src/geo/bounds.ts",
+        "size": 4944,
+        "mode": 420
+      },
+      {
+        "path": "src/geo/edge_insets.test.ts",
+        "size": 2817,
+        "mode": 420
+      },
+      {
+        "path": "src/geo/edge_insets.ts",
+        "size": 4838,
+        "mode": 420
+      },
+      {
+        "path": "src/geo/lng_lat_bounds.test.ts",
+        "size": 17774,
+        "mode": 420
+      },
+      {
+        "path": "src/geo/lng_lat_bounds.ts",
+        "size": 14279,
+        "mode": 420
+      },
+      {
+        "path": "src/geo/lng_lat.test.ts",
+        "size": 2488,
+        "mode": 420
+      },
+      {
+        "path": "src/geo/lng_lat.ts",
+        "size": 6133,
+        "mode": 420
+      },
+      {
+        "path": "src/geo/mercator_coordinate.test.ts",
+        "size": 1998,
+        "mode": 420
+      },
+      {
+        "path": "src/geo/mercator_coordinate.ts",
+        "size": 7196,
+        "mode": 420
+      },
+      {
+        "path": "src/geo/projection/camera_helper.ts",
+        "size": 9747,
+        "mode": 420
+      },
+      {
+        "path": "src/geo/projection/covering_tiles_details_provider.ts",
+        "size": 1952,
+        "mode": 420
+      },
+      {
+        "path": "src/geo/projection/covering_tiles.bench.ts",
+        "size": 1220,
+        "mode": 420
+      },
+      {
+        "path": "src/geo/projection/covering_tiles.test.ts",
+        "size": 36548,
+        "mode": 420
+      },
+      {
+        "path": "src/geo/projection/covering_tiles.ts",
+        "size": 18972,
+        "mode": 420
+      },
+      {
+        "path": "src/geo/projection/crs.test.ts",
+        "size": 12964,
+        "mode": 420
+      },
+      {
+        "path": "src/geo/projection/crs.ts",
+        "size": 11714,
+        "mode": 420
+      },
+      {
+        "path": "src/geo/projection/globe_camera_helper.ts",
+        "size": 2948,
+        "mode": 420
+      },
+      {
+        "path": "src/geo/projection/globe_covering_tiles_details_provider.ts",
+        "size": 16092,
+        "mode": 420
+      },
+      {
+        "path": "src/geo/projection/globe_covering_tiles.test.ts",
+        "size": 7031,
+        "mode": 420
+      },
+      {
+        "path": "src/geo/projection/globe_projection.test.ts",
+        "size": 1178,
+        "mode": 420
+      },
+      {
+        "path": "src/geo/projection/globe_projection.ts",
+        "size": 5272,
+        "mode": 420
+      },
+      {
+        "path": "src/geo/projection/globe_transform.test.ts",
+        "size": 48899,
+        "mode": 420
+      },
+      {
+        "path": "src/geo/projection/globe_transform.ts",
+        "size": 18352,
+        "mode": 420
+      },
+      {
+        "path": "src/geo/projection/globe_utils.test.ts",
+        "size": 3708,
+        "mode": 420
+      },
+      {
+        "path": "src/geo/projection/globe_utils.ts",
+        "size": 26283,
+        "mode": 420
+      },
+      {
+        "path": "src/geo/projection/mercator_camera_helper.ts",
+        "size": 10214,
+        "mode": 420
+      },
+      {
+        "path": "src/geo/projection/mercator_covering_tiles_details_provider.ts",
+        "size": 2923,
+        "mode": 420
+      },
+      {
+        "path": "src/geo/projection/mercator_projection.ts",
+        "size": 4105,
+        "mode": 420
+      },
+      {
+        "path": "src/geo/projection/mercator_transform.bench.ts",
+        "size": 2332,
+        "mode": 420
+      },
+      {
+        "path": "src/geo/projection/mercator_transform.test.ts",
+        "size": 77371,
+        "mode": 420
+      },
+      {
+        "path": "src/geo/projection/mercator_transform.ts",
+        "size": 55484,
+        "mode": 420
+      },
+      {
+        "path": "src/geo/projection/mercator_utils.test.ts",
+        "size": 10859,
+        "mode": 420
+      },
+      {
+        "path": "src/geo/projection/mercator_utils.ts",
+        "size": 13021,
+        "mode": 420
+      },
+      {
+        "path": "src/geo/projection/projection_crud.test.ts",
+        "size": 2862,
+        "mode": 420
+      },
+      {
+        "path": "src/geo/projection/projection_crud.ts",
+        "size": 3735,
+        "mode": 420
+      },
+      {
+        "path": "src/geo/projection/projection_data.ts",
+        "size": 4090,
+        "mode": 420
+      },
+      {
+        "path": "src/geo/projection/projection_factory.test.ts",
+        "size": 3513,
+        "mode": 420
+      },
+      {
+        "path": "src/geo/projection/projection_factory.ts",
+        "size": 4305,
+        "mode": 420
+      },
+      {
+        "path": "src/geo/projection/projection.ts",
+        "size": 6046,
+        "mode": 420
+      },
+      {
+        "path": "src/geo/projection/tile_matrix_set.ts",
+        "size": 1141,
+        "mode": 420
+      },
+      {
+        "path": "src/geo/projection/transform_hot_paths.bench.ts",
+        "size": 2926,
+        "mode": 420
+      },
+      {
+        "path": "src/geo/projection/vertical_perspective_camera_helper.test.ts",
+        "size": 4916,
+        "mode": 420
+      },
+      {
+        "path": "src/geo/projection/vertical_perspective_camera_helper.ts",
+        "size": 26635,
+        "mode": 420
+      },
+      {
+        "path": "src/geo/projection/vertical_perspective_projection.ts",
+        "size": 4490,
+        "mode": 420
+      },
+      {
+        "path": "src/geo/projection/vertical_perspective_transform.test.ts",
+        "size": 17087,
+        "mode": 420
+      },
+      {
+        "path": "src/geo/projection/vertical_perspective_transform.ts",
+        "size": 49607,
+        "mode": 420
+      },
+      {
+        "path": "src/geo/transform_helper.test.ts",
+        "size": 5523,
+        "mode": 420
+      },
+      {
+        "path": "src/geo/transform_helper.ts",
+        "size": 29186,
+        "mode": 420
+      },
+      {
+        "path": "src/geo/transform_interface.ts",
+        "size": 25055,
+        "mode": 420
+      },
+      {
+        "path": "src/index.test.ts",
+        "size": 5461,
+        "mode": 420
+      },
+      {
+        "path": "src/index.ts",
+        "size": 18910,
+        "mode": 420
+      },
+      {
+        "path": "src/render/fill_large_mesh_arrays.test.ts",
+        "size": 15080,
+        "mode": 420
+      },
+      {
+        "path": "src/render/fill_large_mesh_arrays.ts",
+        "size": 12336,
+        "mode": 420
+      },
+      {
+        "path": "src/render/font_face_manager.test.ts",
+        "size": 16662,
+        "mode": 420
+      },
+      {
+        "path": "src/render/font_face_manager.ts",
+        "size": 11274,
+        "mode": 420
+      },
+      {
+        "path": "src/render/frame_render_context.test.ts",
+        "size": 3897,
+        "mode": 420
+      },
+      {
+        "path": "src/render/frame_render_context.ts",
+        "size": 16340,
+        "mode": 420
+      },
+      {
+        "path": "src/render/glyph_atlas.test.ts",
+        "size": 2080,
+        "mode": 420
+      },
+      {
+        "path": "src/render/glyph_atlas.ts",
+        "size": 2447,
+        "mode": 420
+      },
+      {
+        "path": "src/render/glyph_manager.test.ts",
+        "size": 29862,
+        "mode": 420
+      },
+      {
+        "path": "src/render/glyph_manager.ts",
+        "size": 22047,
+        "mode": 420
+      },
+      {
+        "path": "src/render/image_atlas.test.ts",
+        "size": 7372,
+        "mode": 420
+      },
+      {
+        "path": "src/render/image_atlas.ts",
+        "size": 7797,
+        "mode": 420
+      },
+      {
+        "path": "src/render/image_manager.test.ts",
+        "size": 4169,
+        "mode": 420
+      },
+      {
+        "path": "src/render/image_manager.ts",
+        "size": 14308,
+        "mode": 420
+      },
+      {
+        "path": "src/render/line_atlas.test.ts",
+        "size": 1267,
+        "mode": 420
+      },
+      {
+        "path": "src/render/line_atlas.ts",
+        "size": 6904,
+        "mode": 420
+      },
+      {
+        "path": "src/render/mesh.ts",
+        "size": 742,
+        "mode": 420
+      },
+      {
+        "path": "src/render/painter.test.ts",
+        "size": 9571,
+        "mode": 420
+      },
+      {
+        "path": "src/render/painter.ts",
+        "size": 27839,
+        "mode": 420
+      },
+      {
+        "path": "src/render/pattern_atlas.test.ts",
+        "size": 5369,
+        "mode": 420
+      },
+      {
+        "path": "src/render/pattern_atlas.ts",
+        "size": 5637,
+        "mode": 420
+      },
+      {
+        "path": "src/render/render_to_texture_interface.ts",
+        "size": 874,
+        "mode": 420
+      },
+      {
+        "path": "src/render/subdivision_granularity_settings.ts",
+        "size": 4001,
+        "mode": 420
+      },
+      {
+        "path": "src/render/subdivision.bench.ts",
+        "size": 1624,
+        "mode": 420
+      },
+      {
+        "path": "src/render/subdivision.test.ts",
+        "size": 35549,
+        "mode": 420
+      },
+      {
+        "path": "src/render/subdivision.ts",
+        "size": 45935,
+        "mode": 420
+      },
+      {
+        "path": "src/render/terrain_coverage.ts",
+        "size": 10131,
+        "mode": 420
+      },
+      {
+        "path": "src/render/terrain.test.ts",
+        "size": 26067,
+        "mode": 420
+      },
+      {
+        "path": "src/render/terrain.ts",
+        "size": 26574,
+        "mode": 420
+      },
+      {
+        "path": "src/render/update_pattern_positions_in_program.test.ts",
+        "size": 3105,
+        "mode": 420
+      },
+      {
+        "path": "src/render/update_pattern_positions_in_program.ts",
+        "size": 2443,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/encode_attribute.test.ts",
+        "size": 378,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/encode_attribute.ts",
+        "size": 436,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/_prelude.fragment.glsl",
+        "size": 860,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/_prelude.fragment.glsl.g.ts",
+        "size": 893,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/_prelude.vertex.glsl",
+        "size": 6705,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/_prelude.vertex.glsl.g.ts",
+        "size": 3852,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/_projection_globe.fragment.glsl",
+        "size": 537,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/_projection_globe.fragment.glsl.g.ts",
+        "size": 280,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/_projection_globe.vertex.glsl",
+        "size": 7624,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/_projection_globe.vertex.glsl.g.ts",
+        "size": 3959,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/_projection_mercator.fragment.glsl",
+        "size": 187,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/_projection_mercator.fragment.glsl.g.ts",
+        "size": 134,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/_projection_mercator.vertex.glsl",
+        "size": 1382,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/_projection_mercator.vertex.glsl.g.ts",
+        "size": 700,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/atmosphere.fragment.glsl",
+        "size": 5717,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/atmosphere.fragment.glsl.g.ts",
+        "size": 2627,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/atmosphere.vertex.glsl",
+        "size": 254,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/atmosphere.vertex.glsl.g.ts",
+        "size": 299,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/background_pattern.fragment.glsl",
+        "size": 731,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/background_pattern.fragment.glsl.g.ts",
+        "size": 749,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/background_pattern.vertex.glsl",
+        "size": 622,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/background_pattern.vertex.glsl.g.ts",
+        "size": 677,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/background.fragment.glsl",
+        "size": 162,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/background.fragment.glsl.g.ts",
+        "size": 252,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/background.vertex.glsl",
+        "size": 98,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/background.vertex.glsl.g.ts",
+        "size": 190,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/circle.fragment.glsl",
+        "size": 2133,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/circle.fragment.glsl.g.ts",
+        "size": 1421,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/circle.vertex.glsl",
+        "size": 4339,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/circle.vertex.glsl.g.ts",
+        "size": 2675,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/clipping_mask.fragment.glsl",
+        "size": 43,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/clipping_mask.fragment.glsl.g.ts",
+        "size": 140,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/clipping_mask.vertex.glsl",
+        "size": 98,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/clipping_mask.vertex.glsl.g.ts",
+        "size": 190,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/collision_box.fragment.glsl",
+        "size": 398,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/collision_box.fragment.glsl.g.ts",
+        "size": 308,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/collision_box.vertex.glsl",
+        "size": 811,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/collision_box.vertex.glsl.g.ts",
+        "size": 545,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/collision_circle.fragment.glsl",
+        "size": 453,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/collision_circle.fragment.glsl.g.ts",
+        "size": 485,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/collision_circle.vertex.glsl",
+        "size": 949,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/collision_circle.vertex.glsl.g.ts",
+        "size": 770,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/color_relief.fragment.glsl",
+        "size": 1314,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/color_relief.fragment.glsl.g.ts",
+        "size": 1016,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/color_relief.vertex.glsl",
+        "size": 444,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/color_relief.vertex.glsl.g.ts",
+        "size": 420,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/debug.fragment.glsl",
+        "size": 202,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/debug.fragment.glsl.g.ts",
+        "size": 284,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/debug.vertex.glsl",
+        "size": 365,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/debug.vertex.glsl.g.ts",
+        "size": 296,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/depth.vertex.glsl",
+        "size": 210,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/depth.vertex.glsl.g.ts",
+        "size": 280,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/fill_extrusion_pattern.fragment.glsl",
+        "size": 1433,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/fill_extrusion_pattern.fragment.glsl.g.ts",
+        "size": 1396,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/fill_extrusion_pattern.vertex.glsl",
+        "size": 4660,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/fill_extrusion_pattern.vertex.glsl.g.ts",
+        "size": 3338,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/fill_extrusion.fragment.glsl",
+        "size": 132,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/fill_extrusion.fragment.glsl.g.ts",
+        "size": 213,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/fill_extrusion.vertex.glsl",
+        "size": 4523,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/fill_extrusion.vertex.glsl.g.ts",
+        "size": 2583,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/fill_outline_pattern.fragment.glsl",
+        "size": 2080,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/fill_outline_pattern.fragment.glsl.g.ts",
+        "size": 1787,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/fill_outline_pattern.vertex.glsl",
+        "size": 1934,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/fill_outline_pattern.vertex.glsl.g.ts",
+        "size": 1761,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/fill_outline.fragment.glsl",
+        "size": 933,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/fill_outline.fragment.glsl.g.ts",
+        "size": 613,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/fill_outline.vertex.glsl",
+        "size": 743,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/fill_outline.vertex.glsl.g.ts",
+        "size": 684,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/fill_pattern.fragment.glsl",
+        "size": 1768,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/fill_pattern.fragment.glsl.g.ts",
+        "size": 1631,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/fill_pattern.vertex.glsl",
+        "size": 1744,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/fill_pattern.vertex.glsl.g.ts",
+        "size": 1596,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/fill.fragment.glsl",
+        "size": 300,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/fill.fragment.glsl.g.ts",
+        "size": 389,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/fill.vertex.glsl",
+        "size": 524,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/fill.vertex.glsl.g.ts",
+        "size": 491,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/heatmap_texture.fragment.glsl",
+        "size": 308,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/heatmap_texture.fragment.glsl.g.ts",
+        "size": 378,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/heatmap_texture.vertex.glsl",
+        "size": 208,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/heatmap_texture.vertex.glsl.g.ts",
+        "size": 276,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/heatmap.fragment.glsl",
+        "size": 548,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/heatmap.fragment.glsl.g.ts",
+        "size": 491,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/heatmap.vertex.glsl",
+        "size": 2459,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/heatmap.vertex.glsl.g.ts",
+        "size": 1179,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/hillshade_prepare.fragment.glsl",
+        "size": 2755,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/hillshade_prepare.fragment.glsl.g.ts",
+        "size": 1238,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/hillshade_prepare.vertex.glsl",
+        "size": 370,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/hillshade_prepare.vertex.glsl.g.ts",
+        "size": 417,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/hillshade.fragment.glsl",
+        "size": 7321,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/hillshade.fragment.glsl.g.ts",
+        "size": 3972,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/hillshade.vertex.glsl",
+        "size": 320,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/hillshade.vertex.glsl.g.ts",
+        "size": 320,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/layer_opacity.fragment.glsl",
+        "size": 199,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/layer_opacity.fragment.glsl.g.ts",
+        "size": 286,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/layer_opacity.vertex.glsl",
+        "size": 395,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/layer_opacity.vertex.glsl.g.ts",
+        "size": 262,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/line_gradient_sdf.fragment.glsl",
+        "size": 2140,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/line_gradient_sdf.fragment.glsl.g.ts",
+        "size": 1671,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/line_gradient_sdf.vertex.glsl",
+        "size": 5543,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/line_gradient_sdf.vertex.glsl.g.ts",
+        "size": 3606,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/line_gradient.fragment.glsl",
+        "size": 1227,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/line_gradient.fragment.glsl.g.ts",
+        "size": 820,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/line_gradient.vertex.glsl",
+        "size": 4106,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/line_gradient.vertex.glsl.g.ts",
+        "size": 2505,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/line_pattern.fragment.glsl",
+        "size": 2871,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/line_pattern.fragment.glsl.g.ts",
+        "size": 2371,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/line_pattern.vertex.glsl",
+        "size": 4732,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/line_pattern.vertex.glsl.g.ts",
+        "size": 2942,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/line_sdf.fragment.glsl",
+        "size": 2009,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/line_sdf.fragment.glsl.g.ts",
+        "size": 1668,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/line_sdf.vertex.glsl",
+        "size": 5257,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/line_sdf.vertex.glsl.g.ts",
+        "size": 3428,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/line.fragment.glsl",
+        "size": 1651,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/line.fragment.glsl.g.ts",
+        "size": 832,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/line.vertex.glsl",
+        "size": 3974,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/line.vertex.glsl.g.ts",
+        "size": 2396,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/raster.fragment.glsl",
+        "size": 1412,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/raster.fragment.glsl.g.ts",
+        "size": 1171,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/raster.vertex.glsl",
+        "size": 2886,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/raster.vertex.glsl.g.ts",
+        "size": 1398,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/sky.fragment.glsl",
+        "size": 1930,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/sky.fragment.glsl.g.ts",
+        "size": 1714,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/sky.vertex.glsl",
+        "size": 227,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/sky.vertex.glsl.g.ts",
+        "size": 303,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/symbol_icon.fragment.glsl",
+        "size": 210,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/symbol_icon.fragment.glsl.g.ts",
+        "size": 297,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/symbol_icon.vertex.glsl",
+        "size": 4840,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/symbol_icon.vertex.glsl.g.ts",
+        "size": 3840,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/symbol_sdf.fragment.glsl",
+        "size": 2454,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/symbol_sdf.fragment.glsl.g.ts",
+        "size": 2071,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/symbol_sdf.vertex.glsl",
+        "size": 6542,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/symbol_sdf.vertex.glsl.g.ts",
+        "size": 4367,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/symbol_text_and_icon.fragment.glsl",
+        "size": 2340,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/symbol_text_and_icon.fragment.glsl.g.ts",
+        "size": 2077,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/symbol_text_and_icon.vertex.glsl",
+        "size": 6187,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/symbol_text_and_icon.vertex.glsl.g.ts",
+        "size": 4347,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/terrain_depth.fragment.glsl",
+        "size": 472,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/terrain_depth.fragment.glsl.g.ts",
+        "size": 378,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/terrain_depth.vertex.glsl",
+        "size": 316,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/terrain_depth.vertex.glsl.g.ts",
+        "size": 377,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/terrain_height.fragment.glsl",
+        "size": 95,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/terrain_height.fragment.glsl.g.ts",
+        "size": 187,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/terrain_height.vertex.glsl",
+        "size": 320,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/terrain_height.vertex.glsl.g.ts",
+        "size": 378,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/terrain.fragment.glsl",
+        "size": 1328,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/terrain.fragment.glsl.g.ts",
+        "size": 1214,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/terrain.vertex.glsl",
+        "size": 469,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/glsl/terrain.vertex.glsl.g.ts",
+        "size": 505,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/README.md",
+        "size": 1602,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/shaders.test.ts",
+        "size": 599,
+        "mode": 420
+      },
+      {
+        "path": "src/shaders/shaders.ts",
+        "size": 12227,
+        "mode": 420
+      },
+      {
+        "path": "src/source/canvas_source.test.ts",
+        "size": 8210,
+        "mode": 420
+      },
+      {
+        "path": "src/source/canvas_source.ts",
+        "size": 7393,
+        "mode": 420
+      },
+      {
+        "path": "src/source/geojson_source_diff.test.ts",
+        "size": 28760,
+        "mode": 420
+      },
+      {
+        "path": "src/source/geojson_source_diff.ts",
+        "size": 12146,
+        "mode": 420
+      },
+      {
+        "path": "src/source/geojson_source.test.ts",
+        "size": 65518,
+        "mode": 420
+      },
+      {
+        "path": "src/source/geojson_source.ts",
+        "size": 28673,
+        "mode": 420
+      },
+      {
+        "path": "src/source/geojson_worker_source.test.ts",
+        "size": 33830,
+        "mode": 420
+      },
+      {
+        "path": "src/source/geojson_worker_source.ts",
+        "size": 16814,
+        "mode": 420
+      },
+      {
+        "path": "src/source/image_source.test.ts",
+        "size": 33000,
+        "mode": 420
+      },
+      {
+        "path": "src/source/image_source.ts",
+        "size": 25234,
+        "mode": 420
+      },
+      {
+        "path": "src/source/load_tilejson.test.ts",
+        "size": 7364,
+        "mode": 420
+      },
+      {
+        "path": "src/source/load_tilejson.ts",
+        "size": 1835,
+        "mode": 420
+      },
+      {
+        "path": "src/source/pixels_to_tile_units.ts",
+        "size": 740,
+        "mode": 420
+      },
+      {
+        "path": "src/source/projection_handler_worker.ts",
+        "size": 2209,
+        "mode": 420
+      },
+      {
+        "path": "src/source/protocol_crud.ts",
+        "size": 3100,
+        "mode": 420
+      },
+      {
+        "path": "src/source/query_features.test.ts",
+        "size": 1295,
+        "mode": 420
+      },
+      {
+        "path": "src/source/query_features.ts",
+        "size": 12265,
+        "mode": 420
+      },
+      {
+        "path": "src/source/raster_dem_tile_source.test.ts",
+        "size": 16516,
+        "mode": 420
+      },
+      {
+        "path": "src/source/raster_dem_tile_source.ts",
+        "size": 8164,
+        "mode": 420
+      },
+      {
+        "path": "src/source/raster_dem_tile_worker_source.test.ts",
+        "size": 1177,
+        "mode": 420
+      },
+      {
+        "path": "src/source/raster_dem_tile_worker_source.ts",
+        "size": 1307,
+        "mode": 420
+      },
+      {
+        "path": "src/source/raster_tile_source.test.ts",
+        "size": 21310,
+        "mode": 420
+      },
+      {
+        "path": "src/source/raster_tile_source.ts",
+        "size": 10203,
+        "mode": 420
+      },
+      {
+        "path": "src/source/rtl_text_plugin_main_thread.test.ts",
+        "size": 7852,
+        "mode": 420
+      },
+      {
+        "path": "src/source/rtl_text_plugin_main_thread.ts",
+        "size": 2946,
+        "mode": 420
+      },
+      {
+        "path": "src/source/rtl_text_plugin_status.ts",
+        "size": 1336,
+        "mode": 420
+      },
+      {
+        "path": "src/source/rtl_text_plugin_worker.test.ts",
+        "size": 4657,
+        "mode": 420
+      },
+      {
+        "path": "src/source/rtl_text_plugin_worker.ts",
+        "size": 3532,
+        "mode": 420
+      },
+      {
+        "path": "src/source/source_state.test.ts",
+        "size": 3152,
+        "mode": 420
+      },
+      {
+        "path": "src/source/source_state.ts",
+        "size": 7842,
+        "mode": 420
+      },
+      {
+        "path": "src/source/source.test.ts",
+        "size": 2310,
+        "mode": 420
+      },
+      {
+        "path": "src/source/source.ts",
+        "size": 7378,
+        "mode": 420
+      },
+      {
+        "path": "src/source/vector_tile_mlt.ts",
+        "size": 2605,
+        "mode": 420
+      },
+      {
+        "path": "src/source/vector_tile_overzoomed.ts",
+        "size": 4221,
+        "mode": 420
+      },
+      {
+        "path": "src/source/vector_tile_source.test.ts",
+        "size": 24480,
+        "mode": 420
+      },
+      {
+        "path": "src/source/vector_tile_source.ts",
+        "size": 11527,
+        "mode": 420
+      },
+      {
+        "path": "src/source/vector_tile_worker_source.test.ts",
+        "size": 26131,
+        "mode": 420
+      },
+      {
+        "path": "src/source/vector_tile_worker_source.ts",
+        "size": 10477,
+        "mode": 420
+      },
+      {
+        "path": "src/source/video_source.test.ts",
+        "size": 4532,
+        "mode": 420
+      },
+      {
+        "path": "src/source/video_source.ts",
+        "size": 6297,
+        "mode": 420
+      },
+      {
+        "path": "src/source/worker_source.ts",
+        "size": 4998,
+        "mode": 420
+      },
+      {
+        "path": "src/source/worker_tile_mlt.bench.ts",
+        "size": 3749,
+        "mode": 420
+      },
+      {
+        "path": "src/source/worker_tile_state.ts",
+        "size": 1488,
+        "mode": 420
+      },
+      {
+        "path": "src/source/worker_tile.bench.ts",
+        "size": 385,
+        "mode": 420
+      },
+      {
+        "path": "src/source/worker_tile.test.ts",
+        "size": 14628,
+        "mode": 420
+      },
+      {
+        "path": "src/source/worker_tile.ts",
+        "size": 9342,
+        "mode": 420
+      },
+      {
+        "path": "src/source/worker.test.ts",
+        "size": 5924,
+        "mode": 420
+      },
+      {
+        "path": "src/source/worker.ts",
+        "size": 14080,
+        "mode": 420
+      },
+      {
+        "path": "src/style/create_style_layer.bench.ts",
+        "size": 618,
+        "mode": 420
+      },
+      {
+        "path": "src/style/create_style_layer.ts",
+        "size": 2347,
+        "mode": 420
+      },
+      {
+        "path": "src/style/evaluation_parameters.ts",
+        "size": 1801,
+        "mode": 420
+      },
+      {
+        "path": "src/style/format_section_override.test.ts",
+        "size": 2657,
+        "mode": 420
+      },
+      {
+        "path": "src/style/format_section_override.ts",
+        "size": 1996,
+        "mode": 420
+      },
+      {
+        "path": "src/style/light_properties.g.ts",
+        "size": 1719,
+        "mode": 420
+      },
+      {
+        "path": "src/style/light.test.ts",
+        "size": 4823,
+        "mode": 420
+      },
+      {
+        "path": "src/style/light.ts",
+        "size": 2735,
+        "mode": 420
+      },
+      {
+        "path": "src/style/load_sprite.test.ts",
+        "size": 14495,
+        "mode": 420
+      },
+      {
+        "path": "src/style/load_sprite.ts",
+        "size": 3327,
+        "mode": 420
+      },
+      {
+        "path": "src/style/parse_glyph_pbf.ts",
+        "size": 1570,
+        "mode": 420
+      },
+      {
+        "path": "src/style/pauseable_placement.test.ts",
+        "size": 1071,
+        "mode": 420
+      },
+      {
+        "path": "src/style/pauseable_placement.ts",
+        "size": 4618,
+        "mode": 420
+      },
+      {
+        "path": "src/style/projection_properties.g.ts",
+        "size": 1161,
+        "mode": 420
+      },
+      {
+        "path": "src/style/properties.bench.ts",
+        "size": 2843,
+        "mode": 420
+      },
+      {
+        "path": "src/style/properties.test.ts",
+        "size": 12005,
+        "mode": 420
+      },
+      {
+        "path": "src/style/properties.ts",
+        "size": 36862,
+        "mode": 420
+      },
+      {
+        "path": "src/style/query_utils.test.ts",
+        "size": 3555,
+        "mode": 420
+      },
+      {
+        "path": "src/style/query_utils.ts",
+        "size": 7191,
+        "mode": 420
+      },
+      {
+        "path": "src/style/sky_properties.g.ts",
+        "size": 2437,
+        "mode": 420
+      },
+      {
+        "path": "src/style/sky.test.ts",
+        "size": 3843,
+        "mode": 420
+      },
+      {
+        "path": "src/style/sky.ts",
+        "size": 3908,
+        "mode": 420
+      },
+      {
+        "path": "src/style/style_glyph.ts",
+        "size": 803,
+        "mode": 420
+      },
+      {
+        "path": "src/style/style_image.ts",
+        "size": 9450,
+        "mode": 420
+      },
+      {
+        "path": "src/style/style_layer_index.test.ts",
+        "size": 4322,
+        "mode": 420
+      },
+      {
+        "path": "src/style/style_layer_index.ts",
+        "size": 2649,
+        "mode": 420
+      },
+      {
+        "path": "src/style/style_layer.bench.ts",
+        "size": 2115,
+        "mode": 420
+      },
+      {
+        "path": "src/style/style_layer.test.ts",
+        "size": 20027,
+        "mode": 420
+      },
+      {
+        "path": "src/style/style_layer.ts",
+        "size": 17403,
+        "mode": 420
+      },
+      {
+        "path": "src/style/style_layer/background_style_layer_properties.g.ts",
+        "size": 1786,
+        "mode": 420
+      },
+      {
+        "path": "src/style/style_layer/background_style_layer.ts",
+        "size": 936,
+        "mode": 420
+      },
+      {
+        "path": "src/style/style_layer/circle_style_layer_properties.g.ts",
+        "size": 4542,
+        "mode": 420
+      },
+      {
+        "path": "src/style/style_layer/circle_style_layer.test.ts",
+        "size": 9009,
+        "mode": 420
+      },
+      {
+        "path": "src/style/style_layer/circle_style_layer.ts",
+        "size": 3888,
+        "mode": 420
+      },
+      {
+        "path": "src/style/style_layer/color_relief_style_layer_properties.g.ts",
+        "size": 1782,
+        "mode": 420
+      },
+      {
+        "path": "src/style/style_layer/color_relief_style_layer.test.ts",
+        "size": 5004,
+        "mode": 420
+      },
+      {
+        "path": "src/style/style_layer/color_relief_style_layer.ts",
+        "size": 5178,
+        "mode": 420
+      },
+      {
+        "path": "src/style/style_layer/custom_style_layer.test.ts",
+        "size": 1563,
+        "mode": 420
+      },
+      {
+        "path": "src/style/style_layer/custom_style_layer.ts",
+        "size": 16167,
+        "mode": 420
+      },
+      {
+        "path": "src/style/style_layer/fill_extrusion_style_layer_properties.g.ts",
+        "size": 4224,
+        "mode": 420
+      },
+      {
+        "path": "src/style/style_layer/fill_extrusion_style_layer.ts",
+        "size": 8903,
+        "mode": 420
+      },
+      {
+        "path": "src/style/style_layer/fill_style_layer_properties.g.ts",
+        "size": 3585,
+        "mode": 420
+      },
+      {
+        "path": "src/style/style_layer/fill_style_layer.test.ts",
+        "size": 1262,
+        "mode": 420
+      },
+      {
+        "path": "src/style/style_layer/fill_style_layer.ts",
+        "size": 2588,
+        "mode": 420
+      },
+      {
+        "path": "src/style/style_layer/heatmap_style_layer_properties.g.ts",
+        "size": 2222,
+        "mode": 420
+      },
+      {
+        "path": "src/style/style_layer/heatmap_style_layer.test.ts",
+        "size": 3107,
+        "mode": 420
+      },
+      {
+        "path": "src/style/style_layer/heatmap_style_layer.ts",
+        "size": 3236,
+        "mode": 420
+      },
+      {
+        "path": "src/style/style_layer/hillshade_style_layer_properties.g.ts",
+        "size": 3721,
+        "mode": 420
+      },
+      {
+        "path": "src/style/style_layer/hillshade_style_layer.test.ts",
+        "size": 4836,
+        "mode": 420
+      },
+      {
+        "path": "src/style/style_layer/hillshade_style_layer.ts",
+        "size": 2609,
+        "mode": 420
+      },
+      {
+        "path": "src/style/style_layer/line_style_layer_properties.g.ts",
+        "size": 5634,
+        "mode": 420
+      },
+      {
+        "path": "src/style/style_layer/line_style_layer.test.ts",
+        "size": 1684,
+        "mode": 420
+      },
+      {
+        "path": "src/style/style_layer/line_style_layer.ts",
+        "size": 5660,
+        "mode": 420
+      },
+      {
+        "path": "src/style/style_layer/overlap_mode.test.ts",
+        "size": 2508,
+        "mode": 420
+      },
+      {
+        "path": "src/style/style_layer/overlap_mode.ts",
+        "size": 1346,
+        "mode": 420
+      },
+      {
+        "path": "src/style/style_layer/raster_style_layer_properties.g.ts",
+        "size": 3250,
+        "mode": 420
+      },
+      {
+        "path": "src/style/style_layer/raster_style_layer.test.ts",
+        "size": 1162,
+        "mode": 420
+      },
+      {
+        "path": "src/style/style_layer/raster_style_layer.ts",
+        "size": 888,
+        "mode": 420
+      },
+      {
+        "path": "src/style/style_layer/symbol_style_layer_properties.g.ts",
+        "size": 18098,
+        "mode": 420
+      },
+      {
+        "path": "src/style/style_layer/symbol_style_layer.ts",
+        "size": 8578,
+        "mode": 420
+      },
+      {
+        "path": "src/style/style_layer/typed_style_layer.ts",
+        "size": 724,
+        "mode": 420
+      },
+      {
+        "path": "src/style/style_layer/variable_text_anchor.test.ts",
+        "size": 5814,
+        "mode": 420
+      },
+      {
+        "path": "src/style/style_layer/variable_text_anchor.ts",
+        "size": 5933,
+        "mode": 420
+      },
+      {
+        "path": "src/style/style.test.ts",
+        "size": 153942,
+        "mode": 420
+      },
+      {
+        "path": "src/style/style.ts",
+        "size": 86647,
+        "mode": 420
+      },
+      {
+        "path": "src/style/validate_style.bench.ts",
+        "size": 442,
+        "mode": 420
+      },
+      {
+        "path": "src/style/validate_style.test.ts",
+        "size": 4528,
+        "mode": 420
+      },
+      {
+        "path": "src/style/validate_style.ts",
+        "size": 4901,
+        "mode": 420
+      },
+      {
+        "path": "src/style/zoom_history.ts",
+        "size": 1004,
+        "mode": 420
+      },
+      {
+        "path": "src/symbol/anchor.test.ts",
+        "size": 466,
+        "mode": 420
+      },
+      {
+        "path": "src/symbol/anchor.ts",
+        "size": 517,
+        "mode": 420
+      },
+      {
+        "path": "src/symbol/arabic_shaping.test.ts",
+        "size": 2697,
+        "mode": 420
+      },
+      {
+        "path": "src/symbol/arabic_shaping.ts",
+        "size": 7999,
+        "mode": 420
+      },
+      {
+        "path": "src/symbol/bidi.test.ts",
+        "size": 3881,
+        "mode": 420
+      },
+      {
+        "path": "src/symbol/bidi.ts",
+        "size": 8430,
+        "mode": 420
+      },
+      {
+        "path": "src/symbol/check_max_angle.test.ts",
+        "size": 2568,
+        "mode": 420
+      },
+      {
+        "path": "src/symbol/check_max_angle.ts",
+        "size": 2851,
+        "mode": 420
+      },
+      {
+        "path": "src/symbol/clip_line.test.ts",
+        "size": 7186,
+        "mode": 420
+      },
+      {
+        "path": "src/symbol/clip_line.ts",
+        "size": 7715,
+        "mode": 420
+      },
+      {
+        "path": "src/symbol/collision_feature.test.ts",
+        "size": 3671,
+        "mode": 420
+      },
+      {
+        "path": "src/symbol/collision_feature.ts",
+        "size": 4686,
+        "mode": 420
+      },
+      {
+        "path": "src/symbol/collision_index.bench.ts",
+        "size": 4009,
+        "mode": 420
+      },
+      {
+        "path": "src/symbol/collision_index.test.ts",
+        "size": 927,
+        "mode": 420
+      },
+      {
+        "path": "src/symbol/collision_index.ts",
+        "size": 28791,
+        "mode": 420
+      },
+      {
+        "path": "src/symbol/cross_tile_symbol_index.bench.ts",
+        "size": 1517,
+        "mode": 420
+      },
+      {
+        "path": "src/symbol/cross_tile_symbol_index.test.ts",
+        "size": 10958,
+        "mode": 420
+      },
+      {
+        "path": "src/symbol/cross_tile_symbol_index.ts",
+        "size": 16027,
+        "mode": 420
+      },
+      {
+        "path": "src/symbol/get_anchors.test.ts",
+        "size": 4712,
+        "mode": 420
+      },
+      {
+        "path": "src/symbol/get_anchors.ts",
+        "size": 6111,
+        "mode": 420
+      },
+      {
+        "path": "src/symbol/grid_index.test.ts",
+        "size": 4431,
+        "mode": 420
+      },
+      {
+        "path": "src/symbol/grid_index.ts",
+        "size": 15566,
+        "mode": 420
+      },
+      {
+        "path": "src/symbol/merge_lines.test.ts",
+        "size": 2225,
+        "mode": 420
+      },
+      {
+        "path": "src/symbol/merge_lines.ts",
+        "size": 3946,
+        "mode": 420
+      },
+      {
+        "path": "src/symbol/one_em.ts",
+        "size": 128,
+        "mode": 420
+      },
+      {
+        "path": "src/symbol/opacity_state.ts",
+        "size": 522,
+        "mode": 420
+      },
+      {
+        "path": "src/symbol/path_interpolator.test.ts",
+        "size": 4754,
+        "mode": 420
+      },
+      {
+        "path": "src/symbol/path_interpolator.ts",
+        "size": 2007,
+        "mode": 420
+      },
+      {
+        "path": "src/symbol/placement.bench.ts",
+        "size": 1607,
+        "mode": 420
+      },
+      {
+        "path": "src/symbol/placement.test.ts",
+        "size": 5985,
+        "mode": 420
+      },
+      {
+        "path": "src/symbol/placement.ts",
+        "size": 65142,
+        "mode": 420
+      },
+      {
+        "path": "src/symbol/projection.test.ts",
+        "size": 16482,
+        "mode": 420
+      },
+      {
+        "path": "src/symbol/projection.ts",
+        "size": 43713,
+        "mode": 420
+      },
+      {
+        "path": "src/symbol/quads.test.ts",
+        "size": 4109,
+        "mode": 420
+      },
+      {
+        "path": "src/symbol/quads.ts",
+        "size": 14683,
+        "mode": 420
+      },
+      {
+        "path": "src/symbol/shaping.test.ts",
+        "size": 31787,
+        "mode": 420
+      },
+      {
+        "path": "src/symbol/shaping.ts",
+        "size": 34055,
+        "mode": 420
+      },
+      {
+        "path": "src/symbol/symbol_elevation.ts",
+        "size": 1538,
+        "mode": 420
+      },
+      {
+        "path": "src/symbol/symbol_layout.bench.ts",
+        "size": 1485,
+        "mode": 420
+      },
+      {
+        "path": "src/symbol/symbol_layout.ts",
+        "size": 37535,
+        "mode": 420
+      },
+      {
+        "path": "src/symbol/symbol_size.test.ts",
+        "size": 4144,
+        "mode": 420
+      },
+      {
+        "path": "src/symbol/symbol_size.ts",
+        "size": 6272,
+        "mode": 420
+      },
+      {
+        "path": "src/symbol/symbol_style_layer.test.ts",
+        "size": 4181,
+        "mode": 420
+      },
+      {
+        "path": "src/symbol/tagged_string.test.ts",
+        "size": 6825,
+        "mode": 420
+      },
+      {
+        "path": "src/symbol/tagged_string.ts",
+        "size": 18094,
+        "mode": 420
+      },
+      {
+        "path": "src/symbol/transform_text.test.ts",
+        "size": 2136,
+        "mode": 420
+      },
+      {
+        "path": "src/symbol/transform_text.ts",
+        "size": 1004,
+        "mode": 420
+      },
+      {
+        "path": "src/tile/terrain_tile_manager.test.ts",
+        "size": 14422,
+        "mode": 420
+      },
+      {
+        "path": "src/tile/terrain_tile_manager.ts",
+        "size": 14684,
+        "mode": 420
+      },
+      {
+        "path": "src/tile/tile_bounds.test.ts",
+        "size": 3461,
+        "mode": 420
+      },
+      {
+        "path": "src/tile/tile_bounds.ts",
+        "size": 1943,
+        "mode": 420
+      },
+      {
+        "path": "src/tile/tile_cache.test.ts",
+        "size": 5851,
+        "mode": 420
+      },
+      {
+        "path": "src/tile/tile_cache.ts",
+        "size": 7103,
+        "mode": 420
+      },
+      {
+        "path": "src/tile/tile_id_to_lng_lat_bounds.test.ts",
+        "size": 3668,
+        "mode": 420
+      },
+      {
+        "path": "src/tile/tile_id_to_lng_lat_bounds.ts",
+        "size": 1088,
+        "mode": 420
+      },
+      {
+        "path": "src/tile/tile_id.test.ts",
+        "size": 10341,
+        "mode": 420
+      },
+      {
+        "path": "src/tile/tile_id.ts",
+        "size": 13567,
+        "mode": 420
+      },
+      {
+        "path": "src/tile/tile_manager_in_view_tiles.test.ts",
+        "size": 5614,
+        "mode": 420
+      },
+      {
+        "path": "src/tile/tile_manager_in_view_tiles.ts",
+        "size": 3030,
+        "mode": 420
+      },
+      {
+        "path": "src/tile/tile_manager_raster_dem.test.ts",
+        "size": 2913,
+        "mode": 420
+      },
+      {
+        "path": "src/tile/tile_manager_raster_dem.ts",
+        "size": 1720,
+        "mode": 420
+      },
+      {
+        "path": "src/tile/tile_manager_raster.ts",
+        "size": 9907,
+        "mode": 420
+      },
+      {
+        "path": "src/tile/tile_manager.test.ts",
+        "size": 113670,
+        "mode": 420
+      },
+      {
+        "path": "src/tile/tile_manager.ts",
+        "size": 42716,
+        "mode": 420
+      },
+      {
+        "path": "src/tile/tile.test.ts",
+        "size": 16202,
+        "mode": 420
+      },
+      {
+        "path": "src/tile/tile.ts",
+        "size": 21493,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/anchor.ts",
+        "size": 945,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/camera.test.ts",
+        "size": 156271,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/camera.ts",
+        "size": 73004,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/control/attribution_control.test.ts",
+        "size": 29484,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/control/attribution_control.ts",
+        "size": 9087,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/control/control.ts",
+        "size": 2437,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/control/fullscreen_control.test.ts",
+        "size": 6590,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/control/fullscreen_control.ts",
+        "size": 8172,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/control/geolocate_control.test.ts",
+        "size": 37030,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/control/geolocate_control.ts",
+        "size": 35640,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/control/globe_control.test.ts",
+        "size": 3535,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/control/globe_control.ts",
+        "size": 2749,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/control/logo_control.test.ts",
+        "size": 2815,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/control/logo_control.ts",
+        "size": 2510,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/control/navigation_control.test.ts",
+        "size": 11183,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/control/navigation_control.ts",
+        "size": 11009,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/control/scale_control.test.ts",
+        "size": 8903,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/control/scale_control.ts",
+        "size": 5170,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/control/terrain_control.test.ts",
+        "size": 1756,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/control/terrain_control.ts",
+        "size": 2996,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/default_locale.ts",
+        "size": 1297,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/elevation_hold.ts",
+        "size": 4970,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/events.ts",
+        "size": 33440,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/handler_inertia.test.ts",
+        "size": 3133,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/handler_inertia.ts",
+        "size": 7658,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/handler_manager.test.ts",
+        "size": 23505,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/handler_manager.ts",
+        "size": 37320,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/handler/box_zoom.test.ts",
+        "size": 7671,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/handler/box_zoom.ts",
+        "size": 5419,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/handler/click_zoom.ts",
+        "size": 1519,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/handler/cooperative_gestures.test.ts",
+        "size": 12459,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/handler/cooperative_gestures.ts",
+        "size": 4049,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/handler/dblclick_zoom.test.ts",
+        "size": 7901,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/handler/drag_handler.ts",
+        "size": 5568,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/handler/drag_move_state_manager.ts",
+        "size": 5526,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/handler/drag_pan.test.ts",
+        "size": 17698,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/handler/drag_rotate.test.ts",
+        "size": 34680,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/handler/handler_util.ts",
+        "size": 463,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/handler/keyboard.test.ts",
+        "size": 10433,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/handler/keyboard.ts",
+        "size": 5484,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/handler/map_event.test.ts",
+        "size": 14513,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/handler/map_event.ts",
+        "size": 7870,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/handler/mouse_handler_interface.test.ts",
+        "size": 9446,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/handler/mouse_rotate.test.ts",
+        "size": 3835,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/handler/mouse.ts",
+        "size": 6820,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/handler/scroll_zoom.test.ts",
+        "size": 29257,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/handler/scroll_zoom.ts",
+        "size": 13630,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/handler/shim/dblclick_zoom.ts",
+        "size": 1661,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/handler/shim/drag_pan.ts",
+        "size": 2727,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/handler/shim/drag_rotate.ts",
+        "size": 4784,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/handler/shim/two_fingers_touch.ts",
+        "size": 4357,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/handler/tap_drag_zoom.test.ts",
+        "size": 6567,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/handler/tap_drag_zoom.ts",
+        "size": 3206,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/handler/tap_recognizer.ts",
+        "size": 3649,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/handler/tap_zoom.ts",
+        "size": 3071,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/handler/touch_pan.ts",
+        "size": 3293,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/handler/transform-provider.ts",
+        "size": 1326,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/handler/two_fingers_touch.test.ts",
+        "size": 18343,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/handler/two_fingers_touch.ts",
+        "size": 11034,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/hash.test.ts",
+        "size": 23079,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/hash.ts",
+        "size": 5391,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/map_tests/map_animation.test.ts",
+        "size": 1875,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/map_tests/map_basic.test.ts",
+        "size": 13875,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/map_tests/map_bounds.test.ts",
+        "size": 5078,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/map_tests/map_calculate_camera_options.test.ts",
+        "size": 5846,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/map_tests/map_canvas.test.ts",
+        "size": 6242,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/map_tests/map_control.test.ts",
+        "size": 1567,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/map_tests/map_covering_tiles.test.ts",
+        "size": 993,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/map_tests/map_cross_window.test.ts",
+        "size": 2685,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/map_tests/map_disable_handlers.test.ts",
+        "size": 1017,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/map_tests/map_events.test.ts",
+        "size": 40358,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/map_tests/map_feature_state.test.ts",
+        "size": 13703,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/map_tests/map_global_state.test.ts",
+        "size": 2257,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/map_tests/map_images.test.ts",
+        "size": 11673,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/map_tests/map_is_moving.test.ts",
+        "size": 4699,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/map_tests/map_is_rotating.test.ts",
+        "size": 1859,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/map_tests/map_is_zooming.test.ts",
+        "size": 2211,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/map_tests/map_layer.test.ts",
+        "size": 13675,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/map_tests/map_options.test.ts",
+        "size": 2480,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/map_tests/map_pitch.test.ts",
+        "size": 5479,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/map_tests/map_pixel_ratio.test.ts",
+        "size": 4277,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/map_tests/map_projection.test.ts",
+        "size": 6747,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/map_tests/map_query_rendered_features.test.ts",
+        "size": 2712,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/map_tests/map_refresh_tiles.test.ts",
+        "size": 1818,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/map_tests/map_render.test.ts",
+        "size": 12532,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/map_tests/map_request_render_frame.test.ts",
+        "size": 1629,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/map_tests/map_resize.test.ts",
+        "size": 4391,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/map_tests/map_set_lod_params.test.ts",
+        "size": 2084,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/map_tests/map_sky.test.ts",
+        "size": 1109,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/map_tests/map_style.test.ts",
+        "size": 29406,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/map_tests/map_terrain.test.ts",
+        "size": 85690,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/map_tests/map_transform_constrains.test.ts",
+        "size": 6898,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/map_tests/map_webgl.test.ts",
+        "size": 8328,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/map_tests/map_world_copies.test.ts",
+        "size": 5524,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/map_tests/map_zoom.test.ts",
+        "size": 5918,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/map.ts",
+        "size": 208641,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/marker.test.ts",
+        "size": 63257,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/marker.ts",
+        "size": 41714,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/popup.test.ts",
+        "size": 40557,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/popup.ts",
+        "size": 26427,
+        "mode": 420
+      },
+      {
+        "path": "src/util/abort_error.ts",
+        "size": 1048,
+        "mode": 420
+      },
+      {
+        "path": "src/util/actor_messages.ts",
+        "size": 5137,
+        "mode": 420
+      },
+      {
+        "path": "src/util/actor.test.ts",
+        "size": 11889,
+        "mode": 420
+      },
+      {
+        "path": "src/util/actor.ts",
+        "size": 11132,
+        "mode": 420
+      },
+      {
+        "path": "src/util/ajax.test.ts",
+        "size": 15409,
+        "mode": 420
+      },
+      {
+        "path": "src/util/ajax.ts",
+        "size": 13917,
+        "mode": 420
+      },
+      {
+        "path": "src/util/browser.test.ts",
+        "size": 10367,
+        "mode": 420
+      },
+      {
+        "path": "src/util/browser.ts",
+        "size": 4348,
+        "mode": 493
+      },
+      {
+        "path": "src/util/color_ramp.test.ts",
+        "size": 3906,
+        "mode": 420
+      },
+      {
+        "path": "src/util/color_ramp.ts",
+        "size": 1773,
+        "mode": 420
+      },
+      {
+        "path": "src/util/config.ts",
+        "size": 1745,
+        "mode": 420
+      },
+      {
+        "path": "src/util/create_tile_mesh.test.ts",
+        "size": 1246,
+        "mode": 420
+      },
+      {
+        "path": "src/util/create_tile_mesh.ts",
+        "size": 8521,
+        "mode": 420
+      },
+      {
+        "path": "src/util/dictionary_coder.ts",
+        "size": 757,
+        "mode": 420
+      },
+      {
+        "path": "src/util/dispatcher.test.ts",
+        "size": 3530,
+        "mode": 420
+      },
+      {
+        "path": "src/util/dispatcher.ts",
+        "size": 4861,
+        "mode": 420
+      },
+      {
+        "path": "src/util/dom.test.ts",
+        "size": 10606,
+        "mode": 420
+      },
+      {
+        "path": "src/util/dom.ts",
+        "size": 8817,
+        "mode": 420
+      },
+      {
+        "path": "src/util/evented.test.ts",
+        "size": 8708,
+        "mode": 420
+      },
+      {
+        "path": "src/util/evented.ts",
+        "size": 7696,
+        "mode": 420
+      },
+      {
+        "path": "src/util/fast_maths.test.ts",
+        "size": 5046,
+        "mode": 420
+      },
+      {
+        "path": "src/util/fast_maths.ts",
+        "size": 2444,
+        "mode": 420
+      },
+      {
+        "path": "src/util/find_pole_of_inaccessibility.test.ts",
+        "size": 2588,
+        "mode": 420
+      },
+      {
+        "path": "src/util/find_pole_of_inaccessibility.ts",
+        "size": 4655,
+        "mode": 420
+      },
+      {
+        "path": "src/util/geojson_bounds.test.ts",
+        "size": 2470,
+        "mode": 420
+      },
+      {
+        "path": "src/util/geojson_bounds.ts",
+        "size": 1558,
+        "mode": 420
+      },
+      {
+        "path": "src/util/geojson_reproject.test.ts",
+        "size": 7958,
+        "mode": 420
+      },
+      {
+        "path": "src/util/geojson_reproject.ts",
+        "size": 6055,
+        "mode": 420
+      },
+      {
+        "path": "src/util/geolocation_support.test.ts",
+        "size": 1729,
+        "mode": 420
+      },
+      {
+        "path": "src/util/geolocation_support.ts",
+        "size": 953,
+        "mode": 420
+      },
+      {
+        "path": "src/util/global_worker_pool.ts",
+        "size": 2423,
+        "mode": 420
+      },
+      {
+        "path": "src/util/gpu_initialization_error.ts",
+        "size": 1211,
+        "mode": 420
+      },
+      {
+        "path": "src/util/graphemes.test.ts",
+        "size": 3287,
+        "mode": 420
+      },
+      {
+        "path": "src/util/graphemes.ts",
+        "size": 3043,
+        "mode": 420
+      },
+      {
+        "path": "src/util/image_request.test.ts",
+        "size": 17843,
+        "mode": 420
+      },
+      {
+        "path": "src/util/image_request.ts",
+        "size": 13428,
+        "mode": 420
+      },
+      {
+        "path": "src/util/image.ts",
+        "size": 5321,
+        "mode": 420
+      },
+      {
+        "path": "src/util/intersection_tests.ts",
+        "size": 6494,
+        "mode": 420
+      },
+      {
+        "path": "src/util/offscreen_canvas_distorted.test.ts",
+        "size": 854,
+        "mode": 420
+      },
+      {
+        "path": "src/util/offscreen_canvas_distorted.ts",
+        "size": 1716,
+        "mode": 420
+      },
+      {
+        "path": "src/util/offscreen_canvas_supported.test.ts",
+        "size": 785,
+        "mode": 420
+      },
+      {
+        "path": "src/util/offscreen_canvas_supported.ts",
+        "size": 635,
+        "mode": 420
+      },
+      {
+        "path": "src/util/primitives/aabb.test.ts",
+        "size": 5976,
+        "mode": 420
+      },
+      {
+        "path": "src/util/primitives/aabb.ts",
+        "size": 3184,
+        "mode": 420
+      },
+      {
+        "path": "src/util/primitives/bounding_volume_cache.test.ts",
+        "size": 4556,
+        "mode": 420
+      },
+      {
+        "path": "src/util/primitives/bounding_volume_cache.ts",
+        "size": 2484,
+        "mode": 420
+      },
+      {
+        "path": "src/util/primitives/bounding_volume.ts",
+        "size": 565,
+        "mode": 420
+      },
+      {
+        "path": "src/util/primitives/convex_volume.test.ts",
+        "size": 5992,
+        "mode": 420
+      },
+      {
+        "path": "src/util/primitives/convex_volume.ts",
+        "size": 6931,
+        "mode": 420
+      },
+      {
+        "path": "src/util/primitives/frustum.test.ts",
+        "size": 1638,
+        "mode": 420
+      },
+      {
+        "path": "src/util/primitives/frustum.ts",
+        "size": 8694,
+        "mode": 420
+      },
+      {
+        "path": "src/util/ref_properties.ts",
+        "size": 515,
+        "mode": 420
+      },
+      {
+        "path": "src/util/request_manager.ts",
+        "size": 1209,
+        "mode": 420
+      },
+      {
+        "path": "src/util/request_performance.test.ts",
+        "size": 2039,
+        "mode": 420
+      },
+      {
+        "path": "src/util/request_performance.ts",
+        "size": 1067,
+        "mode": 420
+      },
+      {
+        "path": "src/util/resolve_tokens.test.ts",
+        "size": 1971,
+        "mode": 420
+      },
+      {
+        "path": "src/util/resolve_tokens.ts",
+        "size": 523,
+        "mode": 420
+      },
+      {
+        "path": "src/util/script_detection.test.ts",
+        "size": 5725,
+        "mode": 420
+      },
+      {
+        "path": "src/util/script_detection.ts",
+        "size": 2653,
+        "mode": 420
+      },
+      {
+        "path": "src/util/smart_wrap.test.ts",
+        "size": 3522,
+        "mode": 420
+      },
+      {
+        "path": "src/util/smart_wrap.ts",
+        "size": 2628,
+        "mode": 420
+      },
+      {
+        "path": "src/util/struct_array.test.ts",
+        "size": 3986,
+        "mode": 420
+      },
+      {
+        "path": "src/util/struct_array.ts",
+        "size": 7684,
+        "mode": 420
+      },
+      {
+        "path": "src/util/style.test.ts",
+        "size": 1373,
+        "mode": 420
+      },
+      {
+        "path": "src/util/style.ts",
+        "size": 1048,
+        "mode": 420
+      },
+      {
+        "path": "src/util/task_queue.test.ts",
+        "size": 4255,
+        "mode": 420
+      },
+      {
+        "path": "src/util/task_queue.ts",
+        "size": 1946,
+        "mode": 420
+      },
+      {
+        "path": "src/util/test/null_gl.ts",
+        "size": 17525,
+        "mode": 420
+      },
+      {
+        "path": "src/util/test/util.ts",
+        "size": 19803,
+        "mode": 420
+      },
+      {
+        "path": "src/util/throttle.test.ts",
+        "size": 1486,
+        "mode": 420
+      },
+      {
+        "path": "src/util/throttle.ts",
+        "size": 724,
+        "mode": 420
+      },
+      {
+        "path": "src/util/throttled_invoker.test.ts",
+        "size": 502,
+        "mode": 420
+      },
+      {
+        "path": "src/util/throttled_invoker.ts",
+        "size": 1100,
+        "mode": 420
+      },
+      {
+        "path": "src/util/time_control.test.ts",
+        "size": 6307,
+        "mode": 420
+      },
+      {
+        "path": "src/util/time_control.ts",
+        "size": 2898,
+        "mode": 420
+      },
+      {
+        "path": "src/util/transferable_grid_index.test.ts",
+        "size": 2453,
+        "mode": 420
+      },
+      {
+        "path": "src/util/transferable_grid_index.ts",
+        "size": 7638,
+        "mode": 420
+      },
+      {
+        "path": "src/util/unicode_properties.g.ts",
+        "size": 18385,
+        "mode": 420
+      },
+      {
+        "path": "src/util/update_queue.test.ts",
+        "size": 4828,
+        "mode": 420
+      },
+      {
+        "path": "src/util/update_queue.ts",
+        "size": 4613,
+        "mode": 420
+      },
+      {
+        "path": "src/util/util.test.ts",
+        "size": 26778,
+        "mode": 420
+      },
+      {
+        "path": "src/util/util.ts",
+        "size": 42293,
+        "mode": 420
+      },
+      {
+        "path": "src/util/vectortile_to_geojson.test.ts",
+        "size": 2368,
+        "mode": 420
+      },
+      {
+        "path": "src/util/vectortile_to_geojson.ts",
+        "size": 6160,
+        "mode": 420
+      },
+      {
+        "path": "src/util/verticalize_punctuation.test.ts",
+        "size": 648,
+        "mode": 420
+      },
+      {
+        "path": "src/util/verticalize_punctuation.ts",
+        "size": 2608,
+        "mode": 420
+      },
+      {
+        "path": "src/util/web_worker_transfer.test.ts",
+        "size": 6532,
+        "mode": 420
+      },
+      {
+        "path": "src/util/web_worker_transfer.ts",
+        "size": 8730,
+        "mode": 420
+      },
+      {
+        "path": "src/util/web_worker.test.ts",
+        "size": 6740,
+        "mode": 420
+      },
+      {
+        "path": "src/util/web_worker.ts",
+        "size": 3595,
+        "mode": 420
+      },
+      {
+        "path": "src/util/worker_pool.test.ts",
+        "size": 1342,
+        "mode": 420
+      },
+      {
+        "path": "src/util/worker_pool.ts",
+        "size": 1819,
+        "mode": 420
+      },
+      {
+        "path": "src/util/world_bounds.test.ts",
+        "size": 3961,
+        "mode": 420
+      },
+      {
+        "path": "src/util/world_bounds.ts",
+        "size": 1847,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/color_mode.ts",
+        "size": 1031,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/context.ts",
+        "size": 13169,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/cull_face_mode.ts",
+        "size": 1029,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/depth_mode.ts",
+        "size": 665,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/draw/draw_background.ts",
+        "size": 3540,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/draw/draw_circle.ts",
+        "size": 5416,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/draw/draw_collision_debug.ts",
+        "size": 5502,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/draw/draw_color_relief.ts",
+        "size": 5046,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/draw/draw_custom.test.ts",
+        "size": 5205,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/draw/draw_custom.ts",
+        "size": 4947,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/draw/draw_debug.test.ts",
+        "size": 4674,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/draw/draw_debug.ts",
+        "size": 6882,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/draw/draw_fill_extrusion.ts",
+        "size": 5206,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/draw/draw_fill.test.ts",
+        "size": 6648,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/draw/draw_fill.ts",
+        "size": 7998,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/draw/draw_heatmap.ts",
+        "size": 10746,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/draw/draw_hillshade.ts",
+        "size": 6785,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/draw/draw_layer_opacity.ts",
+        "size": 4544,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/draw/draw_line.ts",
+        "size": 10902,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/draw/draw_raster.ts",
+        "size": 10023,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/draw/draw_sky.ts",
+        "size": 3782,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/draw/draw_symbol.test.ts",
+        "size": 9588,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/draw/draw_symbol.ts",
+        "size": 25927,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/draw/draw_terrain.ts",
+        "size": 5498,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/draw/index.ts",
+        "size": 2038,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/frame_uniform_buffer.ts",
+        "size": 2688,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/framebuffer.ts",
+        "size": 1399,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/index_buffer.ts",
+        "size": 1992,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/program_cache.test.ts",
+        "size": 1920,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/program_cache.ts",
+        "size": 2381,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/program.test.ts",
+        "size": 1591,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/program.ts",
+        "size": 11053,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/program/atmosphere_program.ts",
+        "size": 1364,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/program/background_program.ts",
+        "size": 3561,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/program/circle_program.ts",
+        "size": 2531,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/program/color_relief_program.ts",
+        "size": 1757,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/program/debug_program.ts",
+        "size": 922,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/program/fill_extrusion_program.ts",
+        "size": 5044,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/program/fill_program.ts",
+        "size": 4226,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/program/heatmap_program.ts",
+        "size": 2706,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/program/hillshade_program.test.ts",
+        "size": 1399,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/program/hillshade_program.ts",
+        "size": 6304,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/program/layer_opacity_program.ts",
+        "size": 724,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/program/line_program.ts",
+        "size": 8054,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/program/pattern.ts",
+        "size": 4136,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/program/program_uniforms.ts",
+        "size": 6700,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/program/raster_program.ts",
+        "size": 4461,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/program/sky_program.ts",
+        "size": 3297,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/program/symbol_program.ts",
+        "size": 10484,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/program/terrain_program.test.ts",
+        "size": 1407,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/program/terrain_program.ts",
+        "size": 3837,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/projection_uniform_buffer.test.ts",
+        "size": 3430,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/projection_uniform_buffer.ts",
+        "size": 2879,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/render_to_texture.test.ts",
+        "size": 22986,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/render_to_texture.ts",
+        "size": 15220,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/rtt_fingerprint.test.ts",
+        "size": 1748,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/rtt_fingerprint.ts",
+        "size": 2004,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/state.test.ts",
+        "size": 3733,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/stencil_mode.ts",
+        "size": 753,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/terrain_uniform_buffer.ts",
+        "size": 1143,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/texture.test.ts",
+        "size": 6179,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/texture.ts",
+        "size": 7873,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/types.ts",
+        "size": 2935,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/uniform_binding.test.ts",
+        "size": 4223,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/uniform_binding.ts",
+        "size": 5401,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/uniform_buffer.test.ts",
+        "size": 2696,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/uniform_buffer.ts",
+        "size": 3981,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/value.ts",
+        "size": 14385,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/vertex_array_object.ts",
+        "size": 5288,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/vertex_buffer.test.ts",
+        "size": 4420,
+        "mode": 420
+      },
+      {
+        "path": "src/webgl/vertex_buffer.ts",
+        "size": 3791,
+        "mode": 420
+      }
+    ],
+    "entryCount": 759,
+    "bundled": []
+  }
+]

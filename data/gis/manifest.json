@@ -1,0 +1,1033 @@
+{
+  "title": "Dấu chân Di sản — GIS conversion audit",
+  "generated_utc": "2026-10-26T07:52:00+07:00",
+  "source_directory_name": "t1",
+  "target_crs": "EPSG:4326",
+  "geojson_coordinate_order": "longitude, latitude",
+  "status": "PASS_WITH_WARNINGS",
+  "errors": [],
+  "warnings": [
+    "QTG_Diem is a review dataset. Its 35 positions have no independent source/provenance in the supplied sidecars; they are not public markers.",
+    "The current canonical list remains 32 sites with 25 gazette centroids and 7 unlocated sites; no GIS point is used to fill a missing location.",
+    "Road lines have class and one-way attributes but network topology, pedestrian access, motorbike restrictions, and route connectivity have not been validated.",
+    "boundary: source geometry encoding warning(s): Possible issue encountered when converting Shape #0 to GeoJSON: Shapefile format requires that polygons contain at least one exterior ring, but the Shape was entirely made up of interior holes (defined by counter-clockwise orientation in the shapefile format). The rings were still included but were encoded as GeoJSON exterior rings instead of holes."
+  ],
+  "boundary_comparison": {
+    "status": "close",
+    "method": "Hausdorff distance after transforming the WGS84 polygon boundary to the supplementary line source CRS",
+    "distance_m": 1.887,
+    "threshold_m": 5,
+    "note": "A close outline does not establish which boundary is authoritative."
+  },
+  "layers": {
+    "roads": {
+      "id": "roads",
+      "source_file": "road_Clip1",
+      "output_file": "roads.geojson",
+      "geometry_expected": "line",
+      "geometry_types_allowed": [
+        "LineString",
+        "MultiLineString"
+      ],
+      "feature_count_expected_from_input": 1107,
+      "feature_count_read": 1107,
+      "feature_count_exportable": 1107,
+      "feature_count_error": 0,
+      "feature_count_duplicate_geometry": 0,
+      "duplicate_geometry_record_groups": [],
+      "consecutive_duplicate_xy_vertices": 0,
+      "source_geometry_types": {
+        "LineString": 1106,
+        "MultiLineString": 1
+      },
+      "target_geometry_types": {
+        "LineString": 1106,
+        "MultiLineString": 1
+      },
+      "source_crs_name": "WGS 84",
+      "source_crs_authority": "EPSG:4326",
+      "source_crs_wkt": "GEOGCRS[\"WGS 84\",DATUM[\"World Geodetic System 1984\",ELLIPSOID[\"WGS 84\",6378137,298.257223563,LENGTHUNIT[\"metre\",1]],ID[\"EPSG\",6326]],PRIMEM[\"Greenwich\",0,ANGLEUNIT[\"Degree\",0.0174532925199433]],CS[ellipsoidal,2],AXIS[\"longitude\",east,ORDER[1],ANGLEUNIT[\"Degree\",0.0174532925199433]],AXIS[\"latitude\",north,ORDER[2],ANGLEUNIT[\"Degree\",0.0174532925199433]]]",
+      "source_crs_is_geographic": true,
+      "target_crs": "EPSG:4326",
+      "encoding": "UTF-8",
+      "fields": [
+        {
+          "name": "osm_id",
+          "type": "C",
+          "width": 12,
+          "decimal": 0
+        },
+        {
+          "name": "code",
+          "type": "N",
+          "width": 4,
+          "decimal": 0
+        },
+        {
+          "name": "fclass",
+          "type": "C",
+          "width": 28,
+          "decimal": 0
+        },
+        {
+          "name": "name",
+          "type": "C",
+          "width": 100,
+          "decimal": 0
+        },
+        {
+          "name": "ref",
+          "type": "C",
+          "width": 20,
+          "decimal": 0
+        },
+        {
+          "name": "oneway",
+          "type": "C",
+          "width": 1,
+          "decimal": 0
+        },
+        {
+          "name": "maxspeed",
+          "type": "N",
+          "width": 3,
+          "decimal": 0
+        },
+        {
+          "name": "layer",
+          "type": "N",
+          "width": 12,
+          "decimal": 0
+        },
+        {
+          "name": "bridge",
+          "type": "C",
+          "width": 1,
+          "decimal": 0
+        },
+        {
+          "name": "tunnel",
+          "type": "C",
+          "width": 1,
+          "decimal": 0
+        }
+      ],
+      "non_empty_attribute_value_counts": {
+        "osm_id": {
+          "9964440": 1,
+          "11007689": 1,
+          "11558435": 1,
+          "11559222": 1,
+          "11706783": 1,
+          "25953535": 1,
+          "28913675": 1,
+          "28924629": 1,
+          "28924631": 1,
+          "28924674": 1,
+          "28924688": 1,
+          "28946978": 1,
+          "29313233": 1,
+          "29313234": 1,
+          "29313248": 1,
+          "29424129": 1,
+          "36080068": 1,
+          "36081191": 1,
+          "36209604": 1,
+          "37764671": 1,
+          "37862131": 1,
+          "37933540": 1,
+          "80730067": 1,
+          "80730070": 1,
+          "80730072": 1,
+          "80730078": 1,
+          "80730081": 1,
+          "86164242": 1,
+          "86164245": 1,
+          "86164246": 1,
+          "86164247": 1,
+          "86164248": 1,
+          "86164261": 1,
+          "86164263": 1,
+          "86164265": 1,
+          "86164272": 1,
+          "136525916": 1,
+          "136525917": 1,
+          "136525919": 1,
+          "136525920": 1,
+          "136557767": 1,
+          "136557830": 1,
+          "163843395": 1,
+          "163843396": 1,
+          "163843397": 1,
+          "218106748": 1,
+          "218250465": 1,
+          "219978235": 1,
+          "399835468": 1,
+          "402400378": 1
+        },
+        "code": {
+          "5141": 635,
+          "5153": 208,
+          "5122": 71,
+          "5114": 62,
+          "5155": 37,
+          "5113": 30,
+          "5115": 26,
+          "5124": 13,
+          "5154": 9,
+          "5134": 7,
+          "5133": 5,
+          "5152": 4
+        },
+        "fclass": {
+          "service": 635,
+          "footway": 208,
+          "residential": 71,
+          "secondary": 62,
+          "steps": 37,
+          "primary": 30,
+          "tertiary": 26,
+          "pedestrian": 13,
+          "path": 9,
+          "secondary_link": 7,
+          "primary_link": 5,
+          "cycleway": 4
+        },
+        "name": {
+          "Phố Khâm Thiên": 43,
+          "Phố Tôn Đức Thắng": 20,
+          "Đường Lê Duẩn": 11,
+          "Phố Xã Đàn": 9,
+          "Ngách 100/59 Ngõ Chợ Khâm Thiên": 7,
+          "Ngõ Văn Chương": 6,
+          "Ngách 100/27 Ngõ Chợ Khâm Thiên": 6,
+          "Ngõ Thổ Quan": 5,
+          "Ngách 51 Ngõ Linh Quang": 5,
+          "Ngách 33 Ngõ Văn Chương 2": 5,
+          "Phố Nguyễn Thái Học": 5,
+          "Phố Văn Miếu": 5,
+          "Phố Trung Phụng": 5,
+          "Ngõ 143 Ngõ Chợ Khâm Thiên": 5,
+          "Ngõ Cống Trắng": 5,
+          "Phố Kim Hoa": 4,
+          "Phố Nguyễn Khuyến": 4,
+          "Phố Ô Đồng Lầm": 4,
+          "Ngõ Lương Sử C": 4,
+          "Ngõ 221 Phố Tôn Đức Thắng": 4,
+          "Ngõ Lệnh Cư": 4,
+          "Đường Đê La Thành": 4,
+          "Ngõ 218 Ngõ Chợ Khâm Thiên": 4,
+          "Ngõ 178 Ngõ Chợ Khâm Thiên": 4,
+          "Ngõ 138 Ngõ Chợ Khâm Thiên": 4,
+          "Ngõ Vạn Ứng": 4,
+          "Phố Quốc Tử Giám": 3,
+          "Ngõ Thanh Miến": 3,
+          "Ngõ Linh Quang": 3,
+          "Ngõ Trung Tả": 3,
+          "Khu dân cư 66 Ngõ Thông Phong": 3,
+          "Ngách 46 Ngõ Linh Quang": 3,
+          "Ngách 221/56 Phố Tôn Đức Thắng": 3,
+          "Phố Ngô Sỹ Liên": 3,
+          "Ngõ Trung Tiền": 3,
+          "Ngõ Kiến Thiết": 3,
+          "Ngõ Hồ Bãi Cát": 3,
+          "Hẻm 92 Ngách 51 Ngõ Linh Quang": 3,
+          "Ngõ 165 Ngõ Chợ Khâm Thiên": 3,
+          "Ngõ 241 Ngõ Chợ Khâm Thiên": 3,
+          "Ngõ Gia Tụ B": 3,
+          "Ngõ 260 Ngõ Chợ Khâm Thiên": 3,
+          "Ngách 128 Ngõ Văn Chương": 3,
+          "Ngõ Hồ Cây Sữa": 3,
+          "Ngõ Hồ Dài": 3,
+          "Phố Trần Quý Cáp": 2,
+          "Ngõ Yên Thế": 2,
+          "Phố Hồ Linh Quang": 2,
+          "Ngõ Thông Phong": 2,
+          "Ngõ 180 Kim Hoa": 2
+        },
+        "oneway": {
+          "B": 1020,
+          "F": 87
+        },
+        "maxspeed": {
+          "0": 980,
+          "50": 76,
+          "60": 50,
+          "2": 1
+        },
+        "layer": {
+          "0": 1088,
+          "1": 11,
+          "-1": 7,
+          "2": 1
+        },
+        "bridge": {
+          "F": 1101,
+          "T": 6
+        },
+        "tunnel": {
+          "F": 1103,
+          "T": 4
+        }
+      },
+      "source_file_integrity": {
+        "shp_declared_length_matches": true,
+        "shx_declared_length_matches": true,
+        "shp_record_count": 1107,
+        "shx_record_count": 1107,
+        "shx_offsets_match_shp": true,
+        "dbf_record_count": 1107
+      },
+      "source_lineage": [],
+      "source_format_warnings": [],
+      "source_hashes_sha256": {
+        "road_Clip1.shp": "009d45de96826dffd9930e910e39bf6e384ea7d377b8f063dd26ddbed0086786",
+        "road_Clip1.shx": "36f9f1cd84a67b6c1def6784ab3ea8663a9cdf2f7dd285795ea3648007c08ac6",
+        "road_Clip1.dbf": "63ee451743aee4392abb278b495f7a277af8c829b5a836bb51d48960e7b39133",
+        "road_Clip1.prj": "a02a27b1d1982c8516d83398e85a3c8b1aef1713c13ef4d84d7bde17430c07c4",
+        "road_Clip1.cpg": "3ad3031f5503a4404af825262ee8232cc04d4ea6683d42c5dd0a2f2a27ac9824"
+      },
+      "render_on_map": true,
+      "errors": [],
+      "bbox_wgs84": [
+        105.8298350016659,
+        21.00769762810761,
+        105.84157958836022,
+        21.030449694808503
+      ],
+      "geometry_validity": "all exported records pass Shapely validity and finite-coordinate checks",
+      "attributes_with_blank_values": [
+        "osm_id",
+        "name"
+      ]
+    },
+    "water": {
+      "id": "water",
+      "source_file": "nuoc",
+      "output_file": "water.geojson",
+      "geometry_expected": "polygon",
+      "geometry_types_allowed": [
+        "MultiPolygon",
+        "Polygon"
+      ],
+      "feature_count_expected_from_input": 13,
+      "feature_count_read": 13,
+      "feature_count_exportable": 13,
+      "feature_count_error": 0,
+      "feature_count_duplicate_geometry": 0,
+      "duplicate_geometry_record_groups": [],
+      "consecutive_duplicate_xy_vertices": 0,
+      "source_geometry_types": {
+        "Polygon": 13
+      },
+      "target_geometry_types": {
+        "Polygon": 13
+      },
+      "source_crs_name": "WGS 84",
+      "source_crs_authority": "EPSG:4326",
+      "source_crs_wkt": "GEOGCRS[\"WGS 84\",DATUM[\"World Geodetic System 1984\",ELLIPSOID[\"WGS 84\",6378137,298.257223563,LENGTHUNIT[\"metre\",1]],ID[\"EPSG\",6326]],PRIMEM[\"Greenwich\",0,ANGLEUNIT[\"Degree\",0.0174532925199433]],CS[ellipsoidal,2],AXIS[\"longitude\",east,ORDER[1],ANGLEUNIT[\"Degree\",0.0174532925199433]],AXIS[\"latitude\",north,ORDER[2],ANGLEUNIT[\"Degree\",0.0174532925199433]]]",
+      "source_crs_is_geographic": true,
+      "target_crs": "EPSG:4326",
+      "encoding": "UTF-8",
+      "fields": [
+        {
+          "name": "osm_id",
+          "type": "C",
+          "width": 12,
+          "decimal": 0
+        },
+        {
+          "name": "code",
+          "type": "N",
+          "width": 4,
+          "decimal": 0
+        },
+        {
+          "name": "fclass",
+          "type": "C",
+          "width": 28,
+          "decimal": 0
+        },
+        {
+          "name": "name",
+          "type": "C",
+          "width": 100,
+          "decimal": 0
+        }
+      ],
+      "non_empty_attribute_value_counts": {
+        "osm_id": {
+          "2388849": 1,
+          "11706905": 1,
+          "37764672": 1,
+          "37934144": 1,
+          "702185139": 1,
+          "702241359": 1,
+          "702241369": 1,
+          "702241374": 1,
+          "947089942": 1,
+          "17651727": 1,
+          "1289252434": 1,
+          "18099172": 1,
+          "1493852553": 1
+        },
+        "code": {
+          "8200": 13
+        },
+        "fclass": {
+          "water": 13
+        },
+        "name": {
+          "Hồ Văn": 1,
+          "Hồ Ba Mẫu": 1,
+          "Hồ Văn Chương": 1,
+          "Thiên Quang tỉnh": 1,
+          "Hồ Linh Quang": 1
+        }
+      },
+      "source_file_integrity": {
+        "shp_declared_length_matches": true,
+        "shx_declared_length_matches": true,
+        "shp_record_count": 13,
+        "shx_record_count": 13,
+        "shx_offsets_match_shp": true,
+        "dbf_record_count": 13
+      },
+      "source_lineage": [],
+      "source_format_warnings": [],
+      "source_hashes_sha256": {
+        "nuoc.shp": "3814957316b1f7ab94cadab183ce06e3bf9275a1b022ce61dda089ac92590138",
+        "nuoc.shx": "db5c1eaec50cf2d8e4767eafa5fbbe7c5137cb2597097804c113ab0e56c6bab4",
+        "nuoc.dbf": "57691e4b76a375e6f7ab45644873a52bf3bfd2344f162ec5b883d33afb27826e",
+        "nuoc.prj": "a02a27b1d1982c8516d83398e85a3c8b1aef1713c13ef4d84d7bde17430c07c4",
+        "nuoc.cpg": "3ad3031f5503a4404af825262ee8232cc04d4ea6683d42c5dd0a2f2a27ac9824"
+      },
+      "render_on_map": true,
+      "errors": [],
+      "bbox_wgs84": [
+        105.83239170000003,
+        21.010209100000004,
+        105.84101179999998,
+        21.028907600000004
+      ],
+      "geometry_validity": "all exported records pass Shapely validity and finite-coordinate checks",
+      "attributes_with_blank_values": [
+        "name"
+      ]
+    },
+    "railways_area": {
+      "id": "railways_area",
+      "source_file": "duongtau",
+      "output_file": "railways-area.geojson",
+      "geometry_expected": "line",
+      "geometry_types_allowed": [
+        "LineString",
+        "MultiLineString"
+      ],
+      "feature_count_expected_from_input": 87,
+      "feature_count_read": 87,
+      "feature_count_exportable": 87,
+      "feature_count_error": 0,
+      "feature_count_duplicate_geometry": 0,
+      "duplicate_geometry_record_groups": [],
+      "consecutive_duplicate_xy_vertices": 0,
+      "source_geometry_types": {
+        "LineString": 87
+      },
+      "target_geometry_types": {
+        "LineString": 87
+      },
+      "source_crs_name": "WGS 84",
+      "source_crs_authority": "EPSG:4326",
+      "source_crs_wkt": "GEOGCRS[\"WGS 84\",DATUM[\"World Geodetic System 1984\",ELLIPSOID[\"WGS 84\",6378137,298.257223563,LENGTHUNIT[\"metre\",1]],ID[\"EPSG\",6326]],PRIMEM[\"Greenwich\",0,ANGLEUNIT[\"Degree\",0.0174532925199433]],CS[ellipsoidal,2],AXIS[\"longitude\",east,ORDER[1],ANGLEUNIT[\"Degree\",0.0174532925199433]],AXIS[\"latitude\",north,ORDER[2],ANGLEUNIT[\"Degree\",0.0174532925199433]]]",
+      "source_crs_is_geographic": true,
+      "target_crs": "EPSG:4326",
+      "encoding": "UTF-8",
+      "fields": [
+        {
+          "name": "osm_id",
+          "type": "N",
+          "width": 11,
+          "decimal": 0
+        },
+        {
+          "name": "name",
+          "type": "C",
+          "width": 48,
+          "decimal": 0
+        },
+        {
+          "name": "type",
+          "type": "C",
+          "width": 16,
+          "decimal": 0
+        }
+      ],
+      "non_empty_attribute_value_counts": {
+        "osm_id": {
+          "38029148": 1,
+          "262772599": 1,
+          "262772602": 1,
+          "262772603": 1,
+          "262772607": 1,
+          "262772608": 1,
+          "262779970": 1,
+          "654633456": 1,
+          "685021625": 1,
+          "685021658": 1,
+          "685021668": 1,
+          "685021674": 1,
+          "685021675": 1,
+          "685021681": 1,
+          "685021686": 1,
+          "685021687": 1,
+          "685021695": 1,
+          "685021699": 1,
+          "685021700": 1,
+          "685021701": 1,
+          "1210928212": 1,
+          "1210928213": 1,
+          "1210928214": 1,
+          "1210928215": 1,
+          "1210928216": 1,
+          "1210928217": 1,
+          "1210928218": 1,
+          "1210928219": 1,
+          "1210928220": 1,
+          "1210928221": 1,
+          "1210928222": 1,
+          "1210928223": 1,
+          "1210928226": 1,
+          "1210928227": 1,
+          "1210928228": 1,
+          "1210928229": 1,
+          "1210928231": 1,
+          "1210928245": 1,
+          "1210928248": 1,
+          "1210928250": 1,
+          "1210928252": 1,
+          "1214358092": 1,
+          "1214358093": 1,
+          "1214358094": 1,
+          "1214358095": 1,
+          "1214358096": 1,
+          "1214358097": 1,
+          "1214358098": 1,
+          "1214358099": 1,
+          "1214358100": 1
+        },
+        "name": {
+          "ĐM": 19,
+          "Đường sắt Bắc–Nam": 7,
+          "Đường sắt Hà Nội - Đồng Đăng": 5,
+          "5": 2,
+          "3": 2,
+          "TX": 2,
+          "4": 2,
+          "2": 2,
+          "8": 1,
+          "9": 1,
+          "đường 4": 1,
+          "đường 7": 1,
+          "6": 1,
+          "đường 2": 1,
+          "10": 1,
+          "11": 1,
+          "1": 1,
+          "vào cầu quay": 1,
+          "đường 3": 1,
+          "đường 5": 1,
+          "đường 6": 1,
+          "7": 1,
+          "đường 8": 1,
+          "đường 9": 1,
+          "đường 10": 1,
+          "đường 11": 1
+        },
+        "type": {
+          "rail": 77,
+          "platform_edge": 8,
+          "platform": 1,
+          "turntable": 1
+        }
+      },
+      "source_file_integrity": {
+        "shp_declared_length_matches": true,
+        "shx_declared_length_matches": true,
+        "shp_record_count": 87,
+        "shx_record_count": 87,
+        "shx_offsets_match_shp": true,
+        "dbf_record_count": 87
+      },
+      "source_lineage": [],
+      "source_format_warnings": [],
+      "source_hashes_sha256": {
+        "duongtau.shp": "70d90f164b915ff8b0e65a24e7c8915d04ddeef96692db875b6c3956621a6689",
+        "duongtau.shx": "e214adb805334031d8f9e331f9e16117d97ed839f308d60d0acafa445d31f03f",
+        "duongtau.dbf": "73311b61ccca8b6dcf659229ad9197b07fd8833eb0d488d6bf1835711f99bc0b",
+        "duongtau.prj": "a02a27b1d1982c8516d83398e85a3c8b1aef1713c13ef4d84d7bde17430c07c4",
+        "duongtau.cpg": "3ad3031f5503a4404af825262ee8232cc04d4ea6683d42c5dd0a2f2a27ac9824"
+      },
+      "render_on_map": true,
+      "errors": [],
+      "bbox_wgs84": [
+        105.8398712,
+        21.0082543,
+        105.8413518,
+        21.0277458
+      ],
+      "geometry_validity": "all exported records pass Shapely validity and finite-coordinate checks",
+      "attributes_with_blank_values": [
+        "osm_id",
+        "name"
+      ]
+    },
+    "railways_context": {
+      "id": "railways_context",
+      "source_file": "railways",
+      "output_file": "railways-context.geojson",
+      "geometry_expected": "line",
+      "geometry_types_allowed": [
+        "LineString",
+        "MultiLineString"
+      ],
+      "feature_count_expected_from_input": 288,
+      "feature_count_read": 288,
+      "feature_count_exportable": 288,
+      "feature_count_error": 0,
+      "feature_count_duplicate_geometry": 0,
+      "duplicate_geometry_record_groups": [],
+      "consecutive_duplicate_xy_vertices": 0,
+      "source_geometry_types": {
+        "LineString": 288
+      },
+      "target_geometry_types": {
+        "LineString": 288
+      },
+      "source_crs_name": "WGS 84",
+      "source_crs_authority": "EPSG:4326",
+      "source_crs_wkt": "GEOGCRS[\"WGS 84\",DATUM[\"World Geodetic System 1984\",ELLIPSOID[\"WGS 84\",6378137,298.257223563,LENGTHUNIT[\"metre\",1]],ID[\"EPSG\",6326]],PRIMEM[\"Greenwich\",0,ANGLEUNIT[\"Degree\",0.0174532925199433]],CS[ellipsoidal,2],AXIS[\"longitude\",east,ORDER[1],ANGLEUNIT[\"Degree\",0.0174532925199433]],AXIS[\"latitude\",north,ORDER[2],ANGLEUNIT[\"Degree\",0.0174532925199433]]]",
+      "source_crs_is_geographic": true,
+      "target_crs": "EPSG:4326",
+      "encoding": "UTF-8",
+      "fields": [
+        {
+          "name": "osm_id",
+          "type": "N",
+          "width": 11,
+          "decimal": 0
+        },
+        {
+          "name": "name",
+          "type": "C",
+          "width": 48,
+          "decimal": 0
+        },
+        {
+          "name": "type",
+          "type": "C",
+          "width": 16,
+          "decimal": 0
+        }
+      ],
+      "non_empty_attribute_value_counts": {
+        "osm_id": {
+          "10049876": 1,
+          "10904753": 1,
+          "10904818": 1,
+          "11015011": 1,
+          "11015220": 1,
+          "11015324": 1,
+          "28366870": 1,
+          "28378132": 1,
+          "28474293": 1,
+          "37533691": 1,
+          "38029148": 1,
+          "45766922": 1,
+          "146732081": 1,
+          "146732084": 1,
+          "184919495": 1,
+          "184919496": 1,
+          "184919497": 1,
+          "207318370": 1,
+          "242563774": 1,
+          "262772599": 1,
+          "262772601": 1,
+          "262772602": 1,
+          "262772603": 1,
+          "262772607": 1,
+          "262772608": 1,
+          "262779970": 1,
+          "262938174": 1,
+          "262938175": 1,
+          "262938176": 1,
+          "262938177": 1,
+          "262938178": 1,
+          "262938179": 1,
+          "262938180": 1,
+          "263562400": 1,
+          "263562403": 1,
+          "292907011": 1,
+          "292907014": 1,
+          "292907015": 1,
+          "292907016": 1,
+          "292907018": 1,
+          "292907019": 1,
+          "292907020": 1,
+          "292907021": 1,
+          "292907023": 1,
+          "338115254": 1,
+          "338115255": 1,
+          "343122614": 1,
+          "391133904": 1,
+          "391133905": 1,
+          "391133907": 1
+        },
+        "name": {
+          "Đường sắt Hà Nội - Đồng Đăng": 30,
+          "ĐM": 20,
+          "Đường sắt Bắc–Nam": 19,
+          "Đường sắt đô thị 2A Hà Nội (Phân": 16,
+          "Đường sắt đô thị 3 Hà Nội (phân đ": 12,
+          "Đường sắt Bắc Hồng - Văn Điển": 9,
+          "Đường sắt đô thị Số 5 Hà Nội (Vă": 9,
+          "Đường sắt đô thị số 5": 9,
+          "2": 4,
+          "Đường sắt đô thị Số 2 Hà Nội (Ph": 4,
+          "Đường sắt Hà Nội - Hải Phòng": 3,
+          "Cầu Long Biên": 2,
+          "5": 2,
+          "3": 2,
+          "1": 2,
+          "TX": 2,
+          "4": 2,
+          "Đường sắt đô thị sô 8 Hà Nội (Hoà": 2,
+          "Đường sắt đô thị sô 10 Hà Nội (C": 2,
+          "Đường 11": 1,
+          "đi vào nhà máy xe lửa Gia Lâm": 1,
+          "đi kho xăng dầu Đức Giang": 1,
+          "8": 1,
+          "9": 1,
+          "đường 4": 1,
+          "đường 7": 1,
+          "Đường 5": 1,
+          "Đường 13": 1,
+          "Đường 2 (Xếp dỡ hàng hóa và đón tr": 1,
+          "6": 1,
+          "Đường 8": 1,
+          "Đường 3 (Xếp dỡ hàng bách hóa)": 1,
+          "Đường 6": 1,
+          "Đường 7": 1,
+          "Đường 4": 1,
+          "Đường 9": 1,
+          "Đường 10": 1,
+          "Đường 12": 1,
+          "Cầu Chui": 1,
+          "đường 2": 1,
+          "10": 1,
+          "11": 1,
+          "vào cầu quay": 1,
+          "đường 3": 1,
+          "đường 5": 1,
+          "đường 6": 1,
+          "7": 1,
+          "đường 8": 1,
+          "đường 9": 1,
+          "đường 10": 1
+        },
+        "type": {
+          "rail": 188,
+          "platform": 30,
+          "construction": 29,
+          "subway": 26,
+          "platform_edge": 8,
+          "disused": 5,
+          "turntable": 2
+        }
+      },
+      "source_file_integrity": {
+        "shp_declared_length_matches": true,
+        "shx_declared_length_matches": true,
+        "shp_record_count": 288,
+        "shx_record_count": 288,
+        "shx_offsets_match_shp": true,
+        "dbf_record_count": 288
+      },
+      "source_lineage": [],
+      "source_format_warnings": [],
+      "source_hashes_sha256": {
+        "railways.shp": "6b8e02815138801f270d7c6f9123bae6994a4aa015a578f44ee122b69c57db02",
+        "railways.shx": "bdc9cac47378df70ecb13aeb45475606956cc26918eb887610c28f9b35243ba5",
+        "railways.dbf": "4cc3d1b2d62fd4f3d8fa32a65f0d999118b0f8532bfbb5e36a82950e23164bcb",
+        "railways.prj": "ffc9162903c37f0867d1e7f36c20036a165f7aa555dda24c1ae0ee4328d2977f",
+        "railways.cpg": "3ad3031f5503a4404af825262ee8232cc04d4ea6683d42c5dd0a2f2a27ac9824"
+      },
+      "render_on_map": false,
+      "errors": [],
+      "bbox_wgs84": [
+        105.7352194,
+        20.9497634,
+        105.9133303,
+        21.0895359
+      ],
+      "geometry_validity": "all exported records pass Shapely validity and finite-coordinate checks",
+      "attributes_with_blank_values": [
+        "osm_id",
+        "name"
+      ]
+    },
+    "boundary": {
+      "id": "boundary",
+      "source_file": "QTG_RanhGioi",
+      "output_file": "boundary.geojson",
+      "geometry_expected": "polygon",
+      "geometry_types_allowed": [
+        "MultiPolygon",
+        "Polygon"
+      ],
+      "feature_count_expected_from_input": 1,
+      "feature_count_read": 1,
+      "feature_count_exportable": 1,
+      "feature_count_error": 0,
+      "feature_count_duplicate_geometry": 0,
+      "duplicate_geometry_record_groups": [],
+      "consecutive_duplicate_xy_vertices": 0,
+      "source_geometry_types": {
+        "Polygon": 1
+      },
+      "target_geometry_types": {
+        "Polygon": 1
+      },
+      "source_crs_name": "WGS 84",
+      "source_crs_authority": "EPSG:4326",
+      "source_crs_wkt": "GEOGCRS[\"WGS 84\",DATUM[\"World Geodetic System 1984\",ELLIPSOID[\"WGS 84\",6378137,298.257223563,LENGTHUNIT[\"metre\",1]],ID[\"EPSG\",6326]],PRIMEM[\"Greenwich\",0,ANGLEUNIT[\"Degree\",0.0174532925199433]],CS[ellipsoidal,2],AXIS[\"longitude\",east,ORDER[1],ANGLEUNIT[\"Degree\",0.0174532925199433]],AXIS[\"latitude\",north,ORDER[2],ANGLEUNIT[\"Degree\",0.0174532925199433]]]",
+      "source_crs_is_geographic": true,
+      "target_crs": "EPSG:4326",
+      "encoding": "UTF-8",
+      "fields": [
+        {
+          "name": "Name",
+          "type": "C",
+          "width": 150,
+          "decimal": 0
+        }
+      ],
+      "non_empty_attribute_value_counts": {
+        "Name": {
+          "VM-QTG": 1
+        }
+      },
+      "source_file_integrity": {
+        "shp_declared_length_matches": true,
+        "shx_declared_length_matches": true,
+        "shp_record_count": 1,
+        "shx_record_count": 1,
+        "shx_offsets_match_shp": true,
+        "dbf_record_count": 1
+      },
+      "source_lineage": [],
+      "source_format_warnings": [
+        "Possible issue encountered when converting Shape #0 to GeoJSON: Shapefile format requires that polygons contain at least one exterior ring, but the Shape was entirely made up of interior holes (defined by counter-clockwise orientation in the shapefile format). The rings were still included but were encoded as GeoJSON exterior rings instead of holes."
+      ],
+      "source_hashes_sha256": {
+        "QTG_RanhGioi.shp": "4e7081ba07b9234f03339e017391c22d6dc6a850725315a27e9b0aea8afd48b0",
+        "QTG_RanhGioi.shx": "0854fdc1121423ca2a13b73b15d2da3b92afd9dcda9e06e85c7e6614fa13c522",
+        "QTG_RanhGioi.dbf": "f3860ba38427db86a9a7076237ae8ad6e7f95a4a9fa799a157c7133b6a395e2a",
+        "QTG_RanhGioi.prj": "a02a27b1d1982c8516d83398e85a3c8b1aef1713c13ef4d84d7bde17430c07c4",
+        "QTG_RanhGioi.cpg": "3ad3031f5503a4404af825262ee8232cc04d4ea6683d42c5dd0a2f2a27ac9824"
+      },
+      "render_on_map": true,
+      "errors": [],
+      "bbox_wgs84": [
+        105.8298217409784,
+        21.00768958583906,
+        105.8415796743118,
+        21.03046825473816
+      ],
+      "geometry_validity": "all exported records pass Shapely validity and finite-coordinate checks"
+    },
+    "boundary_supplementary": {
+      "id": "boundary_supplementary",
+      "source_file": "ranhgioi",
+      "output_file": "boundary-supplementary.geojson",
+      "geometry_expected": "line",
+      "geometry_types_allowed": [
+        "LineString",
+        "MultiLineString"
+      ],
+      "feature_count_expected_from_input": 1,
+      "feature_count_read": 1,
+      "feature_count_exportable": 1,
+      "feature_count_error": 0,
+      "feature_count_duplicate_geometry": 0,
+      "duplicate_geometry_record_groups": [],
+      "consecutive_duplicate_xy_vertices": 0,
+      "source_geometry_types": {
+        "LineString": 1
+      },
+      "target_geometry_types": {
+        "LineString": 1
+      },
+      "source_crs_name": "WGS 84 / UTM zone 48N",
+      "source_crs_authority": "EPSG:32648",
+      "source_crs_wkt": "PROJCRS[\"WGS 84 / UTM zone 48N\",BASEGEOGCRS[\"WGS 84\",DATUM[\"World Geodetic System 1984\",ELLIPSOID[\"WGS 84\",6378137,298.257223563,LENGTHUNIT[\"metre\",1]],ID[\"EPSG\",6326]],PRIMEM[\"Greenwich\",0,ANGLEUNIT[\"Degree\",0.0174532925199433]]],CONVERSION[\"UTM zone 48N\",METHOD[\"Transverse Mercator\",ID[\"EPSG\",9807]],PARAMETER[\"Latitude of natural origin\",0,ANGLEUNIT[\"Degree\",0.0174532925199433],ID[\"EPSG\",8801]],PARAMETER[\"Longitude of natural origin\",105,ANGLEUNIT[\"Degree\",0.0174532925199433],ID[\"EPSG\",8802]],PARAMETER[\"Scale factor at natural origin\",0.9996,SCALEUNIT[\"unity\",1],ID[\"EPSG\",8805]],PARAMETER[\"False easting\",500000,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",8806]],PARAMETER[\"False northing\",0,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",8807]],ID[\"EPSG\",16048]],CS[Cartesian,2],AXIS[\"(E)\",east,ORDER[1],LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]],AXIS[\"(N)\",north,ORDER[2],LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]]]",
+      "source_crs_is_geographic": false,
+      "target_crs": "EPSG:4326",
+      "encoding": "UTF-8",
+      "fields": [
+        {
+          "name": "Id",
+          "type": "N",
+          "width": 6,
+          "decimal": 0
+        }
+      ],
+      "non_empty_attribute_value_counts": {
+        "Id": {
+          "0": 1
+        }
+      },
+      "source_file_integrity": {
+        "shp_declared_length_matches": true,
+        "shx_declared_length_matches": true,
+        "shp_record_count": 1,
+        "shx_record_count": 1,
+        "shx_offsets_match_shp": true,
+        "dbf_record_count": 1
+      },
+      "source_lineage": [],
+      "source_format_warnings": [],
+      "source_hashes_sha256": {
+        "ranhgioi.shp": "a946e5b786121a4372165aaeb7896783b32b2241ff341e958299df55fe904b1f",
+        "ranhgioi.shx": "86b5ee46e48f8be566ae56a0615ad0bd1140fc9422239db7a8e23543480255ea",
+        "ranhgioi.dbf": "352d8b7e467cf6f3966a9959fb1836f48a2c067ee7c5a9974620bb49357a2530",
+        "ranhgioi.prj": "df71a94a49b57da8f97cfb98bcc760031d9efa742bf3c6e7734490358860c6d8",
+        "ranhgioi.cpg": "3ad3031f5503a4404af825262ee8232cc04d4ea6683d42c5dd0a2f2a27ac9824"
+      },
+      "render_on_map": false,
+      "errors": [],
+      "bbox_wgs84": [
+        105.82982174097843,
+        21.007689585839064,
+        105.84157967431183,
+        21.030468254738164
+      ],
+      "geometry_validity": "all exported records pass Shapely validity and finite-coordinate checks"
+    },
+    "heritage_points_review": {
+      "id": "heritage_points_review",
+      "source_file": "QTG_Diem",
+      "output_file": "heritage-points-review.geojson",
+      "geometry_expected": "point",
+      "geometry_types_allowed": [
+        "Point"
+      ],
+      "feature_count_expected_from_input": 35,
+      "feature_count_read": 35,
+      "feature_count_exportable": 35,
+      "feature_count_error": 0,
+      "feature_count_duplicate_geometry": 0,
+      "duplicate_geometry_record_groups": [],
+      "consecutive_duplicate_xy_vertices": 0,
+      "source_geometry_types": {
+        "Point": 35
+      },
+      "target_geometry_types": {
+        "Point": 35
+      },
+      "source_crs_name": "WGS 84",
+      "source_crs_authority": "EPSG:4326",
+      "source_crs_wkt": "GEOGCRS[\"WGS 84\",DATUM[\"World Geodetic System 1984\",ELLIPSOID[\"WGS 84\",6378137,298.257223563,LENGTHUNIT[\"metre\",1]],ID[\"EPSG\",6326]],PRIMEM[\"Greenwich\",0,ANGLEUNIT[\"Degree\",0.0174532925199433]],CS[ellipsoidal,2],AXIS[\"longitude\",east,ORDER[1],ANGLEUNIT[\"Degree\",0.0174532925199433]],AXIS[\"latitude\",north,ORDER[2],ANGLEUNIT[\"Degree\",0.0174532925199433]]]",
+      "source_crs_is_geographic": true,
+      "target_crs": "EPSG:4326",
+      "encoding": "UTF-8",
+      "fields": [
+        {
+          "name": "Name",
+          "type": "C",
+          "width": 150,
+          "decimal": 0
+        }
+      ],
+      "non_empty_attribute_value_counts": {
+        "Name": {
+          "Đình Làng Thổ Quan": 1,
+          "Chùa Linh Ứng": 1,
+          "Đền Trung Tả": 1,
+          "Chùa Linh Quang": 1,
+          "Chùa Huy Văn": 1,
+          "Đài tưởng niệm Khâm Thiên": 1,
+          "Chùa Phụng Thánh": 1,
+          "Chùa Mỹ Quang": 1,
+          "Chùa Bà Nành": 1,
+          "Y Miếu": 1,
+          "Chùa Ngọc Hồ (Bà Ngô)": 1,
+          "Chùa Phổ Giác": 1,
+          "Chùa Quang Minh": 1,
+          "Chùa Trung Tự": 1,
+          "Giếng Ngọc Đình Trung Tự": 1,
+          "Đền - Đình Kim Liên": 1,
+          "Văn Miếu - Quốc Tử Giám": 1,
+          "Đình Thanh Miến": 1,
+          "Đình Trung Kính": 1,
+          "Đình Thái Kiều": 1,
+          "Chùa Bụt Mọc": 1,
+          "Đình Văn Hương": 1,
+          "Đình - Đền Lương Sử": 1,
+          "Đình làng Trung Tự": 1,
+          "Chùa Liên Hoa": 1,
+          "Chùa Tiên Tích": 1,
+          "Đền Đức Thánh Trần": 1,
+          "Đền Văn Chỉ": 1,
+          "Hồ Giám": 1,
+          "Gò Kim Châu": 1,
+          "Đền Mẫu Sòng Sơn - Hà Nội": 1,
+          "Đền Trung Phụng": 1,
+          "Đình Khâm Đức": 1,
+          "Đền Khâm Đức - thờ Châu Đệ Tứ": 1,
+          "Chùa Tiên Phúc Tự": 1
+        }
+      },
+      "source_file_integrity": {
+        "shp_declared_length_matches": true,
+        "shx_declared_length_matches": true,
+        "shp_record_count": 35,
+        "shx_record_count": 35,
+        "shx_offsets_match_shp": true,
+        "dbf_record_count": 35
+      },
+      "source_lineage": [],
+      "source_format_warnings": [],
+      "source_hashes_sha256": {
+        "QTG_Diem.shp": "0846d6504e01847eedc4ac7f3293fe35471a3468ccc010c311b42c9ecfd40193",
+        "QTG_Diem.shx": "308c4a9feda43c167e4f09a65262c8557e4bc22dff625fc07a125750484ff95e",
+        "QTG_Diem.dbf": "84ebaf5c12e60a85ba3e0939c7871b3d9da0e72bbfb609e55c4a42e9998cb09f",
+        "QTG_Diem.prj": "a02a27b1d1982c8516d83398e85a3c8b1aef1713c13ef4d84d7bde17430c07c4",
+        "QTG_Diem.cpg": "3ad3031f5503a4404af825262ee8232cc04d4ea6683d42c5dd0a2f2a27ac9824"
+      },
+      "render_on_map": false,
+      "errors": [],
+      "bbox_wgs84": [
+        105.8328232,
+        21.0106528,
+        105.8413874,
+        21.0294284
+      ],
+      "geometry_validity": "all exported records pass Shapely validity and finite-coordinate checks"
+    }
+  },
+  "map_layer_ids": [
+    "roads",
+    "water",
+    "railways_area",
+    "railways_context",
+    "boundary",
+    "boundary_supplementary"
+  ],
+  "audit_only_layer_ids": [
+    "heritage_points_review"
+  ],
+  "canonical_data_unchanged_by_pipeline": true,
+  "route_geometry_created": false,
+  "source_attribution": "OpenStreetMap-derived layers carry © OpenStreetMap contributors attribution. Source bundle has no separate license file; verify terms before redistribution."
+}

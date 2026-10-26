@@ -1,0 +1,132 @@
+[
+  {
+    "id": "W01",
+    "mode": "walk",
+    "title": "Hồ Văn – Chùa Bà Nành",
+    "color": "#00A983",
+    "sites": [
+      "van_mieu",
+      "ho_van",
+      "ba_nanh"
+    ],
+    "details": "Không gian Văn Miếu, Hồ Văn, di tích Chùa Bà Nành.",
+    "site_names": [
+      "Văn Miếu – Quốc Tử Giám",
+      "Hồ Văn – Gò Kim Châu",
+      "Chùa Bà Nành (Tiên Phúc tự)"
+    ],
+    "fully_located": true,
+    "routing_status": "point_order_only",
+    "google_directions_url": "https://www.google.com/maps/dir/?api=1&origin=V%C4%83n%20Mi%E1%BA%BFu%20%E2%80%93%20Qu%E1%BB%91c%20T%E1%BB%AD%20Gi%C3%A1m%2C%20H%C3%A0%20N%E1%BB%99i&destination=Ch%C3%B9a%20B%C3%A0%20N%C3%A0nh%20%28Ti%C3%AAn%20Ph%C3%BAc%20t%E1%BB%B1%29%2C%20H%C3%A0%20N%E1%BB%99i&waypoints=H%E1%BB%93%20V%C4%83n%20%E2%80%93%20G%C3%B2%20Kim%20Ch%C3%A2u%2C%20H%C3%A0%20N%E1%BB%99i&travelmode=walking"
+  },
+  {
+    "id": "W02",
+    "mode": "walk",
+    "title": "Chùa Ngọc Hồ – Y Miếu",
+    "color": "#BD8A39",
+    "sites": [
+      "van_mieu",
+      "ngoc_ho",
+      "y_mieu"
+    ],
+    "details": "Khám phá hai địa điểm văn hóa ở phía đông bắc Văn Miếu.",
+    "site_names": [
+      "Văn Miếu – Quốc Tử Giám",
+      "Chùa Ngọc Hồ (Bà Ngô)",
+      "Y Miếu"
+    ],
+    "fully_located": true,
+    "routing_status": "point_order_only",
+    "google_directions_url": "https://www.google.com/maps/dir/?api=1&origin=V%C4%83n%20Mi%E1%BA%BFu%20%E2%80%93%20Qu%E1%BB%91c%20T%E1%BB%AD%20Gi%C3%A1m%2C%20H%C3%A0%20N%E1%BB%99i&destination=Y%20Mi%E1%BA%BFu%2C%20H%C3%A0%20N%E1%BB%99i&waypoints=Ch%C3%B9a%20Ng%E1%BB%8Dc%20H%E1%BB%93%20%28B%C3%A0%20Ng%C3%B4%29%2C%20H%C3%A0%20N%E1%BB%99i&travelmode=walking"
+  },
+  {
+    "id": "W03",
+    "mode": "walk",
+    "title": "Chùa Huy Văn – Đền Văn Chỉ",
+    "color": "#804324",
+    "sites": [
+      "van_mieu",
+      "huy_van",
+      "van_chi"
+    ],
+    "details": "Tuyến đi bộ về phía phố Huy Văn, Văn Chương.",
+    "site_names": [
+      "Văn Miếu – Quốc Tử Giám",
+      "Chùa Huy Văn",
+      "Đền Văn Chỉ"
+    ],
+    "fully_located": true,
+    "routing_status": "point_order_only",
+    "google_directions_url": "https://www.google.com/maps/dir/?api=1&origin=V%C4%83n%20Mi%E1%BA%BFu%20%E2%80%93%20Qu%E1%BB%91c%20T%E1%BB%AD%20Gi%C3%A1m%2C%20H%C3%A0%20N%E1%BB%99i&destination=%C4%90%E1%BB%81n%20V%C4%83n%20Ch%E1%BB%89%2C%20H%C3%A0%20N%E1%BB%99i&waypoints=Ch%C3%B9a%20Huy%20V%C4%83n%2C%20H%C3%A0%20N%E1%BB%99i&travelmode=walking"
+  },
+  {
+    "id": "R01",
+    "mode": "motorbike",
+    "title": "Phổ Giác – Y Miếu – Khâm Thiên",
+    "color": "#F4513A",
+    "sites": [
+      "van_mieu",
+      "pho_giac",
+      "y_mieu",
+      "kham_thien"
+    ],
+    "details": "Từ Văn Miếu qua di tích tôn giáo và đài tưởng niệm lịch sử.",
+    "site_names": [
+      "Văn Miếu – Quốc Tử Giám",
+      "Chùa Phổ Giác",
+      "Y Miếu",
+      "Đài tưởng niệm Khâm Thiên"
+    ],
+    "fully_located": true,
+    "routing_status": "point_order_only",
+    "google_directions_url": "https://www.google.com/maps/dir/?api=1&origin=V%C4%83n%20Mi%E1%BA%BFu%20%E2%80%93%20Qu%E1%BB%91c%20T%E1%BB%AD%20Gi%C3%A1m%2C%20H%C3%A0%20N%E1%BB%99i&destination=%C4%90%C3%A0i%20t%C6%B0%E1%BB%9Fng%20ni%E1%BB%87m%20Kh%C3%A2m%20Thi%C3%AAn%2C%20H%C3%A0%20N%E1%BB%99i&waypoints=Ch%C3%B9a%20Ph%E1%BB%95%20Gi%C3%A1c%2C%20H%C3%A0%20N%E1%BB%99i%7CY%20Mi%E1%BA%BFu%2C%20H%C3%A0%20N%E1%BB%99i"
+  },
+  {
+    "id": "R02",
+    "mode": "motorbike",
+    "title": "Huy Văn – Trung Tự – Kim Liên",
+    "color": "#208FD1",
+    "sites": [
+      "van_mieu",
+      "pho_giac",
+      "huy_van",
+      "trung_tu_dinh",
+      "kim_lien"
+    ],
+    "details": "Điểm kết là Đền Kim Liên, một trong Thăng Long tứ trấn.",
+    "site_names": [
+      "Văn Miếu – Quốc Tử Giám",
+      "Chùa Phổ Giác",
+      "Chùa Huy Văn",
+      "Đình làng Trung Tự",
+      "Đền Kim Liên (Đình Kim Liên)"
+    ],
+    "fully_located": true,
+    "routing_status": "point_order_only",
+    "google_directions_url": "https://www.google.com/maps/dir/?api=1&origin=V%C4%83n%20Mi%E1%BA%BFu%20%E2%80%93%20Qu%E1%BB%91c%20T%E1%BB%AD%20Gi%C3%A1m%2C%20H%C3%A0%20N%E1%BB%99i&destination=%C4%90%E1%BB%81n%20Kim%20Li%C3%AAn%20%28%C4%90%C3%ACnh%20Kim%20Li%C3%AAn%29%2C%20H%C3%A0%20N%E1%BB%99i&waypoints=Ch%C3%B9a%20Ph%E1%BB%95%20Gi%C3%A1c%2C%20H%C3%A0%20N%E1%BB%99i%7CCh%C3%B9a%20Huy%20V%C4%83n%2C%20H%C3%A0%20N%E1%BB%99i%7C%C4%90%C3%ACnh%20l%C3%A0ng%20Trung%20T%E1%BB%B1%2C%20H%C3%A0%20N%E1%BB%99i"
+  },
+  {
+    "id": "R03",
+    "mode": "motorbike",
+    "title": "Văn Hương – Phụng Thánh – Khâm Đức",
+    "color": "#D61C8B",
+    "sites": [
+      "van_mieu",
+      "van_huong",
+      "van_chi",
+      "phung_thanh",
+      "kham_duc_dinh"
+    ],
+    "details": "Đình Khâm Đức chưa có tọa độ đáng tin, không vẽ vị trí cuối tuyến.",
+    "site_names": [
+      "Văn Miếu – Quốc Tử Giám",
+      "Đình Văn Hương",
+      "Đền Văn Chỉ",
+      "Chùa Phụng Thánh",
+      "Đình Khâm Đức"
+    ],
+    "fully_located": false,
+    "routing_status": "point_order_only",
+    "google_directions_url": "https://www.google.com/maps/dir/?api=1&origin=V%C4%83n%20Mi%E1%BA%BFu%20%E2%80%93%20Qu%E1%BB%91c%20T%E1%BB%AD%20Gi%C3%A1m%2C%20H%C3%A0%20N%E1%BB%99i&destination=%C4%90%C3%ACnh%20Kh%C3%A2m%20%C4%90%E1%BB%A9c%2C%20H%C3%A0%20N%E1%BB%99i&waypoints=%C4%90%C3%ACnh%20V%C4%83n%20H%C6%B0%C6%A1ng%2C%20H%C3%A0%20N%E1%BB%99i%7C%C4%90%E1%BB%81n%20V%C4%83n%20Ch%E1%BB%89%2C%20H%C3%A0%20N%E1%BB%99i%7CCh%C3%B9a%20Ph%E1%BB%A5ng%20Th%C3%A1nh%2C%20H%C3%A0%20N%E1%BB%99i"
+  }
+]

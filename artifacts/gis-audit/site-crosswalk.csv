@@ -1,0 +1,36 @@
+﻿gis_record,gis_name,exact_name_or_alias_site_ids,possible_name_matches,identity_status,public_map_status,notes
+QTG_Diem.0001,Đình Làng Thổ Quan,tho_quan,tho_quan:1.000;trung_tu_dinh:0.722,needs_human_review,audit_only_not_rendered,"Name similarity is a review hint, not an identity or coordinate verification."
+QTG_Diem.0002,Chùa Linh Ứng,linh_ung,linh_ung:1.000;linh_quang:0.929;my_quang:0.692,needs_human_review,audit_only_not_rendered,"Name similarity is a review hint, not an identity or coordinate verification."
+QTG_Diem.0003,Đền Trung Tả,trung_ta,trung_ta:1.000;trung_phung:0.741;trung_tu_dinh:0.667,needs_human_review,audit_only_not_rendered,"Name similarity is a review hint, not an identity or coordinate verification."
+QTG_Diem.0004,Chùa Linh Quang,linh_quang,linh_quang:1.000;linh_ung:0.929;my_quang:0.786,needs_human_review,audit_only_not_rendered,"Name similarity is a review hint, not an identity or coordinate verification."
+QTG_Diem.0005,Chùa Huy Văn,huy_van,huy_van:1.000;my_quang:0.720;phung_thanh:0.714,needs_human_review,audit_only_not_rendered,"Name similarity is a review hint, not an identity or coordinate verification."
+QTG_Diem.0006,Đài tưởng niệm Khâm Thiên,kham_thien,kham_thien:1.000,needs_human_review,audit_only_not_rendered,"Name similarity is a review hint, not an identity or coordinate verification."
+QTG_Diem.0007,Chùa Phụng Thánh,phung_thanh,phung_thanh:1.000;huy_van:0.714;quang_minh:0.710,needs_human_review,audit_only_not_rendered,"Name similarity is a review hint, not an identity or coordinate verification."
+QTG_Diem.0008,Chùa Mỹ Quang,my_quang,my_quang:1.000;linh_quang:0.786;huy_van:0.720,needs_human_review,audit_only_not_rendered,Close to Đình Trung Kính; preserve distinct identities and check the local-context match.
+QTG_Diem.0009,Chùa Bà Nành,,ngoc_ho:0.783;huy_van:0.667;ba_nanh:0.649,needs_human_review,audit_only_not_rendered,GIS also has a separate Tiên Phúc Tự point; compare against the PDF alias before merging.
+QTG_Diem.0010,Y Miếu,y_mieu,y_mieu:1.000,needs_human_review,audit_only_not_rendered,Close to Chùa Quang Minh; preserve distinct identities.
+QTG_Diem.0011,Chùa Ngọc Hồ (Bà Ngô),ngoc_ho,ngoc_ho:1.000;phung_thanh:0.629;lien_hoa:0.625,needs_human_review,audit_only_not_rendered,"Name similarity is a review hint, not an identity or coordinate verification."
+QTG_Diem.0012,Chùa Phổ Giác,pho_giac,pho_giac:1.000;huy_van:0.640;but_moc:0.640,needs_human_review,audit_only_not_rendered,"Name similarity is a review hint, not an identity or coordinate verification."
+QTG_Diem.0013,Chùa Quang Minh,quang_minh,quang_minh:1.000;my_quang:0.714;phung_thanh:0.710,needs_human_review,audit_only_not_rendered,Close to Y Miếu; preserve distinct identities.
+QTG_Diem.0014,Chùa Trung Tự,trung_tu_chua,trung_tu_chua:1.000;trung_tu_dinh:0.710;phung_thanh:0.690,needs_human_review,audit_only_not_rendered,"Name similarity is a review hint, not an identity or coordinate verification."
+QTG_Diem.0015,Giếng Ngọc Đình Trung Tự,,trung_tu_dinh:0.619;trung_tu_chua:0.595,needs_human_review,audit_only_not_rendered,Additional GIS point outside the current 32-site canonical list; do not add automatically.
+QTG_Diem.0016,Đền - Đình Kim Liên,,kim_lien:0.791,needs_human_review,audit_only_not_rendered,"Name similarity is a review hint, not an identity or coordinate verification."
+QTG_Diem.0017,Văn Miếu - Quốc Tử Giám,van_mieu,van_mieu:1.000,needs_human_review,audit_only_not_rendered,"Name similarity is a review hint, not an identity or coordinate verification."
+QTG_Diem.0018,Đình Thanh Miến,thanh_mien,thanh_mien:1.000;thai_kieu:0.759;van_huong:0.621,needs_human_review,audit_only_not_rendered,"Name similarity is a review hint, not an identity or coordinate verification."
+QTG_Diem.0019,Đình Trung Kính,trung_kinh,trung_kinh:1.000;trung_tu_dinh:0.667;trung_ta:0.667,needs_human_review,audit_only_not_rendered,Close to Chùa Mỹ Quang; preserve distinct identities and check the local-context match.
+QTG_Diem.0020,Đình Thái Kiều,thai_kieu,thai_kieu:1.000;thanh_mien:0.759;kham_duc_dinh:0.667,needs_human_review,audit_only_not_rendered,"Name similarity is a review hint, not an identity or coordinate verification."
+QTG_Diem.0021,Chùa Bụt Mọc,but_moc,but_moc:1.000;ngoc_ho:0.696;tien_tich:0.615,needs_human_review,audit_only_not_rendered,"Name similarity is a review hint, not an identity or coordinate verification."
+QTG_Diem.0022,Đình Văn Hương,van_huong,van_huong:1.000;luong_su:0.710;trung_tu_dinh:0.688,needs_human_review,audit_only_not_rendered,"Name similarity is a review hint, not an identity or coordinate verification."
+QTG_Diem.0023,Đình - Đền Lương Sử,luong_su,luong_su:1.000;van_huong:0.710,needs_human_review,audit_only_not_rendered,"Name similarity is a review hint, not an identity or coordinate verification."
+QTG_Diem.0024,Đình làng Trung Tự,trung_tu_dinh,trung_tu_dinh:1.000;tho_quan:0.722;trung_tu_chua:0.710,needs_human_review,audit_only_not_rendered,Keep distinct from Chùa Trung Tự and Giếng Ngọc pending identity review.
+QTG_Diem.0025,Chùa Liên Hoa,lien_hoa,lien_hoa:1.000;tien_tich:0.741;linh_quang:0.714,needs_human_review,audit_only_not_rendered,"Name similarity is a review hint, not an identity or coordinate verification."
+QTG_Diem.0026,Chùa Tiên Tích,tien_tich,tien_tich:1.000;lien_hoa:0.741;ba_nanh:0.710,needs_human_review,audit_only_not_rendered,Additional GIS point outside the current 32-site canonical list; do not add to the public list automatically.
+QTG_Diem.0027,Đền Đức Thánh Trần,duc_thanh_tran,duc_thanh_tran:1.000;thanh_mien:0.606,needs_human_review,audit_only_not_rendered,Additional GIS point outside the current 32-site canonical list; do not add automatically.
+QTG_Diem.0028,Đền Văn Chỉ,van_chi,van_chi:1.000;van_huong:0.640,needs_human_review,audit_only_not_rendered,"Name similarity is a review hint, not an identity or coordinate verification."
+QTG_Diem.0029,Hồ Giám,,pho_giac:0.600,needs_human_review,audit_only_not_rendered,Compare with Hồ Văn and Gò Kim Châu in the canonical list; nearby features may be parts of one complex.
+QTG_Diem.0030,Gò Kim Châu,,ho_van:0.759,needs_human_review,audit_only_not_rendered,Compare with Hồ Văn and Hồ Giám; retain separate geometry until identity/scope is confirmed.
+QTG_Diem.0031,Đền Mẫu Sòng Sơn - Hà Nội,song_son,song_son:1.000,needs_human_review,audit_only_not_rendered,"Name similarity is a review hint, not an identity or coordinate verification."
+QTG_Diem.0032,Đền Trung Phụng,trung_phung,trung_phung:1.000;trung_ta:0.741;trung_kinh:0.667,needs_human_review,audit_only_not_rendered,"Name similarity is a review hint, not an identity or coordinate verification."
+QTG_Diem.0033,Đình Khâm Đức,kham_duc_dinh,kham_duc_dinh:1.000;thai_kieu:0.667,needs_human_review,audit_only_not_rendered,A separate Đền Khâm Đức point is only 8.8 m away; confirm whether these are distinct sites/entrances.
+QTG_Diem.0034,Đền Khâm Đức - thờ Châu Đệ Tứ,kham_duc_den,kham_duc_den:1.000,needs_human_review,audit_only_not_rendered,A separate Đình Khâm Đức point is only 8.8 m away; confirm whether these are distinct sites/entrances.
+QTG_Diem.0035,Chùa Tiên Phúc Tự,ba_nanh,ba_nanh:1.000;tien_tich:0.710;trung_tu_chua:0.667,needs_human_review,audit_only_not_rendered,The canonical list treats Tiên Phúc Tự as an alias of Chùa Bà Nành; do not auto-merge the two GIS pins.
