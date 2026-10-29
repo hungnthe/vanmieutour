@@ -64,6 +64,11 @@ assert.strictEqual(document.querySelector('.detail-cover-photo')?.getAttribute('
 await click('[data-route="W02"]');
 assert.strictEqual(document.querySelector('[data-route="W02"]').getAttribute('aria-pressed'),'true');
 assert(document.querySelector('#floating-route').textContent.includes('Chùa Ngọc Hồ'));
+assert.strictEqual(document.querySelector('.floating-route-toggle').getAttribute('aria-expanded'),'false','Route details start folded on narrow screens');
+await click('.floating-route-toggle');
+assert.strictEqual(document.querySelector('.floating-route-toggle').getAttribute('aria-expanded'),'true','Route details can be opened');
+await click('.floating-route-toggle');
+assert.strictEqual(document.querySelector('.floating-route-toggle').getAttribute('aria-expanded'),'false','Route details can be folded again');
 assert.strictEqual($count('.site-row.dim'),29);
 
 await click('#tab-motorbike');
@@ -121,6 +126,7 @@ assert(document.querySelector('.planner-stops li:first-child').textContent.inclu
 await click('#preview-tour');
 assert.deepStrictEqual([...document.querySelectorAll('#floating-route .route-stops button')].map(button=>button.dataset.site),['kham_duc_dinh','ngoc_ho'],'Preview preserves all selected stops and their order');
 assert(document.querySelector('#floating-route').textContent.includes('Nguyễn Khuyến'),'Preview shows addresses');
+assert.strictEqual(document.querySelector('.floating-route-toggle').getAttribute('aria-expanded'),'false','Custom tour keeps the map clear until details are requested');
 await click('button[aria-label="Bỏ Đình Khâm Đức"]');
 assert.strictEqual(document.querySelectorAll('.planner-stops li').length,1,'A selected stop can be removed');
 Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype,'value').set.call(tourSearch,'Trung Kính');
@@ -145,13 +151,26 @@ assert(homeDom.window.document.querySelector('a[href="#/map"]'),'The homepage ex
 assert.strictEqual(homeDom.window.document.querySelector('.home-explorer-side'),null,'The map is shown without a site picker.');
 assert.strictEqual(homeDom.window.document.querySelector('.home-map-stage img')?.getAttribute('src'),'assets/ban-do-di-san-ha-noi-day-du.png','The map preserves the entire supplied PDF page.');
 const homeDocument = homeDom.window.document;
+const illustratedWebsites=JSON.parse(fs.readFileSync(path.join(root,'src/illustrated-websites.json'),'utf8'));
+for(const [id,name] of Object.entries({
+  duc_thanh_tran:'Đền Đức Thánh Trần',
+  van_huong:'Đình Văn Hương',
+  but_moc:'Chùa Bụt Mọc',
+  kham_duc_den:'Đền Khâm Đức thờ Châu Đệ Tứ',
+})) {
+  const url=new URL(illustratedWebsites[id]);
+  assert.strictEqual(url.origin,'https://www.google.com');
+  assert.strictEqual(url.pathname,'/maps/search/');
+  assert.strictEqual(url.searchParams.get('api'),'1');
+  assert(url.searchParams.get('query').startsWith(name),`${name} opens a named Google Maps search.`);
+}
 assert.strictEqual(homeDocument.querySelectorAll('.home-route-option').length,6,'The homepage offers all six routes.');
 const homeR02=[...homeDocument.querySelectorAll('.home-route-option')].find(button=>button.textContent.includes('R02'));
 assert(homeR02.textContent.includes('Đình Văn Hương')&&homeR02.textContent.includes('Đình Khâm Đức'),'R02 follows the supplied legend.');
 homeR02.click();
 await tick();
 assert.strictEqual(homeDocument.querySelectorAll('.home-route-stop').length,5,'Selecting R02 highlights its five illustrated stops.');
-assert.strictEqual(homeDocument.querySelectorAll('.home-route-stop')[1].getAttribute('href'),'#/di-tich/van_huong');
+assert.strictEqual(homeDocument.querySelectorAll('.home-route-stop')[1].getAttribute('href'),illustratedWebsites.van_huong,'Route badges use the matching website from the supplied sheet.');
 const routeTransform=homeDocument.querySelector('.home-route-highlight').style.transform;
 const transformParts=/translate\(([\d.]+)%,([\d.]+)%\) scale\(([\d.]+),([\d.]+)\)/.exec(routeTransform);
 assert(transformParts,'The route line is calibrated to the current illustrated map.');
@@ -166,7 +185,7 @@ const homeW02=[...homeDocument.querySelectorAll('.home-route-option')].find(butt
 homeW02.click();
 await tick();
 for(const [id,x,y] of [['ngoc_ho',554,137],['y_mieu',613,218]]) {
-  const stop=homeDocument.querySelector(`.home-route-stop[href="#/di-tich/${id}"]`);
+  const stop=homeDocument.querySelector(`.home-route-stop[data-site-id="${id}"]`);
   assert(stop,`W02 includes ${id}.`);
   assert(Math.abs(parseFloat(stop.style.left)*768/100-x)<2,`${id} route marker aligns horizontally with the map.`);
   assert(Math.abs(parseFloat(stop.style.top)*1152/100-y)<2,`${id} route marker aligns vertically with the map.`);
@@ -181,7 +200,7 @@ for(const [id,name,x,y] of [
   ['duc_thanh_tran','Đền Đức Thánh Trần',674,254],
   ['tien_tich','Chùa Tiên Tích',679,274],
 ]) {
-  const hotspot=homeDocument.querySelector(`a.home-map-hotspot[href="#/di-tich/${id}"]`);
+  const hotspot=homeDocument.querySelector(`a.home-map-hotspot[data-site-id="${id}"]`);
   assert(hotspot,`Missing hotspot for ${name}`);
   assert(Math.abs(parseFloat(hotspot.style.left)*768/100-x)<2,`${name} horizontal position matches the current map image.`);
   assert(Math.abs(parseFloat(hotspot.style.top)*1152/100-y)<2,`${name} vertical position matches the current map image.`);
@@ -197,26 +216,27 @@ for(let attempt=0;attempt<50&&homeDocument.querySelector('[role="tooltip"] stron
 assert.strictEqual(homeDocument.querySelector('[role="tooltip"] strong')?.textContent,'Đình Thanh Miến','The nearest landmark wins in overlapping areas.');
 homeDom.window.dispatchEvent(new homeDom.window.KeyboardEvent('keydown',{key:'Escape'}));
 await tick();
+let lastMapNavigation=null;
+homeDocument.addEventListener('click',event=>{
+  const link=event.target.closest?.('a.home-map-hotspot,a.home-route-stop');
+  if(link){lastMapNavigation=link.getAttribute('href');event.preventDefault();}
+},true);
 illustratedStage.dispatchEvent(new homeDom.window.MouseEvent('click',{bubbles:true,clientX:603,clientY:245,detail:1}));
 await tick();
-assert.strictEqual(homeDocument.querySelector('.site-page h1')?.textContent,'Chùa Quang Minh','The nearby artwork opens the matching detail page.');
-homeDom.window.location.hash='#gioi-thieu';
-homeDom.window.dispatchEvent(new homeDom.window.HashChangeEvent('hashchange'));
+assert.strictEqual(lastMapNavigation,illustratedWebsites.quang_minh,'The nearby artwork opens the matching external website.');
+lastMapNavigation=null;
+homeDocument.querySelector('a.home-map-hotspot[data-site-id="ngoc_ho"]').dispatchEvent(new homeDom.window.MouseEvent('click',{bubbles:true,cancelable:true,clientX:517,clientY:131,detail:1}));
 await tick();
-const returnedStage=homeDocument.querySelector('.home-map-stage');
-returnedStage.getBoundingClientRect=()=>({left:0,top:0,right:768,bottom:1152,width:768,height:1152});
-homeDocument.querySelector('a.home-map-hotspot[href="#/di-tich/ngoc_ho"]').dispatchEvent(new homeDom.window.MouseEvent('click',{bubbles:true,cancelable:true,clientX:517,clientY:131,detail:1}));
-await tick();
-assert.strictEqual(homeDocument.querySelector('.site-page h1')?.textContent,'Đình Thanh Miến','An overlap opens the nearest landmark rather than the covering link.');
-homeDom.window.location.hash='#gioi-thieu';
-homeDom.window.dispatchEvent(new homeDom.window.HashChangeEvent('hashchange'));
-await tick();
-// Every illustrated site must open its own name and the matching supplied photo.
+assert.strictEqual(lastMapNavigation,illustratedWebsites.thanh_mien,'An overlap opens the nearest landmark website rather than the covering link.');
+// Every illustrated site retains its own name, supplied photo and matching website.
 const suppliedPhotos=JSON.parse(fs.readFileSync(path.join(root,'src/landmark-photos.json'),'utf8'));
 for(const hotspot of homeDocument.querySelectorAll('a.home-map-hotspot')) {
   const name=hotspot.getAttribute('aria-label');
-  const id=hotspot.getAttribute('href').split('/').pop();
+  const id=hotspot.dataset.siteId;
   const photoKey=name==='Chùa Tiên Phúc Tự'?'tien_phuc':id;
+  const website=illustratedWebsites[photoKey];
+  assert.strictEqual(hotspot.getAttribute('href'),website||`#/di-tich/${id}`,`${name} navigates to its matching website or existing detail page.`);
+  assert.strictEqual(hotspot.getAttribute('target'),website?'_blank':null,`${name} keeps the map open when visiting an external website.`);
   hotspot.dispatchEvent(new homeDom.window.MouseEvent('mouseover',{bubbles:true}));
   for(let attempt=0;attempt<50&&!homeDocument.querySelector('[role="tooltip"]');attempt++) await new Promise(resolve=>setTimeout(resolve,10));
   const preview=homeDocument.querySelector('[role="tooltip"]');
@@ -233,12 +253,12 @@ for(const [label,key] of [['Chùa Bà Nành','ba_nanh'],['Chùa Tiên Phúc Tự
   await tick();
   assert.strictEqual(homeDocument.querySelector('[role="tooltip"] img').getAttribute('src'),`assets/landmark-photos/${key}.png`,'Shared destination retains the distinct photograph assigned to each illustration.');
 }
-const noPhoto=homeDocument.querySelector('a.home-map-hotspot[href="#/di-tich/song_son"]');
+const noPhoto=homeDocument.querySelector('a.home-map-hotspot[data-site-id="song_son"]');
 noPhoto.focus();
 await tick();
 assert.strictEqual(homeDocument.querySelector('[role="tooltip"] strong').textContent,'Đền Mẫu Sòng Sơn – Hà Nội');
 assert.strictEqual(homeDocument.querySelector('[role="tooltip"] img'),null,'Never borrow a photograph from another place.');
-const withPhoto=homeDocument.querySelector('a.home-map-hotspot[href="#/di-tich/tien_tich"]');
+const withPhoto=homeDocument.querySelector('a.home-map-hotspot[data-site-id="tien_tich"]');
 withPhoto.focus();
 await tick();
 homeDocument.querySelector('[role="tooltip"] img').dispatchEvent(new homeDom.window.Event('error'));
@@ -249,14 +269,13 @@ await tick();
 assert(homeDocument.querySelector('[role="tooltip"]'),'Keyboard preview remains available when the browser scrolls to the focused landmark.');
 const hotspotLinks = [...homeDocument.querySelectorAll('.home-map-hotspot')].map(link=>({href:link.getAttribute('href'),name:link.getAttribute('aria-label')}));
 assert.strictEqual(hotspotLinks.length,33,'Every named illustration has a link.');
-assert.strictEqual(new Set(hotspotLinks.map(link=>link.href)).size,32,'Ba Nanh and Tien Phuc refer to the same landmark.');
-for (const link of hotspotLinks) {
-  homeDom.window.location.hash=link.href;
-  homeDom.window.dispatchEvent(new homeDom.window.HashChangeEvent('hashchange'));
-  await tick();
-  assert.strictEqual(homeDocument.querySelector('.site-page h1')?.textContent,link.href.endsWith('/ba_nanh')?'Chùa Bà Nành (Tiên Phúc tự)':link.name,'Landmark URL shows its matching name.');
-  assert.strictEqual(homeDocument.querySelector('#map'),null,'A landmark page does not mount the GIS map.');
-}
+assert.strictEqual(new Set(hotspotLinks.map(link=>link.href)).size,33,'Ba Nanh and Tien Phuc use distinct websites.');
+assert.strictEqual(homeDocument.querySelector('.home-map-hotspot[data-site-id="kham_duc_dinh"]').getAttribute('href'),'#/di-tich/kham_duc_dinh','A blank sheet URL retains the existing detail-page destination.');
+homeDom.window.location.hash='#/di-tich/van_mieu';
+homeDom.window.dispatchEvent(new homeDom.window.HashChangeEvent('hashchange'));
+await tick();
+assert.strictEqual(homeDocument.querySelector('.site-page h1')?.textContent,'Văn Miếu – Quốc Tử Giám','Existing internal detail pages remain available.');
+assert.strictEqual(homeDocument.querySelector('#map'),null,'A landmark page does not mount the GIS map.');
 homeDom.window.location.hash='#gioi-thieu';
 homeDom.window.dispatchEvent(new homeDom.window.HashChangeEvent('hashchange'));
 await tick();

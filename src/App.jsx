@@ -140,6 +140,7 @@ function MapPage() {
   const [detailsOpen,setDetailsOpen] = useState(false);
   const [sidebarCollapsed,setSidebarCollapsed] = useState(false);
   const [detailsCollapsed,setDetailsCollapsed] = useState(false);
+  const [routePanelExpanded,setRoutePanelExpanded] = useState(false);
   const [roadResult,setRoadResult] = useState(null);
   const mapRef = useRef(null);
   const selectSiteRef = useRef(null);
@@ -154,6 +155,7 @@ function MapPage() {
   const nearbySiteIds=panel==='tour' && !tourPreview ? tourStops : selectedRoute?.sites || EMPTY_SITE_IDS;
   const activeNearbyVenues=useMemo(()=>venuesForTour(nearbyVenues,nearbySiteIds),[nearbySiteIds]);
   const selectedRouteKey=selectedRoute?`${selectedRoute.mode}:${selectedRoute.sites.join(',')}`:null;
+  useEffect(()=>setRoutePanelExpanded(false),[selectedRouteKey]);
   const byRoute = selectedRoute ? {...selectedRoute,roadSegments:roadResult?.key===selectedRouteKey?roadResult.value.legs.map(leg=>leg.coordinates):null} : null;
   const selectedSite = byId[selected];
   const locatedCount = sites.filter(isLocated).length;
@@ -224,7 +226,7 @@ function MapPage() {
     const site = byId[id];
     if (!site) return;
     if(viewMode==='3d' && id!=='van_mieu' && !tourStops.includes(id)) switchMapView('2d');
-    setSelected(id); setDetailsOpen(true); setDetailsCollapsed(false); closeMobileMenu();
+    setSelected(id); setDetailsOpen(true); setDetailsCollapsed(false); setRoutePanelExpanded(false); closeMobileMenu();
     const panel = document.getElementById('details');
     if (panel) panel.scrollTop = 0;
     mapRef.current?.focus(site);
@@ -424,16 +426,19 @@ function MapPage() {
           <button id="map-zoom-in" className="map-control square-control" title="Phóng to" onClick={()=>mapRef.current?.zoom(1)}>+</button>
           <button id="map-zoom-out" className="map-control square-control" title="Thu nhỏ" onClick={()=>mapRef.current?.zoom(-1)}>−</button>
         </div>
-        <div id="floating-route" className="floating-route" style={{'--active-route':byRoute?.color || '#267459'}} hidden={!byRoute}>
-          {byRoute&&<><div className="floating-route-label">{byRoute.id==='CUSTOM'?'TOUR CỦA BẠN':byRoute.id} · {byRoute.mode==='walk'?'ĐI BỘ':'XE MÁY'} · {byRoute.sites.length} ĐIỂM</div>
-            <details className="route-itinerary" open={byRoute.id==='CUSTOM'?true:undefined}><summary>{byRoute.title} <span>Xem điểm ghé</span></summary><ol className="route-stops">{byRoute.sites.map((id,index)=>{
+        <div id="floating-route" className={`floating-route${routePanelExpanded?' expanded':''}`} style={{'--active-route':byRoute?.color || '#267459'}} hidden={!byRoute}>
+          {byRoute&&<><button type="button" className="floating-route-toggle" aria-controls="floating-route-content" aria-expanded={routePanelExpanded} onClick={()=>setRoutePanelExpanded(value=>!value)}>
+            <span className="floating-route-toggle-text"><span>{byRoute.id==='CUSTOM'?'TOUR CỦA BẠN':byRoute.id} · {byRoute.mode==='walk'?'ĐI BỘ':'XE MÁY'} · {byRoute.sites.length} ĐIỂM</span><strong>{byRoute.title}</strong><small>{roadResult?.key===selectedRouteKey?`${formatKm(roadResult.value.km)} · ${formatTravelTime(roadResult.value.seconds)}`:'Chạm để xem hành trình'}</small></span>
+            <span className="floating-route-toggle-arrow" aria-hidden="true">{routePanelExpanded?'↓':'↑'}</span>
+          </button><div id="floating-route-content" className="floating-route-content"><div className="floating-route-label">{byRoute.id==='CUSTOM'?'TOUR CỦA BẠN':byRoute.id} · {byRoute.mode==='walk'?'ĐI BỘ':'XE MÁY'} · {byRoute.sites.length} ĐIỂM</div>
+            <details className="route-itinerary" open={byRoute.id==='CUSTOM'?true:undefined}><summary><span className="route-itinerary-title">{byRoute.title}</span><span>Xem điểm ghé</span></summary><ol className="route-stops">{byRoute.sites.map((id,index)=>{
               const site=byId[id],located=isLocated(site);
               return <li key={id}><button type="button" data-site={id} className={located?'':'unlocated-stop'} onClick={()=>selectSite(id)}><b>{index+1}</b><span>{labelOf(site)}{byRoute.id==='CUSTOM'&&<small>{site.address||'Chưa có địa chỉ'}</small>}{!located&&<small>Chưa có tọa độ · chỉ xem chi tiết</small>}</span></button></li>;
             })}</ol></details>
             {byRoute.sites.some(id=>!isLocated(byId[id]))&&<p className="route-missing">{byRoute.sites.filter(id=>!isLocated(byId[id])).length} điểm chưa có tọa độ để đặt pin.</p>}
             <RouteMetrics route={byRoute} byId={byId} onResult={(key,value)=>setRoadResult({key,value})}/>
             <button type="button" className="route-clear" data-reset-route="1" onClick={resetRoute}><Icon name="close"/> Bỏ chọn tuyến</button>
-          </>}
+          </div></>}
         </div>
         <details className="map-key" id="map-key"><summary className="map-key-title">CHÚ GIẢI & KIỂM SOÁT LỚP</summary>
           <div className="map-key-entry"><span className="key-pin official"/> {sites.filter(site=>site.coord_status==='gazette_centroid').length} tâm địa danh · Thông tư 10/2022</div><div className="map-key-entry"><span className="key-pin official"/> {sites.filter(site=>site.coord_status==='osm_reference').length} vị trí tham khảo · OpenStreetMap</div><div className="map-key-entry"><span className="key-pin official"/> {sites.filter(site=>site.coord_status==='gis_reference').length} vị trí tham khảo · GIS dự án</div>{sites.some(site=>!isLocated(site))&&<div className="map-key-entry"><span className="key-pin missing"/> {sites.filter(site=>!isLocated(site)).length} điểm chờ định vị · xem danh sách</div>}<div className="map-key-entry"><span className="key-road-route"/> Tuyến đường ước tính từ OpenStreetMap</div><div className="map-key-entry"><span className="key-venue"/> Quán xá quanh tuyến hoặc tour đang chọn</div>

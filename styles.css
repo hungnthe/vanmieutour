@@ -206,3 +206,27 @@ html,body{font-family:var(--font-text);font-size:14px;line-height:1.5}
 .map-marker.tour-photo-marker:hover .map-marker-core,.map-marker.tour-photo-marker.selected .map-marker-core,.map-marker.tour-photo-marker.in-route .map-marker-core{transform:scale(1.06);box-shadow:0 10px 26px #173d3699,0 0 0 3px #f1d58f}
 .map-marker.maplibregl-marker.tour-photo-marker.selected{z-index:500!important}
 @media(max-width:800px){.map-marker.maplibregl-marker.tour-photo-marker{width:56px;height:69px}.map-marker.tour-photo-marker .map-marker-core{width:48px;height:48px}.map-marker.tour-photo-marker .map-marker-label{bottom:72px}}
+
+/* On narrow screens, keep the route available without covering the map. */
+.floating-route-toggle{display:none}
+@media(max-width:1090px){
+  .floating-route{top:auto;bottom:12px;left:12px;width:min(360px,calc(100% - 24px));max-width:none;max-height:min(72dvh,calc(100% - 110px));padding:0;overflow:hidden}
+  .floating-route.expanded{display:flex;flex-direction:column}
+  .floating-route-toggle{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;min-height:72px;padding:10px 14px;border:0;background:#fffefa;color:#254c3d;text-align:left}
+  .floating-route-toggle-text{display:grid;gap:3px;min-width:0}
+  .floating-route-toggle-text>span{color:var(--active-route);font-size:10px;font-weight:800;letter-spacing:.04em}
+  .floating-route-toggle-text strong{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:13px;line-height:1.3}
+  .floating-route-toggle-text small{color:#667d6e;font-size:11px;line-height:1.3}
+  .floating-route-toggle-arrow{display:grid;place-items:center;flex:0 0 32px;width:32px;height:32px;border-radius:50%;background:#eaf3eb;color:var(--active-route);font-size:22px;line-height:1}
+  .floating-route:not(.expanded) .floating-route-content{display:none}
+  .floating-route.expanded .floating-route-content{min-height:0;overflow-y:auto;padding:0 14px 14px;overscroll-behavior:contain}
+  .floating-route.expanded .route-stops{max-height:none;overflow:visible}
+  .floating-route-content>.floating-route-label,.route-itinerary summary>.route-itinerary-title{display:none}
+  .route-itinerary summary>span:last-child{display:inline;color:#2c6952;font-size:12px;font-weight:800}
+  .map-wrap:has(.floating-route:not([hidden])) .map-key{bottom:96px}
+  .map-wrap:has(.floating-route.expanded) .map-key{display:none}
+}
+@media(max-width:800px){
+  .floating-route{bottom:max(10px,env(safe-area-inset-bottom));left:10px;width:calc(100% - 20px);max-height:min(56dvh,calc(100% - 150px))}
+  .map-wrap:has(.floating-route:not([hidden])) .map-key{bottom:94px}
+}

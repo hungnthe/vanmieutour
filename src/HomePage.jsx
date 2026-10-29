@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
-import {ILLUSTRATED_HOTSPOTS, ILLUSTRATED_SITES, MAP_ART, MAP_ART_ALIGNMENT, alignMapPoint, siteHref} from './illustrated-sites.js';
+import {ILLUSTRATED_HOTSPOTS, ILLUSTRATED_SITES, MAP_ART, MAP_ART_ALIGNMENT, alignMapPoint, illustratedWebsite, siteHref} from './illustrated-sites.js';
 import {ILLUSTRATED_ROUTES, ILLUSTRATED_ROUTE_POINTS} from './illustrated-routes.js';
+import ROUTE_STORIES from './route-stories.json';
 import LandmarkPreview from './LandmarkPreview.jsx';
 
 const ROUTE_NAMES = {
@@ -15,6 +16,10 @@ const routeSite = Object.fromEntries(ILLUSTRATED_SITES.map(site=>[site.id,site])
 const alignedHotspots = ILLUSTRATED_HOTSPOTS.map(site=>({...site,...alignMapPoint(site)}));
 const routeOverlayTransform = `translate(${MAP_ART_ALIGNMENT.offsetX/MAP_ART.width*100}%,${MAP_ART_ALIGNMENT.offsetY/MAP_ART.height*100}%) scale(${MAP_ART_ALIGNMENT.scaleX},${MAP_ART_ALIGNMENT.scaleY})`;
 const MAP_IMAGE_SRC = 'assets/ban-do-di-san-ha-noi-day-du.png';
+function mapLinkProps(site) {
+  const website=illustratedWebsite(site);
+  return website ? {href:website,target:'_blank',rel:'noopener noreferrer'} : {href:siteHref(site.id)};
+}
 
 function nearestIllustratedSite(event,stage) {
   const rect=stage.getBoundingClientRect();
@@ -34,7 +39,7 @@ function nearestIllustratedSite(event,stage) {
 export function Brand({light = false}) {
   return <a className={`home-brand${light ? ' home-brand-light' : ''}`} href="/" aria-label="Văn Miếu 37 di tích — Trang chủ">
     <img className="home-brand-image" src="assets/brand-vm-stamp.png" alt="" aria-hidden="true" width="408" height="408" />
-    <span className="home-brand-copy"><strong>Văn Miếu 37 di tích</strong></span>
+    <span className="home-brand-copy"><strong><span>Văn Miếu</span><span>37 di tích</span></strong></span>
   </a>;
 }
 
@@ -50,11 +55,12 @@ function HeritageExplorer() {
     if(!event.detail||!event.target.closest?.('.home-map-hotspot')) return;
     const stage=event.currentTarget.querySelector('.home-map-stage');
     const nearest=nearestIllustratedSite(event,stage);
-    if(nearest&&siteHref(nearest.site.id)!==event.target.closest('.home-map-hotspot').getAttribute('href')){
+    const nearestAnchor=nearest&&stage.querySelectorAll('.home-map-hotspot')[nearest.index];
+    if(nearestAnchor&&nearestAnchor!==event.target.closest('.home-map-hotspot')){
       event.preventDefault();
       event.stopPropagation();
       setPreview(null);
-      window.location.hash=siteHref(nearest.site.id);
+      nearestAnchor.click();
     }
   };
   const onMapMouseMove=event=>{
@@ -73,7 +79,7 @@ function HeritageExplorer() {
     const nearest=nearestIllustratedSite(event,event.currentTarget);
     if(nearest){
       setPreview(null);
-      window.location.hash=siteHref(nearest.site.id);
+      event.currentTarget.querySelectorAll('.home-map-hotspot')[nearest.index]?.click();
     }
   };
   useEffect(()=>{
@@ -123,7 +129,7 @@ function HeritageExplorer() {
           </>}
           {alignedHotspots.map(site=><a
             key={`${site.id}-${site.label}`} className="home-map-hotspot"
-            href={siteHref(site.id)} aria-label={site.label}
+            {...mapLinkProps(site)} data-site-id={site.id} aria-label={site.label}
             aria-describedby={preview?.site.label===site.label?'landmark-preview':undefined}
             onMouseEnter={event=>setPreview({site,anchor:event.currentTarget})}
             onFocus={event=>setPreview({site,anchor:event.currentTarget})}
@@ -137,7 +143,7 @@ function HeritageExplorer() {
             // Keep the starting badge clear of the Văn Miếu illustration.
             const badgeY=point.y+(id==='van_mieu'?-40:0);
             const site=routeSite[id];
-            return <a key={`${activeRoute.id}-${id}`} className="home-route-stop" href={siteHref(id)}
+            return <a key={`${activeRoute.id}-${id}`} className="home-route-stop" {...mapLinkProps(site)} data-site-id={id}
               style={{left:`${point.x/MAP_ART.width*100}%`,top:`${badgeY/MAP_ART.height*100}%`,'--route-color':activeRoute.color}}
               aria-label={`${index+1}. ${ROUTE_NAMES[id]}`}
               onMouseEnter={event=>setPreview({site:{...site,label:ROUTE_NAMES[id]},anchor:event.currentTarget})}
@@ -164,9 +170,20 @@ function HeritageExplorer() {
           </div>
         </div>)}
       </div>
-      {activeRoute&&<p className="home-route-selected" role="status" style={{'--route-color':activeRoute.color}}>
-        <strong>{activeRoute.id}</strong> · {activeRoute.stops.length} điểm ghé theo thứ tự trên sơ đồ. Chạm vào chấm đánh số để mở di tích.
-      </p>}
+      {activeRoute&&<>
+        <p className="home-route-selected" role="status" style={{'--route-color':activeRoute.color}}>
+          <strong>{activeRoute.id}</strong> · {activeRoute.stops.length} điểm ghé theo thứ tự trên sơ đồ. Chạm vào chấm đánh số để mở di tích.
+        </p>
+        {ROUTE_STORIES[activeRoute.id]&&<article className="home-route-story" style={{'--route-color':activeRoute.color}} aria-labelledby="home-route-story-title">
+          <span className="home-route-story-kicker">Câu chuyện hành trình · {activeRoute.id}</span>
+          <h3 id="home-route-story-title">{ROUTE_STORIES[activeRoute.id].title}</h3>
+          <p className="home-route-story-journey">{ROUTE_STORIES[activeRoute.id].journey}</p>
+          <p className="home-route-story-theme"><strong>Chủ đề:</strong> {ROUTE_STORIES[activeRoute.id].theme}</p>
+          <p className="home-route-story-hook">{ROUTE_STORIES[activeRoute.id].hook}</p>
+          {ROUTE_STORIES[activeRoute.id].paragraphs.map((paragraph,index)=><p key={index}>{paragraph}</p>)}
+          <p className="home-route-story-meaning"><strong>Ý nghĩa hành trình:</strong> {ROUTE_STORIES[activeRoute.id].meaning}</p>
+        </article>}
+      </>}
     </div>
     {preview&&<LandmarkPreview key={preview.site.label} site={preview.site} anchor={preview.anchor}/>}
   </section>;

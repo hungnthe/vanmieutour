@@ -1,5 +1,6 @@
 // Positions in PDF page points (768 × 1152), not GIS coordinates.
-// Labels are preserved from the supplied PDF. Ba Nanh and Tien Phuc share one destination.
+// Labels are preserved from the supplied PDF. Ba Nanh and Tien Phuc share one internal detail page.
+import illustratedWebsites from './illustrated-websites.json';
 export const MAP_ART = {width:768,height:1152,imageWidth:2048,imageHeight:3072};
 // The current illustrated PNG places the original PDF map slightly inset on its canvas.
 // Keep hotspots, route stops and route line overlays in one calibrated coordinate system.
@@ -46,3 +47,4 @@ export const ILLUSTRATED_HOTSPOTS = [
   {...ILLUSTRATED_SITES.find(site=>site.id==='ba_nanh'),label:'Chùa Tiên Phúc Tự',photoKey:'tien_phuc',x:466,y:125,size:14},
 ];
 export function siteHref(id) { return `#/di-tich/${id}`; }
+export function illustratedWebsite(site) { return illustratedWebsites[site.photoKey || site.id] || null; }
