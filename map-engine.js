@@ -45,6 +45,7 @@
       this.modelPromise = null;
       this.visibleNearbyVenues = [];
       this.venuePopup = null;
+      this.tourPhotoStops = [];
     }
     later(callback, delay) {
       const token = setTimeout(() => { this.timers.delete(token); callback(); }, delay);
@@ -282,6 +283,7 @@
         element.setAttribute('aria-label',`${order >= 0 ? `Điểm ${order+1}. ` : ''}Xem chi tiết ${this.byId[id].name}`);
         if (this.kind === 'raster') marker.setZIndexOffset(selected === id ? 1000 : order >= 0 ? 500 : 0);
       }
+      this.updateTourPhotoMarkers();
       // Only draw geometry supplied by the routing service; no straight-line fallback.
       const segments = route?.roadSegments || [];
       this.container.dataset.routeSegments = segments.length;
@@ -300,29 +302,56 @@
         }).addTo(this.line));
       }
     }
+    setTourPhotoMarkers(stops) {
+      this.tourPhotoStops = Array.isArray(stops) ? stops : [];
+      this.updateTourPhotoMarkers();
+    }
+    updateTourPhotoMarkers() {
+      const photos = new Map(this.kind === 'vector' ? this.tourPhotoStops.map(stop => [stop.id,stop]) : []);
+      for (const [id,{element}] of this.markers) {
+        const stop=photos.get(id);
+        const src=typeof stop?.src === 'string' ? stop.src : null;
+        const routeOrder=this.route?.sites.indexOf(id) ?? -1;
+        const order=stop?.order || (routeOrder >= 0 ? routeOrder+1 : null);
+        element.querySelector('.marker-number').textContent=order || '';
+        element.setAttribute('aria-label',`${order ? `Điểm ${order}. ` : ''}Xem chi tiết ${this.byId[id].name}`);
+        const frame=element.querySelector('.marker-photo-frame');
+        if (!frame) continue;
+        const existing=frame.querySelector('img');
+        if (!src || element.dataset.photoError === src) {
+          existing?.remove();
+          element.classList.remove('tour-photo-marker');
+          if (!src) {delete element.dataset.photoError;delete element.dataset.photoSrc;}
+          continue;
+        }
+        element.classList.add('tour-photo-marker');
+        if (existing?.getAttribute('src') === src) continue;
+        existing?.remove();
+        element.dataset.photoSrc=src;
+        const img=document.createElement('img');
+        img.alt='';
+        img.decoding='async';
+        img.addEventListener('error',()=>{
+          if (element.dataset.photoSrc !== src) return;
+          element.dataset.photoError=src;
+          frame.replaceChildren();
+          element.classList.remove('tour-photo-marker');
+        });
+        img.src=src;
+        frame.append(img);
+      }
+    }
     attachNearbyVenueLayers() {
       if (this.kind !== 'vector' || !this.ready || !this.map?.getStyle()) return false;
       const map = this.map;
       if (map.getSource('heritage-nearby-venues')) return false;
       map.addSource('heritage-nearby-venues',{
-        type:'geojson',data:{type:'FeatureCollection',features:[]},
-        cluster:true,clusterMaxZoom:17,clusterRadius:38
+        type:'geojson',data:{type:'FeatureCollection',features:[]}
       });
-      map.addLayer({id:'heritage-venue-clusters',type:'circle',source:'heritage-nearby-venues',
-        filter:['has','point_count'],paint:{'circle-color':'#a85b2d','circle-radius':['step',['get','point_count'],16,10,21,30,25],
-          'circle-stroke-color':'#fffaf0','circle-stroke-width':2.5,'circle-opacity':.96}});
-      map.addLayer({id:'heritage-venue-cluster-count',type:'symbol',source:'heritage-nearby-venues',
-        filter:['has','point_count'],layout:{'text-field':['get','point_count_abbreviated'],'text-font':['Noto Sans Bold'],'text-size':12},
-        paint:{'text-color':'#fffaf0'}});
       map.addLayer({id:'heritage-venue-points',type:'circle',source:'heritage-nearby-venues',
-        filter:['!',['has','point_count']],paint:{'circle-color':'#bd7138',
-          'circle-radius':['interpolate',['linear'],['zoom'],14,5,18,9],
-          'circle-stroke-color':'#fffaf0','circle-stroke-width':2.5,'circle-opacity':.98}});
-      map.on('click','heritage-venue-clusters',event=>{
-        const feature=event.features?.[0];
-        if (!feature) return;
-        map.easeTo({center:feature.geometry.coordinates,zoom:Math.min(map.getZoom()+2,19),duration:450});
-      });
+        paint:{'circle-color':'#bd7138',
+          'circle-radius':['interpolate',['linear'],['zoom'],14,4,18,7],
+          'circle-stroke-color':'#fffaf0','circle-stroke-width':2,'circle-opacity':.98}});
       map.on('click','heritage-venue-points',event=>{
         const feature=event.features?.[0];
         if (!feature) return;
@@ -331,10 +360,8 @@
         this.venuePopup=new maplibregl.Popup({anchor:'top',offset:14,maxWidth:'280px',className:'heritage-venue-popup-shell'})
           .setLngLat(feature.geometry.coordinates).setDOMContent(box).addTo(map);
       });
-      for (const id of ['heritage-venue-clusters','heritage-venue-points']) {
-        map.on('mouseenter',id,()=>{map.getCanvas().style.cursor='pointer';});
-        map.on('mouseleave',id,()=>{map.getCanvas().style.cursor='';});
-      }
+      map.on('mouseenter','heritage-venue-points',()=>{map.getCanvas().style.cursor='pointer';});
+      map.on('mouseleave','heritage-venue-points',()=>{map.getCanvas().style.cursor='';});
       this.container.dataset.nearbyLayer='ready';
       return true;
     }

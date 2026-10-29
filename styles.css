@@ -193,3 +193,16 @@ html,body{font-family:var(--font-text);font-size:14px;line-height:1.5}
 .nearby-venue-popup span{color:#a35e2f;font-size:12px;font-weight:700}
 .nearby-venue-popup small{color:#5f7169;font-size:11px}
 .planner-venue-note{margin:10px 0 16px;padding:10px 12px;border-left:3px solid #bd7138;background:#fff8ed;color:#365c4e;font-size:12px;line-height:1.5}
+
+/* Custom-tour photographs stay in map markers above the 3D canvas. */
+.marker-photo-frame{display:none}
+.map-marker.maplibregl-marker.tour-photo-marker{width:64px;height:76px;z-index:22!important}
+.map-marker.tour-photo-marker .map-marker-core{position:relative;width:56px;height:56px;padding:0;border-radius:12px 12px 12px 4px;background:#f8f4ea;transform:none;box-shadow:0 8px 22px #173d3673,0 0 0 2px #d7bc7a}
+.map-marker.tour-photo-marker .marker-photo-frame{display:block;position:absolute;inset:0;overflow:hidden;border-radius:9px 9px 9px 2px;transform:none}
+.map-marker.tour-photo-marker .marker-photo-frame img{display:block;width:100%;height:100%;object-fit:cover}
+.map-marker.tour-photo-marker .marker-kind{display:none}
+.map-marker.tour-photo-marker .marker-number{display:grid!important;place-items:center;position:absolute;top:-11px;right:-11px;z-index:2;width:25px;height:25px;border:2px solid #fff;border-radius:50%;background:#174638;color:#fff;font-size:11px!important;line-height:1;transform:none;box-shadow:0 2px 8px #173d3666}
+.map-marker.tour-photo-marker .map-marker-label{bottom:79px}
+.map-marker.tour-photo-marker:hover .map-marker-core,.map-marker.tour-photo-marker.selected .map-marker-core,.map-marker.tour-photo-marker.in-route .map-marker-core{transform:scale(1.06);box-shadow:0 10px 26px #173d3699,0 0 0 3px #f1d58f}
+.map-marker.maplibregl-marker.tour-photo-marker.selected{z-index:500!important}
+@media(max-width:800px){.map-marker.maplibregl-marker.tour-photo-marker{width:56px;height:69px}.map-marker.tour-photo-marker .map-marker-core{width:48px;height:48px}.map-marker.tour-photo-marker .map-marker-label{bottom:72px}}

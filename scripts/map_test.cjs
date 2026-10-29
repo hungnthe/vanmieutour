@@ -122,6 +122,33 @@ const vectorMap={
  triggerRepaint(){}
 };
 engine.kind='vector';engine.ready=true;engine.map=vectorMap;engine.baseVisible=true;engine.osmBuildingsVisible=false;engine.sketchupEnabled=false;
+const venueLayers=[];
+let venueSourceDefinition=null;
+engine.map={getStyle:()=>({}),getSource:()=>null,
+  addSource:(_id,definition)=>{venueSourceDefinition=definition;},
+  addLayer:layer=>venueLayers.push(layer),on:()=>{}};
+assert(engine.attachNearbyVenueLayers(),'The vector map installs the venue layer');
+assert.equal(venueSourceDefinition.cluster,undefined,'Venue locations remain individual dots');
+assert.deepEqual(venueLayers.map(layer=>layer.id),['heritage-venue-points'],'No numbered cluster layer is installed');
+engine.map=vectorMap;
+const photoElement=window.document.createElement('div');
+photoElement.className='map-marker';
+photoElement.dataset.color='#123456';
+photoElement.innerHTML='<span class="marker-photo-frame"></span><span class="marker-kind">⌂</span><span class="marker-number"></span>';
+engine.markers.set('van_mieu',{element:photoElement,marker:{}});
+engine.render(null,'van_mieu');
+engine.setTourPhotoMarkers([{id:'van_mieu',order:1,src:'assets/landmark-photos/van_mieu.png'}]);
+assert(photoElement.classList.contains('tour-photo-marker'),'A custom stop gains a photograph over the 3D map');
+assert.equal(photoElement.querySelector('.marker-photo-frame img').getAttribute('src'),'assets/landmark-photos/van_mieu.png');
+assert.equal(photoElement.querySelector('.marker-number').textContent,'1','The photograph keeps the custom tour order');
+engine.setTourPhotoMarkers([]);
+assert(!photoElement.classList.contains('tour-photo-marker'),'Leaving the custom 3D tour restores the original icon');
+assert.equal(photoElement.querySelector('.marker-photo-frame img'),null,'Inactive photos are not loaded');
+engine.kind='raster';
+engine.setTourPhotoMarkers([{id:'van_mieu',order:1,src:'assets/landmark-photos/van_mieu.png'}]);
+assert(!photoElement.classList.contains('tour-photo-marker'),'The 2D fallback keeps its original marker');
+engine.kind='vector';
+engine.setTourPhotoMarkers([]);
 engine.setNearbyVenues([{...nearbyVenues[0],nearSelected:[nearbyVenues[0].near[0]]}]);
 assert.equal(venueData.features.length,1,'A selected-route venue is drawn in the vector map');
 assert.equal(venueData.features[0].geometry.coordinates[0],nearbyVenues[0].lng);

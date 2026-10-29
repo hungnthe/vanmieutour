@@ -25,7 +25,9 @@ Khi chọn tuyến có ít nhất hai điểm đủ tọa độ, giao diện g�
 
 ### Quán xá quanh tour tự tạo
 
-Hai tệp Excel/KML do người dùng cung cấp có 218 địa điểm trùng khớp theo tên và tọa độ. Bỏ 6 mục không phải quán (di tích, bảo tàng, phòng tranh, chợ), còn 212 quán trong `data/nearby-venues.json`, liên kết với 32 điểm di tích của ứng dụng. Một quán gần nhiều di tích chỉ được đánh dấu một lần. Khi chọn một trong sáu tuyến có sẵn hoặc thêm di tích vào **Tạo tour của bạn**, bản đồ 2D và 3D hiện quán quanh các điểm đang chọn; chạm cụm số để phóng to và chạm dấu quán để xem tên, loại, khoảng cách ghi trong Excel. Lớp quán tự ẩn khi bỏ chọn tuyến hoặc không có điểm trong tour. Tọa độ và khoảng cách là dữ liệu tham khảo từ hai tệp; dự án chưa kiểm chứng từng quán tại hiện trường. Có thể tái tạo JSON bằng `scripts/import_nearby_venues.py` với hai đường dẫn tệp nguồn.
+Hai tệp Excel/KML do người dùng cung cấp có 218 địa điểm trùng khớp theo tên và tọa độ. Bỏ 6 mục không phải quán (di tích, bảo tàng, phòng tranh, chợ), còn 212 quán trong `data/nearby-venues.json`, liên kết với 32 điểm di tích của ứng dụng. Một quán gần nhiều di tích chỉ được đánh dấu một lần. Khi chọn một trong sáu tuyến có sẵn hoặc thêm di tích vào **Tạo tour của bạn**, bản đồ 2D và 3D hiện mỗi quán bằng một chấm riêng, không gộp thành vòng số; chạm chấm để xem tên, loại, khoảng cách ghi trong Excel. Lớp quán tự ẩn khi bỏ chọn tuyến hoặc không có điểm trong tour. Tọa độ và khoảng cách là dữ liệu tham khảo từ hai tệp; dự án chưa kiểm chứng từng quán tại hiện trường. Có thể tái tạo JSON bằng `scripts/import_nearby_venues.py` với hai đường dẫn tệp nguồn.
+
+Trong **Tạo tour của bạn**, khi bật 3D, các điểm đã thêm có ảnh tương ứng sẽ hiện ảnh và số thứ tự ngay trên marker ở vị trí địa danh, nổi phía trên mô hình. Điểm chưa có ảnh đúng tên giữ icon cũ; khi trở lại 2D, marker trở về dạng thông thường.
 
 Docker build chạy bước bundle React trong image builder; máy chủ Linux chỉ cần nạp image như hướng dẫn deploy.
 

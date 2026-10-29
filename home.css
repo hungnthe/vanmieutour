@@ -1,5 +1,5 @@
 .home-page{height:100dvh;min-height:100%;overflow-x:hidden;overflow-y:auto;background:#f6f4ee;color:#193a34;scroll-behavior:smooth;scrollbar-width:thin;scrollbar-color:#c5c5b9 transparent}
-.home-nav{height:78px;padding:0 clamp(22px,6.1vw,104px);display:flex;align-items:center;justify-content:space-between;gap:24px;background:#faf9f5;position:relative;z-index:2;border-bottom:1px solid rgba(34,61,52,.1)}
+.home-nav{height:78px;padding:0 clamp(16px,2vw,28px) 0 clamp(22px,6.1vw,104px);display:flex;align-items:center;justify-content:space-between;gap:24px;background:#faf9f5;position:relative;z-index:2;border-bottom:1px solid rgba(34,61,52,.1)}
 .home-brand{display:inline-flex;align-items:center;gap:11px;min-width:245px;color:#173d36}
 .home-brand-image{width:39px;height:42px;flex:none;object-fit:cover;border-radius:10px}
 .home-brand-copy{display:flex;align-items:center}.home-brand-copy strong{color:#8d3327;font-size:16px;white-space:nowrap}

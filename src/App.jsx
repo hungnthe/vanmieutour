@@ -147,6 +147,9 @@ function MapPage() {
   const tourStopsRef = useRef(tourStops);
   tourStopsRef.current = tourStops;
   const selectedRoute = tourPreview && tourStops.length ? {id:'CUSTOM',title:'Tour của bạn',mode:tourMode,color:'#267459',sites:tourStops} : routes.find(route=>route.id===routeId) || null;
+  const tourPhotoStops=useMemo(()=>viewMode==='3d' && (panel==='tour' || tourPreview)
+    ? tourStops.map((id,index)=>({id,order:index+1,src:photoForSite(byId[id])?.src || null}))
+    : [],[viewMode,panel,tourPreview,tourStops]);
   const tourNearbyVenues=useMemo(()=>venuesForTour(nearbyVenues,tourStops),[tourStops]);
   const nearbySiteIds=panel==='tour' && !tourPreview ? tourStops : selectedRoute?.sites || EMPTY_SITE_IDS;
   const activeNearbyVenues=useMemo(()=>venuesForTour(nearbyVenues,nearbySiteIds),[nearbySiteIds]);
@@ -243,7 +246,7 @@ function MapPage() {
       element.className = 'map-marker'; element.dataset.siteId = site.id; element.dataset.color = kindColor(site.kind);
       element.style.setProperty('--marker',kindColor(site.kind)); element.title = `${site.name} — vị trí tham khảo`;
       element.setAttribute('role','button'); element.setAttribute('tabindex','0'); element.setAttribute('aria-label',`Xem chi tiết ${site.name}`);
-      element.innerHTML = `<div class="map-marker-label">${labelOf(site)}</div><div class="map-marker-core"><span class="marker-kind">${kindEmoji(site.kind)}</span><span class="marker-number"></span></div>`;
+      element.innerHTML = `<div class="map-marker-label">${labelOf(site)}</div><div class="map-marker-core"><span class="marker-photo-frame" aria-hidden="true"></span><span class="marker-kind">${kindEmoji(site.kind)}</span><span class="marker-number"></span></div>`;
       const choose = () => selectSiteRef.current?.(site.id);
       element.addEventListener('click',choose);
       element.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();choose();}});
@@ -292,6 +295,10 @@ function MapPage() {
   useEffect(()=>{
     mapRef.current?.render(byRoute,selected);
   },[routeId,selected,tourPreview,tourStops,tourMode,roadResult]);
+
+  useEffect(()=>{
+    mapRef.current?.setTourPhotoMarkers?.(tourPhotoStops);
+  },[tourPhotoStops]);
 
   useEffect(()=>{
     mapRef.current?.setNearbyVenues?.(activeNearbyVenues);
@@ -360,7 +367,7 @@ function MapPage() {
               <span className="planner-number">{index+1}</span><div className="planner-stop-text"><strong>{site.name}</strong><span>{site.address||'Chưa có địa chỉ'}</span>{!isLocated(site)&&<small>Chưa có tọa độ để đặt trên bản đồ</small>}</div>
               <div className="planner-stop-actions"><button type="button" aria-label={`Đưa ${site.name} lên`} disabled={index===0} onClick={()=>moveTourStop(index,-1)}>↑</button><button type="button" aria-label={`Đưa ${site.name} xuống`} disabled={index===tourStops.length-1} onClick={()=>moveTourStop(index,1)}>↓</button><button type="button" aria-label={`Bỏ ${site.name}`} onClick={()=>{setTourStops(current=>current.filter(stop=>stop!==id));if(tourStops.length===1)setTourPreview(false);}}>×</button></div>
             </li>})}</ol> : <p className="planner-empty">Chưa có điểm ghé. Chọn địa điểm ở danh sách bên dưới.</p>}
-            {tourStops.length>0&&<p className="planner-venue-note">{tourNearbyVenues.length} quán xá quanh các điểm đã chọn · hiện trên bản đồ 2D và 3D. Chạm vào vòng số để phóng to, rồi chạm dấu quán để xem tên.</p>}
+            {tourStops.length>0&&<p className="planner-venue-note">{tourNearbyVenues.length} quán xá quanh các điểm đã chọn · hiện bằng các chấm trên bản đồ 2D và 3D. Chạm vào chấm để xem tên.</p>}
             <button type="button" id="preview-tour" className="planner-preview" disabled={!tourStops.length} onClick={previewTour}>Xem hành trình trên bản đồ</button>
             <p className="planner-note">Đường đi được ước tính theo OpenStreetMap từ tọa độ tâm; cổng vào và lối đi thực tế chưa được xác minh.</p>
             <div className="planner-heading planner-search-heading"><h2>Thêm địa điểm</h2><span>{tourResults.length}/{sites.length} điểm</span></div>
