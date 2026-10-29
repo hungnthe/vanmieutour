@@ -1,0 +1,44 @@
+{
+  "kham_duc_dinh": {
+    "record": "QTG_Diem.0033",
+    "source_name": "Đình Khâm Đức",
+    "lat": 21.01757334920506,
+    "lng": 105.8386937794429,
+    "crosscheck_separation_m": 0.4
+  },
+  "thanh_mien": {
+    "record": "QTG_Diem.0018",
+    "source_name": "Đình Thanh Miến",
+    "lat": 21.0294284,
+    "lng": 105.837608,
+    "crosscheck_separation_m": 3.3
+  },
+  "duc_thanh_tran": {
+    "record": "QTG_Diem.0027",
+    "source_name": "Đền Đức Thánh Trần",
+    "lat": 21.0264668,
+    "lng": 105.8413874,
+    "crosscheck_separation_m": 3.1
+  },
+  "tien_tich": {
+    "record": "QTG_Diem.0026",
+    "source_name": "Chùa Tiên Tích",
+    "lat": 21.0262436,
+    "lng": 105.8413848,
+    "crosscheck_separation_m": 0.5
+  },
+  "kham_duc_den": {
+    "record": "QTG_Diem.0034",
+    "source_name": "Đền Khâm Đức - thờ Châu Đệ Tứ",
+    "lat": 21.01763811491321,
+    "lng": 105.8387428425481,
+    "crosscheck_separation_m": 0.6
+  },
+  "thai_kieu": {
+    "record": "QTG_Diem.0020",
+    "source_name": "Đình Thái Kiều",
+    "lat": 21.0157923,
+    "lng": 105.836492,
+    "crosscheck_separation_m": 0.0
+  }
+}

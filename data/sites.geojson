@@ -1,6 +1,6 @@
 {
   "type": "FeatureCollection",
-  "name": "heritage-gazette-centroids-review-only",
+  "name": "heritage-reference-locations-review-only",
   "features": [
     {
       "type": "Feature",
@@ -450,6 +450,139 @@
         "status": "gazette_centroid",
         "gazette_page": 35,
         "accuracy_note": "VN-2000 converted centroid, not visitor entrance"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.83927,
+          21.01686
+        ]
+      },
+      "properties": {
+        "id": "trung_kinh",
+        "name": "Đình Trung Kính",
+        "kind": "đình",
+        "status": "osm_reference",
+        "gazette_page": null,
+        "accuracy_note": "OpenStreetMap reference, not verified visitor entrance",
+        "coordinate_source": "https://vietnam-pagodas.vercel.app/vi/chua/dinh-trung-kinh"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8386937794429,
+          21.01757334920506
+        ]
+      },
+      "properties": {
+        "id": "kham_duc_dinh",
+        "name": "Đình Khâm Đức",
+        "kind": "đình",
+        "status": "gis_reference",
+        "gazette_page": null,
+        "accuracy_note": "Project GIS reference, not verified visitor entrance",
+        "coordinate_record": "QTG_Diem.0033"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.837608,
+          21.0294284
+        ]
+      },
+      "properties": {
+        "id": "thanh_mien",
+        "name": "Đình Thanh Miến",
+        "kind": "đình",
+        "status": "gis_reference",
+        "gazette_page": null,
+        "accuracy_note": "Project GIS reference, not verified visitor entrance",
+        "coordinate_record": "QTG_Diem.0018"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8413874,
+          21.0264668
+        ]
+      },
+      "properties": {
+        "id": "duc_thanh_tran",
+        "name": "Đền Đức Thánh Trần",
+        "kind": "đền",
+        "status": "gis_reference",
+        "gazette_page": null,
+        "accuracy_note": "Project GIS reference, not verified visitor entrance",
+        "coordinate_record": "QTG_Diem.0027"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8413848,
+          21.0262436
+        ]
+      },
+      "properties": {
+        "id": "tien_tich",
+        "name": "Chùa Tiên Tích",
+        "kind": "chùa",
+        "status": "gis_reference",
+        "gazette_page": null,
+        "accuracy_note": "Project GIS reference, not verified visitor entrance",
+        "coordinate_record": "QTG_Diem.0026"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8387428425481,
+          21.01763811491321
+        ]
+      },
+      "properties": {
+        "id": "kham_duc_den",
+        "name": "Đền Khâm Đức (thờ Châu Đệ Tứ)",
+        "kind": "đền",
+        "status": "gis_reference",
+        "gazette_page": null,
+        "accuracy_note": "Project GIS reference, not verified visitor entrance",
+        "coordinate_record": "QTG_Diem.0034"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.836492,
+          21.0157923
+        ]
+      },
+      "properties": {
+        "id": "thai_kieu",
+        "name": "Đình Thái Kiều",
+        "kind": "đình",
+        "status": "gis_reference",
+        "gazette_page": null,
+        "accuracy_note": "Project GIS reference, not verified visitor entrance",
+        "coordinate_record": "QTG_Diem.0020"
       }
     }
   ]

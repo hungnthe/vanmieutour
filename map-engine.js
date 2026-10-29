@@ -25,7 +25,7 @@
       this.container = document.getElementById('map');
       this.byId = Object.fromEntries(this.sites.map(s => [s.id,s]));
       this.markers = new Map();
-      this.mode = '2.5d';
+      this.mode = '2d';
       this.route = null;
       this.selected = 'van_mieu';
       this.kind = 'loading';
@@ -43,6 +43,8 @@
       this.sketchupLayerVisibility = Object.fromEntries([...document.querySelectorAll('[data-sketchup-layer]')].map(input=>[input.dataset.sketchupLayer,input.checked]));
       this.modelState = 'idle';
       this.modelPromise = null;
+      this.visibleNearbyVenues = [];
+      this.venuePopup = null;
     }
     later(callback, delay) {
       const token = setTimeout(() => { this.timers.delete(token); callback(); }, delay);
@@ -59,6 +61,9 @@
     }
     clear() {
       this.generation++;
+      this.venuePopup?.remove();
+      this.venuePopup = null;
+      this.venueLayer = null;
       this.modelAbort?.abort();
       this.modelLayer = null;
       this.modelPromise = null;
@@ -77,6 +82,8 @@
       this.container.dataset.moving = 'false';
       this.container.dataset.streets = 'false';
       this.container.dataset.buildings = 'hidden';
+      this.container.dataset.nearbyVenues = '0';
+      this.container.dataset.nearbyLayer = 'missing';
     }
     start() {
       if (!window.maplibregl) { this.fallback('Thư viện 2.5D chưa tải được'); return; }
@@ -94,7 +101,7 @@
       try {
         const map = this.map = new maplibregl.Map({
           container:this.container, style:window.HERITAGE_MAP_STYLE || 'map-style.json',
-          center:[105.8356,21.0225], zoom:15, pitch:52, bearing:-15,
+          center:[105.8356,21.0225], zoom:15, pitch:0, bearing:0,
           minZoom:11, maxZoom:19, canvasContextAttributes:{antialias:true},
           attributionControl:{compact:true}
         });
@@ -129,17 +136,20 @@
           this.attachMapLibreGIS();
           map.addLayer({id:'heritage-route',type:'line',source:'heritage-route',
             layout:{'line-join':'round','line-cap':'round'},
-            paint:{'line-width':4,'line-opacity':0.9,'line-dasharray':[1,1.8],'line-color':'#38846b'}});
+            paint:{'line-width':5,'line-opacity':0.95,'line-color':'#38846b'}});
+          this.attachNearbyVenueLayers();
+          this.updateNearbyVenues();
           this.setPerspective(this.mode, false);
           this.applyMapLayerVisibility();
           if (this.sketchupEnabled) this.loadSketchUp();
           this.render(this.route,this.selected);
-          this.route ? this.fitRoute(this.route) : this.overview();
+          this.route?.roadSegments?.length ? this.fitRoadRoute(this.route.roadSegments) : this.route ? this.fitRoute(this.route) : this.overview();
           this.checkStreets();
         });
         map.on('idle', () => {
           if (!current()) return;
           this.attachMapLibreGIS();
+          if (this.attachNearbyVenueLayers()) this.updateNearbyVenues();
           this.applyMapLayerVisibility();
           this.checkStreets();
         });
@@ -175,7 +185,7 @@
       if (!this.hasStreets()) return;
       this.baseReady = true;
       this.container.dataset.streets = 'true';
-      this.status(this.modelState === 'error' ? 'Mô hình chưa tải được · đang dùng nhà OSM' : this.modelState === 'ready' ? 'model_2.skp · 25 vị trí tâm' : 'Đường phố OSM · 25 vị trí tâm',this.modelState === 'error' ? 'model-error' : 'ready');
+      this.status(this.modelState === 'error' ? 'Mô hình chưa tải được · bản đồ 2D vẫn hoạt động' : this.sketchupEnabled && this.modelState === 'ready' ? '3D Văn Miếu · vị trí suy ra từ GIS' : `Đường phố OSM · ${this.sites.filter(located).length} vị trí tham khảo`,this.modelState === 'error' ? 'model-error' : 'ready');
       this.onReady?.();
     }
     fallback(reason = 'Đã chọn nền 2D') {
@@ -207,11 +217,14 @@
         this.markers.set(site.id,{marker,element});
       });
       this.line = L.layerGroup().addTo(map);
+      this.venueLayer = L.layerGroup().addTo(map);
       this.ready = true;
       this.container.dataset.ready = 'true';
+      this.container.dataset.nearbyLayer = 'ready';
       this.attachLeafletGIS();
       this.render(this.route,this.selected);
-      this.route ? this.fitRoute(this.route) : this.overview();
+      this.updateNearbyVenues();
+      this.route?.roadSegments?.length ? this.fitRoadRoute(this.route.roadSegments) : this.route ? this.fitRoute(this.route) : this.overview();
       const providers = [
         {name:'OSM DE',url:'https://tile.openstreetmap.de/{z}/{x}/{y}.png',attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> · <a href="https://www.openstreetmap.de/germanstyle.html">OSM DE</a>'},
         {name:'OpenStreetMap',url:'https://tile.openstreetmap.org/{z}/{x}/{y}.png',attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'}
@@ -269,8 +282,10 @@
         element.setAttribute('aria-label',`${order >= 0 ? `Điểm ${order+1}. ` : ''}Xem chi tiết ${this.byId[id].name}`);
         if (this.kind === 'raster') marker.setZIndexOffset(selected === id ? 1000 : order >= 0 ? 500 : 0);
       }
-      const segments = routeSegments(route,this.byId);
+      // Only draw geometry supplied by the routing service; no straight-line fallback.
+      const segments = route?.roadSegments || [];
       this.container.dataset.routeSegments = segments.length;
+      this.container.dataset.routeGeometry = segments.length ? 'road' : 'none';
       this.container.dataset.routeStops = route ? route.sites.filter(id => located(this.byId[id])).length : 0;
       if (!this.ready) return;
       if (this.kind === 'vector') {
@@ -281,9 +296,93 @@
       } else {
         this.line.clearLayers();
         segments.forEach(segment => L.polyline(segment.map(([lng,lat]) => [lat,lng]),{
-          color:route.color,weight:4,dashArray:'5 9',opacity:0.9,interactive:false
+          color:route.color,weight:5,opacity:0.95,interactive:false
         }).addTo(this.line));
       }
+    }
+    attachNearbyVenueLayers() {
+      if (this.kind !== 'vector' || !this.ready || !this.map?.getStyle()) return false;
+      const map = this.map;
+      if (map.getSource('heritage-nearby-venues')) return false;
+      map.addSource('heritage-nearby-venues',{
+        type:'geojson',data:{type:'FeatureCollection',features:[]},
+        cluster:true,clusterMaxZoom:17,clusterRadius:38
+      });
+      map.addLayer({id:'heritage-venue-clusters',type:'circle',source:'heritage-nearby-venues',
+        filter:['has','point_count'],paint:{'circle-color':'#a85b2d','circle-radius':['step',['get','point_count'],16,10,21,30,25],
+          'circle-stroke-color':'#fffaf0','circle-stroke-width':2.5,'circle-opacity':.96}});
+      map.addLayer({id:'heritage-venue-cluster-count',type:'symbol',source:'heritage-nearby-venues',
+        filter:['has','point_count'],layout:{'text-field':['get','point_count_abbreviated'],'text-font':['Noto Sans Bold'],'text-size':12},
+        paint:{'text-color':'#fffaf0'}});
+      map.addLayer({id:'heritage-venue-points',type:'circle',source:'heritage-nearby-venues',
+        filter:['!',['has','point_count']],paint:{'circle-color':'#bd7138',
+          'circle-radius':['interpolate',['linear'],['zoom'],14,5,18,9],
+          'circle-stroke-color':'#fffaf0','circle-stroke-width':2.5,'circle-opacity':.98}});
+      map.on('click','heritage-venue-clusters',event=>{
+        const feature=event.features?.[0];
+        if (!feature) return;
+        map.easeTo({center:feature.geometry.coordinates,zoom:Math.min(map.getZoom()+2,19),duration:450});
+      });
+      map.on('click','heritage-venue-points',event=>{
+        const feature=event.features?.[0];
+        if (!feature) return;
+        const box=this.nearbyVenuePopup(feature.properties || {});
+        this.venuePopup?.remove();
+        this.venuePopup=new maplibregl.Popup({anchor:'top',offset:14,maxWidth:'280px',className:'heritage-venue-popup-shell'})
+          .setLngLat(feature.geometry.coordinates).setDOMContent(box).addTo(map);
+      });
+      for (const id of ['heritage-venue-clusters','heritage-venue-points']) {
+        map.on('mouseenter',id,()=>{map.getCanvas().style.cursor='pointer';});
+        map.on('mouseleave',id,()=>{map.getCanvas().style.cursor='';});
+      }
+      this.container.dataset.nearbyLayer='ready';
+      return true;
+    }
+    nearbyVenuePopup(properties) {
+      const box=document.createElement('div');
+      box.className='nearby-venue-popup';
+      const title=document.createElement('strong');
+      title.textContent=properties.name || 'Quán gần di tích';
+      const type=document.createElement('span');
+      type.textContent=properties.category || 'Quán xá';
+      const distance=document.createElement('small');
+      distance.textContent=`Gần ${properties.siteName || 'di tích trong tour'} · khoảng ${properties.distanceM || 0} m${properties.extraSites > 0 ? ` · gần thêm ${properties.extraSites} điểm trong tour` : ''}`;
+      const note=document.createElement('small');
+      note.textContent='Tọa độ tham khảo từ tệp người dùng cung cấp.';
+      box.append(title,type,distance,note);
+      return box;
+    }
+    setNearbyVenues(venues) {
+      this.visibleNearbyVenues = Array.isArray(venues) ? venues : [];
+      this.updateNearbyVenues();
+    }
+    updateNearbyVenues() {
+      const active=this.ready ? this.visibleNearbyVenues : [];
+      this.container.dataset.nearbyVenues=String(active.length);
+      this.venuePopup?.remove();
+      this.venuePopup=null;
+      if (!this.ready) return;
+      if (this.kind==='raster') {
+        this.venueLayer?.clearLayers();
+        active.forEach(venue=>{
+          const nearest=venue.nearSelected[0];
+          const popup=this.nearbyVenuePopup({name:venue.name,category:venue.category,
+            siteName:this.byId[nearest.siteId]?.name || nearest.sourcePoi,
+            distanceM:nearest.distanceM,extraSites:venue.nearSelected.length-1});
+          L.circleMarker([venue.lat,venue.lng],{radius:7,color:'#fffaf0',weight:2.5,
+            fillColor:'#bd7138',fillOpacity:.98}).bindPopup(popup).addTo(this.venueLayer);
+        });
+        return;
+      }
+      if (this.kind!=='vector') return;
+      const features=active.map(venue=>{
+        const nearest=venue.nearSelected[0];
+        return {type:'Feature',id:venue.id,geometry:{type:'Point',coordinates:[venue.lng,venue.lat]},
+          properties:{name:venue.name,category:venue.category,
+            siteName:this.byId[nearest.siteId]?.name || nearest.sourcePoi,
+            distanceM:nearest.distanceM,extraSites:venue.nearSelected.length-1}};
+      });
+      this.map.getSource('heritage-nearby-venues')?.setData({type:'FeatureCollection',features});
     }
     setGISData(layers) {
       this.gisData = layers || {};
@@ -307,7 +406,7 @@
       const generation = this.generation;
       const map = this.map;
       const abort = this.modelAbort = new AbortController();
-      this.modelStatus('loading','Đang tải mô hình từ model_2.skp…');
+      this.modelStatus('loading','Đang tải mô hình 3D Văn Miếu…');
       const timeout = this.later(() => abort.abort(),45000);
       const task = (async () => {
         try {
@@ -319,17 +418,17 @@
           layer.setVisible(this.sketchupEnabled);
           for (const [name,visible] of Object.entries(this.sketchupLayerVisibility)) layer.setGroupVisible(name,visible);
           this.applyMapLayerVisibility();
-          this.modelStatus('ready','Mô hình chưa có georeference; vị trí suy ra từ GIS và chưa được khảo sát. Các lớp nền, đường, nước và địa hình của SketchUp được tắt để tránh chồng lớp.');
+          this.modelStatus('ready','Đã tải phần công trình Văn Miếu từ model_2.skp. Vị trí đặt trên bản đồ suy ra từ GIS, chưa được khảo sát; chưa có điểm neo riêng cho từng công trình.');
           return layer;
         } catch (error) {
           if (generation !== this.generation) return null;
           this.modelLayer?.dispose();
           this.modelLayer = null;
-          console.warn('Không tải được model_2.skp:',error);
+          console.warn('Không tải được mô hình 3D Văn Miếu:',error);
           this.sketchupEnabled = false;
           this.onLayerState?.({sketchup:false,osmBuildings:this.osmBuildingsVisible});
           this.applyMapLayerVisibility();
-          this.modelStatus('error','Không tải được model_2.skp. Lớp SketchUp đã tắt; kiểm tra mạng hoặc nhấn Tải lại.');
+          this.modelStatus('error','Không tải được mô hình 3D Văn Miếu. Bản đồ 2D và các điểm di tích vẫn sử dụng được; thử Tải lại.');
           return null;
         } finally {
           clearTimeout(timeout);
@@ -343,9 +442,19 @@
     focusModel() {
       if (this.kind !== 'vector' || !this.ready || !this.modelLayer) return;
       const config = this.modelLayer.config;
+      const [[west,south],[east,north]] = config.campus.focus_bounds_m;
+      const origin = maplibregl.MercatorCoordinate.fromLngLat(config.origin,0);
+      const unit = origin.meterInMercatorCoordinateUnits();
+      const [[a,b],[c,d]] = config.matrix;
+      const bounds = new maplibregl.LngLatBounds();
+      for (const x of [west,east]) for (const y of [south,north]) {
+        const point = new maplibregl.MercatorCoordinate(
+          origin.x + unit*(a*x+c*y), origin.y - unit*(b*x+d*y), 0);
+        bounds.extend(point.toLngLat());
+      }
       const p = this.padding();
-      this.map.fitBounds(config.bounds,{padding:{top:p.top,bottom:p.bottom,left:p.left,right:p.right},
-        maxZoom:17,duration:650,pitch:this.mode === '2.5d' ? 52 : 0,bearing:this.mode === '2.5d' ? -15 : 0});
+      this.map.fitBounds(bounds,{padding:{top:p.top,bottom:p.bottom,left:p.left,right:p.right},
+        maxZoom:18.3,duration:650,pitch:55,bearing:-15});
     }
     setGISVisibility(group, visible) {
       if (!this.gisGroups[group]) return;
@@ -496,6 +605,7 @@
     }
     overview() { this.fit(this.sites.filter(located),15.2); }
     fitRoute(route) { this.fit(route.sites.map(id => this.byId[id]).filter(located),16.4); }
+    fitRoadRoute(segments) { this.fit(segments.flat().map(([lng,lat])=>({lng,lat})),16.4); }
     focus(site) {
       if (!this.ready || !located(site)) return;
       const sheetOpen = window.matchMedia('(max-width:800px)').matches && document.getElementById('details').classList.contains('open');

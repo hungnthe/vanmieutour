@@ -1,0 +1,193 @@
+{
+  "tien_tich": {
+    "src": "assets/landmark-photos/tien_tich.png",
+    "sourceLabel": "Chùa Tiên Tích",
+    "source": "User attachment",
+    "attachmentOrder": 1,
+    "matchBasis": "User supplied images in the same order as landmark names."
+  },
+  "luong_su": {
+    "src": "assets/landmark-photos/luong_su.png",
+    "sourceLabel": "đình đền lương sử",
+    "sourceCell": "G14"
+  },
+  "linh_quang": {
+    "src": "assets/landmark-photos/linh_quang.png",
+    "sourceLabel": "Chùa Linh Quang",
+    "source": "User attachment",
+    "attachmentOrder": 1,
+    "matchBasis": "User supplied images in the same order as landmark names."
+  },
+  "but_moc": {
+    "src": "assets/landmark-photos/but_moc.png",
+    "sourceLabel": "Chùa Bụt Mọc",
+    "source": "User attachment",
+    "attachmentOrder": 2,
+    "matchBasis": "User supplied images in the same order as landmark names."
+  },
+  "van_huong": {
+    "src": "assets/landmark-photos/van_huong.png",
+    "sourceLabel": "Đình Văn Hương",
+    "source": "User attachment",
+    "attachmentOrder": 3,
+    "matchBasis": "User supplied images in the same order as landmark names."
+  },
+  "van_mieu": {
+    "src": "assets/landmark-photos/van_mieu.png",
+    "sourceLabel": "Văn Miếu",
+    "source": "User attachment",
+    "attachmentOrder": 1
+  },
+  "ho_van": {
+    "src": "assets/landmark-photos/ho_van.png",
+    "sourceLabel": "Hồ Kim Châu",
+    "source": "User attachment",
+    "attachmentOrder": 2
+  },
+  "ba_nanh": {
+    "src": "assets/landmark-photos/ba_nanh.png",
+    "sourceLabel": "Chùa Bà Nành",
+    "source": "User attachment",
+    "attachmentOrder": 3
+  },
+  "thanh_mien": {
+    "src": "assets/landmark-photos/thanh_mien.png",
+    "sourceLabel": "Đình Thanh Miến",
+    "source": "User attachment",
+    "attachmentOrder": 4
+  },
+  "ngoc_ho": {
+    "src": "assets/landmark-photos/ngoc_ho.png",
+    "sourceLabel": "Chùa Bà Ngô",
+    "source": "User attachment",
+    "attachmentOrder": 5
+  },
+  "tien_phuc": {
+    "src": "assets/landmark-photos/tien_phuc.png",
+    "sourceLabel": "Chùa Tiên Phúc",
+    "source": "User attachment",
+    "attachmentOrder": 1
+  },
+  "pho_giac": {
+    "src": "assets/landmark-photos/pho_giac.png",
+    "sourceLabel": "Chùa Phổ Giác",
+    "source": "User attachment",
+    "attachmentOrder": 2
+  },
+  "y_mieu": {
+    "src": "assets/landmark-photos/y_mieu.png",
+    "sourceLabel": "Y Miếu",
+    "source": "User attachment",
+    "attachmentOrder": 3
+  },
+  "quang_minh": {
+    "src": "assets/landmark-photos/quang_minh.png",
+    "sourceLabel": "Chùa Quang Minh",
+    "source": "User attachment",
+    "attachmentOrder": 4
+  },
+  "duc_thanh_tran": {
+    "src": "assets/landmark-photos/duc_thanh_tran.png",
+    "sourceLabel": "Đền Đức Thánh Trần",
+    "source": "User attachment",
+    "attachmentOrder": 5
+  },
+  "van_chi": {
+    "src": "assets/landmark-photos/van_chi.png",
+    "sourceLabel": "Đền Văn Chỉ",
+    "source": "User attachment",
+    "attachmentOrder": 2,
+    "matchBasis": "User supplied images in the same order as landmark names."
+  },
+  "huy_van": {
+    "src": "assets/landmark-photos/huy_van.png",
+    "sourceLabel": "Chùa Huy Văn",
+    "source": "User attachment",
+    "attachmentOrder": 4,
+    "matchBasis": "User supplied images in the same order as landmark names."
+  },
+  "linh_ung": {
+    "src": "assets/landmark-photos/linh_ung.png",
+    "sourceLabel": "Chùa Linh Ứng",
+    "source": "User attachment",
+    "attachmentOrder": 3,
+    "matchBasis": "User supplied images in the same order as landmark names."
+  },
+  "trung_ta": {
+    "src": "assets/landmark-photos/trung_ta.png",
+    "sourceLabel": "Đền Trung Tả",
+    "source": "User attachment",
+    "attachmentOrder": 4,
+    "matchBasis": "User supplied images in the same order as landmark names."
+  },
+  "lien_hoa": {
+    "src": "assets/landmark-photos/lien_hoa.png",
+    "sourceLabel": "Chùa Liên Hoa",
+    "source": "User attachment",
+    "attachmentOrder": 5,
+    "matchBasis": "User supplied images in the same order as landmark names."
+  },
+  "phung_thanh": {
+    "src": "assets/landmark-photos/phung_thanh.png",
+    "sourceLabel": "Chùa Phụng Thánh",
+    "source": "User attachment",
+    "attachmentOrder": 1,
+    "matchBasis": "User supplied images in the same order as landmark names."
+  },
+  "kham_duc_den": {
+    "src": "assets/landmark-photos/kham_duc_den.png",
+    "sourceLabel": "Đền Khâm Đức – thờ Châu Đệ Tứ",
+    "source": "User attachment",
+    "attachmentOrder": 2,
+    "matchBasis": "User supplied images in the same order as landmark names."
+  },
+  "my_quang": {
+    "src": "assets/landmark-photos/my_quang.png",
+    "sourceLabel": "Chùa Mỹ Quang",
+    "source": "User attachment",
+    "attachmentOrder": 3,
+    "matchBasis": "User supplied images in the same order as landmark names."
+  },
+  "trung_kinh": {
+    "src": "assets/landmark-photos/trung_kinh.png",
+    "sourceLabel": "Đình Trung Kính",
+    "source": "User attachment",
+    "attachmentOrder": 4,
+    "matchBasis": "User supplied images in the same order as landmark names."
+  },
+  "tho_quan": {
+    "src": "assets/landmark-photos/tho_quan.png",
+    "sourceLabel": "Đình làng Thổ Quan",
+    "source": "User attachment",
+    "attachmentOrder": 5,
+    "matchBasis": "User supplied images in the same order as landmark names."
+  },
+  "trung_phung": {
+    "src": "assets/landmark-photos/trung_phung.png",
+    "sourceLabel": "ĐÌnh cung phụng",
+    "source": "User attachment",
+    "attachmentOrder": 1,
+    "matchBasis": "Mapped to illustrated hotspot Đền Trung Phụng; user-provided name appears to be a variant or typo."
+  },
+  "trung_tu_chua": {
+    "src": "assets/landmark-photos/trung_tu_chua.png",
+    "sourceLabel": "Chùa Trung Tự",
+    "source": "User attachment",
+    "attachmentOrder": 2,
+    "matchBasis": "User supplied images in the same order as landmark names."
+  },
+  "trung_tu_dinh": {
+    "src": "assets/landmark-photos/trung_tu_dinh.png",
+    "sourceLabel": "Đình Làng Trung Tự",
+    "source": "User attachment",
+    "attachmentOrder": 3,
+    "matchBasis": "User supplied images in the same order as landmark names."
+  },
+  "kim_lien": {
+    "src": "assets/landmark-photos/kim_lien.png",
+    "sourceLabel": "Đình làng kim lên",
+    "source": "User attachment",
+    "attachmentOrder": 4,
+    "matchBasis": "Mapped to illustrated hotspot Đền Kim Liên; the research source also refers to Đình Kim Liên."
+  }
+}

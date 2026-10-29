@@ -5,8 +5,9 @@
   "description": "Prototype bản đồ di tích Hà Nội 2.5D — ưu tiên kiểm chứng địa lý",
   "scripts": {
     "build": "node scripts/build.mjs",
-    "test": "npm run build && node scripts/data_test.cjs && node scripts/gis_test.cjs && node scripts/map_test.cjs && node scripts/dom_test.cjs && node scripts/model_test.cjs",
+    "test": "npm run build && node scripts/data_test.cjs && node scripts/gis_test.cjs && node scripts/map_test.cjs && node scripts/dom_test.cjs && node scripts/model_test.cjs && node scripts/route-coordinates_test.mjs && node scripts/nearby-venues_test.mjs",
     "check": "npm run build && node --check app.bundle.js && node --check map-engine.js && node --check gis-layers.js && node --check scripts/sketchup-layer.mjs",
+    "model:campus": "node scripts/build_campus_model.mjs",
     "vendor": "node scripts/vendor.cjs",
     "start": "npm run build && python -m http.server 8765 --bind localhost",
     "qa": "python scripts/qa_server.py"

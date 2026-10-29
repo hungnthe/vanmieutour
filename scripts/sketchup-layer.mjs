@@ -71,12 +71,17 @@ window.HeritageSketchUp = {
       if (!response.ok) throw new Error(`${url}: HTTP ${response.status}`);
       return response[type]();
     };
-    const [config, buffer] = await Promise.all([
+    const [placement, campus] = await Promise.all([
       inline?.config || read('data/model/manifest.json', 'json'),
-      inline ? Uint8Array.from(atob(inline.glb), c => c.charCodeAt(0)).buffer : read('data/model/model_2.glb', 'arrayBuffer')
+      inline?.campus || read('data/model/campus-scene.json', 'json')
     ]);
+    const buffer = inline
+      ? Uint8Array.from(atob(inline.glb), c => c.charCodeAt(0)).buffer
+      : await read(campus.url, 'arrayBuffer');
     if (signal.aborted) throw new DOMException('Aborted','AbortError');
-    if (!Array.isArray(config.origin) || config.origin.length !== 2 || !config.matrix?.flat().every(Number.isFinite)) throw new Error('Invalid model placement');
+    if (!Array.isArray(placement.origin) || placement.origin.length !== 2 || !placement.matrix?.flat().every(Number.isFinite)) throw new Error('Invalid model placement');
+    if (!Array.isArray(campus.focus_bounds_m) || campus.source_groups?.length !== 3) throw new Error('Invalid campus scene');
+    const config = {...placement, campus, sketchup_layer_defaults:Object.fromEntries(campus.source_groups.map(name => [name,true]))};
     const gltf = await new GLTFLoader().parseAsync(buffer, '');
     const layer = new SketchUpLayer(config, gltf.scene);
     if (signal.aborted) { layer.dispose(); throw new DOMException('Aborted','AbortError'); }

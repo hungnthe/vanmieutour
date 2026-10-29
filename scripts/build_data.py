@@ -59,7 +59,7 @@ SITES = [
     dict(id="trung_ta", name="Đền Trung Tả", kind="đền", gazette="đền Trung Tả", ward="Thổ Quan", address="24 ngõ Trung Tả, Khâm Thiên, Hà Nội", address_ref="https://www.dongda360.vn/chi_tiet_di_tich_danh_lam/dinh-thanh-mien.html"),
     dict(id="kham_duc_den", name="Đền Khâm Đức (thờ Châu Đệ Tứ)", kind="đền", flag="Có thể là một cơ sở riêng với Đình Khâm Đức; chưa có chứng cứ vị trí độc lập."),
     dict(id="my_quang", name="Chùa Mỹ Quang", kind="chùa", gazette="chùa Mỹ Quang", ward="Trung Phụng"),
-    dict(id="trung_kinh", name="Đình Trung Kính", kind="đình", flag="Đình gần chùa Mỹ Quang; KHÔNG nhầm với đình Trung Kính tại quận Cầu Giấy.", ref="https://chonthieng.com/dia-diem/chua-my-quang-linh-quang-tu-dong-da-ha-noi-2/"),
+    dict(id="trung_kinh", name="Đình Trung Kính", kind="đình", address="Ngõ Chùa Mỹ Quang, Hà Nội", flag="Điểm tham khảo OpenStreetMap cạnh chùa Mỹ Quang; chưa xác minh cổng vào.", ref="https://chonthieng.com/dia-diem/chua-my-quang-linh-quang-tu-dong-da-ha-noi-2/", coordinate_source="https://vietnam-pagodas.vercel.app/vi/chua/dinh-trung-kinh", coordinate_lat=21.01686, coordinate_lng=105.83927),
     dict(id="tho_quan", name="Đình làng Thổ Quan", kind="đình", gazette="đình Thổ Quan", ward="Thổ Quan"),
     dict(id="thai_kieu", name="Đình Thái Kiều", kind="đình", flag="Một trong các đình chưa xếp hạng theo bài báo 2026; không đồng nhất với Đình Thái Kiều ở Nam Định."),
     dict(id="trung_phung", name="Đền Trung Phụng", kind="đền", gazette="đền Trung Phụng", ward="Trung Phụng"),
@@ -71,8 +71,8 @@ ROUTES = [
     dict(id="W02", mode="walk", title="Chùa Ngọc Hồ – Y Miếu", color="#BD8A39", sites=["van_mieu","ngoc_ho","y_mieu"], details="Khám phá hai địa điểm văn hóa ở phía đông bắc Văn Miếu."),
     dict(id="W03", mode="walk", title="Chùa Huy Văn – Đền Văn Chỉ", color="#804324", sites=["van_mieu","huy_van","van_chi"], details="Tuyến đi bộ về phía phố Huy Văn, Văn Chương."),
     dict(id="R01", mode="motorbike", title="Phổ Giác – Y Miếu – Khâm Thiên", color="#F4513A", sites=["van_mieu","pho_giac","y_mieu","kham_thien"], details="Từ Văn Miếu qua di tích tôn giáo và đài tưởng niệm lịch sử."),
-    dict(id="R02", mode="motorbike", title="Huy Văn – Trung Tự – Kim Liên", color="#208FD1", sites=["van_mieu","pho_giac","huy_van","trung_tu_dinh","kim_lien"], details="Điểm kết là Đền Kim Liên, một trong Thăng Long tứ trấn."),
-    dict(id="R03", mode="motorbike", title="Văn Hương – Phụng Thánh – Khâm Đức", color="#D61C8B", sites=["van_mieu","van_huong","van_chi","phung_thanh","kham_duc_dinh"], details="Đình Khâm Đức chưa có tọa độ đáng tin, không vẽ vị trí cuối tuyến."),
+    dict(id="R02", mode="motorbike", title="Văn Hương – Phụng Thánh – Khâm Đức", color="#C90091", sites=["van_mieu","van_huong","van_chi","phung_thanh","kham_duc_dinh"], details="Tuyến qua Văn Hương, Phụng Thánh và Đình Khâm Đức."),
+    dict(id="R03", mode="motorbike", title="Phổ Giác – Huy Văn – Kim Liên", color="#008FCE", sites=["van_mieu","pho_giac","huy_van","trung_tu_dinh","kim_lien"], details="Điểm kết là Đền Kim Liên, một trong Thăng Long tứ trấn."),
 ]
 
 
@@ -119,6 +119,7 @@ def distance_m(a: tuple[float, float], b: tuple[float, float]) -> float:
 
 def build(gazette_path: Path) -> dict:
     gazette = gazette_rows(gazette_path)
+    reference_points = json.loads((ROOT / "data" / "gis-reference-coordinates.json").read_text(encoding="utf-8"))
     converter = Transformer.from_crs("EPSG:4756", "EPSG:4326", always_xy=True)
     sites = []
     seen = set()
@@ -156,6 +157,17 @@ def build(gazette_path: Path) -> dict:
             })
             if item.get("osm_lat") is not None:
                 item["osm_crosscheck_m"] = round(distance_m((lat_wgs, lng_wgs), (item["osm_lat"], item["osm_lng"])), 1)
+        elif item["id"] in reference_points:
+            point = reference_points[item["id"]]
+            item.update({"lat": point["lat"], "lng": point["lng"], "coord_status": "gis_reference",
+                         "coordinate_source": "data/gis/heritage-points-review.geojson",
+                         "coordinate_record": point["record"], "coord_system_raw": "EPSG:4326",
+                         "coord_detail": "Điểm tham khảo từ GIS dự án; chưa xác minh cổng tham quan",
+                         "flag": "Điểm tham khảo từ GIS dự án; chưa xác minh cổng hoặc lối đi thực tế."})
+        elif item.get("coordinate_source"):
+            item.update({"lat": item["coordinate_lat"], "lng": item["coordinate_lng"],
+                         "coord_status": "osm_reference", "coord_system_raw": "EPSG:4326",
+                         "coord_detail": "Điểm tham khảo từ OpenStreetMap; chưa xác minh cổng tham quan"})
         item["maps_search_url"] = "https://www.google.com/maps/search/?api=1&query=" + quote(item["name"] + ", Hà Nội", safe="")
         item["maps_point_url"] = (
             "https://www.google.com/maps/search/?api=1&query=" + quote(f"{item['lat']},{item['lng']}")
@@ -213,16 +225,16 @@ def main() -> None:
     (root / "routes.json").write_text(json.dumps(data["routes"], ensure_ascii=False, indent=2), encoding="utf-8")
     geojson = {
         "type": "FeatureCollection",
-        "name": "heritage-gazette-centroids-review-only",
+        "name": "heritage-reference-locations-review-only",
         "features": [{
             "type": "Feature",
             "geometry": {"type": "Point", "coordinates": [s["lng"], s["lat"]]},
-            "properties": {"id": s["id"], "name": s["name"], "kind": s["kind"], "status": s["coord_status"], "gazette_page": s["gazette_page"], "accuracy_note": "VN-2000 converted centroid, not visitor entrance"}
+            "properties": {"id": s["id"], "name": s["name"], "kind": s["kind"], "status": s["coord_status"], "gazette_page": s["gazette_page"], "accuracy_note": "Reference location, not verified visitor entrance"}
         } for s in data["sites"] if s["lat"] is not None],
     }
     (root / "sites.geojson").write_text(json.dumps(geojson, ensure_ascii=False, indent=2), encoding="utf-8")
     (ROOT / "data.js").write_text("window.HERITAGE_DATA = " + json.dumps(data, ensure_ascii=False, separators=(",", ":")) + ";\n", encoding="utf-8")
-    fields = ["id", "name", "kind", "address", "lat", "lng", "coord_status", "coord_detail", "google_status", "gazette", "gazette_page", "source_dms", "osm_crosscheck_m", "aliases", "maps_search_url", "maps_point_url", "gazette_pdf", "ref", "flag"]
+    fields = ["id", "name", "kind", "address", "lat", "lng", "coord_status", "coord_detail", "coordinate_source", "coordinate_record", "google_status", "gazette", "gazette_page", "source_dms", "osm_crosscheck_m", "aliases", "maps_search_url", "maps_point_url", "gazette_pdf", "ref", "flag"]
     with (root / "site-audit.csv").open("w", newline="", encoding="utf-8-sig") as stream:
         writer = csv.DictWriter(stream, fieldnames=fields, extrasaction="ignore")
         writer.writeheader()

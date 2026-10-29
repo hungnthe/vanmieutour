@@ -1,5 +1,6 @@
 node_modules/
 app.bundle.js
+heritage-atlas-2_5d.html
 __pycache__/
 *.log
 .venv-gis/

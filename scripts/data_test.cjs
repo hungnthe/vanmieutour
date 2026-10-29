@@ -5,9 +5,9 @@ const crypto = require('node:crypto');
 const vm = require('node:vm');
 const root = path.resolve(__dirname,'..');
 const expected = {
-  'data/sites.json':'DAC003DFDB10561E479CE1FB4341F7E7DBF7C1F8DF34BA06B1A76572EAF716E1',
-  'data/routes.json':'9DFD225D4F9E43035058D7AF5DCCB3D3842F504EC0BABBAD4331F5E2D1F9CE49',
-  'data.js':'9370C39DACC8F63E040F8A3A0713B4C74CCDAAC633B2ACC211E23659731FCE94',
+  'data/sites.json':'FDF1F17EFDE379010AB03C996C80BEF7B0CC25C229F6983D36A48D8D7C1C7B3C',
+  'data/routes.json':'1D6F71055B3F017AEB4E50821EDFB6885265F45A0829D0390BB726E653B365FB',
+  'data.js':'3EB5C43D9ABEE7DE380B018AC19C18C8C220205A011909D17371E454D8F18F4B',
   'references/original-tour-map.pdf':'28AA8290CEA870F2348D060F6DB06A867F5E8C62B8457AE152F0A5958E84DBBC'
 };
 for (const [file,hash] of Object.entries(expected)) {
@@ -19,22 +19,33 @@ const {routeSegments,located} = sandbox.window.HeritageGeometry;
 const sites = JSON.parse(fs.readFileSync(path.join(root,'data/sites.json')));
 const routes = JSON.parse(fs.readFileSync(path.join(root,'data/routes.json')));
 const byId = Object.fromEntries(sites.map(s=>[s.id,s]));
-assert.equal(sites.filter(located).length,25);
-assert.equal(sites.filter(s=>!located(s)).length,7);
+assert.equal(sites.filter(located).length,32);
+assert.equal(sites.filter(s=>!located(s)).length,0);
+const gis=JSON.parse(fs.readFileSync(path.join(root,'data/gis/heritage-points-review.geojson')));
+const sourceByRecord=Object.fromEntries(gis.features.map(f=>[f.id,f]));
+for (const site of sites.filter(s=>s.coord_status==='gis_reference')) {
+  const feature=sourceByRecord[site.coordinate_record];
+  assert(feature, `${site.name} has a source record`);
+  assert.deepEqual([site.lng,site.lat],feature.geometry.coordinates);
+}
+assert.equal(sites.filter(s=>s.coord_status==='gis_reference').length,6);
+assert.equal(byId.trung_kinh.coord_status,'osm_reference');
+assert.equal(byId.trung_kinh.coordinate_source,'https://vietnam-pagodas.vercel.app/vi/chua/dinh-trung-kinh');
+assert.deepEqual([byId.trung_kinh.lat,byId.trung_kinh.lng],[21.01686,105.83927]);
 assert.equal(routes.filter(r=>r.mode==='walk').length,3);
 assert.equal(routes.filter(r=>r.mode==='motorbike').length,3);
 for (const route of routes) {
   const segments = routeSegments(route,byId);
-  assert.equal(segments.flat().length,route.id==='R03'?4:route.sites.length);
+  assert.equal(segments.flat().length,route.sites.length);
   assert.equal(segments.length,1);
   assert.equal(route.routing_status,'point_order_only');
 }
 // Unknown intermediate stops cannot be bridged, even for a future route.
-const split = routeSegments({sites:['van_mieu','ho_van','kham_duc_dinh','ngoc_ho','y_mieu']},byId);
+const split = routeSegments({sites:['van_mieu','ho_van','unknown_site','ngoc_ho','y_mieu']},byId);
 assert.equal(split.length,2);
 assert.equal(split[0].length,2);
 assert.equal(split[1].length,2);
 const style = JSON.parse(fs.readFileSync(path.join(root,'map-style.json')));
 assert.equal(style.layers.filter(l=>l.type==='fill-extrusion').length,1,'Only one building extrusion layer');
 assert(style.layers.some(l=>l['source-layer']==='transportation' && l.type==='line'));
-console.log('Data checks passed: unchanged research hashes, 25/7 points, 3+3 routes, no bridge over missing stops, real road/building layers.');
+console.log('Data checks passed: 32 points with sources, 3+3 routes, no bridge over missing stops, real road/building layers.');

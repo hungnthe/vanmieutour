@@ -1,0 +1,33 @@
+{
+  "id": "van-mieu",
+  "title": "Văn Miếu – Quốc Tử Giám",
+  "url": "data/model/van-mieu-campus.glb",
+  "glb_sha256": "5e78b4419ccef4fda637811a53cca7382a7b63e04cb37d930f35ceade21b490f",
+  "source_glb_sha256": "592213f2c0990556119be06faf16fb0ecbcaa2a3128701851f92f928fcba02b1",
+  "source_groups": [
+    "noithat",
+    "nha_khoi",
+    "timngo"
+  ],
+  "excluded_source_groups": [
+    "TPX_BUILDINGS",
+    "TPX_ROADS_HATCH",
+    "TPX_WATERWAYS_HATCH",
+    "TPX_VEGETATION_GREEN_SPACES_HATCH",
+    "TPX_TERRAIN_TERRAIN_MESH"
+  ],
+  "focus_bounds_m": [
+    [
+      370.51,
+      218.15452972912115
+    ],
+    [
+      708.3976269534402,
+      460.4618951125103
+    ]
+  ],
+  "triangles": 156020,
+  "placement_status": "inferred_from_supplied_gis_geometry_not_surveyed",
+  "individual_building_anchors": "not_identified_in_source_model",
+  "architecture_reference": "https://vanmieu.gov.vn/vi/visit/architecture"
+}

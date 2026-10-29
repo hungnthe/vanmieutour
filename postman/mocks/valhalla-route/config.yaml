@@ -1,0 +1,11 @@
+version: 1
+id: 1fddd3b3-810f-46ce-8c04-ed0b071339da
+name: valhalla-route
+slug: valhalla-route
+protocol: http
+port: 4500
+interceptRequests: true
+scenarios:
+  - name: default
+    path: ./default.js
+    default: true

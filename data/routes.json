@@ -84,8 +84,32 @@
   {
     "id": "R02",
     "mode": "motorbike",
-    "title": "Huy Văn – Trung Tự – Kim Liên",
-    "color": "#208FD1",
+    "title": "Văn Hương – Phụng Thánh – Khâm Đức",
+    "color": "#C90091",
+    "sites": [
+      "van_mieu",
+      "van_huong",
+      "van_chi",
+      "phung_thanh",
+      "kham_duc_dinh"
+    ],
+    "details": "Tuyến qua Văn Hương, Phụng Thánh và Đình Khâm Đức.",
+    "site_names": [
+      "Văn Miếu – Quốc Tử Giám",
+      "Đình Văn Hương",
+      "Đền Văn Chỉ",
+      "Chùa Phụng Thánh",
+      "Đình Khâm Đức"
+    ],
+    "fully_located": true,
+    "routing_status": "point_order_only",
+    "google_directions_url": "https://www.google.com/maps/dir/?api=1&origin=V%C4%83n%20Mi%E1%BA%BFu%20%E2%80%93%20Qu%E1%BB%91c%20T%E1%BB%AD%20Gi%C3%A1m%2C%20H%C3%A0%20N%E1%BB%99i&destination=%C4%90%C3%ACnh%20Kh%C3%A2m%20%C4%90%E1%BB%A9c%2C%20H%C3%A0%20N%E1%BB%99i&waypoints=%C4%90%C3%ACnh%20V%C4%83n%20H%C6%B0%C6%A1ng%2C%20H%C3%A0%20N%E1%BB%99i%7C%C4%90%E1%BB%81n%20V%C4%83n%20Ch%E1%BB%89%2C%20H%C3%A0%20N%E1%BB%99i%7CCh%C3%B9a%20Ph%E1%BB%A5ng%20Th%C3%A1nh%2C%20H%C3%A0%20N%E1%BB%99i"
+  },
+  {
+    "id": "R03",
+    "mode": "motorbike",
+    "title": "Phổ Giác – Huy Văn – Kim Liên",
+    "color": "#008FCE",
     "sites": [
       "van_mieu",
       "pho_giac",
@@ -104,29 +128,5 @@
     "fully_located": true,
     "routing_status": "point_order_only",
     "google_directions_url": "https://www.google.com/maps/dir/?api=1&origin=V%C4%83n%20Mi%E1%BA%BFu%20%E2%80%93%20Qu%E1%BB%91c%20T%E1%BB%AD%20Gi%C3%A1m%2C%20H%C3%A0%20N%E1%BB%99i&destination=%C4%90%E1%BB%81n%20Kim%20Li%C3%AAn%20%28%C4%90%C3%ACnh%20Kim%20Li%C3%AAn%29%2C%20H%C3%A0%20N%E1%BB%99i&waypoints=Ch%C3%B9a%20Ph%E1%BB%95%20Gi%C3%A1c%2C%20H%C3%A0%20N%E1%BB%99i%7CCh%C3%B9a%20Huy%20V%C4%83n%2C%20H%C3%A0%20N%E1%BB%99i%7C%C4%90%C3%ACnh%20l%C3%A0ng%20Trung%20T%E1%BB%B1%2C%20H%C3%A0%20N%E1%BB%99i"
-  },
-  {
-    "id": "R03",
-    "mode": "motorbike",
-    "title": "Văn Hương – Phụng Thánh – Khâm Đức",
-    "color": "#D61C8B",
-    "sites": [
-      "van_mieu",
-      "van_huong",
-      "van_chi",
-      "phung_thanh",
-      "kham_duc_dinh"
-    ],
-    "details": "Đình Khâm Đức chưa có tọa độ đáng tin, không vẽ vị trí cuối tuyến.",
-    "site_names": [
-      "Văn Miếu – Quốc Tử Giám",
-      "Đình Văn Hương",
-      "Đền Văn Chỉ",
-      "Chùa Phụng Thánh",
-      "Đình Khâm Đức"
-    ],
-    "fully_located": false,
-    "routing_status": "point_order_only",
-    "google_directions_url": "https://www.google.com/maps/dir/?api=1&origin=V%C4%83n%20Mi%E1%BA%BFu%20%E2%80%93%20Qu%E1%BB%91c%20T%E1%BB%AD%20Gi%C3%A1m%2C%20H%C3%A0%20N%E1%BB%99i&destination=%C4%90%C3%ACnh%20Kh%C3%A2m%20%C4%90%E1%BB%A9c%2C%20H%C3%A0%20N%E1%BB%99i&waypoints=%C4%90%C3%ACnh%20V%C4%83n%20H%C6%B0%C6%A1ng%2C%20H%C3%A0%20N%E1%BB%99i%7C%C4%90%E1%BB%81n%20V%C4%83n%20Ch%E1%BB%89%2C%20H%C3%A0%20N%E1%BB%99i%7CCh%C3%B9a%20Ph%E1%BB%A5ng%20Th%C3%A1nh%2C%20H%C3%A0%20N%E1%BB%99i"
   }
 ]

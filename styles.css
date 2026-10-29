@@ -103,3 +103,93 @@ h1{font-family:"DM Serif Display",Georgia,serif;font-weight:400;font-size:29px;l
   .route-stops{max-height:190px}.map-marker-core{width:30px;height:30px}.map-marker-label{max-width:160px;font-size:9px}
 }
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+
+.map-mode-switch{display:flex;align-items:center;gap:2px;padding:3px;border:1px solid #dfe8dd;border-radius:11px;background:#fffefa;box-shadow:0 5px 18px #1e4c3515}
+.map-mode-switch .map-control{height:34px;min-width:0;border:0;border-radius:8px;box-shadow:none;white-space:nowrap;padding:0 11px;font-size:10px}
+.map-mode-switch .map-control[aria-pressed="true"]{background:#173f36;color:#fff}
+.map-mode-switch .map-control[aria-pressed="true"]:hover{background:#24594a}
+.map-mode-switch .map-control:focus-visible{outline:2px solid #c49c52;outline-offset:2px}
+@media (max-width:800px){.map-mode-switch .map-control{font-size:9px;padding:0 8px}}
+@media (max-width:380px){.map-control-group{left:10px;right:10px;justify-content:flex-end}.map-control-group #map-reset{display:none}.map-mode-switch .map-control{padding:0 6px;font-size:8px}}
+
+/* The tour planner keeps addresses and the chosen order visible together. */
+.planner-nav,.planner-mode{display:grid;grid-template-columns:1fr 1fr;gap:4px;background:#eef3ed;border:1px solid #e4ebe2;border-radius:11px;padding:4px}
+.planner-nav{margin-bottom:22px}.planner-nav button,.planner-mode button{border:0;border-radius:8px;background:transparent;color:#667e70;padding:10px 6px;font-size:10px;font-weight:800}.planner-nav button[aria-pressed="true"],.planner-mode button[aria-pressed="true"]{background:var(--forest);color:#fff}
+.planner-intro,.planner-note,.planner-empty{font-size:10px;line-height:1.7;color:#718579}.planner-intro{margin:0 0 16px}.planner-mode{margin-bottom:20px}.planner-heading{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:0 0 10px}.planner-heading h2{font-size:13px;margin:0;color:var(--forest)}.planner-heading>span{font-size:10px;color:#7c8f82}.planner-search-heading{border-top:1px solid var(--line);padding-top:18px;margin-top:18px}
+.planner-stops{list-style:none;padding:0;margin:0;display:grid;gap:7px}.planner-stops li{display:flex;align-items:flex-start;gap:8px;padding:10px;background:#f3f8f1;border:1px solid #e1ebe0;border-radius:10px}.planner-number{display:grid;place-items:center;flex:0 0 23px;height:23px;border-radius:50%;background:#31765b;color:white;font-size:10px;font-weight:800}.planner-stop-text,.planner-result>div{min-width:0;flex:1;display:flex;flex-direction:column;gap:4px}.planner-stop-text strong,.planner-result strong{font-size:10.5px;line-height:1.4;color:#315244}.planner-stop-text span,.planner-result span{font-size:9.5px;line-height:1.5;color:#72877b}.planner-stop-text small,.planner-result small{font-size:9px;line-height:1.4;color:#9b7135}.planner-stop-actions{display:flex;gap:2px}.planner-stop-actions button{border:0;background:#fff;color:#426956;border-radius:5px;min-width:22px;height:24px;font-size:13px}.planner-stop-actions button:disabled{opacity:.3;cursor:default}
+.planner-preview{width:100%;border:0;border-radius:10px;padding:12px;margin-top:12px;background:var(--forest);color:white;font-size:10px;font-weight:800}.planner-preview:disabled,.planner-detail-action:disabled{opacity:.5;cursor:default}.planner-note{background:#fbf7ed;border-radius:9px;padding:10px;margin:12px 0;color:#836e4e}.planner-results{display:grid;gap:6px;max-height:320px;overflow-y:auto}.planner-result{display:flex;gap:7px;align-items:center;border:1px solid #e7ede5;border-radius:10px;padding:10px}.planner-result button{flex:0 0 auto;border:1px solid #c9dfcf;background:#eef8ef;color:#286549;border-radius:8px;padding:8px;font-size:9px;font-weight:800}.planner-result button:disabled{color:#91a59a;background:#f5f6f3;border-color:#e6eae4;cursor:default}.planner-detail-action{width:100%;margin-top:16px}
+
+/* A consistent Vietnamese type hierarchy for map and tour controls. */
+:root{--font-text:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",sans-serif;--font-display:"Source Serif 4",Georgia,"Times New Roman",serif}
+html,body{font-family:var(--font-text);font-size:14px;line-height:1.5}
+.sidebar h1{font-family:var(--font-display);font-size:30px;line-height:1.28;letter-spacing:-.02em}
+.hero-subtitle,.planner-intro,.planner-note,.planner-empty,.detail-text{font-size:12px;line-height:1.65}
+.section-row h2,.planner-heading h2{font-size:15px;line-height:1.35}
+.brand-name{font-size:13px}.brand-tagline{font-size:10px;letter-spacing:.12em}
+.topbar-center,.top-link,.edition-tag{font-size:11px}.eyebrow,.kicker{font-size:10px;letter-spacing:.12em}
+.metric span,.mini-count,.route-code,.route-end,.site-index,.site-row-sub,.sidebar-footnote p{font-size:10.5px;line-height:1.45}
+.tab,.route-clear,.route-title,.site-row-name,.search-field input,.planner-nav button,.planner-mode button,.planner-preview{font-size:12px;line-height:1.45}
+.route-title,.site-row-name{white-space:normal;overflow-wrap:anywhere}
+.planner-heading>span,.planner-number,.planner-result button{font-size:11px}
+.planner-stop-text strong,.planner-result strong{font-size:12px;line-height:1.45}
+.planner-stop-text span,.planner-result span,.planner-stop-text small,.planner-result small{font-size:11px;line-height:1.5}
+.detail-title{font-size:23px;line-height:1.35}.detail-section-heading h3,.detail-status-title{font-size:12.5px}
+.detail-eyebrow,.detail-position,.detail-subline,.detail-status-desc,.detail-fact span,.detail-fact strong,.detail-warning,.small-note,.membership-pill{font-size:11px;line-height:1.55}
+.primary-action,.secondary-action{font-size:12px;line-height:1.4}
+.map-caption,.floating-route-label{font-size:10px;letter-spacing:.06em}.map-status,.map-status button,.map-key summary,.map-key-entry,.map-key p,.route-disclaimer,.route-missing,.floating-route .route-clear{font-size:11px;line-height:1.5}
+.map-control,.map-mode-switch .map-control,.route-itinerary summary,.route-stops button{font-size:11.5px;line-height:1.4}
+.route-itinerary summary span,.route-stops small,.gis-layer-controls legend,.gis-layer-controls label,.map-key #gis-layer-status,.map-key .gis-attribution,.map-bottom-banner>span,.map-marker-label{font-size:10.5px;line-height:1.5}
+@media(max-width:800px){
+  .sidebar h1{font-size:28px}.sidebar-scroll{padding-top:54px}
+  .brand-name{font-size:11px}.brand-tagline{font-size:9px;letter-spacing:.08em}.menu-toggle{font-size:11px}
+  .search-field:has(input:focus){height:auto;min-height:44px}.search-field input{font-size:16px}
+  .map-caption{font-size:10px}.map-control-group{gap:4px}.map-control{min-width:36px;padding-inline:7px}.map-mode-switch .map-control{font-size:11px;padding-inline:7px}
+  .map-status,.map-status button,.map-key summary{font-size:11px}.map-bottom-banner>span{font-size:10px;line-height:1.45}
+  .detail-title{font-size:21px}.detail-text{font-size:12px}
+}
+@media(max-width:380px){.map-mode-switch .map-control{font-size:10px;padding-inline:5px}}
+
+/* Use the same image as the illustrated map, keeping the full photograph visible. */
+.detail-cover.has-photo{background:#e8eee7}
+.detail-cover.has-photo:before{display:none}
+.detail-cover-photo{display:block;width:100%;height:100%;object-fit:contain}
+.detail-cover.has-photo .cover-floating,.detail-cover.has-photo .cover-category-tag{background:rgba(17,47,42,.78);border-radius:6px;padding:5px 7px}
+.detail-cover.has-photo .cover-num{color:#fff;text-shadow:0 1px 5px #102b29}
+@media(max-width:1090px){.details.open .detail-cover.has-photo{display:flex;height:150px}}
+
+/* Edge controls keep the map usable while either desktop panel is folded. */
+.panel-edge-toggle{position:absolute;top:50%;z-index:12;width:24px;height:52px;display:grid;place-items:center;transform:translateY(-50%);border:1px solid #dbe6dc;background:#fffefa;color:#315c4c;box-shadow:0 3px 14px #1e4c351c;font-size:23px;line-height:1}
+.panel-edge-toggle:hover{background:#edf6ee}.panel-edge-left{left:0;border-left:0;border-radius:0 9px 9px 0}.panel-edge-right{right:0;border-right:0;border-radius:9px 0 0 9px}
+.map-key{bottom:28px}
+@media(min-width:1091px){
+  .app-shell{--sidebar-width:320px;--details-width:320px;grid-template-columns:var(--sidebar-width) minmax(0,1fr) var(--details-width)}
+  .app-shell.sidebar-collapsed{--sidebar-width:0px}.app-shell.details-collapsed{--details-width:0px}
+  .app-shell.sidebar-collapsed>.sidebar,.app-shell.details-collapsed>.details{visibility:hidden;overflow:hidden}
+}
+@media(min-width:1091px) and (max-width:1200px){.app-shell{--sidebar-width:295px;--details-width:290px}}
+@media(min-width:1650px){.app-shell{--sidebar-width:365px;--details-width:350px}}
+@media(min-width:801px) and (max-width:1090px){
+  .app-shell{--sidebar-width:300px;grid-template-columns:var(--sidebar-width) minmax(0,1fr)}
+  .app-shell.sidebar-collapsed{--sidebar-width:0px}.app-shell.sidebar-collapsed>.sidebar{visibility:hidden;overflow:hidden}
+  .panel-edge-right{display:none}
+}
+@media(max-width:800px){
+  .panel-edge-toggle{display:none}
+  .map-key,.map-wrap:has(.floating-route:not([hidden])) .map-key{bottom:28px}
+  .floating-route{bottom:80px}
+}
+
+.floating-route{max-height:calc(100% - 165px);overflow-y:auto}
+.route-metrics{margin-top:10px;padding:10px;border:1px solid #e1ebe0;border-radius:9px;background:#f2f7f1;color:#315747}
+.route-metrics-heading{font-size:9px;letter-spacing:.06em;font-weight:800;line-height:1.45}.route-metrics-total{display:flex;align-items:baseline;gap:8px;margin:5px 0;font-size:15px;color:#1f6048}.route-metrics-total span{color:#9db2a1}
+.route-metrics-legs{list-style:none;padding:0;margin:7px 0;display:grid;gap:4px}.route-metrics-legs li{display:flex;justify-content:space-between;gap:8px;font-size:10px;line-height:1.4}.route-metrics p,.route-metrics-message{font-size:10.5px;line-height:1.5;color:#5e7869;margin:8px 0 0}.route-metrics-retry{border:0;background:transparent;color:#176448;font:inherit;font-weight:700;text-decoration:underline;padding:0}
+.key-road-route{width:19px;height:0;border-top:3px solid #38846b;flex-shrink:0}
+.key-venue{width:12px;height:12px;border:2px solid #fffaf0;border-radius:50%;background:#bd7138;box-shadow:0 0 0 1px #bd7138;flex-shrink:0}
+.route-directions{border-top:1px solid #dbe9dd;padding-top:7px;font-size:10.5px;line-height:1.5}.route-directions summary{cursor:pointer;font-weight:700;color:#226148}.route-directions section{margin-top:8px}.route-directions ol{padding-left:20px;margin:5px 0}.route-directions li{padding:2px 0}
+@media(max-width:800px){.floating-route{max-height:calc(100% - 260px)}}
+.heritage-venue-popup-shell{z-index:1001}
+.nearby-venue-popup{display:grid;gap:5px;min-width:180px;max-width:245px;color:#173d36;font-family:"Be Vietnam Pro",sans-serif;line-height:1.45}
+.nearby-venue-popup strong{font-size:14px}
+.nearby-venue-popup span{color:#a35e2f;font-size:12px;font-weight:700}
+.nearby-venue-popup small{color:#5f7169;font-size:11px}
+.planner-venue-note{margin:10px 0 16px;padding:10px 12px;border-left:3px solid #bd7138;background:#fff8ed;color:#365c4e;font-size:12px;line-height:1.5}

@@ -1,5 +1,7 @@
 # Dấu chân Di sản — bản đồ 2.5D kiểm toán dữ liệu
 
+> Cập nhật tọa độ: bản đồ hiện có 32/32 điểm, gồm 25 tâm địa danh từ Thông tư 10/2022, Đình Trung Kính từ [OpenStreetMap](https://vietnam-pagodas.vercel.app/vi/chua/dinh-trung-kinh), và sáu điểm tham khảo từ lớp GIS do dự án cung cấp. Sáu bản ghi GIS được đối chiếu với listing theo tên và khu vực trong `artifacts/google-crosscheck/REPORT.md`; nguồn gốc và giấy phép của lớp GIS chưa được xác định, nên cần làm rõ trước khi phân phối. Các điểm GIS chưa được khảo sát cổng hoặc kiểm chứng độc lập; tuyến đường, km và thời gian là ước tính của dịch vụ định tuyến, không bảo đảm đúng lối vào hoặc điều kiện đường thực tế. Các số liệu 25/7 hoặc 26/6 bên dưới phản ánh trạng thái trước cập nhật.
+
 ### Đóng gói Docker
 
 Có thể triển khai bản đồ tĩnh bằng Docker image đã đóng gói, công khai không cần đăng nhập. Xem [hướng dẫn deploy Linux](DOCKER_DEPLOY.md); image `linux/amd64` và gói chuyển máy được tạo tại `artifacts/docker/`.
@@ -17,7 +19,13 @@ npm ci
 npm run start
 ```
 
-Sau đó truy cập `http://localhost:8765/`. Giao diện được viết bằng React trong `src/App.jsx`, esbuild tạo `app.bundle.js`; phần vẽ bản đồ MapLibre/Leaflet tiếp tục nằm trong `map-engine.js`. Các thư viện bản đồ và worker đã nằm trong `vendor/`. Trang hoạt động không cần tài khoản hay khóa API. Nhấn vào các tuyến W01–W03 (đi bộ) hoặc R01–R03 (xe máy) để làm nổi bật và đánh số điểm ghé; mở mục **Xem điểm ghé** để chọn từng điểm theo PDF. Nhấn pin hoặc danh sách để mở chi tiết; có chuyển 2D / 2.5D. Trên mobile, nút **Tuyến & địa điểm** mở bộ lọc/tìm kiếm, chi tiết mở thành bảng phía dưới có nút đóng.
+Sau đó truy cập `http://localhost:8765/`. Giao diện được viết bằng React trong `src/App.jsx`, esbuild tạo `app.bundle.js`; phần vẽ bản đồ MapLibre/Leaflet tiếp tục nằm trong `map-engine.js`. Các thư viện bản đồ và worker đã nằm trong `vendor/`. Trang hoạt động không cần tài khoản hay khóa API. Nhấn vào các tuyến W01–W03 (đi bộ) hoặc R01–R03 (xe máy) để làm nổi bật và đánh số điểm ghé; mở mục **Xem điểm ghé** để chọn từng điểm theo PDF. Nhấn pin hoặc danh sách để mở chi tiết; trên trang `#/map` có nút **2D toàn khu / 3D Văn Miếu**. Trên mobile, nút **Tuyến & địa điểm** mở bộ lọc/tìm kiếm, chi tiết mở thành bảng phía dưới có nút đóng.
+
+Khi chọn tuyến có ít nhất hai điểm đủ tọa độ, giao diện gửi tọa độ tâm địa danh đến dịch vụ demo Valhalla dựa trên OpenStreetMap để vẽ tuyến theo mạng đường, hiển thị hướng dẫn rẽ và ước tính km, thời gian từng chặng cho đi bộ hoặc xe máy. Đường vẽ và số liệu lấy cùng một kết quả định tuyến. Tổng không bao gồm thời gian tham quan; khi có điểm thiếu tọa độ hoặc dịch vụ lỗi, hệ thống thông báo và không vẽ tuyến nối thẳng thay thế. Dịch vụ demo cần Internet, có giới hạn và không thay thế kiểm tra cổng hay lối đi thực tế; trước khi xuất bản ứng dụng cần tuân theo [hướng dẫn máy chủ demo](https://valhalla.github.io/valhalla/start/introduction/) hoặc cấu hình dịch vụ định tuyến phù hợp. Thông tin kiểm thử và mock cục bộ nằm trong `postman/simulations/heritage-routing.context.md`.
+
+### Quán xá quanh tour tự tạo
+
+Hai tệp Excel/KML do người dùng cung cấp có 218 địa điểm trùng khớp theo tên và tọa độ. Bỏ 6 mục không phải quán (di tích, bảo tàng, phòng tranh, chợ), còn 212 quán trong `data/nearby-venues.json`, liên kết với 32 điểm di tích của ứng dụng. Một quán gần nhiều di tích chỉ được đánh dấu một lần. Khi chọn một trong sáu tuyến có sẵn hoặc thêm di tích vào **Tạo tour của bạn**, bản đồ 2D và 3D hiện quán quanh các điểm đang chọn; chạm cụm số để phóng to và chạm dấu quán để xem tên, loại, khoảng cách ghi trong Excel. Lớp quán tự ẩn khi bỏ chọn tuyến hoặc không có điểm trong tour. Tọa độ và khoảng cách là dữ liệu tham khảo từ hai tệp; dự án chưa kiểm chứng từng quán tại hiện trường. Có thể tái tạo JSON bằng `scripts/import_nearby_venues.py` với hai đường dẫn tệp nguồn.
 
 Docker build chạy bước bundle React trong image builder; máy chủ Linux chỉ cần nạp image như hướng dẫn deploy.
 
@@ -50,7 +58,13 @@ npm test
 npm run check
 ```
 
-Xem [báo cáo tích hợp](artifacts/MODEL_INTEGRATION.md), [kiểm toán lớp và ảnh theo lớp](artifacts/LAYER_AUDIT.md), [ảnh chi tiết SketchUp](artifacts/model-closeup.png). Kiểm tra trình duyệt: chạy `npm run qa`, rồi `node scripts/layer_browser_test.cjs` với Playwright và Chrome cài sẵn (có thể đặt `NODE_PATH` đến gói Playwright).
+Xem [báo cáo tích hợp ban đầu](artifacts/MODEL_INTEGRATION.md), [kiểm toán lớp của bản xuất đầy đủ](artifacts/LAYER_AUDIT.md) và [ảnh chi tiết bản xuất đầy đủ](artifacts/model-closeup.png). Bản đồ hiện dùng cảnh Văn Miếu đã tách ở phần tiếp theo.
+
+### Cảnh 3D Văn Miếu trên `#/map` — 28/10/2026
+
+- Nút **3D Văn Miếu** tải `data/model/van-mieu-campus.glb` theo yêu cầu và đưa camera tới quần thể. Bản này được tách từ `model_2.glb`, chỉ giữ ba nhóm gốc `noithat`, `nha_khoi`, `timngo`: **156.020 tam giác, 8,18 MiB**. Các lớp TPX công trình, đường và địa hình ngoài khu không còn được nạp trong chế độ này. Nút **2D toàn khu** trả lại góc nhìn toàn bộ 25 điểm có tọa độ.
+- Tạo lại cảnh bằng `npm run model:campus`, sau đó chạy `npm run vendor`, `npm run build`, `python scripts/bundle_onefile.py` và `npm test`. `data/model/campus-scene.json` ghi hash, nhóm nguồn và phạm vi camera; GLB gốc vẫn giữ nguyên.
+- Tệp SKP chưa có tọa độ khảo sát hoặc điểm neo định danh từng tòa. Phép đặt cảnh trên bản đồ vẫn là suy ra từ GIS; giao diện ghi rõ giới hạn này. Nếu WebGL hay tải cảnh lỗi, bản đồ 2D và các điểm di tích vẫn dùng được. Xem [ảnh chụp giao diện 3D](artifacts/van-mieu-3d-actual.png).
 
 ### Kiểm thử và ảnh kết quả
 
@@ -84,7 +98,7 @@ Xem [báo cáo Google Maps](artifacts/google-crosscheck/REPORT.md), [bảng đ�
 | Địa điểm còn thiếu tọa độ đáng tin | **7** | Chỉ hiện trong danh sách, không cắm pin giả |
 | Tuyến được nhập theo PDF | **6** | 3 đi bộ và 3 xe máy, giữ thứ tự điểm |
 | Tuyến đủ tất cả tọa độ tâm | **5/6** | Tuyến R03 còn thiếu Đình Khâm Đức |
-| Tuyến thực tế trên mặt đường được kiểm chứng | **0/6** | Nét nối trên màn hình chỉ là sơ đồ, không dùng dẫn đường |
+| Tuyến thực địa được kiểm chứng | **0/6** | Đường ước tính theo OpenStreetMap, chưa xác minh cổng và khả năng tiếp cận |
 | Điểm được Google Places API xác minh | **0** | Chưa có API key/billing để lấy Place ID hoặc dữ liệu có phép |
 
 ### Cảnh báo về con số 37
@@ -128,12 +142,12 @@ Tham khảo so khớp: [Chùa Phổ Giác](https://mapcarta.com/W702456248), [Đ
 | W02 | Đi bộ | Văn Miếu → Chùa Ngọc Hồ → Y Miếu | Đủ 3/3 |
 | W03 | Đi bộ | Văn Miếu → Chùa Huy Văn → Đền Văn Chỉ | Đủ 3/3 |
 | R01 | Xe máy | Văn Miếu → Chùa Phổ Giác → Y Miếu → Đài tưởng niệm Khâm Thiên | Đủ 4/4* |
-| R02 | Xe máy | Văn Miếu → Chùa Phổ Giác → Chùa Huy Văn → Đình Trung Tự → Đền Kim Liên | Đủ 5/5 |
-| R03 | Xe máy | Văn Miếu → Đình Văn Hương → Đền Văn Chỉ → Chùa Phụng Thánh → Đình Khâm Đức | **4/5** |
+| R02 | Xe máy | Văn Miếu → Đình Văn Hương → Đền Văn Chỉ → Chùa Phụng Thánh → Đình Khâm Đức | **4/5** |
+| R03 | Xe máy | Văn Miếu → Chùa Phổ Giác → Chùa Huy Văn → Đình Trung Tự → Đền Kim Liên | Đủ 5/5 |
 
 `*` Tọa độ của **Khu di tích Khâm Thiên** được dùng làm vị trí đại diện cho Đài tưởng niệm; chưa kiểm chứng cổng đi vào. Đình Trung Tự và Đền Kim Liên sử dụng các tên tương đương trong công báo là Đình Trung Tự và Đình Kim Liên.
 
-Các đoạn đường dạng nét đứt trong bản đồ là đường nối **thẳng giữa các điểm dừng** để quan sát thứ tự; **không phải tuyến phố, khoảng cách di chuyển hay chỉ đường an toàn**. Liên kết Google Maps trong bảng là *liên kết tìm kiếm*, không được coi là xác minh Place ID.
+Tuyến hiển thị trên bản đồ lấy từ kết quả định tuyến OpenStreetMap/Valhalla, nhưng tọa độ đầu cuối là tâm địa danh và chưa xác minh cổng, lối vào hoặc điều kiện thực tế. Liên kết Google Maps trong bảng là *liên kết tìm kiếm*, không được coi là xác minh Place ID.
 
 ## Tệp dữ liệu
 
@@ -156,4 +170,4 @@ Các đoạn đường dạng nét đứt trong bản đồ là đường nối 
 4. Tính đường đi thực tế bằng **Routes API** (đi bộ WALK, xe máy TWO_WHEELER nếu phù hợp khu vực) hoặc một engine khác có dữ liệu đi bộ/xe máy, và kiểm tra các đoạn beta chưa đầy đủ.
 5. Chỉ sau khi có đường đi kiểm chứng mới cho phép dẫn đường và tính khoảng cách/thời gian. Thiết lập lại quy định lưu dữ liệu và ghi nguồn theo điều khoản Google Maps Platform khi tích hợp Google.
 
-Nền bản đồ sử dụng MapLibre GL JS và OpenFreeMap/OpenStreetMap. Lớp 2.5D chính là mô hình chuyển từ `model_2.skp`; nhà OSM với chiều cao mặc định 7 m chỉ là dự phòng khi mô hình không tải được. Vị trí mô hình suy ra từ GIS và chưa kiểm chứng khảo sát thực địa.
+Nền bản đồ sử dụng MapLibre GL JS và OpenFreeMap/OpenStreetMap. Chế độ 3D Văn Miếu hiển thị phần công trình được tách từ `model_2.skp`; vị trí mô hình suy ra từ GIS và chưa kiểm chứng khảo sát thực địa.

@@ -5,6 +5,7 @@ from urllib.parse import quote
 import json
 import base64
 import os
+import re
 import subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -41,17 +42,20 @@ for name in ['maplibre-gl', 'leaflet']:
     html = html.replace(f'<script src="vendor/{name}.js"></script>',script(vendor_js))
 model_dir = ROOT / 'data' / 'model'
 model_config = json.loads((model_dir / 'manifest.json').read_text(encoding='utf-8'))
+campus_scene = json.loads((model_dir / 'campus-scene.json').read_text(encoding='utf-8'))
 model_inline = 'window.HERITAGE_SKETCHUP_DATA=' + json.dumps({
-    'config': model_config, 'glb': base64.b64encode((model_dir/'model_2.glb').read_bytes()).decode('ascii')
+    'config': model_config,
+    'campus': campus_scene,
+    'glb': base64.b64encode((ROOT / campus_scene['url']).read_bytes()).decode('ascii')
 },separators=(',',':')) + ';'
 html = html.replace('<script src="vendor/sketchup-model.js"></script>',script(model_inline)+'\n'+script((ROOT/'vendor/sketchup-model.js').read_text(encoding='utf-8')))
 config = f'window.HERITAGE_MAP_STYLE={style};\nwindow.HERITAGE_WORKER_URL=URL.createObjectURL(new Blob([{json.dumps(worker)}],{{type:"text/javascript"}}));'
-html = html.replace('<script src="data.js"></script>',script(config)+'\n<script src="data.js"></script>')
-html = html.replace('<link rel="stylesheet" href="styles.css">', f'<style>\n{css}\n</style>')
-html = html.replace('<link rel="stylesheet" href="home.css">', f'<style>\n{home_css}\n</style>')
-html = html.replace('<script src="data.js"></script>', f'<script>\n{data}\n</script>')
-html = html.replace('<script src="app.bundle.js"></script>', f'<script>\n{app}\n</script>')
-html = html.replace('<script src="map-engine.js"></script>',script(engine))
+html = html.replace('<script src="data.js?v=20261029-gis-points"></script>',script(config)+'\n<script src="data.js?v=20261029-gis-points"></script>')
+html = re.sub(r'<link rel="stylesheet" href="styles\.css(?:\?[^"]*)?">', lambda _: f'<style>\n{css}\n</style>', html, count=1)
+html = re.sub(r'<link rel="stylesheet" href="home\.css(?:\?[^"]*)?">', lambda _: f'<style>\n{home_css}\n</style>', html, count=1)
+html = html.replace('<script src="data.js?v=20261029-gis-points"></script>', f'<script>\n{data}\n</script>')
+html = re.sub(r'<script src="app\.bundle\.js(?:\?[^\"]*)?"></script>', lambda _: f'<script>\n{app}\n</script>', html, count=1)
+html = re.sub(r'<script src="map-engine\.js(?:\?[^\"]*)?"></script>', lambda _: script(engine), html, count=1)
 gis_bundle = {"manifest":gis_manifest,"layers":gis_layers}
 gis_inline = f"window.HERITAGE_GIS_DATA={json.dumps(gis_bundle,ensure_ascii=False,separators=(',',':'))};"
 html = html.replace('<script src="gis-layers.js"></script>',script(gis_inline)+"\n"+script(gis_engine))
@@ -60,5 +64,11 @@ csv_url = 'data:text/csv;charset=utf-8,' + quote('\ufeff' + csv_data, safe='')
 html = html.replace('href="data/site-audit.csv"', f'href="{csv_url}"')
 hero_data = base64.b64encode((ROOT / "assets" / "van-mieu-home-hero.webp").read_bytes()).decode("ascii")
 html = html.replace('assets/van-mieu-home-hero.webp', f'data:image/webp;base64,{hero_data}')
+for filename, mime in [('ban-do-di-san-ha-noi-day-du.png', 'image/png'), ('map-title-37-di-tich.png', 'image/png'), ('brand-vm-stamp.png', 'image/png'), ('van-mieu-ticket-logo-vertical.png', 'image/png'), ('postage-stamp-background.png', 'image/png'), ('di-san-ha-noi-chu-giai.pdf', 'application/pdf')]:
+    asset_data = base64.b64encode((ROOT / "assets" / filename).read_bytes()).decode("ascii")
+    html = html.replace(f'assets/{filename}', f'data:{mime};base64,{asset_data}')
+for photo in json.loads((ROOT / 'src' / 'landmark-photos.json').read_text(encoding='utf-8')).values():
+    photo_data = base64.b64encode((ROOT / photo['src']).read_bytes()).decode('ascii')
+    html = html.replace(photo['src'], f'data:image/png;base64,{photo_data}')
 (ROOT / "heritage-atlas-2_5d.html").write_text(html,encoding="utf-8")
 print("Built",ROOT / "heritage-atlas-2_5d.html")
